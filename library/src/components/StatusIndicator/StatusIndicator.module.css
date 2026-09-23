@@ -1,0 +1,62 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--hive-radius-pill);
+  color: var(--hive-content-inverse);
+  flex-shrink: 0;
+}
+
+.xs {
+  width: 6px;
+  height: 6px;
+}
+
+.sm {
+  width: 8px;
+  height: 8px;
+}
+
+.md {
+  width: 10px;
+  height: 10px;
+}
+
+.lg {
+  width: 13px;
+  height: 13px;
+}
+
+.xl {
+  width: 16px;
+  height: 16px;
+}
+
+.online {
+  background: var(--hive-status-success);
+}
+
+.busy {
+  background: var(--hive-status-error);
+}
+
+.away {
+  background: var(--hive-status-warning);
+}
+
+.offline {
+  background: var(--hive-content-tertiary);
+}
+
+.verified,
+.add {
+  background: var(--hive-brand);
+}
+
+.delete {
+  background: var(--hive-status-error);
+}
+
+.favorite {
+  background: var(--hive-progress-yellow);
+}

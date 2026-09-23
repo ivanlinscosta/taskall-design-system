@@ -1,0 +1,73 @@
+.root {
+  position: relative;
+}
+
+.iconButton,
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--hive-space-8);
+  min-width: var(--hive-touch-target);
+  height: var(--hive-touch-target);
+  padding: 0 var(--hive-space-12);
+  border: 1px solid transparent;
+  border-radius: var(--hive-radius-3);
+  background: transparent;
+  color: var(--hive-content-primary);
+  font: var(--hive-font-label-s);
+  cursor: pointer;
+}
+
+.iconButton {
+  padding: 0;
+}
+
+.iconButton:hover,
+.trigger:hover,
+.trigger[aria-expanded="true"] {
+  background-color: var(--hive-background-hover);
+  border-color: var(--hive-border-subtle);
+}
+
+.panel {
+  position: absolute;
+  top: calc(100% + var(--hive-space-8));
+  right: 0;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  gap: var(--hive-space-12);
+  width: 280px;
+  max-width: calc(100vw - var(--hive-space-32));
+  padding: var(--hive-space-16);
+  border: 1px solid var(--hive-border-subtle);
+  border-radius: var(--hive-radius-surface);
+  background-color: var(--hive-background-primary);
+  box-shadow: var(--hive-shadow-lg);
+}
+
+.panel[hidden] {
+  display: none;
+}
+
+.hint {
+  margin: 0;
+  font: var(--hive-font-paragraph-xs);
+  color: var(--hive-content-secondary);
+}
+
+@media (max-width: 640px) {
+  .triggerLabel {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .trigger {
+    padding: 0;
+  }
+}

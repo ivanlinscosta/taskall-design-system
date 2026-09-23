@@ -1,0 +1,74 @@
+.root {
+  --progress-fill: var(--hive-progress-brand);
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--hive-space-step-2);
+  width: 100%;
+  max-width: 300px;
+}
+
+.root[data-tone="brand"] {
+  --progress-fill: var(--hive-progress-brand);
+}
+
+.root[data-tone="purple"] {
+  --progress-fill: var(--hive-progress-purple);
+}
+
+.root[data-tone="blue"] {
+  --progress-fill: var(--hive-progress-blue);
+}
+
+.root[data-tone="green"] {
+  --progress-fill: var(--hive-progress-green);
+}
+
+.root[data-tone="yellow"] {
+  --progress-fill: var(--hive-progress-yellow);
+}
+
+.root[data-tone="orange"] {
+  --progress-fill: var(--hive-progress-orange);
+}
+
+.root[data-tone="red"] {
+  --progress-fill: var(--hive-progress-red);
+}
+
+.root[data-tone="pink"] {
+  --progress-fill: var(--hive-progress-pink);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--hive-space-step-3);
+}
+
+.label {
+  font: var(--hive-font-label-xs);
+  color: var(--hive-content-secondary);
+}
+
+.track {
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--hive-radius-pill);
+  background: var(--hive-background-tertiary);
+}
+
+.fill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--progress-fill);
+  transition: width 150ms ease;
+}
+
+.small .track {
+  height: 2px;
+}
+
+.medium .track {
+  height: 4px;
+}

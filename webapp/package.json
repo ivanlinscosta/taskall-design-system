@@ -1,0 +1,49 @@
+{
+  "name": "hive-docs",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Hive Design System — aplicação de documentação (React Router 7 + Vite, pré-renderizada)",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm gen:api && react-router dev",
+    "build": "pnpm gen:api && react-router build",
+    "preview": "tsx scripts/preview.ts",
+    "gen:api": "tsx scripts/generate-api.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "storybook": "storybook dev -p 6006",
+    "storybook:build": "storybook build"
+  },
+  "dependencies": {
+    "@fontsource/archivo": "^5.3.0",
+    "@hive/react": "workspace:*",
+    "@react-router/node": "^7.18.4",
+    "isbot": "^5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router": "^7.18.4",
+    "sugar-high": "^2.4.1"
+  },
+  "devDependencies": {
+    "@react-router/dev": "^7.18.4",
+    "@storybook/addon-a11y": "^10.6.0",
+    "@storybook/addon-docs": "^10.6.0",
+    "@storybook/react": "^10.6.0",
+    "@storybook/react-vite": "^10.6.0",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^24.0.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^6.1.1",
+    "axe-core": "^4.10.3",
+    "jest-axe": "^11.0.0",
+    "jsdom": "^29.1.1",
+    "storybook": "^10.6.0",
+    "tsx": "^4.23.15",
+    "typescript": "~5.9.3",
+    "vite": "^8.3.0",
+    "vitest": "^5.0.1"
+  }
+}

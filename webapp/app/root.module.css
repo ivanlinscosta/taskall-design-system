@@ -1,0 +1,28 @@
+.app {
+  min-height: 100vh;
+  background-color: var(--hive-background-primary);
+  color: var(--hive-content-primary);
+}
+
+.skipLink {
+  position: fixed;
+  top: var(--hive-space-8);
+  left: var(--hive-space-8);
+  z-index: 100;
+  padding: var(--hive-space-12) var(--hive-space-16);
+  border-radius: var(--hive-radius-3);
+  background-color: var(--hive-background-inverse);
+  color: var(--hive-content-inverse);
+  font: var(--hive-font-label-m);
+  transform: translateY(-200%);
+}
+
+.skipLink:focus-visible {
+  transform: none;
+}
+
+.error {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: var(--hive-space-64) var(--hive-space-24);
+}

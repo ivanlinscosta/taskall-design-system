@@ -1,0 +1,966 @@
+[
+  {
+    "name": "AlertNotification",
+    "source": "library/src/components/AlertNotification/AlertNotification.tsx",
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "body",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "closable",
+        "type": "boolean",
+        "required": false,
+        "defaultValue": "false"
+      },
+      {
+        "name": "linkHref",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "linkLabel",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "\"large\" | \"medium\" | \"small\"",
+        "required": false,
+        "defaultValue": "\"large\""
+      },
+      {
+        "name": "status",
+        "type": "\"information\" | \"warning\" | \"success\" | \"error\" | \"update\"",
+        "required": false,
+        "defaultValue": "\"information\""
+      },
+      {
+        "name": "visualStyle",
+        "type": "\"filled\" | \"light\" | \"outline\"",
+        "required": false,
+        "defaultValue": "\"light\""
+      }
+    ]
+  },
+  {
+    "name": "Avatar",
+    "source": "library/src/components/Avatar/Avatar.tsx",
+    "props": [
+      {
+        "name": "fallback",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "alt",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "\"xs\" | \"sm\" | \"md\" | \"lg\" | \"xl\"",
+        "required": false,
+        "defaultValue": "\"md\""
+      },
+      {
+        "name": "src",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "| \"online\" | \"busy\" | \"away\" | \"offline\" | \"verified\" | \"add\" | \"delete\" | \"favorite\"",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "AvatarGroup",
+    "source": "library/src/components/AvatarGroup/AvatarGroup.tsx",
+    "props": [
+      {
+        "name": "avatars",
+        "type": "AvatarGroupItem[]",
+        "required": true
+      },
+      {
+        "name": "ariaLabel",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "max",
+        "type": "number",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "AvatarProps[\"size\"]",
+        "required": false,
+        "defaultValue": "\"md\""
+      },
+      {
+        "name": "surplusLabel",
+        "type": "string",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "Badge",
+    "source": "library/src/components/Badge/Badge.tsx",
+    "props": [
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": false,
+        "defaultValue": "\"Badge\""
+      },
+      {
+        "name": "icon",
+        "type": "IconComponent",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "\"medium\" | \"small\" | \"x-small\"",
+        "required": false,
+        "defaultValue": "\"medium\""
+      },
+      {
+        "name": "type",
+        "type": "\"status\" | \"icon\" | \"number\"",
+        "required": false,
+        "defaultValue": "\"status\""
+      },
+      {
+        "name": "visualStyle",
+        "type": "\"filled\" | \"light\" | \"outline\"",
+        "required": false,
+        "defaultValue": "type === \"number\" ? \"light\" : \"filled\""
+      }
+    ]
+  },
+  {
+    "name": "Button",
+    "source": "library/src/components/Button/Button.tsx",
+    "props": [
+      {
+        "name": "leftIcon",
+        "type": "IconComponent",
+        "required": false
+      },
+      {
+        "name": "loading",
+        "type": "boolean",
+        "required": false,
+        "defaultValue": "false"
+      },
+      {
+        "name": "rightIcon",
+        "type": "IconComponent",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "\"medium\" | \"small\"",
+        "required": false,
+        "defaultValue": "\"medium\""
+      },
+      {
+        "name": "tone",
+        "type": "\"primary\" | \"neutral\" | \"error\"",
+        "required": false,
+        "defaultValue": "\"primary\""
+      },
+      {
+        "name": "visualStyle",
+        "type": "\"filled\" | \"light\" | \"outline\"",
+        "required": false,
+        "defaultValue": "\"filled\""
+      }
+    ]
+  },
+  {
+    "name": "Checkbox",
+    "source": "library/src/components/Checkbox/Checkbox.tsx",
+    "props": [
+      {
+        "name": "indeterminate",
+        "type": "boolean",
+        "required": false,
+        "defaultValue": "false"
+      },
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "\"small\" | \"x-small\"",
+        "required": false,
+        "defaultValue": "\"small\""
+      }
+    ]
+  },
+  {
+    "name": "Content",
+    "source": "library/src/components/Content/Content.tsx",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "avatar",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "avatarSize",
+        "type": "\"xs\" | \"sm\" | \"md\" | \"lg\" | \"xl\"",
+        "required": false,
+        "defaultValue": "\"md\""
+      },
+      {
+        "name": "badge",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "icon",
+        "type": "IconComponent",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "\"small\" | \"x-small\"",
+        "required": false,
+        "defaultValue": "\"small\""
+      },
+      {
+        "name": "type",
+        "type": "\"avatar\" | \"icon\"",
+        "required": false,
+        "defaultValue": "\"avatar\""
+      }
+    ]
+  },
+  {
+    "name": "Divider",
+    "source": "library/src/components/Divider/Divider.tsx",
+    "props": [
+      {
+        "name": "dotted",
+        "type": "boolean",
+        "required": false,
+        "defaultValue": "false"
+      },
+      {
+        "name": "icon",
+        "type": "IconComponent",
+        "required": false
+      },
+      {
+        "name": "text",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "type",
+        "type": "\"line\" | \"text\" | \"icon\"",
+        "required": false,
+        "defaultValue": "\"line\""
+      }
+    ]
+  },
+  {
+    "name": "Dropdown",
+    "source": "library/src/components/Dropdown/Dropdown.tsx",
+    "props": [
+      {
+        "name": "options",
+        "type": "DropdownOption[]",
+        "required": true
+      },
+      {
+        "name": "defaultValue",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "leftIcon",
+        "type": "IconComponent",
+        "required": false
+      },
+      {
+        "name": "onValueChange",
+        "type": "(value: string) => void",
+        "required": false
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "required": false,
+        "defaultValue": "\"Selecione\""
+      },
+      {
+        "name": "size",
+        "type": "\"medium\" | \"small\"",
+        "required": false,
+        "defaultValue": "\"medium\""
+      },
+      {
+        "name": "sublabel",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "DropdownOption",
+    "source": "library/src/components/Dropdown/Dropdown.tsx",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "adornment",
+        "type": "DropdownAdornment",
+        "required": false
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "required": false
+      },
+      {
+        "name": "icon",
+        "type": "IconComponent",
+        "required": false
+      },
+      {
+        "name": "meta",
+        "type": "ReactNode",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "Heading",
+    "source": "library/src/components/Heading/Heading.tsx",
+    "props": [
+      {
+        "name": "as",
+        "type": "HeadingLevel",
+        "required": false
+      },
+      {
+        "name": "level",
+        "type": "HeadingLevel",
+        "required": false,
+        "defaultValue": "1"
+      }
+    ]
+  },
+  {
+    "name": "HiveProvider",
+    "source": "library/src/components/Provider/HiveProvider.tsx",
+    "props": [
+      {
+        "name": "brand",
+        "type": "\"coral\" | \"gestao\" | \"estudantes\" | \"responsaveis\"",
+        "required": false,
+        "defaultValue": "\"coral\""
+      },
+      {
+        "name": "colorMode",
+        "type": "\"light\" | \"dark\"",
+        "required": false,
+        "defaultValue": "\"light\""
+      },
+      {
+        "name": "density",
+        "type": "\"compact\" | \"default\" | \"expanded\"",
+        "required": false,
+        "defaultValue": "\"default\""
+      },
+      {
+        "name": "shape",
+        "type": "\"sharp\" | \"default\" | \"rounded\"",
+        "required": false,
+        "defaultValue": "\"default\""
+      }
+    ]
+  },
+  {
+    "name": "IconButton",
+    "source": "library/src/components/IconButton/IconButton.tsx",
+    "props": [
+      {
+        "name": "aria-label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "icon",
+        "type": "IconComponent",
+        "required": true
+      },
+      {
+        "name": "loading",
+        "type": "boolean",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "\"medium\" | \"small\"",
+        "required": false,
+        "defaultValue": "\"medium\""
+      },
+      {
+        "name": "tone",
+        "type": "\"primary\" | \"neutral\" | \"error\"",
+        "required": false
+      },
+      {
+        "name": "visualStyle",
+        "type": "\"filled\" | \"light\" | \"outline\"",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "LabelText",
+    "source": "library/src/components/LabelText/LabelText.tsx",
+    "props": [
+      {
+        "name": "size",
+        "type": "\"l\" | \"m\" | \"s\" | \"xs\"",
+        "required": false,
+        "defaultValue": "\"m\""
+      }
+    ]
+  },
+  {
+    "name": "Modal",
+    "source": "library/src/components/Modal/Modal.tsx",
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "closeLabel",
+        "type": "string",
+        "required": false,
+        "defaultValue": "\"Fechar\""
+      },
+      {
+        "name": "defaultOpen",
+        "type": "boolean",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "footer",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "header",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "icon",
+        "type": "IconComponent",
+        "required": false
+      },
+      {
+        "name": "iconTone",
+        "type": "ModalIconTone",
+        "required": false,
+        "defaultValue": "\"brand\""
+      },
+      {
+        "name": "onOpenChange",
+        "type": "(open: boolean) => void",
+        "required": false
+      },
+      {
+        "name": "open",
+        "type": "boolean",
+        "required": false
+      },
+      {
+        "name": "showCloseButton",
+        "type": "boolean",
+        "required": false,
+        "defaultValue": "true"
+      },
+      {
+        "name": "trigger",
+        "type": "ReactElement",
+        "required": false
+      },
+      {
+        "name": "width",
+        "type": "number | string",
+        "required": false,
+        "defaultValue": "343"
+      }
+    ]
+  },
+  {
+    "name": "ModalFooter",
+    "source": "library/src/components/Modal/Modal.tsx",
+    "props": [
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "variant",
+        "type": "\"cta\" | \"information\" | \"checkbox\" | \"link\" | \"cta-full\"",
+        "required": false,
+        "defaultValue": "\"cta\""
+      }
+    ]
+  },
+  {
+    "name": "ModalHeader",
+    "source": "library/src/components/Modal/Modal.tsx",
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "closeLabel",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "icon",
+        "type": "IconComponent",
+        "required": false
+      },
+      {
+        "name": "iconTone",
+        "type": "ModalIconTone",
+        "required": false,
+        "defaultValue": "\"brand\""
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "required": false
+      },
+      {
+        "name": "showCloseButton",
+        "type": "boolean",
+        "required": false
+      },
+      {
+        "name": "subtitle",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "type",
+        "type": "\"slot\" | \"icon\"",
+        "required": false,
+        "defaultValue": "\"slot\""
+      }
+    ]
+  },
+  {
+    "name": "Paragraph",
+    "source": "library/src/components/Paragraph/Paragraph.tsx",
+    "props": [
+      {
+        "name": "size",
+        "type": "\"l\" | \"m\" | \"s\" | \"xs\"",
+        "required": false,
+        "defaultValue": "\"m\""
+      }
+    ]
+  },
+  {
+    "name": "ProgressBar",
+    "source": "library/src/components/ProgressBar/ProgressBar.tsx",
+    "props": [
+      {
+        "name": "value",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "showPercentage",
+        "type": "boolean",
+        "required": false,
+        "defaultValue": "false"
+      },
+      {
+        "name": "size",
+        "type": "\"small\" | \"medium\"",
+        "required": false,
+        "defaultValue": "\"medium\""
+      },
+      {
+        "name": "tone",
+        "type": "| \"brand\" | \"purple\" | \"blue\" | \"green\" | \"yellow\" | \"orange\" | \"red\" | \"pink\"",
+        "required": false,
+        "defaultValue": "\"brand\""
+      }
+    ]
+  },
+  {
+    "name": "Radio",
+    "source": "library/src/components/Radio/Radio.tsx",
+    "props": [
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "\"small\" | \"x-small\"",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "RadioGroup",
+    "source": "library/src/components/Radio/Radio.tsx",
+    "props": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "defaultValue",
+        "type": "string",
+        "required": false,
+        "defaultValue": "\"\""
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "required": false,
+        "defaultValue": "false"
+      },
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "onValueChange",
+        "type": "(value: string) => void",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "\"small\" | \"x-small\"",
+        "required": false,
+        "defaultValue": "\"small\""
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "Rating",
+    "source": "library/src/components/Rating/Rating.tsx",
+    "props": [
+      {
+        "name": "direction",
+        "type": "\"horizontal\" | \"vertical\"",
+        "required": false,
+        "defaultValue": "\"horizontal\""
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "max",
+        "type": "number",
+        "required": false,
+        "defaultValue": "5"
+      },
+      {
+        "name": "onChange",
+        "type": "(value: number) => void",
+        "required": false
+      },
+      {
+        "name": "readOnly",
+        "type": "boolean",
+        "required": false,
+        "defaultValue": "false"
+      },
+      {
+        "name": "type",
+        "type": "\"star\" | \"heart\"",
+        "required": false,
+        "defaultValue": "\"star\""
+      },
+      {
+        "name": "value",
+        "type": "number",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "Slot",
+    "source": "library/src/components/Slot/Slot.tsx",
+    "props": [
+      {
+        "name": "size",
+        "type": "\"2xl\" | \"xl\" | \"lg\" | \"md\" | \"sm\" | \"xs\"",
+        "required": false,
+        "defaultValue": "\"md\""
+      }
+    ]
+  },
+  {
+    "name": "SlotGroup",
+    "source": "library/src/components/SlotGroup/SlotGroup.tsx",
+    "props": [
+      {
+        "name": "ariaLabel",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "orientation",
+        "type": "\"horizontal\" | \"vertical\"",
+        "required": false,
+        "defaultValue": "\"horizontal\""
+      }
+    ]
+  },
+  {
+    "name": "StatusIndicator",
+    "source": "library/src/components/StatusIndicator/StatusIndicator.tsx",
+    "props": [
+      {
+        "name": "status",
+        "type": "| \"online\" | \"busy\" | \"away\" | \"offline\" | \"verified\" | \"add\" | \"delete\" | \"favorite\"",
+        "required": true
+      },
+      {
+        "name": "size",
+        "type": "\"xs\" | \"sm\" | \"md\" | \"lg\" | \"xl\"",
+        "required": false,
+        "defaultValue": "\"md\""
+      }
+    ]
+  },
+  {
+    "name": "TabItem",
+    "source": "library/src/components/TabMenu/TabMenu.tsx",
+    "props": [
+      {
+        "name": "key",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "content",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "icon",
+        "type": "IconComponent",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "TabMenu",
+    "source": "library/src/components/TabMenu/TabMenu.tsx",
+    "props": [
+      {
+        "name": "items",
+        "type": "TabItem[]",
+        "required": true
+      },
+      {
+        "name": "ariaLabel",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "defaultValue",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "onValueChange",
+        "type": "(value: string) => void",
+        "required": false
+      },
+      {
+        "name": "type",
+        "type": "\"horizontal\" | \"vertical\"",
+        "required": false,
+        "defaultValue": "\"horizontal\""
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "TextInput",
+    "source": "library/src/components/TextInput/TextInput.tsx",
+    "props": [
+      {
+        "name": "error",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "leftIcon",
+        "type": "IconComponent",
+        "required": false
+      },
+      {
+        "name": "rightIcon",
+        "type": "IconComponent",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "\"medium\" | \"small\"",
+        "required": false,
+        "defaultValue": "\"medium\""
+      },
+      {
+        "name": "sublabel",
+        "type": "string",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "Tooltip",
+    "source": "library/src/components/Tooltip/Tooltip.tsx",
+    "props": [
+      {
+        "name": "children",
+        "type": "ReactElement",
+        "required": true
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "side",
+        "type": "\"top\" | \"bottom\" | \"left\" | \"right\"",
+        "required": false,
+        "defaultValue": "\"top\""
+      },
+      {
+        "name": "size",
+        "type": "\"small\" | \"large\"",
+        "required": false
+      },
+      {
+        "name": "visualStyle",
+        "type": "\"outline\" | \"light\" | \"filled\"",
+        "required": false,
+        "defaultValue": "\"light\""
+      }
+    ]
+  }
+]

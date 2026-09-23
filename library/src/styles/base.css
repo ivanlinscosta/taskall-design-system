@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.hive-base {
+  font-family: var(--hive-font-family);
+  font-size: var(--hive-font-size-paragraph-m);
+  line-height: var(--hive-line-height-paragraph-m);
+  color: var(--hive-content-primary);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.hive-base :focus-visible {
+  outline: var(--hive-focus-ring-width) solid var(--hive-focus-ring-color);
+  outline-offset: var(--hive-focus-ring-offset);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hive-base *,
+  .hive-base *::before,
+  .hive-base *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

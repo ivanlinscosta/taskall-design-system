@@ -1,0 +1,6 @@
+.logo {
+  display: inline-block;
+  flex-shrink: 0;
+  height: 1em;
+  width: auto;
+}

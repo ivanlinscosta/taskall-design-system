@@ -1,0 +1,83 @@
+.root {
+  --avatar-group-overlap: var(--hive-space-8);
+  display: inline-flex;
+  align-items: center;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px;
+  border-radius: var(--hive-radius-pill);
+  background: var(--hive-background-primary);
+}
+
+.item + .item {
+  margin-left: calc(var(--avatar-group-overlap) * -1);
+}
+
+.xs {
+  --avatar-group-overlap: var(--hive-space-4);
+}
+
+.sm {
+  --avatar-group-overlap: var(--hive-space-4);
+}
+
+.md {
+  --avatar-group-overlap: var(--hive-space-8);
+}
+
+.lg {
+  --avatar-group-overlap: var(--hive-space-8);
+}
+
+.xl {
+  --avatar-group-overlap: var(--hive-space-12);
+}
+
+.overflowWrap {
+  flex-shrink: 0;
+}
+
+.overflow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--hive-radius-pill);
+  background: var(--hive-brand-soft);
+  color: var(--hive-brand);
+  font-family: var(--hive-font-family);
+  font-weight: var(--hive-weight-bold);
+}
+
+.xs .overflow {
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+}
+
+.sm .overflow {
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+}
+
+.md .overflow {
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+}
+
+.lg .overflow {
+  width: 32px;
+  height: 32px;
+  font-size: 14px;
+}
+
+.xl .overflow {
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+}

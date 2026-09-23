@@ -1,0 +1,20 @@
+.paragraph {
+  margin: 0;
+  color: var(--hive-content-primary);
+}
+
+.l {
+  font: var(--hive-font-paragraph-l);
+}
+
+.m {
+  font: var(--hive-font-paragraph-m);
+}
+
+.s {
+  font: var(--hive-font-paragraph-s);
+}
+
+.xs {
+  font: var(--hive-font-paragraph-xs);
+}

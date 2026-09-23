@@ -1,0 +1,178 @@
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--hive-space-16);
+}
+
+.columnSurface {
+  border: 1px solid var(--hive-border-default);
+  border-radius: var(--hive-radius-4);
+}
+
+.stepColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hive-space-8);
+}
+
+.columnTitle {
+  margin: 0 0 var(--hive-space-4);
+  font: var(--hive-font-label-m);
+}
+
+.barRow {
+  display: grid;
+  grid-template-columns: 56px 1fr 40px;
+  align-items: center;
+  gap: var(--hive-space-8);
+}
+
+.barLabel {
+  font-size: 12px;
+}
+
+.bar {
+  display: inline-block;
+  height: 12px;
+  min-width: 1px;
+  border-radius: var(--hive-radius-1);
+  background-color: var(--hive-brand);
+}
+
+.barValue {
+  font: var(--hive-font-paragraph-xs);
+  font-family: var(--docs-mono);
+  color: var(--hive-content-secondary);
+}
+
+.radiusGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: var(--hive-space-16);
+}
+
+.radiusItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hive-space-8);
+  margin: 0;
+}
+
+.radiusItem figcaption {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+.radiusBox {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 2px solid var(--hive-brand);
+  background-color: var(--hive-brand-soft);
+}
+
+.gridDemo {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--hive-space-step-4);
+}
+
+.gridCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  border-radius: var(--hive-radius-2);
+  background-color: var(--hive-brand-soft);
+  color: var(--hive-content-on-soft);
+  font: var(--hive-font-label-s);
+}
+
+.gridBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: var(--hive-space-8);
+  border-radius: var(--hive-radius-2);
+  background-color: var(--hive-background-tertiary);
+  color: var(--hive-content-primary);
+  font: var(--hive-font-label-s);
+  text-align: center;
+}
+
+.iconToolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: var(--hive-space-16);
+}
+
+.iconGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+  gap: var(--hive-space-8);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.iconButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--hive-space-8);
+  width: 100%;
+  min-height: 104px;
+  padding: var(--hive-space-12) var(--hive-space-8);
+  border: 1px solid var(--hive-border-subtle);
+  border-radius: var(--hive-radius-4);
+  background-color: var(--hive-background-primary);
+  color: var(--hive-content-primary);
+  font: var(--hive-font-paragraph-xs);
+  cursor: pointer;
+}
+
+.iconButton:hover {
+  border-color: var(--hive-border-strong);
+  background-color: var(--hive-background-hover);
+}
+
+.iconButton[data-copied="true"] {
+  border-color: var(--hive-status-success-outline);
+  background-color: var(--hive-status-success-soft);
+}
+
+.brandGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--hive-space-16);
+}
+
+.brandCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hive-space-12);
+  border: 1px solid var(--hive-border-default);
+  border-radius: var(--hive-radius-4);
+}
+
+.brandSwatches {
+  display: flex;
+  gap: var(--hive-space-6);
+}
+
+.brandSwatches span {
+  flex: 1;
+  height: 32px;
+  border-radius: var(--hive-radius-2);
+  border: 1px solid var(--hive-border-subtle);
+}
+
+.iconName {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
