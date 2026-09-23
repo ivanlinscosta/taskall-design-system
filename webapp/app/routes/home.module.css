@@ -19,7 +19,8 @@
   min-width: 0;
 }
 
-.heroLogo {
+/* Mais específico que a regra base do Logo da lib: a ordem do CSS muda no build. */
+.heroText > .heroLogo {
   height: 48px;
 }
 
