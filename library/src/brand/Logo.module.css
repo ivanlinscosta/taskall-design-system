@@ -1,6 +1,16 @@
 .logo {
   display: inline-block;
   flex-shrink: 0;
+  align-self: flex-start;
   height: 1em;
   width: auto;
+}
+
+/* Proporção fixa: em containers flex/grid o SVG não estica nem se centraliza. */
+.logo[data-variant="full"] {
+  aspect-ratio: 3522 / 978;
+}
+
+.logo[data-variant="symbol"] {
+  aspect-ratio: 971 / 916;
 }

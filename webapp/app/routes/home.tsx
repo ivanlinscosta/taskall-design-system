@@ -1,21 +1,11 @@
 import { Link } from "react-router";
-import {
-  Add,
-  AlertNotification,
-  AvatarGroup,
-  Badge,
-  Button,
-  Calendar,
-  Content,
-  Heading,
-  Logo,
-  ProgressBar,
-} from "@taskall/react";
+import { Logo } from "@taskall/react";
 
 import { COMPONENTS, FOUNDATIONS, GUIDES } from "../lib/registry";
 import { SETTING_OPTIONS, useSettings } from "../lib/settings";
 import { CodeBlock } from "../ui/CodeBlock";
 import { DemoSurface } from "../ui/DemoSurface";
+import { HeroShowcase } from "../ui/HeroShowcase";
 import styles from "./home.module.css";
 
 /** Em produção o Storybook é publicado junto, em <base>/storybook/. */
@@ -54,59 +44,6 @@ const principles = [
   },
 ];
 
-function HeroPreview() {
-  return (
-    <DemoSurface
-      align="stretch"
-      className={styles.preview}
-      label="Prévia de componentes"
-    >
-      <div className={styles.previewCard}>
-        <div className={styles.previewHeader}>
-          <div>
-            <Heading level={2} as={6}>
-              Projeto de Ciências
-            </Heading>
-            <Content
-              type="icon"
-              icon={Calendar}
-              size="x-small"
-              label="Entrega em 02/10"
-            />
-          </div>
-          <Badge size="small" visualStyle="light">
-            Em andamento
-          </Badge>
-        </div>
-        <ProgressBar
-          value={68}
-          label="Etapas concluídas"
-          showPercentage
-          size="small"
-        />
-        <div className={styles.previewFooter}>
-          <AvatarGroup
-            size="sm"
-            max={3}
-            ariaLabel="Integrantes"
-            avatars={["LM", "BF", "TC", "IR", "GN"].map((fallback) => ({
-              fallback,
-            }))}
-          />
-          <Button size="small" leftIcon={Add}>
-            Nova etapa
-          </Button>
-        </div>
-      </div>
-      <AlertNotification
-        size="small"
-        status="success"
-        title="Relatório enviado para a coordenação."
-      />
-    </DemoSurface>
-  );
-}
-
 export default function Home() {
   const { settings, setSetting } = useSettings();
 
@@ -138,7 +75,7 @@ export default function Home() {
             className={styles.install}
           />
         </div>
-        <HeroPreview />
+        <HeroShowcase />
       </section>
 
       <section className={styles.section} aria-labelledby="marcas-title">
