@@ -1,7 +1,11 @@
 import type { Config } from "@react-router/dev/config";
 
+/** Subcaminho de publicação (ex.: "/taskall-design-system/" no GitHub Pages). */
+const basename = process.env.DOCS_BASE ?? "/";
+
 export default {
   appDirectory: "app",
+  basename,
   ssr: false,
   prerender: true,
   future: {

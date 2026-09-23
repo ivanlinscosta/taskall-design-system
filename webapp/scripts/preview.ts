@@ -11,6 +11,7 @@ const root = resolve(
   fileURLToPath(new URL("../build/client", import.meta.url)),
 );
 const port = Number(process.env.PORT ?? 4173);
+const base = (process.env.DOCS_BASE ?? "/").replace(/\/$/, "");
 
 const types: Record<string, string> = {
   ".html": "text/html; charset=utf-8",
@@ -42,7 +43,13 @@ if (!existsSync(root)) {
 }
 
 createServer((request, response) => {
-  const { pathname } = new URL(request.url ?? "/", "http://localhost");
+  const url = new URL(request.url ?? "/", "http://localhost");
+  if (base && !url.pathname.startsWith(`${base}/`) && url.pathname !== base) {
+    response.writeHead(302, { Location: `${base}/` });
+    response.end();
+    return;
+  }
+  const pathname = url.pathname.slice(base.length) || "/";
   const { file, status } = resolveFile(pathname);
   response.writeHead(status, {
     "Content-Type": types[extname(file)] ?? "application/octet-stream",
@@ -52,5 +59,7 @@ createServer((request, response) => {
   });
   createReadStream(file).pipe(response);
 }).listen(port, () => {
-  console.log(`TaskAll docs (build estático) em http://localhost:${port}/`);
+  console.log(
+    `TaskAll docs (build estático) em http://localhost:${port}${base}/`,
+  );
 });

@@ -18,6 +18,11 @@ import { CodeBlock } from "../ui/CodeBlock";
 import { DemoSurface } from "../ui/DemoSurface";
 import styles from "./home.module.css";
 
+/** Em produção o Storybook é publicado junto, em <base>/storybook/. */
+const STORYBOOK_URL = import.meta.env.PROD
+  ? `${import.meta.env.BASE_URL}storybook/`
+  : "http://localhost:6006/";
+
 export const meta = () => [
   { title: "TaskAll Design System" },
   {
@@ -222,8 +227,12 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <p>
-          TaskAll Design System · <code>@taskall/react</code> · Documentação
-          pré-renderizada com React Router 7 e Vite.
+          TaskAll Design System · <code>@taskall/react</code> ·{" "}
+          <a href={STORYBOOK_URL}>Storybook</a> ·{" "}
+          <a href="https://www.npmjs.com/package/@taskall/react">npm</a> ·{" "}
+          <a href="https://github.com/ivanlinscosta/taskall-design-system">
+            GitHub
+          </a>
         </p>
       </footer>
     </main>

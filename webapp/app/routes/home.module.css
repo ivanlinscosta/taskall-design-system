@@ -255,6 +255,11 @@
   text-decoration-color: var(--taskall-brand);
 }
 
+.footer a {
+  color: var(--taskall-content-primary);
+  text-underline-offset: 3px;
+}
+
 .footer {
   padding: var(--taskall-space-32) var(--taskall-space-48);
   border-top: 1px solid var(--taskall-border-subtle);
