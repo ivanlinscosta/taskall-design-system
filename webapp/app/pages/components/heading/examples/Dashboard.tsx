@@ -1,11 +1,11 @@
-import { Badge, Heading, Paragraph } from "@hive/react";
+import { Badge, Heading, Paragraph } from "@taskall/react";
 
 export default function HeadingDashboard() {
   return (
     <div
       style={{
         display: "grid",
-        gap: "var(--hive-space-step-7)",
+        gap: "var(--taskall-space-step-7)",
         maxWidth: 640,
         margin: "0 auto",
       }}
@@ -16,17 +16,17 @@ export default function HeadingDashboard() {
         </Heading>
         <Paragraph
           size="s"
-          style={{ margin: 0, color: "var(--hive-content-secondary)" }}
+          style={{ margin: 0, color: "var(--taskall-content-secondary)" }}
         >
           Escola Municipal Ana Néri · semana de 22 a 26/09
         </Paragraph>
       </header>
-      <section style={{ display: "grid", gap: "var(--hive-space-step-3)" }}>
+      <section style={{ display: "grid", gap: "var(--taskall-space-step-3)" }}>
         <div
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "var(--hive-space-8)",
+            gap: "var(--taskall-space-8)",
           }}
         >
           <Heading level={2} as={6}>
@@ -40,7 +40,7 @@ export default function HeadingDashboard() {
           Quatro turmas têm entregas pendentes há mais de 3 dias.
         </Paragraph>
       </section>
-      <section style={{ display: "grid", gap: "var(--hive-space-step-3)" }}>
+      <section style={{ display: "grid", gap: "var(--taskall-space-step-3)" }}>
         <Heading level={2} as={6}>
           Próximos eventos
         </Heading>

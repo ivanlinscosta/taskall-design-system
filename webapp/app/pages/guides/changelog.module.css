@@ -1,7 +1,7 @@
 .list {
   display: flex;
   flex-direction: column;
-  gap: var(--hive-space-12);
+  gap: var(--taskall-space-12);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -10,19 +10,19 @@
 .item {
   display: flex;
   align-items: flex-start;
-  gap: var(--hive-space-12);
-  padding: var(--hive-space-16);
-  border: 1px solid var(--hive-border-default);
-  border-radius: var(--hive-radius-4);
+  gap: var(--taskall-space-12);
+  padding: var(--taskall-space-16);
+  border: 1px solid var(--taskall-border-default);
+  border-radius: var(--taskall-radius-4);
 }
 
 .body {
-  font: var(--hive-font-paragraph-s);
-  color: var(--hive-content-primary);
+  font: var(--taskall-font-paragraph-s);
+  color: var(--taskall-content-primary);
 }
 
 .body p {
-  margin: 0 0 var(--hive-space-8);
+  margin: 0 0 var(--taskall-space-8);
 }
 
 .body p:last-child {

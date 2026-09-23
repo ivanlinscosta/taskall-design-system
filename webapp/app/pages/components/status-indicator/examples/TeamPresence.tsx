@@ -1,4 +1,4 @@
-import { LabelText, StatusIndicator } from "@hive/react";
+import { LabelText, StatusIndicator } from "@taskall/react";
 
 const team = [
   { name: "Mariana Souza", status: "online" as const, text: "Disponível" },
@@ -13,14 +13,14 @@ export default function StatusIndicatorTeamPresence() {
       aria-label="Equipe pedagógica"
       style={{
         display: "grid",
-        gap: "var(--hive-space-step-4)",
+        gap: "var(--taskall-space-step-4)",
         maxWidth: 360,
         margin: "0 auto",
-        padding: "var(--hive-space-step-6)",
+        padding: "var(--taskall-space-step-6)",
         listStyle: "none",
-        border: "1px solid var(--hive-border-default)",
-        borderRadius: "var(--hive-radius-surface)",
-        backgroundColor: "var(--hive-background-primary)",
+        border: "1px solid var(--taskall-border-default)",
+        borderRadius: "var(--taskall-radius-surface)",
+        backgroundColor: "var(--taskall-background-primary)",
       }}
     >
       {team.map((person) => (
@@ -29,7 +29,7 @@ export default function StatusIndicatorTeamPresence() {
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "var(--hive-space-12)",
+            gap: "var(--taskall-space-12)",
           }}
         >
           <StatusIndicator status={person.status} size="md" />
@@ -38,8 +38,8 @@ export default function StatusIndicatorTeamPresence() {
           </LabelText>
           <span
             style={{
-              font: "var(--hive-font-paragraph-xs)",
-              color: "var(--hive-content-secondary)",
+              font: "var(--taskall-font-paragraph-xs)",
+              color: "var(--taskall-content-secondary)",
             }}
           >
             {person.text}

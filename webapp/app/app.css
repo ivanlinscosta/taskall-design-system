@@ -1,5 +1,5 @@
 /*
- * Estilos globais da documentação. Somente tokens do Hive (--hive-*) para cor,
+ * Estilos globais da documentação. Somente tokens do TaskAll (--taskall-*) para cor,
  * espaço, raio e tipografia; --docs-* guarda apenas medidas de layout da app.
  */
 :root {
@@ -12,8 +12,8 @@
 }
 
 html {
-  background-color: var(--hive-background-primary);
-  scroll-padding-top: calc(var(--docs-header-height) + var(--hive-space-24));
+  background-color: var(--taskall-background-primary);
+  scroll-padding-top: calc(var(--docs-header-height) + var(--taskall-space-24));
   -webkit-text-size-adjust: 100%;
 }
 
@@ -26,8 +26,8 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: var(--hive-background-primary);
-  color: var(--hive-content-primary);
+  background-color: var(--taskall-background-primary);
+  color: var(--taskall-content-primary);
 }
 
 code,
@@ -37,9 +37,9 @@ pre {
 }
 
 :not(pre) > code {
-  padding: 0 var(--hive-space-4);
-  border-radius: var(--hive-radius-2);
-  background-color: var(--hive-background-tertiary);
+  padding: 0 var(--taskall-space-4);
+  border-radius: var(--taskall-radius-2);
+  background-color: var(--taskall-background-tertiary);
   font-size: 0.9em;
   overflow-wrap: anywhere;
 }
@@ -47,20 +47,20 @@ pre {
 kbd {
   display: inline-block;
   min-width: 20px;
-  padding: 0 var(--hive-space-4);
-  border: 1px solid var(--hive-border-default);
+  padding: 0 var(--taskall-space-4);
+  border: 1px solid var(--taskall-border-default);
   border-bottom-width: 2px;
-  border-radius: var(--hive-radius-2);
-  background-color: var(--hive-background-primary);
-  font-size: var(--hive-font-size-paragraph-xs);
+  border-radius: var(--taskall-radius-2);
+  background-color: var(--taskall-background-primary);
+  font-size: var(--taskall-font-size-paragraph-xs);
   line-height: 18px;
   text-align: center;
-  color: var(--hive-content-secondary);
+  color: var(--taskall-content-secondary);
 }
 
 ::selection {
-  background-color: var(--hive-brand-soft);
-  color: var(--hive-content-on-soft);
+  background-color: var(--taskall-brand-soft);
+  color: var(--taskall-content-on-soft);
 }
 
 .visually-hidden {

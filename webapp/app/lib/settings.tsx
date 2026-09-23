@@ -1,10 +1,10 @@
 import * as React from "react";
-import type { HiveProviderProps } from "@hive/react";
+import type { TaskAllProviderProps } from "@taskall/react";
 
-export type ColorMode = NonNullable<HiveProviderProps["colorMode"]>;
-export type Brand = NonNullable<HiveProviderProps["brand"]>;
-export type Density = NonNullable<HiveProviderProps["density"]>;
-export type Shape = NonNullable<HiveProviderProps["shape"]>;
+export type ColorMode = NonNullable<TaskAllProviderProps["colorMode"]>;
+export type Brand = NonNullable<TaskAllProviderProps["brand"]>;
+export type Density = NonNullable<TaskAllProviderProps["density"]>;
+export type Shape = NonNullable<TaskAllProviderProps["shape"]>;
 
 export type ThemeSettings = {
   colorMode: ColorMode;
@@ -59,7 +59,7 @@ export const DEFAULT_SETTINGS: ThemeSettings = {
   shape: "default",
 };
 
-export const STORAGE_KEY = "hive-docs:settings";
+export const STORAGE_KEY = "taskall-docs:settings";
 
 const ATTRIBUTE_BY_KEY: Record<SettingKey, string> = {
   colorMode: "data-color-mode",
@@ -124,17 +124,17 @@ export function resolveSettings(
 
 /**
  * Script inline executado antes da primeira pintura: aplica as preferências
- * salvas no <html> e no HiveProvider raiz para evitar "flash" de tema claro
+ * salvas no <html> e no TaskAllProvider raiz para evitar "flash" de tema claro
  * nas páginas pré-renderizadas. Mantém a mesma regra de `resolveSettings`.
  */
 export const THEME_BOOTSTRAP_SCRIPT = `(function(){try{var d=${JSON.stringify(
   DEFAULT_SETTINGS,
 )},s={};try{s=JSON.parse(localStorage.getItem(${JSON.stringify(
   STORAGE_KEY,
-)})||"{}")||{}}catch(e){}var m=s.colorMode||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");var v={"data-color-mode":m,"data-brand":s.brand||d.brand,"data-density":s.density||d.density,"data-shape":s.shape||d.shape};window.__hiveTheme=v;var h=document.documentElement;for(var k in v)h.setAttribute(k,v[k]);}catch(e){}})();`;
+)})||"{}")||{}}catch(e){}var m=s.colorMode||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");var v={"data-color-mode":m,"data-brand":s.brand||d.brand,"data-density":s.density||d.density,"data-shape":s.shape||d.shape};window.__taskallTheme=v;var h=document.documentElement;for(var k in v)h.setAttribute(k,v[k]);}catch(e){}})();`;
 
-/** Aplica as mesmas preferências ao elemento pai (HiveProvider raiz). */
-export const PROVIDER_BOOTSTRAP_SCRIPT = `(function(){var v=window.__hiveTheme,p=document.currentScript&&document.currentScript.parentElement;if(!v||!p)return;p.setAttribute("data-color-mode",v["data-color-mode"]);p.setAttribute("data-brand",v["data-brand"]);})();`;
+/** Aplica as mesmas preferências ao elemento pai (TaskAllProvider raiz). */
+export const PROVIDER_BOOTSTRAP_SCRIPT = `(function(){var v=window.__taskallTheme,p=document.currentScript&&document.currentScript.parentElement;if(!v||!p)return;p.setAttribute("data-color-mode",v["data-color-mode"]);p.setAttribute("data-brand",v["data-brand"]);})();`;
 
 type SettingsContextValue = {
   settings: ThemeSettings;

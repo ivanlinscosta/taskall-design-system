@@ -28,5 +28,8 @@ export function useControllableState<T>({
     [isControlled, onChange],
   );
 
-  return [isControlled ? (valueRef.current as T) : internalValue, setValue] as const;
+  return [
+    isControlled ? (valueRef.current as T) : internalValue,
+    setValue,
+  ] as const;
 }

@@ -130,7 +130,7 @@ export const RealExample: Story = {
         width: "100%",
         maxWidth: 480,
         padding: "16px 0",
-        borderTop: "1px solid var(--hive-border-default)",
+        borderTop: "1px solid var(--taskall-border-default)",
       }}
     >
       <Button tone="neutral" visualStyle="light">

@@ -1,30 +1,30 @@
 .root {
   display: grid;
-  gap: var(--hive-space-step-2);
+  gap: var(--taskall-space-step-2);
   width: 100%;
-  color: var(--hive-content-primary);
+  color: var(--taskall-content-primary);
 }
 
 .label {
-  color: var(--hive-content-primary);
-  font: var(--hive-font-label-s);
+  color: var(--taskall-content-primary);
+  font: var(--taskall-font-label-s);
 }
 
 .sublabel {
-  color: var(--hive-content-secondary);
-  font: var(--hive-font-paragraph-xs);
+  color: var(--taskall-content-secondary);
+  font: var(--taskall-font-paragraph-xs);
 }
 
 .field {
   display: flex;
   align-items: center;
-  gap: var(--hive-space-step-3);
+  gap: var(--taskall-space-step-3);
   width: 100%;
-  border: 1px solid var(--hive-border-default);
-  border-radius: var(--hive-radius-3);
-  background-color: var(--hive-background-primary);
-  color: var(--hive-content-primary);
-  padding-inline: var(--hive-space-12);
+  border: 1px solid var(--taskall-border-default);
+  border-radius: var(--taskall-radius-3);
+  background-color: var(--taskall-background-primary);
+  color: var(--taskall-content-primary);
+  padding-inline: var(--taskall-space-12);
   transition:
     border-color 120ms ease,
     box-shadow 120ms ease,
@@ -33,39 +33,40 @@
 }
 
 .field:hover {
-  border-color: var(--hive-border-strong);
+  border-color: var(--taskall-border-strong);
+  background-color: var(--taskall-background-hover);
 }
 
 .field:focus-within {
-  border-color: var(--hive-action-primary);
-  box-shadow: 0 0 0 3px var(--hive-brand-soft);
+  border-color: var(--taskall-action-primary);
+  box-shadow: 0 0 0 3px var(--taskall-brand-soft);
 }
 
 .fieldError {
-  border-color: var(--hive-status-error);
+  border-color: var(--taskall-status-error);
 }
 
 .fieldError:hover,
 .fieldError:focus-within {
-  border-color: var(--hive-status-error);
+  border-color: var(--taskall-status-error);
 }
 
 .fieldError:focus-within {
-  box-shadow: 0 0 0 3px var(--hive-status-error-soft);
+  box-shadow: 0 0 0 3px var(--taskall-status-error-soft);
 }
 
 .fieldDisabled {
-  background-color: var(--hive-background-disabled);
-  border-color: var(--hive-action-disabled-border);
-  color: var(--hive-content-disabled);
+  background-color: var(--taskall-background-disabled);
+  border-color: var(--taskall-action-disabled-border);
+  color: var(--taskall-content-disabled);
 }
 
 .fieldDisabled:hover {
-  border-color: var(--hive-action-disabled-border);
+  border-color: var(--taskall-action-disabled-border);
 }
 
 .medium .field {
-  min-height: var(--hive-space-44);
+  min-height: var(--taskall-space-44);
 }
 
 .small .field {
@@ -74,33 +75,45 @@
 
 .icon {
   flex-shrink: 0;
-  color: var(--hive-content-tertiary);
+  color: var(--taskall-content-tertiary);
 }
 
 .fieldError .icon {
-  color: var(--hive-status-error);
+  color: var(--taskall-status-error);
 }
 
 .fieldDisabled .icon {
-  color: var(--hive-content-disabled);
+  color: var(--taskall-content-disabled);
 }
 
 .input {
+  align-self: stretch;
   width: 100%;
   min-width: 0;
   border: 0;
+  border-radius: inherit;
   outline: 0;
   background: transparent;
   color: inherit;
-  font: var(--hive-font-paragraph-m);
+  font: var(--taskall-font-paragraph-m);
+}
+
+/* O foco é exibido no contorno arredondado do campo (:focus-within), não no <input>. */
+.input:focus-visible {
+  outline: none;
+}
+
+.input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--taskall-background-primary) inset;
+  -webkit-text-fill-color: var(--taskall-content-primary);
 }
 
 .small .input {
-  font: var(--hive-font-paragraph-s);
+  font: var(--taskall-font-paragraph-s);
 }
 
 .input::placeholder {
-  color: var(--hive-content-tertiary);
+  color: var(--taskall-content-tertiary);
 }
 
 .input:disabled {
@@ -108,6 +121,6 @@
 }
 
 .error {
-  color: var(--hive-status-error);
-  font: var(--hive-font-paragraph-xs);
+  color: var(--taskall-status-error);
+  font: var(--taskall-font-paragraph-xs);
 }

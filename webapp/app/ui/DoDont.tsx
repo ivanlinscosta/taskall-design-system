@@ -1,5 +1,5 @@
 import * as React from "react";
-import { CheckCircleFilled, WarningCircleFilled } from "@hive/react";
+import { CheckCircleFilled, WarningCircleFilled } from "@taskall/react";
 
 import type { Guideline } from "../lib/doc";
 import { DemoSurface } from "./DemoSurface";

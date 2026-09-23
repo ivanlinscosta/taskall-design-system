@@ -1,4 +1,4 @@
-import { Rating } from "@hive/react";
+import { Rating } from "@taskall/react";
 
 export default function RatingVariants() {
   return (
@@ -7,7 +7,7 @@ export default function RatingVariants() {
         display: "flex",
         flexWrap: "wrap",
         alignItems: "center",
-        gap: "var(--hive-space-32)",
+        gap: "var(--taskall-space-32)",
       }}
     >
       <Rating label="Estrelas" />

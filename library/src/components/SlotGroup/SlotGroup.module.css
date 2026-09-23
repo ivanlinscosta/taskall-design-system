@@ -1,6 +1,6 @@
 .group {
   display: inline-flex;
-  gap: var(--hive-space-step-4);
+  gap: var(--taskall-space-step-4);
 }
 
 .horizontal {

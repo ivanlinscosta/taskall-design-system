@@ -1,4 +1,7 @@
-export * from "./components/Provider/HiveProvider";
+// Tokens, temas e base: entram no dist/styles.css publicado.
+import "./styles/index.css";
+
+export * from "./components/Provider/TaskAllProvider";
 export * from "./components/Button/Button";
 export * from "./components/IconButton/IconButton";
 export * from "./components/AlertNotification/AlertNotification";

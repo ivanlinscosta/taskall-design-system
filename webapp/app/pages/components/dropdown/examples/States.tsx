@@ -1,4 +1,4 @@
-import { Dropdown } from "@hive/react";
+import { Dropdown } from "@taskall/react";
 
 const options = [
   { value: "mat", label: "Matemática" },
@@ -12,7 +12,7 @@ export default function DropdownStates() {
       style={{
         display: "grid",
         gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-        gap: "var(--hive-space-16)",
+        gap: "var(--taskall-space-16)",
         width: "100%",
       }}
     >

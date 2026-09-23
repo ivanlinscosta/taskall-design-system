@@ -22,7 +22,7 @@ export default function GettingStartedPage() {
       <PageHeader
         eyebrow="Guias"
         title="Primeiros passos"
-        lead="Instale @hive/react, importe os estilos, envolva a aplicação no HiveProvider e use o primeiro componente."
+        lead="Instale @taskall/react, importe os estilos, envolva a aplicação no TaskAllProvider e use o primeiro componente."
       />
       <DocSection id="requisitos" title="Requisitos">
         <BulletList
@@ -37,14 +37,14 @@ export default function GettingStartedPage() {
         <CodeBlock
           language="shell"
           caption="terminal"
-          code={`pnpm add @hive/react\n# ou\nnpm install @hive/react`}
+          code={`pnpm add @taskall/react\n# ou\nnpm install @taskall/react`}
         />
       </DocSection>
       <DocSection id="estilos" title="2. Estilos e fonte">
         <Prose>
           <p>
-            <code>@hive/react/styles.css</code> contém tokens, temas e o CSS de
-            todos os componentes. Importe uma vez, no ponto de entrada.
+            <code>@taskall/react/styles.css</code> contém tokens, temas e o CSS
+            de todos os componentes. Importe uma vez, no ponto de entrada.
           </p>
         </Prose>
         <CodeBlock
@@ -52,10 +52,10 @@ export default function GettingStartedPage() {
           code={`import "@fontsource/archivo/400.css";
 import "@fontsource/archivo/600.css";
 import "@fontsource/archivo/700.css";
-import "@hive/react/styles.css";`}
+import "@taskall/react/styles.css";`}
         />
       </DocSection>
-      <DocSection id="provider" title="3. HiveProvider">
+      <DocSection id="provider" title="3. TaskAllProvider">
         <Prose>
           <p>
             O provider aplica modo, marca, densidade e forma. Veja{" "}
@@ -64,13 +64,13 @@ import "@hive/react/styles.css";`}
         </Prose>
         <CodeBlock
           caption="App.tsx"
-          code={`import { HiveProvider } from "@hive/react";
+          code={`import { TaskAllProvider } from "@taskall/react";
 
 export function App() {
   return (
-    <HiveProvider brand="estudantes" colorMode="light">
+    <TaskAllProvider brand="estudantes" colorMode="light">
       <StudentHome />
-    </HiveProvider>
+    </TaskAllProvider>
   );
 }`}
         />
@@ -78,7 +78,7 @@ export function App() {
       <DocSection id="primeiro-componente" title="4. Primeiro componente">
         <CodeBlock
           caption="NewTaskButton.tsx"
-          code={`import { Add, Button } from "@hive/react";
+          code={`import { Add, Button } from "@taskall/react";
 
 export function NewTaskButton({ onClick }: { onClick: () => void }) {
   return (

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Button, Download, Dropdown, Filter, Paragraph } from "@hive/react";
+import { Button, Download, Dropdown, Filter, Paragraph } from "@taskall/react";
 
 const classes = [
   { value: "todas", label: "Todas as turmas" },
@@ -26,20 +26,20 @@ export default function DropdownReportFilters() {
       aria-label="Exportar boletins"
       style={{
         display: "grid",
-        gap: "var(--hive-space-step-5)",
+        gap: "var(--taskall-space-step-5)",
         maxWidth: 640,
         margin: "0 auto",
-        padding: "var(--hive-space-step-7)",
-        border: "1px solid var(--hive-border-default)",
-        borderRadius: "var(--hive-radius-surface)",
-        backgroundColor: "var(--hive-background-primary)",
+        padding: "var(--taskall-space-step-7)",
+        border: "1px solid var(--taskall-border-default)",
+        borderRadius: "var(--taskall-radius-surface)",
+        backgroundColor: "var(--taskall-background-primary)",
       }}
     >
       <div
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
-          gap: "var(--hive-space-12)",
+          gap: "var(--taskall-space-12)",
         }}
       >
         <Dropdown
@@ -68,12 +68,12 @@ export default function DropdownReportFilters() {
           flexWrap: "wrap",
           alignItems: "center",
           justifyContent: "space-between",
-          gap: "var(--hive-space-12)",
+          gap: "var(--taskall-space-12)",
         }}
       >
         <Paragraph
           size="s"
-          style={{ margin: 0, color: "var(--hive-content-secondary)" }}
+          style={{ margin: 0, color: "var(--taskall-content-secondary)" }}
         >
           {classLabel} · {period === "b1" ? "1º" : "2º"} bimestre ·{" "}
           {format.toUpperCase()}

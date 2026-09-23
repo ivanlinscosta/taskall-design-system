@@ -92,7 +92,7 @@ export default function GridPage() {
           code={`.layout {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: var(--hive-space-step-5);
+  gap: var(--taskall-space-step-5);
 }
 
 .main  { grid-column: span 8; }
@@ -106,16 +106,16 @@ export default function GridPage() {
       </DocSection>
       <DocSection id="composicoes" title="Composições comuns">
         <DemoSurface align="stretch">
-          <div style={{ display: "grid", gap: "var(--hive-space-step-5)" }}>
+          <div style={{ display: "grid", gap: "var(--taskall-space-step-5)" }}>
             {compositions.map((composition) => (
               <div
                 key={composition.label}
-                style={{ display: "grid", gap: "var(--hive-space-6)" }}
+                style={{ display: "grid", gap: "var(--taskall-space-6)" }}
               >
                 <span
                   style={{
-                    font: "var(--hive-font-label-xs)",
-                    color: "var(--hive-content-secondary)",
+                    font: "var(--taskall-font-label-xs)",
+                    color: "var(--taskall-content-secondary)",
                   }}
                 >
                   {composition.label}
@@ -139,7 +139,7 @@ export default function GridPage() {
       <DocSection id="breakpoints" title="Breakpoints">
         <Prose>
           <p>
-            O Hive não define tokens de breakpoint; estes são os valores
+            O TaskAll não define tokens de breakpoint; estes são os valores
             recomendados para as aplicações Task All (e usados nesta
             documentação).
           </p>
@@ -153,7 +153,7 @@ export default function GridPage() {
               item.name,
               item.range,
               item.columns,
-              <code key="g">--hive-space-{item.gutter}</code>,
+              <code key="g">--taskall-space-{item.gutter}</code>,
               item.margin,
             ],
           }))}

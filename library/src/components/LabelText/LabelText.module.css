@@ -1,20 +1,20 @@
 .labelText {
   display: inline-block;
-  color: var(--hive-content-primary);
+  color: var(--taskall-content-primary);
 }
 
 .l {
-  font: var(--hive-font-label-l);
+  font: var(--taskall-font-label-l);
 }
 
 .m {
-  font: var(--hive-font-label-m);
+  font: var(--taskall-font-label-m);
 }
 
 .s {
-  font: var(--hive-font-label-s);
+  font: var(--taskall-font-label-s);
 }
 
 .xs {
-  font: var(--hive-font-label-xs);
+  font: var(--taskall-font-label-xs);
 }

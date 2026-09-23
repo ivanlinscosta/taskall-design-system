@@ -52,5 +52,5 @@ createServer((request, response) => {
   });
   createReadStream(file).pipe(response);
 }).listen(port, () => {
-  console.log(`Hive docs (build estático) em http://localhost:${port}/`);
+  console.log(`TaskAll docs (build estático) em http://localhost:${port}/`);
 });

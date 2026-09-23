@@ -1,4 +1,4 @@
-import { Button } from "@hive/react";
+import { Button } from "@taskall/react";
 
 import { findPage } from "../../lib/registry";
 import { CodeBlock } from "../../ui/CodeBlock";
@@ -22,26 +22,26 @@ export default function BestPracticesPage() {
       <PageHeader
         eyebrow="Guias"
         title="Boas práticas"
-        lead="As convenções que mantêm o Hive consistente, temável e acessível — valem para a biblioteca e para o código dos produtos Task All."
+        lead="As convenções que mantêm o TaskAll consistente, temável e acessível — valem para a biblioteca e para o código dos produtos Task All."
       />
 
       <DocSection id="tokens" title="Tokens, nunca valores fixos">
         <Prose>
           <p>
-            Cor, espaço, raio, sombra e tipografia vêm de <code>--hive-*</code>.
-            Um hex no código quebra o modo escuro, as 4 marcas e as densidades
-            de uma vez.
+            Cor, espaço, raio, sombra e tipografia vêm de{" "}
+            <code>--taskall-*</code>. Um hex no código quebra o modo escuro, as
+            4 marcas e as densidades de uma vez.
           </p>
         </Prose>
         <DoDontList
           items={[
             {
-              do: "`color: var(--hive-content-secondary)` e `gap: var(--hive-space-step-4)`.",
+              do: "`color: var(--taskall-content-secondary)` e `gap: var(--taskall-space-step-4)`.",
               dont: "Cores em hexadecimal ou medidas como `padding: 13px` escritas à mão.",
             },
             {
-              do: "Use o token pelo papel (`--hive-status-error`), não pela cor que ele tem hoje.",
-              dont: "Usar `--hive-status-error` só porque “é vermelho” em algo que não é erro.",
+              do: "Use o token pelo papel (`--taskall-status-error`), não pela cor que ele tem hoje.",
+              dont: "Usar `--taskall-status-error` só porque “é vermelho” em algo que não é erro.",
             },
           ]}
         />
@@ -60,11 +60,36 @@ export default function BestPracticesPage() {
           language="css"
           caption="TaskRow.module.css"
           code={`.row[data-state="late"] {
-  border-left: 3px solid var(--hive-status-warning);
+  border-left: 3px solid var(--taskall-status-warning);
 }
 
 .row[data-state="done"] {
-  color: var(--hive-content-secondary);
+  color: var(--taskall-content-secondary);
+}`}
+        />
+      </DocSection>
+
+      <DocSection id="classes" title="Classes com prefixo taskall-">
+        <Prose>
+          <p>
+            Os componentes usam classes estáveis com o prefixo{" "}
+            <code>taskall-</code>: o elemento raiz recebe{" "}
+            <code>taskall-&lt;componente&gt;</code> e as partes{" "}
+            <code>taskall-&lt;componente&gt;-&lt;parte&gt;</code>. O
+            TaskAllProvider aplica <code>taskall-base</code>.
+          </p>
+        </Prose>
+        <CodeBlock
+          language="css"
+          caption="overrides.css"
+          code={`/* Prefira atributos data-* para variações */
+.taskall-button[data-tone="primary"] {
+  min-width: 160px;
+}
+
+/* Partes internas também são estáveis */
+.taskall-text-input-field {
+  background: var(--taskall-background-secondary);
 }`}
         />
       </DocSection>
@@ -72,8 +97,8 @@ export default function BestPracticesPage() {
       <DocSection id="foco" title="Foco sempre visível">
         <Prose>
           <p>
-            O <code>.hive-base</code> aplica <code>:focus-visible</code> com{" "}
-            <code>--hive-focus-ring-*</code>. Nunca remova o outline sem um
+            O <code>.taskall-base</code> aplica <code>:focus-visible</code> com{" "}
+            <code>--taskall-focus-ring-*</code>. Nunca remova o outline sem um
             substituto equivalente.
           </p>
         </Prose>
@@ -91,7 +116,7 @@ export default function BestPracticesPage() {
       <DocSection id="toque" title="Alvos de toque de 44px">
         <BulletList
           items={[
-            "Controles interativos: mínimo `--hive-touch-target` (44×44px).",
+            "Controles interativos: mínimo `--taskall-touch-target` (44×44px).",
             "Tamanhos compactos (Button small, Rating) são exceções para desktop — documente quando usar.",
             "Aumente a área clicável com padding no contêiner, não aumentando o ícone.",
           ]}
@@ -104,7 +129,7 @@ export default function BestPracticesPage() {
             "HTML semântico primeiro: `<button>` para ações, `<a>` para navegação, `<fieldset>` para grupos.",
             "Ícones decorativos com `aria-hidden`; botões só com ícone com `aria-label`.",
             "Nunca comunique algo só por cor — acompanhe de texto ou ícone.",
-            "Respeite `prefers-reduced-motion` (o `.hive-base` já reduz animações).",
+            "Respeite `prefers-reduced-motion` (o `.taskall-base` já reduz animações).",
             "Contraste mínimo AA (4,5:1 para texto). Veja a tabela em Fundamentos → Cores.",
           ]}
         />

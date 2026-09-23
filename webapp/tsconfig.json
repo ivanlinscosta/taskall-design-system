@@ -4,7 +4,7 @@
     "types": ["react", "react-dom", "node", "vite/client", "vitest/globals", "@testing-library/jest-dom"],
     "baseUrl": ".",
     "paths": {
-      "@hive/react": ["../library/src/index.ts"]
+      "@taskall/react": ["../library/src/index.ts"]
     },
     "noEmit": true
   },

@@ -1,4 +1,4 @@
-import { Button, CheckCircle, PencilSquare, RecycleBin } from "@hive/react";
+import { Button, CheckCircle, PencilSquare, RecycleBin } from "@taskall/react";
 
 const tones = ["primary", "neutral", "error"] as const;
 const visualStyles = ["filled", "light", "outline"] as const;
@@ -14,7 +14,7 @@ export default function ButtonVariants() {
       style={{
         display: "grid",
         gridTemplateColumns: "repeat(3, auto)",
-        gap: "var(--hive-space-12)",
+        gap: "var(--taskall-space-12)",
       }}
     >
       {tones.map((tone) =>

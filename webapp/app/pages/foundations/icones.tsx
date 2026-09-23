@@ -1,12 +1,12 @@
 import * as React from "react";
-import * as Hive from "@hive/react";
+import * as TaskAll from "@taskall/react";
 import {
   Dropdown,
   iconSearchIndex,
   MagnifyingGlass,
   TextInput,
   type IconComponent,
-} from "@hive/react";
+} from "@taskall/react";
 
 import { rankBy } from "../../lib/fuzzy";
 import { findPage } from "../../lib/registry";
@@ -55,7 +55,7 @@ const ALIASES: Array<[string, string]> = [
   ["User", "UserCircleSingle"],
 ];
 
-const registry = Hive as unknown as Record<string, unknown>;
+const registry = TaskAll as unknown as Record<string, unknown>;
 
 function getIcon(name: string): IconComponent | undefined {
   const candidate = registry[name];
@@ -70,11 +70,11 @@ const officialCount = iconSearchIndex.filter(
 
 const sizes = ["16", "20", "24", "32"];
 const colors = [
-  { value: "--hive-content-primary", label: "Conteúdo" },
-  { value: "--hive-content-secondary", label: "Secundário" },
-  { value: "--hive-brand", label: "Marca" },
-  { value: "--hive-status-error", label: "Erro" },
-  { value: "--hive-status-success", label: "Sucesso" },
+  { value: "--taskall-content-primary", label: "Conteúdo" },
+  { value: "--taskall-content-secondary", label: "Secundário" },
+  { value: "--taskall-brand", label: "Marca" },
+  { value: "--taskall-status-error", label: "Erro" },
+  { value: "--taskall-status-success", label: "Sucesso" },
 ];
 const sets = [
   { value: "todos", label: "Todos" },
@@ -85,7 +85,7 @@ const sets = [
 function IconLibrary() {
   const [query, setQuery] = React.useState("");
   const [size, setSize] = React.useState("24");
-  const [color, setColor] = React.useState("--hive-content-primary");
+  const [color, setColor] = React.useState("--taskall-content-primary");
   const [set, setSet] = React.useState("todos");
   const [copied, setCopied] = React.useState<string | null>(null);
 
@@ -117,7 +117,7 @@ function IconLibrary() {
   const copy = async (name: string) => {
     try {
       await navigator.clipboard.writeText(
-        `import { ${name} } from "@hive/react";`,
+        `import { ${name} } from "@taskall/react";`,
       );
       setCopied(name);
     } catch {
@@ -126,7 +126,7 @@ function IconLibrary() {
   };
 
   return (
-    <div style={{ display: "grid", gap: "var(--hive-space-16)" }}>
+    <div style={{ display: "grid", gap: "var(--taskall-space-16)" }}>
       <div className={styles.iconToolbar}>
         <div style={{ flex: "1 1 240px" }}>
           <TextInput
@@ -166,8 +166,8 @@ function IconLibrary() {
         role="status"
         style={{
           margin: 0,
-          font: "var(--hive-font-paragraph-s)",
-          color: "var(--hive-content-secondary)",
+          font: "var(--taskall-font-paragraph-s)",
+          color: "var(--taskall-content-secondary)",
         }}
       >
         {copied
@@ -214,7 +214,7 @@ export default function IconsPage() {
       <PageHeader
         eyebrow="Fundamentos"
         title="Ícones"
-        lead={`${officialCount} ícones oficiais do Task All em SVG (grade 20×20, preenchimento em currentColor), exportados como componentes React por @hive/react. A cor vem do texto ao redor.`}
+        lead={`${officialCount} ícones oficiais do Task All em SVG (grade 20×20, preenchimento em currentColor), exportados como componentes React por @taskall/react. A cor vem do texto ao redor.`}
       />
       <DocSection id="biblioteca" title="Biblioteca">
         <IconLibrary />
@@ -222,7 +222,7 @@ export default function IconsPage() {
       <DocSection id="uso" title="Como usar">
         <CodeBlock
           caption="Uso"
-          code={`import { BellNotification, Button, IconButton, RecycleBin } from "@hive/react";
+          code={`import { BellNotification, Button, IconButton, RecycleBin } from "@taskall/react";
 
 // Decorativo (padrão): aria-hidden automático
 <BellNotification size={16} />
@@ -240,7 +240,7 @@ export default function IconsPage() {
             'Com `title`, vira `role="img"` com nome acessível.',
             "Botões só com ícone: use IconButton (o `aria-label` é obrigatório).",
             "Tamanhos recomendados: 16 (inline), 20 (padrão, grade nativa) e 24 (destaque).",
-            "Cor: nunca passe hex — o ícone herda `color`; use tokens (`--hive-content-*`, `--hive-status-*`).",
+            "Cor: nunca passe hex — o ícone herda `color`; use tokens (`--taskall-content-*`, `--taskall-status-*`).",
             "A busca usa `iconSearchIndex`, exportado pela biblioteca, com palavras-chave em PT e EN.",
           ]}
         />
@@ -285,7 +285,7 @@ export default function IconsPage() {
           caption="terminal"
           code={`# 1. Coloque o SVG (20×20) em library/src/assets/icons/nome-do-icone.svg
 # 2. Gere os componentes, o índice e as palavras-chave
-pnpm --filter @hive/react generate:icons`}
+pnpm --filter @taskall/react generate:icons`}
         />
       </DocSection>
     </Article>

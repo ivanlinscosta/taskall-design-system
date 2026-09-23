@@ -1,19 +1,19 @@
 .app {
   min-height: 100vh;
-  background-color: var(--hive-background-primary);
-  color: var(--hive-content-primary);
+  background-color: var(--taskall-background-primary);
+  color: var(--taskall-content-primary);
 }
 
 .skipLink {
   position: fixed;
-  top: var(--hive-space-8);
-  left: var(--hive-space-8);
+  top: var(--taskall-space-8);
+  left: var(--taskall-space-8);
   z-index: 100;
-  padding: var(--hive-space-12) var(--hive-space-16);
-  border-radius: var(--hive-radius-3);
-  background-color: var(--hive-background-inverse);
-  color: var(--hive-content-inverse);
-  font: var(--hive-font-label-m);
+  padding: var(--taskall-space-12) var(--taskall-space-16);
+  border-radius: var(--taskall-radius-3);
+  background-color: var(--taskall-background-inverse);
+  color: var(--taskall-content-inverse);
+  font: var(--taskall-font-label-m);
   transform: translateY(-200%);
 }
 
@@ -24,5 +24,5 @@
 .error {
   max-width: 640px;
   margin: 0 auto;
-  padding: var(--hive-space-64) var(--hive-space-24);
+  padding: var(--taskall-space-64) var(--taskall-space-24);
 }

@@ -250,7 +250,7 @@ export const ModalFooterVariants: Story = {
     <div style={{ display: "grid", gap: 16, maxWidth: 520 }}>
       <div
         style={{
-          border: "1px solid var(--hive-border-subtle)",
+          border: "1px solid var(--taskall-border-subtle)",
           borderRadius: 12,
         }}
       >
@@ -264,7 +264,7 @@ export const ModalFooterVariants: Story = {
 
       <div
         style={{
-          border: "1px solid var(--hive-border-subtle)",
+          border: "1px solid var(--taskall-border-subtle)",
           borderRadius: 12,
         }}
       >
@@ -273,8 +273,8 @@ export const ModalFooterVariants: Story = {
             <InformationCircle size={16} aria-hidden="true" />
             <span
               style={{
-                color: "var(--hive-content-secondary)",
-                font: "var(--hive-font-paragraph-s)",
+                color: "var(--taskall-content-secondary)",
+                font: "var(--taskall-font-paragraph-s)",
               }}
             >
               Os convites expiram em 7 dias.
@@ -288,7 +288,7 @@ export const ModalFooterVariants: Story = {
 
       <div
         style={{
-          border: "1px solid var(--hive-border-subtle)",
+          border: "1px solid var(--taskall-border-subtle)",
           borderRadius: 12,
         }}
       >
@@ -315,7 +315,7 @@ export const ModalFooterVariants: Story = {
 
       <div
         style={{
-          border: "1px solid var(--hive-border-subtle)",
+          border: "1px solid var(--taskall-border-subtle)",
           borderRadius: 12,
         }}
       >
@@ -326,8 +326,8 @@ export const ModalFooterVariants: Story = {
               border: 0,
               padding: 0,
               background: "transparent",
-              color: "var(--hive-brand)",
-              font: "var(--hive-font-link-s)",
+              color: "var(--taskall-brand)",
+              font: "var(--taskall-font-link-s)",
               cursor: "pointer",
             }}
           >
@@ -341,7 +341,7 @@ export const ModalFooterVariants: Story = {
 
       <div
         style={{
-          border: "1px solid var(--hive-border-subtle)",
+          border: "1px solid var(--taskall-border-subtle)",
           borderRadius: 12,
         }}
       >

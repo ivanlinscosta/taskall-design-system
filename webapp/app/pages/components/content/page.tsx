@@ -1,4 +1,4 @@
-import { Badge, Calendar, Content, type ContentProps } from "@hive/react";
+import { Badge, Calendar, Content, type ContentProps } from "@taskall/react";
 
 import { jsx, raw } from "../../../lib/api";
 import { definePlayground, example, type ComponentDoc } from "../../../lib/doc";
@@ -23,7 +23,7 @@ const doc: ComponentDoc = {
     "Layouts com várias ações por linha — componha com Button ao lado.",
     "Conteúdo longo com parágrafos — use Heading + Paragraph.",
   ],
-  usage: `import { Badge, Calendar, Content } from "@hive/react";
+  usage: `import { Badge, Calendar, Content } from "@taskall/react";
 
 <Content
   type="icon"
@@ -115,8 +115,10 @@ const doc: ComponentDoc = {
         description: "Linha secundária.",
         type: "avatar (iniciais ou `avatar` customizado) ou icon.",
         size: "small ou x-small.",
-        avatar: "Nó customizado no lugar das iniciais (ex.: `<Avatar>`).",
-        avatarSize: "Tamanho das iniciais geradas.",
+        avatar:
+          'Nó customizado no lugar das iniciais (ex.: `<Avatar size="xl">` para acompanhar rótulo + descrição).',
+        avatarSize:
+          "Tamanho fixo das iniciais. Sem valor, acompanha a altura do texto (32px sem descrição, 40px com).",
         icon: 'Ícone usado quando `type="icon"`.',
         badge: "Nó exibido à direita (ex.: `<Badge>`).",
       },

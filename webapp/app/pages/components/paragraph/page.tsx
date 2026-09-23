@@ -1,4 +1,4 @@
-import { Paragraph, type ParagraphProps } from "@hive/react";
+import { Paragraph, type ParagraphProps } from "@taskall/react";
 
 import { jsx } from "../../../lib/api";
 import { definePlayground, example, type ComponentDoc } from "../../../lib/doc";
@@ -14,13 +14,13 @@ const page = findPage("componentes", "paragraph");
 const doc: ComponentDoc = {
   page,
   description:
-    "Paragraph formata texto corrido com a escala `--hive-font-paragraph-*` e renderiza um `<p>` nativo.",
+    "Paragraph formata texto corrido com a escala `--taskall-font-paragraph-*` e renderiza um `<p>` nativo.",
   whenToUse: [
     "Descrições, comunicados, textos de apoio em cards e modais.",
     "Qualquer bloco de leitura com mais de uma frase.",
   ],
   whenNotToUse: ["Títulos — use Heading.", "Rótulos curtos — use LabelText."],
-  usage: `import { Paragraph } from "@hive/react";
+  usage: `import { Paragraph } from "@taskall/react";
 
 <Paragraph size="s">Envie a autorização até sexta-feira.</Paragraph>`,
   playground: definePlayground({
@@ -76,7 +76,7 @@ const doc: ComponentDoc = {
   accessibility: {
     notes: [
       "`<p>` nativo: leitura linear por tecnologias assistivas.",
-      "Texto secundário deve usar `--hive-content-secondary` (contraste AA), nunca `tertiary` para conteúdo essencial.",
+      "Texto secundário deve usar `--taskall-content-secondary` (contraste AA), nunca `tertiary` para conteúdo essencial.",
     ],
     keyboard: [],
   },

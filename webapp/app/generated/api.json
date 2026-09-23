@@ -233,8 +233,7 @@
       {
         "name": "avatarSize",
         "type": "\"xs\" | \"sm\" | \"md\" | \"lg\" | \"xl\"",
-        "required": false,
-        "defaultValue": "\"md\""
+        "required": false
       },
       {
         "name": "badge",
@@ -401,36 +400,6 @@
         "type": "HeadingLevel",
         "required": false,
         "defaultValue": "1"
-      }
-    ]
-  },
-  {
-    "name": "HiveProvider",
-    "source": "library/src/components/Provider/HiveProvider.tsx",
-    "props": [
-      {
-        "name": "brand",
-        "type": "\"coral\" | \"gestao\" | \"estudantes\" | \"responsaveis\"",
-        "required": false,
-        "defaultValue": "\"coral\""
-      },
-      {
-        "name": "colorMode",
-        "type": "\"light\" | \"dark\"",
-        "required": false,
-        "defaultValue": "\"light\""
-      },
-      {
-        "name": "density",
-        "type": "\"compact\" | \"default\" | \"expanded\"",
-        "required": false,
-        "defaultValue": "\"default\""
-      },
-      {
-        "name": "shape",
-        "type": "\"sharp\" | \"default\" | \"rounded\"",
-        "required": false,
-        "defaultValue": "\"default\""
       }
     ]
   },
@@ -885,6 +854,36 @@
         "name": "value",
         "type": "string",
         "required": false
+      }
+    ]
+  },
+  {
+    "name": "TaskAllProvider",
+    "source": "library/src/components/Provider/TaskAllProvider.tsx",
+    "props": [
+      {
+        "name": "brand",
+        "type": "\"coral\" | \"gestao\" | \"estudantes\" | \"responsaveis\"",
+        "required": false,
+        "defaultValue": "\"coral\""
+      },
+      {
+        "name": "colorMode",
+        "type": "\"light\" | \"dark\"",
+        "required": false,
+        "defaultValue": "\"light\""
+      },
+      {
+        "name": "density",
+        "type": "\"compact\" | \"default\" | \"expanded\"",
+        "required": false,
+        "defaultValue": "\"default\""
+      },
+      {
+        "name": "shape",
+        "type": "\"sharp\" | \"default\" | \"rounded\"",
+        "required": false,
+        "defaultValue": "\"default\""
       }
     ]
   },

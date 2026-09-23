@@ -1,56 +1,56 @@
 .block {
-  --sh-class: var(--hive-status-warning);
-  --sh-identifier: var(--hive-content-primary);
-  --sh-sign: var(--hive-content-secondary);
-  --sh-property: var(--hive-status-information);
-  --sh-entity: var(--hive-status-success);
-  --sh-jsxliterals: var(--hive-content-primary);
-  --sh-string: var(--hive-status-warning);
-  --sh-keyword: var(--hive-brand-hover);
-  --sh-comment: var(--hive-content-tertiary);
-  --sh-break: var(--hive-content-primary);
-  --sh-space: var(--hive-content-primary);
+  --sh-class: var(--taskall-status-warning);
+  --sh-identifier: var(--taskall-content-primary);
+  --sh-sign: var(--taskall-content-secondary);
+  --sh-property: var(--taskall-status-information);
+  --sh-entity: var(--taskall-status-success);
+  --sh-jsxliterals: var(--taskall-content-primary);
+  --sh-string: var(--taskall-status-warning);
+  --sh-keyword: var(--taskall-brand-hover);
+  --sh-comment: var(--taskall-content-tertiary);
+  --sh-break: var(--taskall-content-primary);
+  --sh-space: var(--taskall-content-primary);
 
   overflow: hidden;
-  border: 1px solid var(--hive-border-default);
-  border-radius: var(--hive-radius-4);
-  background-color: var(--hive-background-secondary);
+  border: 1px solid var(--taskall-border-default);
+  border-radius: var(--taskall-radius-4);
+  background-color: var(--taskall-background-secondary);
 }
 
 .toolbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--hive-space-8);
-  padding: var(--hive-space-4) var(--hive-space-4) var(--hive-space-4)
-    var(--hive-space-16);
-  border-bottom: 1px solid var(--hive-border-subtle);
+  gap: var(--taskall-space-8);
+  padding: var(--taskall-space-4) var(--taskall-space-4) var(--taskall-space-4)
+    var(--taskall-space-16);
+  border-bottom: 1px solid var(--taskall-border-subtle);
 }
 
 .caption {
-  font: var(--hive-font-label-xs);
-  color: var(--hive-content-secondary);
+  font: var(--taskall-font-label-xs);
+  color: var(--taskall-content-secondary);
 }
 
 .copy {
   min-height: 36px;
-  padding: 0 var(--hive-space-12);
+  padding: 0 var(--taskall-space-12);
   border: 1px solid transparent;
-  border-radius: var(--hive-radius-3);
+  border-radius: var(--taskall-radius-3);
   background: transparent;
-  color: var(--hive-content-primary);
-  font: var(--hive-font-label-xs);
+  color: var(--taskall-content-primary);
+  font: var(--taskall-font-label-xs);
   cursor: pointer;
 }
 
 .copy:hover {
-  border-color: var(--hive-border-default);
-  background-color: var(--hive-background-hover);
+  border-color: var(--taskall-border-default);
+  background-color: var(--taskall-background-hover);
 }
 
 .pre {
   margin: 0;
-  padding: var(--hive-space-16);
+  padding: var(--taskall-space-16);
   overflow-x: auto;
   font-size: 13px;
   line-height: 1.65;

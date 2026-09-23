@@ -1,5 +1,12 @@
 import * as React from "react";
-import { Button, Heading, Mail, Paragraph, TextInput, User } from "@hive/react";
+import {
+  Button,
+  Heading,
+  Mail,
+  Paragraph,
+  TextInput,
+  User,
+} from "@taskall/react";
 
 export default function TextInputGuardianForm() {
   const [submitted, setSubmitted] = React.useState(false);
@@ -13,20 +20,23 @@ export default function TextInputGuardianForm() {
       }}
       style={{
         display: "grid",
-        gap: "var(--hive-space-step-6)",
+        gap: "var(--taskall-space-step-6)",
         maxWidth: 480,
         margin: "0 auto",
-        padding: "var(--hive-space-step-8)",
-        border: "1px solid var(--hive-border-default)",
-        borderRadius: "var(--hive-radius-surface)",
-        backgroundColor: "var(--hive-background-primary)",
+        padding: "var(--taskall-space-step-8)",
+        border: "1px solid var(--taskall-border-default)",
+        borderRadius: "var(--taskall-radius-surface)",
+        backgroundColor: "var(--taskall-background-primary)",
       }}
     >
       <div>
         <Heading level={3} as={5}>
           Cadastrar responsável
         </Heading>
-        <Paragraph size="s" style={{ color: "var(--hive-content-secondary)" }}>
+        <Paragraph
+          size="s"
+          style={{ color: "var(--taskall-content-secondary)" }}
+        >
           Estudante: Lucas Martins · 8º B
         </Paragraph>
       </div>
@@ -49,7 +59,7 @@ export default function TextInputGuardianForm() {
         style={{
           display: "flex",
           justifyContent: "flex-end",
-          gap: "var(--hive-space-8)",
+          gap: "var(--taskall-space-8)",
         }}
       >
         <Button

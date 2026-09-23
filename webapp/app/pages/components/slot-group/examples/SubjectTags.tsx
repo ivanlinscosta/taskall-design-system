@@ -1,4 +1,4 @@
-import { LabelText, Slot, SlotGroup } from "@hive/react";
+import { LabelText, Slot, SlotGroup } from "@taskall/react";
 
 const subjects = [
   { short: "MA", name: "Matemática" },
@@ -14,20 +14,23 @@ export default function SlotGroupSubjectTags() {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        gap: "var(--hive-space-16)",
+        gap: "var(--taskall-space-16)",
         maxWidth: 420,
         margin: "0 auto",
-        padding: "var(--hive-space-step-6)",
-        border: "1px solid var(--hive-border-default)",
-        borderRadius: "var(--hive-radius-surface)",
-        backgroundColor: "var(--hive-background-primary)",
+        padding: "var(--taskall-space-step-6)",
+        border: "1px solid var(--taskall-border-default)",
+        borderRadius: "var(--taskall-radius-surface)",
+        backgroundColor: "var(--taskall-background-primary)",
       }}
     >
       <div>
         <LabelText size="s" style={{ display: "block" }}>
           Prof.ª Helena Duarte
         </LabelText>
-        <LabelText size="xs" style={{ color: "var(--hive-content-secondary)" }}>
+        <LabelText
+          size="xs"
+          style={{ color: "var(--taskall-content-secondary)" }}
+        >
           Disciplinas no 8º B
         </LabelText>
       </div>
@@ -40,7 +43,7 @@ export default function SlotGroupSubjectTags() {
             aria-label={subject.name}
             title={subject.name}
           >
-            <span style={{ font: "var(--hive-font-label-xs)" }}>
+            <span style={{ font: "var(--taskall-font-label-xs)" }}>
               {subject.short}
             </span>
           </Slot>

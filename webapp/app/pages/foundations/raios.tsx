@@ -12,10 +12,10 @@ const page = findPage("fundamentos", "raios");
 const tokens = [
   ...[1, 2, 3, 4, 5, 6, 7, 8, 9].map((level) => ({
     label: `radius-${level}`,
-    token: `--hive-radius-${level}`,
+    token: `--taskall-radius-${level}`,
   })),
-  { label: "radius-surface", token: "--hive-radius-surface" },
-  { label: "radius-pill", token: "--hive-radius-pill" },
+  { label: "radius-surface", token: "--taskall-radius-surface" },
+  { label: "radius-pill", token: "--taskall-radius-pill" },
 ];
 
 function RadiusGrid() {
@@ -55,20 +55,20 @@ export default function RadiusPage() {
         <Prose>
           <p>
             Para superfícies (cards, modais, campos agrupados) use{" "}
-            <code>--hive-radius-surface</code>. Para elementos internos, escolha
-            um nível. <code>--hive-radius-pill</code> é fixo (999px) para chips
-            e trilhas.
+            <code>--taskall-radius-surface</code>. Para elementos internos,
+            escolha um nível. <code>--taskall-radius-pill</code> é fixo (999px)
+            para chips e trilhas.
           </p>
         </Prose>
         <CodeBlock
           language="css"
           caption="Card.module.css"
           code={`.card {
-  border-radius: var(--hive-radius-surface);
+  border-radius: var(--taskall-radius-surface);
 }
 
 .thumb {
-  border-radius: var(--hive-radius-3);
+  border-radius: var(--taskall-radius-3);
 }`}
         />
       </DocSection>

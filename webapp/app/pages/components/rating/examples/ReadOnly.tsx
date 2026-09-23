@@ -1,4 +1,4 @@
-import { LabelText, Paragraph, Rating } from "@hive/react";
+import { LabelText, Paragraph, Rating } from "@taskall/react";
 
 export default function RatingReadOnly() {
   return (
@@ -6,7 +6,7 @@ export default function RatingReadOnly() {
       style={{
         display: "flex",
         alignItems: "center",
-        gap: "var(--hive-space-12)",
+        gap: "var(--taskall-space-12)",
       }}
     >
       <Rating readOnly value={4.5} label="Avaliação média da atividade" />
@@ -14,7 +14,7 @@ export default function RatingReadOnly() {
         <LabelText size="s">4,5 de 5</LabelText>
         <Paragraph
           size="xs"
-          style={{ margin: 0, color: "var(--hive-content-secondary)" }}
+          style={{ margin: 0, color: "var(--taskall-content-secondary)" }}
         >
           32 avaliações de estudantes
         </Paragraph>

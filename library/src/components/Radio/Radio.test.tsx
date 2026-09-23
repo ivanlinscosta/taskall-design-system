@@ -5,12 +5,12 @@ import userEvent from "@testing-library/user-event";
 import { axe } from "jest-axe";
 import { describe, expect, it } from "vitest";
 
-import { renderWithHive } from "../../test/renderWithHive";
+import { renderWithTaskAll } from "../../test/renderWithTaskAll";
 import { Radio, RadioGroup } from "./Radio";
 
 describe("Radio", () => {
   it("renders radios inside a fieldset with legend", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <RadioGroup name="status" label="Status">
         <Radio value="draft" label="Rascunho" />
         <Radio value="published" label="Publicado" />
@@ -24,7 +24,7 @@ describe("Radio", () => {
   it("forwards the ref to the native input", () => {
     const ref = createRef<HTMLInputElement>();
 
-    renderWithHive(<Radio value="draft" label="Rascunho" ref={ref} />);
+    renderWithTaskAll(<Radio value="draft" label="Rascunho" ref={ref} />);
 
     expect(ref.current).toBeInstanceOf(HTMLInputElement);
   });
@@ -32,7 +32,7 @@ describe("Radio", () => {
   it("supports uncontrolled radio groups", async () => {
     const user = userEvent.setup();
 
-    renderWithHive(
+    renderWithTaskAll(
       <RadioGroup name="priority" label="Prioridade" defaultValue="high">
         <Radio value="high" label="Alta" />
         <Radio value="low" label="Baixa" />
@@ -66,7 +66,7 @@ describe("Radio", () => {
       );
     }
 
-    renderWithHive(<ControlledGroup />);
+    renderWithTaskAll(<ControlledGroup />);
 
     const review = screen.getByRole("radio", { name: "Revisão" });
 
@@ -78,7 +78,7 @@ describe("Radio", () => {
   it("supports standalone radios", async () => {
     const user = userEvent.setup();
 
-    renderWithHive(<Radio name="single" value="only" label="Única" />);
+    renderWithTaskAll(<Radio name="single" value="only" label="Única" />);
 
     const radio = screen.getByRole("radio", { name: "Única" });
 
@@ -90,7 +90,7 @@ describe("Radio", () => {
   it("supports keyboard focus and native radio selection", async () => {
     const user = userEvent.setup();
 
-    renderWithHive(
+    renderWithTaskAll(
       <RadioGroup name="channel" label="Canal">
         <Radio value="email" label="E-mail" />
         <Radio value="sms" label="SMS" />
@@ -108,7 +108,7 @@ describe("Radio", () => {
   });
 
   it("inherits name, disabled and size from the group", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <RadioGroup name="permissions" label="Permissões" size="x-small" disabled>
         <Radio value="view" label="Visualizar" />
       </RadioGroup>,
@@ -122,7 +122,7 @@ describe("Radio", () => {
   });
 
   it("has no axe violations", async () => {
-    const { container } = renderWithHive(
+    const { container } = renderWithTaskAll(
       <RadioGroup name="frequency" label="Frequência" defaultValue="daily">
         <Radio value="daily" label="Diário" />
         <Radio value="weekly" label="Semanal" />

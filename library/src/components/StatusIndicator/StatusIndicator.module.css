@@ -2,8 +2,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--hive-radius-pill);
-  color: var(--hive-content-inverse);
+  border-radius: var(--taskall-radius-pill);
+  color: var(--taskall-content-inverse);
   flex-shrink: 0;
 }
 
@@ -33,30 +33,30 @@
 }
 
 .online {
-  background: var(--hive-status-success);
+  background: var(--taskall-status-success);
 }
 
 .busy {
-  background: var(--hive-status-error);
+  background: var(--taskall-status-error);
 }
 
 .away {
-  background: var(--hive-status-warning);
+  background: var(--taskall-status-warning);
 }
 
 .offline {
-  background: var(--hive-content-tertiary);
+  background: var(--taskall-content-tertiary);
 }
 
 .verified,
 .add {
-  background: var(--hive-brand);
+  background: var(--taskall-brand);
 }
 
 .delete {
-  background: var(--hive-status-error);
+  background: var(--taskall-status-error);
 }
 
 .favorite {
-  background: var(--hive-progress-yellow);
+  background: var(--taskall-progress-yellow);
 }

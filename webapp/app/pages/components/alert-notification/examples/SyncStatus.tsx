@@ -1,4 +1,4 @@
-import { AlertNotification, Heading, ProgressBar } from "@hive/react";
+import { AlertNotification, Heading, ProgressBar } from "@taskall/react";
 
 export default function AlertNotificationSyncStatus() {
   return (
@@ -6,13 +6,13 @@ export default function AlertNotificationSyncStatus() {
       aria-labelledby="sync-title"
       style={{
         display: "grid",
-        gap: "var(--hive-space-step-5)",
+        gap: "var(--taskall-space-step-5)",
         maxWidth: 560,
         margin: "0 auto",
-        padding: "var(--hive-space-step-7)",
-        border: "1px solid var(--hive-border-default)",
-        borderRadius: "var(--hive-radius-surface)",
-        backgroundColor: "var(--hive-background-primary)",
+        padding: "var(--taskall-space-step-7)",
+        border: "1px solid var(--taskall-border-default)",
+        borderRadius: "var(--taskall-radius-surface)",
+        backgroundColor: "var(--taskall-background-primary)",
       }}
     >
       <Heading level={3} as={6} id="sync-title">

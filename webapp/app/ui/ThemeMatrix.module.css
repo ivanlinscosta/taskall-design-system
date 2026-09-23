@@ -1,66 +1,66 @@
 .matrix {
   display: flex;
   flex-direction: column;
-  gap: var(--hive-space-16);
+  gap: var(--taskall-space-16);
 }
 
 .switcher {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--hive-space-4);
+  gap: var(--taskall-space-4);
 }
 
 .switcherLabel {
-  margin-right: var(--hive-space-8);
-  font: var(--hive-font-label-s);
-  color: var(--hive-content-secondary);
+  margin-right: var(--taskall-space-8);
+  font: var(--taskall-font-label-s);
+  color: var(--taskall-content-secondary);
 }
 
 .option {
   min-height: 36px;
-  padding: 0 var(--hive-space-12);
-  border: 1px solid var(--hive-border-default);
-  border-radius: var(--hive-radius-pill);
-  background-color: var(--hive-background-primary);
-  color: var(--hive-content-primary);
-  font: var(--hive-font-label-s);
+  padding: 0 var(--taskall-space-12);
+  border: 1px solid var(--taskall-border-default);
+  border-radius: var(--taskall-radius-pill);
+  background-color: var(--taskall-background-primary);
+  color: var(--taskall-content-primary);
+  font: var(--taskall-font-label-s);
   cursor: pointer;
 }
 
 .option[aria-pressed="true"] {
-  border-color: var(--hive-content-primary);
-  background-color: var(--hive-background-inverse);
-  color: var(--hive-content-inverse);
+  border-color: var(--taskall-content-primary);
+  background-color: var(--taskall-background-inverse);
+  color: var(--taskall-content-inverse);
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--hive-space-12);
+  gap: var(--taskall-space-12);
 }
 
 .cell {
   display: flex;
   flex-direction: column;
-  gap: var(--hive-space-8);
+  gap: var(--taskall-space-8);
   margin: 0;
 }
 
 .surface {
   min-height: 140px;
-  padding: var(--hive-space-16);
-  border: 1px solid var(--hive-border-default);
-  border-radius: var(--hive-radius-4);
+  padding: var(--taskall-space-16);
+  border: 1px solid var(--taskall-border-default);
+  border-radius: var(--taskall-radius-4);
 }
 
 .caption {
-  font: var(--hive-font-paragraph-xs);
-  color: var(--hive-content-secondary);
+  font: var(--taskall-font-paragraph-xs);
+  color: var(--taskall-content-secondary);
 }
 
 @media (pointer: coarse) {
   .option {
-    min-height: var(--hive-touch-target);
+    min-height: var(--taskall-touch-target);
   }
 }

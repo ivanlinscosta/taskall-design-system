@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Badge } from "@hive/react";
+import { Badge } from "@taskall/react";
 
 import { findPage } from "../../lib/registry";
 import { useSettings } from "../../lib/settings";
@@ -34,13 +34,13 @@ const groups: Array<{
     intro:
       "Texto e ícones. `primary` para conteúdo principal, `secondary` para apoio; `tertiary` só para elementos não essenciais.",
     tokens: [
-      { name: "Primary", token: "--hive-content-primary" },
-      { name: "Secondary", token: "--hive-content-secondary" },
-      { name: "Tertiary", token: "--hive-content-tertiary" },
-      { name: "Inverse", token: "--hive-content-inverse" },
-      { name: "Disabled", token: "--hive-content-disabled" },
-      { name: "On brand", token: "--hive-content-on-brand" },
-      { name: "On soft", token: "--hive-content-on-soft" },
+      { name: "Primary", token: "--taskall-content-primary" },
+      { name: "Secondary", token: "--taskall-content-secondary" },
+      { name: "Tertiary", token: "--taskall-content-tertiary" },
+      { name: "Inverse", token: "--taskall-content-inverse" },
+      { name: "Disabled", token: "--taskall-content-disabled" },
+      { name: "On brand", token: "--taskall-content-on-brand" },
+      { name: "On soft", token: "--taskall-content-on-soft" },
     ],
   },
   {
@@ -49,12 +49,12 @@ const groups: Array<{
     intro:
       "Superfícies em camadas: `primary` é a página, `secondary`/`tertiary` agrupam conteúdo.",
     tokens: [
-      { name: "Primary", token: "--hive-background-primary" },
-      { name: "Secondary", token: "--hive-background-secondary" },
-      { name: "Tertiary", token: "--hive-background-tertiary" },
-      { name: "Inverse", token: "--hive-background-inverse" },
-      { name: "Disabled", token: "--hive-background-disabled" },
-      { name: "Hover", token: "--hive-background-hover" },
+      { name: "Primary", token: "--taskall-background-primary" },
+      { name: "Secondary", token: "--taskall-background-secondary" },
+      { name: "Tertiary", token: "--taskall-background-tertiary" },
+      { name: "Inverse", token: "--taskall-background-inverse" },
+      { name: "Disabled", token: "--taskall-background-disabled" },
+      { name: "Hover", token: "--taskall-background-hover" },
     ],
   },
   {
@@ -63,10 +63,10 @@ const groups: Array<{
     intro:
       "Divisores e contornos. `subtle` separa, `default` delimita campos, `strong` destaca.",
     tokens: [
-      { name: "Default", token: "--hive-border-default" },
-      { name: "Subtle", token: "--hive-border-subtle" },
-      { name: "Strong", token: "--hive-border-strong" },
-      { name: "Inverse", token: "--hive-border-inverse" },
+      { name: "Default", token: "--taskall-border-default" },
+      { name: "Subtle", token: "--taskall-border-subtle" },
+      { name: "Strong", token: "--taskall-border-strong" },
+      { name: "Inverse", token: "--taskall-border-inverse" },
     ],
   },
   {
@@ -75,11 +75,11 @@ const groups: Array<{
     intro:
       "Mudam com `brand` (Coral, Gestão, Estudantes, Responsáveis) e com o modo de cor.",
     tokens: [
-      { name: "Brand", token: "--hive-brand" },
-      { name: "Soft", token: "--hive-brand-soft" },
-      { name: "Hover", token: "--hive-brand-hover" },
-      { name: "Active", token: "--hive-brand-active" },
-      { name: "Soft hover", token: "--hive-brand-soft-hover" },
+      { name: "Brand", token: "--taskall-brand" },
+      { name: "Soft", token: "--taskall-brand-soft" },
+      { name: "Hover", token: "--taskall-brand-hover" },
+      { name: "Active", token: "--taskall-brand-active" },
+      { name: "Soft hover", token: "--taskall-brand-soft-hover" },
     ],
   },
   {
@@ -87,14 +87,17 @@ const groups: Array<{
     title: "Ação",
     intro: "Usados por Button e controles. `primary` é um alias da marca.",
     tokens: [
-      { name: "Primary", token: "--hive-action-primary" },
-      { name: "Primary contrast", token: "--hive-action-primary-contrast" },
-      { name: "Neutral fill", token: "--hive-action-neutral-fill" },
-      { name: "Neutral light", token: "--hive-action-neutral-light" },
-      { name: "Error fill", token: "--hive-action-error-fill" },
-      { name: "Error light", token: "--hive-action-error-light" },
-      { name: "Disabled fill", token: "--hive-action-disabled-fill" },
-      { name: "Disabled contrast", token: "--hive-action-disabled-contrast" },
+      { name: "Primary", token: "--taskall-action-primary" },
+      { name: "Primary contrast", token: "--taskall-action-primary-contrast" },
+      { name: "Neutral fill", token: "--taskall-action-neutral-fill" },
+      { name: "Neutral light", token: "--taskall-action-neutral-light" },
+      { name: "Error fill", token: "--taskall-action-error-fill" },
+      { name: "Error light", token: "--taskall-action-error-light" },
+      { name: "Disabled fill", token: "--taskall-action-disabled-fill" },
+      {
+        name: "Disabled contrast",
+        token: "--taskall-action-disabled-contrast",
+      },
     ],
   },
   {
@@ -104,8 +107,8 @@ const groups: Array<{
       "Feedback semântico. Cada status tem `soft`, `outline` e `contrast` para compor fundos, bordas e texto sobre cor.",
     tokens: ["information", "success", "warning", "error", "update"].flatMap(
       (status) => [
-        { name: status, token: `--hive-status-${status}` },
-        { name: `${status} soft`, token: `--hive-status-${status}-soft` },
+        { name: status, token: `--taskall-status-${status}` },
+        { name: `${status} soft`, token: `--taskall-status-${status}-soft` },
       ],
     ),
   },
@@ -125,55 +128,55 @@ const groups: Array<{
       "pink",
     ].map((tone) => ({
       name: tone,
-      token: `--hive-progress-${tone}`,
+      token: `--taskall-progress-${tone}`,
     })),
   },
 ];
 
 const contrastPairs = [
   {
-    text: "--hive-content-primary",
-    background: "--hive-background-primary",
+    text: "--taskall-content-primary",
+    background: "--taskall-background-primary",
     use: "Texto principal",
   },
   {
-    text: "--hive-content-secondary",
-    background: "--hive-background-primary",
+    text: "--taskall-content-secondary",
+    background: "--taskall-background-primary",
     use: "Texto de apoio",
   },
   {
-    text: "--hive-content-secondary",
-    background: "--hive-background-secondary",
+    text: "--taskall-content-secondary",
+    background: "--taskall-background-secondary",
     use: "Apoio em superfície",
   },
   {
-    text: "--hive-content-tertiary",
-    background: "--hive-background-primary",
+    text: "--taskall-content-tertiary",
+    background: "--taskall-background-primary",
     use: "Placeholder / decorativo",
   },
   {
-    text: "--hive-content-on-brand",
-    background: "--hive-brand",
+    text: "--taskall-content-on-brand",
+    background: "--taskall-brand",
     use: "Texto sobre a marca",
   },
   {
-    text: "--hive-content-on-soft",
-    background: "--hive-brand-soft",
+    text: "--taskall-content-on-soft",
+    background: "--taskall-brand-soft",
     use: "Texto sobre marca suave",
   },
   {
-    text: "--hive-action-neutral-contrast",
-    background: "--hive-action-neutral-fill",
+    text: "--taskall-action-neutral-contrast",
+    background: "--taskall-action-neutral-fill",
     use: "Botão neutral filled",
   },
   {
-    text: "--hive-action-error-contrast",
-    background: "--hive-action-error-fill",
+    text: "--taskall-action-error-contrast",
+    background: "--taskall-action-error-fill",
     use: "Botão error filled",
   },
   {
-    text: "--hive-status-error",
-    background: "--hive-background-primary",
+    text: "--taskall-status-error",
+    background: "--taskall-background-primary",
     use: "Texto de erro",
   },
 ];
@@ -223,20 +226,20 @@ function ContrastTable() {
                 key="sample"
                 style={{
                   display: "inline-block",
-                  padding: "var(--hive-space-4) var(--hive-space-12)",
-                  borderRadius: "var(--hive-radius-2)",
-                  border: "1px solid var(--hive-border-subtle)",
+                  padding: "var(--taskall-space-4) var(--taskall-space-12)",
+                  borderRadius: "var(--taskall-radius-2)",
+                  border: "1px solid var(--taskall-border-subtle)",
                   background: `var(${pair.background})`,
                   color: `var(${pair.text})`,
-                  font: "var(--hive-font-label-s)",
+                  font: "var(--taskall-font-label-s)",
                   whiteSpace: "nowrap",
                 }}
               >
                 Aa Tarefa
               </span>,
               <code key="tokens" style={{ fontSize: 12 }}>
-                {pair.text.replace("--hive-", "")} /{" "}
-                {pair.background.replace("--hive-", "")}
+                {pair.text.replace("--taskall-", "")} /{" "}
+                {pair.background.replace("--taskall-", "")}
               </code>,
               ratio ? `${ratio.toFixed(2)}:1` : "…",
               <Badge
@@ -262,30 +265,30 @@ export default function ColorsPage() {
       <PageHeader
         eyebrow="Fundamentos"
         title="Cores"
-        lead="Cores do Hive são tokens semânticos: o nome diz o papel (conteúdo, fundo, ação, status), não a tonalidade. Os valores mudam com o modo de cor e a marca — nunca use hex diretamente."
+        lead="Cores do TaskAll são tokens semânticos: o nome diz o papel (conteúdo, fundo, ação, status), não a tonalidade. Os valores mudam com o modo de cor e a marca — nunca use hex diretamente."
       />
 
       <DocSection id="uso" title="Como usar">
         <Prose>
           <p>
             Consuma as cores como CSS Custom Properties dentro de um{" "}
-            <code>HiveProvider</code>. Os valores exibidos abaixo são lidos ao
-            vivo do tema atual — troque modo e marca no topo da página para ver
-            a mudança.
+            <code>TaskAllProvider</code>. Os valores exibidos abaixo são lidos
+            ao vivo do tema atual — troque modo e marca no topo da página para
+            ver a mudança.
           </p>
         </Prose>
         <CodeBlock
           language="css"
           caption="TaskCard.module.css"
           code={`.card {
-  background: var(--hive-background-primary);
-  border: 1px solid var(--hive-border-subtle);
-  color: var(--hive-content-primary);
+  background: var(--taskall-background-primary);
+  border: 1px solid var(--taskall-border-subtle);
+  color: var(--taskall-content-primary);
 }
 
 .card[data-state="late"] {
-  border-color: var(--hive-status-warning-outline);
-  background: var(--hive-status-warning-soft);
+  border-color: var(--taskall-status-warning-outline);
+  background: var(--taskall-status-warning-soft);
 }`}
         />
       </DocSection>

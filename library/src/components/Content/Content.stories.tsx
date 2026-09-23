@@ -13,9 +13,9 @@ const badge = (
       padding: "0 8px",
       minHeight: 20,
       borderRadius: 999,
-      backgroundColor: "var(--hive-background-secondary)",
-      color: "var(--hive-content-primary)",
-      font: "var(--hive-font-label-xs)",
+      backgroundColor: "var(--taskall-background-secondary)",
+      color: "var(--taskall-content-primary)",
+      font: "var(--taskall-font-label-xs)",
     }}
   >
     Novo

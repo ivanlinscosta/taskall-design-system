@@ -8,8 +8,8 @@ import { axe } from "jest-axe";
 import { describe, expect, it, vi } from "vitest";
 
 import { WarningTriangle } from "../../icons/WarningTriangle";
-import { renderWithHive } from "../../test/renderWithHive";
-import { HiveProvider } from "../Provider/HiveProvider";
+import { renderWithTaskAll } from "../../test/renderWithTaskAll";
+import { TaskAllProvider } from "../Provider/TaskAllProvider";
 import { Modal, ModalFooter, ModalHeader } from "./Modal";
 
 function UncontrolledModalExample() {
@@ -64,7 +64,7 @@ describe("Modal", () => {
   it("opens and closes in uncontrolled mode with the trigger prop", async () => {
     const user = userEvent.setup();
 
-    renderWithHive(<UncontrolledModalExample />);
+    renderWithTaskAll(<UncontrolledModalExample />);
 
     await user.click(screen.getByRole("button", { name: "Abrir modal" }));
     expect(
@@ -80,7 +80,7 @@ describe("Modal", () => {
   it("opens and closes in controlled mode", async () => {
     const user = userEvent.setup();
 
-    renderWithHive(<ControlledModalExample />);
+    renderWithTaskAll(<ControlledModalExample />);
 
     await user.click(screen.getByRole("button", { name: "Abrir controlado" }));
     expect(
@@ -96,7 +96,7 @@ describe("Modal", () => {
   it("forwards the ref to the dialog content element", () => {
     const ref = createRef<HTMLDivElement>();
 
-    renderWithHive(
+    renderWithTaskAll(
       <Modal open ref={ref} title="Detalhes">
         Conteúdo
       </Modal>,
@@ -109,7 +109,7 @@ describe("Modal", () => {
   it("moves focus into the modal and traps it while open", async () => {
     const user = userEvent.setup();
 
-    renderWithHive(<UncontrolledModalExample />);
+    renderWithTaskAll(<UncontrolledModalExample />);
 
     await user.click(screen.getByRole("button", { name: "Abrir modal" }));
 
@@ -140,7 +140,7 @@ describe("Modal", () => {
   it("closes on Escape and returns focus to the trigger", async () => {
     const user = userEvent.setup();
 
-    renderWithHive(<UncontrolledModalExample />);
+    renderWithTaskAll(<UncontrolledModalExample />);
 
     const trigger = screen.getByRole("button", { name: "Abrir modal" });
 
@@ -158,7 +158,7 @@ describe("Modal", () => {
   });
 
   it("applies aria-labelledby and aria-describedby through title and description", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <Modal
         open
         title="Excluir cadastro"
@@ -194,7 +194,7 @@ describe("Modal", () => {
   });
 
   it("honors showCloseButton={false} when using a custom ModalHeader", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <Modal
         open
         title="Editar responsáveis"
@@ -218,7 +218,7 @@ describe("Modal", () => {
   it("uses ModalHeader inside Modal to close the dialog", async () => {
     const user = userEvent.setup();
 
-    renderWithHive(
+    renderWithTaskAll(
       <Modal
         trigger={<button type="button">Abrir com header customizado</button>}
         title="Excluir vínculo"
@@ -260,7 +260,7 @@ describe("Modal", () => {
       pointerEventsCheck: PointerEventsCheckLevel.Never,
     });
 
-    renderWithHive(<UncontrolledModalExample />);
+    renderWithTaskAll(<UncontrolledModalExample />);
 
     await user.click(screen.getByRole("button", { name: "Abrir modal" }));
 
@@ -297,11 +297,11 @@ describe("Modal", () => {
 
     try {
       render(
-        <HiveProvider data-testid="provider" colorMode="dark" brand="gestao">
+        <TaskAllProvider data-testid="provider" colorMode="dark" brand="gestao">
           <Modal open title="Portal">
             Conteúdo
           </Modal>
-        </HiveProvider>,
+        </TaskAllProvider>,
       );
 
       const dialog = screen.getByRole("dialog", { name: "Portal" });
@@ -312,7 +312,7 @@ describe("Modal", () => {
   });
 
   it("renders a decorative header icon with tone", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <Modal
         open
         title="Excluir tarefa?"
@@ -329,13 +329,13 @@ describe("Modal", () => {
     expect(iconBox?.querySelector("svg")).toBeInTheDocument();
   });
 
-  it("renders inside the nearest HiveProvider so dark mode tokens are preserved", () => {
+  it("renders inside the nearest TaskAllProvider so dark mode tokens are preserved", () => {
     render(
-      <HiveProvider data-testid="dark-provider" colorMode="dark">
+      <TaskAllProvider data-testid="dark-provider" colorMode="dark">
         <Modal open title="Tema escuro">
           Conteúdo em dark mode.
         </Modal>
-      </HiveProvider>,
+      </TaskAllProvider>,
     );
 
     const provider = screen.getByTestId("dark-provider");
@@ -345,7 +345,7 @@ describe("Modal", () => {
   });
 
   it("supports light mode rendering with the default helper", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <Modal open title="Tema claro">
         Conteúdo em light mode.
       </Modal>,
@@ -358,7 +358,7 @@ describe("Modal", () => {
   });
 
   it("has no axe violations", async () => {
-    renderWithHive(
+    renderWithTaskAll(
       <Modal
         open
         title="Acessibilidade"
@@ -385,7 +385,7 @@ describe("Modal", () => {
     const user = userEvent.setup();
     const onClose = vi.fn();
 
-    renderWithHive(
+    renderWithTaskAll(
       <ModalHeader
         type="icon"
         icon={WarningTriangle}

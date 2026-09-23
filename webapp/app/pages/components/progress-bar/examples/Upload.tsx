@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Button, ProgressBar, Upload } from "@hive/react";
+import { Button, ProgressBar, Upload } from "@taskall/react";
 
 export default function ProgressBarUpload() {
   const [value, setValue] = React.useState(0);
@@ -18,7 +18,7 @@ export default function ProgressBarUpload() {
     <div
       style={{
         display: "grid",
-        gap: "var(--hive-space-12)",
+        gap: "var(--taskall-space-12)",
         width: "100%",
         maxWidth: 420,
       }}

@@ -19,7 +19,7 @@ export default function PatternsPage() {
       <PageHeader
         eyebrow="Guias"
         title="Padrões aplicados"
-        lead="Telas do Task All montadas apenas com componentes e tokens do Hive. Troque marca, modo, densidade e forma no menu “Tema” para ver o mesmo código se adaptar."
+        lead="Telas do Task All montadas apenas com componentes e tokens do TaskAll. Troque marca, modo, densidade e forma no menu “Tema” para ver o mesmo código se adaptar."
       />
       <DocSection
         id="painel-professor"

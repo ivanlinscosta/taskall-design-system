@@ -1,4 +1,11 @@
-import { Bell, Calendar, Home, Settings, Slot, SlotGroup } from "@hive/react";
+import {
+  Bell,
+  Calendar,
+  Home,
+  Settings,
+  Slot,
+  SlotGroup,
+} from "@taskall/react";
 
 const icons = [Home, Calendar, Bell, Settings];
 
@@ -8,7 +15,7 @@ export default function SlotGroupOrientation() {
       style={{
         display: "flex",
         alignItems: "start",
-        gap: "var(--hive-space-48)",
+        gap: "var(--taskall-space-48)",
       }}
     >
       {(["horizontal", "vertical"] as const).map((orientation) => (

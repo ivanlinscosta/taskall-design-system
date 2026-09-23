@@ -2,23 +2,23 @@
   position: relative;
   display: inline-flex;
   align-items: flex-start;
-  gap: var(--hive-space-step-3);
-  color: var(--hive-content-primary);
+  gap: var(--taskall-space-step-3);
+  color: var(--taskall-content-primary);
   cursor: pointer;
-  font: var(--hive-font-paragraph-s);
+  font: var(--taskall-font-paragraph-s);
 }
 
 .small {
-  min-height: var(--hive-space-20);
+  min-height: var(--taskall-space-20);
 }
 
 .x-small {
   min-height: 16px;
-  font: var(--hive-font-paragraph-xs);
+  font: var(--taskall-font-paragraph-xs);
 }
 
 .disabled {
-  color: var(--hive-content-disabled);
+  color: var(--taskall-content-disabled);
   cursor: not-allowed;
 }
 
@@ -38,9 +38,9 @@
   width: 20px;
   height: 20px;
   flex-shrink: 0;
-  border: 1px solid var(--hive-border-strong);
-  border-radius: var(--hive-radius-2);
-  background-color: var(--hive-background-primary);
+  border: 1px solid var(--taskall-border-strong);
+  border-radius: var(--taskall-radius-2);
+  background-color: var(--taskall-background-primary);
   color: transparent;
   transition:
     background-color 120ms ease,
@@ -55,26 +55,26 @@
 }
 
 .input:focus-visible + .control {
-  outline: var(--hive-focus-ring-width) solid var(--hive-focus-ring-color);
-  outline-offset: var(--hive-focus-ring-offset);
+  outline: var(--taskall-focus-ring-width) solid var(--taskall-focus-ring-color);
+  outline-offset: var(--taskall-focus-ring-offset);
 }
 
 .root:hover:not(.disabled) .control {
-  border-color: var(--hive-action-primary);
+  border-color: var(--taskall-action-primary);
 }
 
 .root[data-state="checked"] .control,
 .root[data-state="indeterminate"] .control {
-  background-color: var(--hive-action-primary);
-  border-color: var(--hive-action-primary);
-  color: var(--hive-action-primary-contrast);
+  background-color: var(--taskall-action-primary);
+  border-color: var(--taskall-action-primary);
+  color: var(--taskall-action-primary-contrast);
 }
 
 .root.disabled .control,
 .input:disabled + .control {
-  background-color: var(--hive-action-disabled-fill);
-  border-color: var(--hive-action-disabled-border);
-  color: var(--hive-action-disabled-contrast);
+  background-color: var(--taskall-action-disabled-fill);
+  border-color: var(--taskall-action-disabled-border);
+  color: var(--taskall-action-disabled-contrast);
 }
 
 .checkIcon,

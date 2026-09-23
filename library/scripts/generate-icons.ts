@@ -5,7 +5,7 @@
  * - clipPath de 20×20 (sem efeito visual) é descartado para evitar ids duplicados.
  * - Regenera src/icons/index.ts e src/icons/iconSearch.ts (palavras-chave EN + PT).
  *
- * Uso: pnpm --filter @hive/react generate:icons
+ * Uso: pnpm --filter @taskall/react generate:icons
  */
 import * as fs from "node:fs";
 import * as path from "node:path";

@@ -1,4 +1,4 @@
-import { Paragraph } from "@hive/react";
+import { Paragraph } from "@taskall/react";
 
 const text =
   "A tarefa fica disponível para a turma até a data de entrega definida pelo professor.";
@@ -6,7 +6,7 @@ const text =
 export default function ParagraphSizes() {
   return (
     <div
-      style={{ display: "grid", gap: "var(--hive-space-12)", maxWidth: 560 }}
+      style={{ display: "grid", gap: "var(--taskall-space-12)", maxWidth: 560 }}
     >
       <Paragraph size="l">L · {text}</Paragraph>
       <Paragraph size="m">M · {text}</Paragraph>

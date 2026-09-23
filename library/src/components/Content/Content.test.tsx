@@ -3,12 +3,14 @@ import { axe } from "jest-axe";
 import { describe, expect, it } from "vitest";
 
 import { BellNotification as Bell } from "../../icons/BellNotification";
-import { renderWithHive } from "../../test/renderWithHive";
+import { renderWithTaskAll } from "../../test/renderWithTaskAll";
 import { Content } from "./Content";
 
 describe("Content", () => {
   it("renders avatar content with fallback initials from the label", () => {
-    renderWithHive(<Content label="Maria Silva" description="Responsável" />);
+    renderWithTaskAll(
+      <Content label="Maria Silva" description="Responsável" />,
+    );
 
     expect(screen.getByText("Maria Silva")).toBeInTheDocument();
     expect(screen.getByText("Responsável")).toBeInTheDocument();
@@ -16,7 +18,7 @@ describe("Content", () => {
   });
 
   it("renders icon content with the requested size and trailing badge", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <Content
         type="icon"
         size="x-small"
@@ -37,7 +39,7 @@ describe("Content", () => {
   });
 
   it("preserves a custom avatar node and title for context", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <Content
         label="Carlos Souza"
         avatar={<span aria-hidden="true">CS</span>}
@@ -50,7 +52,7 @@ describe("Content", () => {
   });
 
   it("has no axe violations", async () => {
-    const { container } = renderWithHive(
+    const { container } = renderWithTaskAll(
       <Content
         type="icon"
         label="Agenda"

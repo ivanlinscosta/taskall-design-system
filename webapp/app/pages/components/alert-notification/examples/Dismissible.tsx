@@ -1,5 +1,5 @@
 import * as React from "react";
-import { AlertNotification, Button } from "@hive/react";
+import { AlertNotification, Button } from "@taskall/react";
 
 export default function AlertNotificationDismissible() {
   const [key, setKey] = React.useState(0);
@@ -9,7 +9,7 @@ export default function AlertNotificationDismissible() {
     <div
       style={{
         display: "grid",
-        gap: "var(--hive-space-12)",
+        gap: "var(--taskall-space-12)",
         width: "100%",
         maxWidth: 520,
       }}

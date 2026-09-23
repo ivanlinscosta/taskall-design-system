@@ -1,28 +1,28 @@
 .heading {
   margin: 0;
-  color: var(--hive-content-primary);
+  color: var(--taskall-content-primary);
 }
 
 .lvl1 {
-  font: var(--hive-font-h1);
+  font: var(--taskall-font-h1);
 }
 
 .lvl2 {
-  font: var(--hive-font-h2);
+  font: var(--taskall-font-h2);
 }
 
 .lvl3 {
-  font: var(--hive-font-h3);
+  font: var(--taskall-font-h3);
 }
 
 .lvl4 {
-  font: var(--hive-font-h4);
+  font: var(--taskall-font-h4);
 }
 
 .lvl5 {
-  font: var(--hive-font-h5);
+  font: var(--taskall-font-h5);
 }
 
 .lvl6 {
-  font: var(--hive-font-h6);
+  font: var(--taskall-font-h6);
 }

@@ -1,4 +1,4 @@
-import { Avatar, Badge, LabelText, Paragraph } from "@hive/react";
+import { Avatar, Badge, LabelText, Paragraph } from "@taskall/react";
 
 const reviewers = [
   {
@@ -21,14 +21,14 @@ export default function AvatarTaskAssignee() {
       aria-label="Revisores da avaliação"
       style={{
         display: "grid",
-        gap: "var(--hive-space-step-3)",
+        gap: "var(--taskall-space-step-3)",
         maxWidth: 440,
         margin: "0 auto",
-        padding: "var(--hive-space-step-4)",
+        padding: "var(--taskall-space-step-4)",
         listStyle: "none",
-        border: "1px solid var(--hive-border-default)",
-        borderRadius: "var(--hive-radius-surface)",
-        backgroundColor: "var(--hive-background-primary)",
+        border: "1px solid var(--taskall-border-default)",
+        borderRadius: "var(--taskall-radius-surface)",
+        backgroundColor: "var(--taskall-background-primary)",
       }}
     >
       {reviewers.map((person) => (
@@ -37,7 +37,7 @@ export default function AvatarTaskAssignee() {
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "var(--hive-space-12)",
+            gap: "var(--taskall-space-12)",
           }}
         >
           <Avatar
@@ -49,7 +49,7 @@ export default function AvatarTaskAssignee() {
             <LabelText size="s">{person.name}</LabelText>
             <Paragraph
               size="xs"
-              style={{ margin: 0, color: "var(--hive-content-secondary)" }}
+              style={{ margin: 0, color: "var(--taskall-content-secondary)" }}
             >
               {person.role} ·{" "}
               {person.status === "online" ? "online agora" : "ausente"}

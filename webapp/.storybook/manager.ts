@@ -1,9 +1,9 @@
 import { addons } from "storybook/manager-api";
 import { create } from "storybook/theming";
 
-const hiveTheme = create({
+const taskallTheme = create({
   base: "light",
-  brandTitle: "Hive Design System · Task All",
+  brandTitle: "TaskAll Design System",
   brandImage: "brand/logo.svg",
   brandUrl: "/",
   brandTarget: "_self",
@@ -23,4 +23,4 @@ const hiveTheme = create({
   inputTextColor: "#080b12",
 });
 
-addons.setConfig({ theme: hiveTheme });
+addons.setConfig({ theme: taskallTheme });

@@ -3,13 +3,13 @@ import { screen } from "@testing-library/react";
 import { axe } from "jest-axe";
 import { describe, expect, it } from "vitest";
 
-import { renderWithHive } from "../../test/renderWithHive";
+import { renderWithTaskAll } from "../../test/renderWithTaskAll";
 import { Avatar } from "../Avatar/Avatar";
 import { AvatarGroup } from "./AvatarGroup";
 
 describe("AvatarGroup", () => {
   it("renders a group with a default accessible name", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <AvatarGroup
         avatars={[{ fallback: "IC" }, { fallback: "AM" }, { fallback: "NO" }]}
       />,
@@ -21,13 +21,13 @@ describe("AvatarGroup", () => {
   it("forwards the ref to the root div", () => {
     const ref = createRef<HTMLDivElement>();
 
-    renderWithHive(<AvatarGroup ref={ref} avatars={[{ fallback: "IC" }]} />);
+    renderWithTaskAll(<AvatarGroup ref={ref} avatars={[{ fallback: "IC" }]} />);
 
     expect(ref.current).toBeInstanceOf(HTMLDivElement);
   });
 
   it("uses a custom ariaLabel when provided", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <AvatarGroup
         avatars={[{ fallback: "IC" }]}
         ariaLabel="Equipe pedagógica"
@@ -40,7 +40,7 @@ describe("AvatarGroup", () => {
   });
 
   it("respects max and renders a surplus avatar", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <AvatarGroup
         max={2}
         avatars={[
@@ -58,7 +58,7 @@ describe("AvatarGroup", () => {
   });
 
   it("accepts Avatar elements and applies the group size fallback", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <AvatarGroup
         avatars={[
           <Avatar key="1" fallback="IC" />,
@@ -75,7 +75,7 @@ describe("AvatarGroup", () => {
   });
 
   it("has no axe violations", async () => {
-    const { container } = renderWithHive(
+    const { container } = renderWithTaskAll(
       <AvatarGroup
         avatars={[{ fallback: "IC" }, { fallback: "AM" }, { fallback: "NO" }]}
         max={2}

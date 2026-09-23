@@ -7,7 +7,7 @@ import {
   ModalFooter,
   ModalHeader,
   Paragraph,
-} from "@hive/react";
+} from "@taskall/react";
 
 export default function ModalCustomHeader() {
   const [open, setOpen] = React.useState(false);

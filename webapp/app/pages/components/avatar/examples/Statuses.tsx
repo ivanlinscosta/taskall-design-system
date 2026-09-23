@@ -1,4 +1,4 @@
-import { Avatar } from "@hive/react";
+import { Avatar } from "@taskall/react";
 
 const statuses = [
   { status: "online", label: "Online" },
@@ -17,7 +17,7 @@ export default function AvatarStatuses() {
       style={{
         display: "flex",
         flexWrap: "wrap",
-        gap: "var(--hive-space-20)",
+        gap: "var(--taskall-space-20)",
         margin: 0,
         padding: 0,
         listStyle: "none",
@@ -29,14 +29,14 @@ export default function AvatarStatuses() {
           style={{
             display: "grid",
             justifyItems: "center",
-            gap: "var(--hive-space-6)",
+            gap: "var(--taskall-space-6)",
           }}
         >
           <Avatar size="lg" fallback="AL" status={status} />
           <span
             style={{
-              font: "var(--hive-font-paragraph-xs)",
-              color: "var(--hive-content-secondary)",
+              font: "var(--taskall-font-paragraph-xs)",
+              color: "var(--taskall-content-secondary)",
             }}
           >
             {label}

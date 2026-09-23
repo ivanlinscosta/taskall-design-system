@@ -8,7 +8,7 @@ import {
   PencilSquare,
   RecycleBin,
   Tooltip,
-} from "@hive/react";
+} from "@taskall/react";
 
 const actions = [
   { icon: PencilSquare, label: "Editar tarefa", tone: "neutral" as const },
@@ -23,7 +23,7 @@ export default function IconButtonTaskRowActions() {
     <div
       style={{
         display: "grid",
-        gap: "var(--hive-space-8)",
+        gap: "var(--taskall-space-8)",
         maxWidth: 560,
         margin: "0 auto",
       }}
@@ -32,11 +32,11 @@ export default function IconButtonTaskRowActions() {
         style={{
           display: "flex",
           alignItems: "center",
-          gap: "var(--hive-space-12)",
-          padding: "var(--hive-space-step-4) var(--hive-space-step-5)",
-          border: "1px solid var(--hive-border-default)",
-          borderRadius: "var(--hive-radius-surface)",
-          backgroundColor: "var(--hive-background-primary)",
+          gap: "var(--taskall-space-12)",
+          padding: "var(--taskall-space-step-4) var(--taskall-space-step-5)",
+          border: "1px solid var(--taskall-border-default)",
+          borderRadius: "var(--taskall-radius-surface)",
+          backgroundColor: "var(--taskall-background-primary)",
         }}
       >
         <Content
@@ -50,7 +50,7 @@ export default function IconButtonTaskRowActions() {
         <div
           role="toolbar"
           aria-label="Ações da tarefa"
-          style={{ display: "flex", gap: "var(--hive-space-4)" }}
+          style={{ display: "flex", gap: "var(--taskall-space-4)" }}
         >
           {actions.map((action) => (
             <Tooltip key={action.label} title={action.label}>
@@ -70,8 +70,8 @@ export default function IconButtonTaskRowActions() {
         role="status"
         style={{
           margin: 0,
-          font: "var(--hive-font-paragraph-xs)",
-          color: "var(--hive-content-secondary)",
+          font: "var(--taskall-font-paragraph-xs)",
+          color: "var(--taskall-content-secondary)",
         }}
       >
         {last ? `Ação: ${last}` : ""}

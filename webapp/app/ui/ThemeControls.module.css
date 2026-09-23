@@ -7,15 +7,15 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--hive-space-8);
-  min-width: var(--hive-touch-target);
-  height: var(--hive-touch-target);
-  padding: 0 var(--hive-space-12);
+  gap: var(--taskall-space-8);
+  min-width: var(--taskall-touch-target);
+  height: var(--taskall-touch-target);
+  padding: 0 var(--taskall-space-12);
   border: 1px solid transparent;
-  border-radius: var(--hive-radius-3);
+  border-radius: var(--taskall-radius-3);
   background: transparent;
-  color: var(--hive-content-primary);
-  font: var(--hive-font-label-s);
+  color: var(--taskall-content-primary);
+  font: var(--taskall-font-label-s);
   cursor: pointer;
 }
 
@@ -26,25 +26,25 @@
 .iconButton:hover,
 .trigger:hover,
 .trigger[aria-expanded="true"] {
-  background-color: var(--hive-background-hover);
-  border-color: var(--hive-border-subtle);
+  background-color: var(--taskall-background-hover);
+  border-color: var(--taskall-border-subtle);
 }
 
 .panel {
   position: absolute;
-  top: calc(100% + var(--hive-space-8));
+  top: calc(100% + var(--taskall-space-8));
   right: 0;
   z-index: 30;
   display: flex;
   flex-direction: column;
-  gap: var(--hive-space-12);
+  gap: var(--taskall-space-12);
   width: 280px;
-  max-width: calc(100vw - var(--hive-space-32));
-  padding: var(--hive-space-16);
-  border: 1px solid var(--hive-border-subtle);
-  border-radius: var(--hive-radius-surface);
-  background-color: var(--hive-background-primary);
-  box-shadow: var(--hive-shadow-lg);
+  max-width: calc(100vw - var(--taskall-space-32));
+  padding: var(--taskall-space-16);
+  border: 1px solid var(--taskall-border-subtle);
+  border-radius: var(--taskall-radius-surface);
+  background-color: var(--taskall-background-primary);
+  box-shadow: var(--taskall-shadow-lg);
 }
 
 .panel[hidden] {
@@ -53,8 +53,8 @@
 
 .hint {
   margin: 0;
-  font: var(--hive-font-paragraph-xs);
-  color: var(--hive-content-secondary);
+  font: var(--taskall-font-paragraph-xs);
+  color: var(--taskall-content-secondary);
 }
 
 @media (max-width: 640px) {

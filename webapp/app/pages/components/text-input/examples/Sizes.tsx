@@ -1,11 +1,11 @@
-import { Search, TextInput } from "@hive/react";
+import { Search, TextInput } from "@taskall/react";
 
 export default function TextInputSizes() {
   return (
     <div
       style={{
         display: "grid",
-        gap: "var(--hive-space-16)",
+        gap: "var(--taskall-space-16)",
         width: "100%",
         maxWidth: 360,
       }}

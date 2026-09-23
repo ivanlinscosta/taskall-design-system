@@ -6,7 +6,7 @@ import {
   TaillessLineArrowRight,
   UploadTray,
   type ButtonProps,
-} from "@hive/react";
+} from "@taskall/react";
 
 import { jsx, raw } from "../../../lib/api";
 import { definePlayground, example, type ComponentDoc } from "../../../lib/doc";
@@ -52,7 +52,7 @@ const doc: ComponentDoc = {
     "Alternar um estado ligado/desligado — use Checkbox.",
     "Muitas ações equivalentes lado a lado — agrupe em menu ou reduza a hierarquia.",
   ],
-  usage: `import { Button, TaillessLineArrowRight } from "@hive/react";
+  usage: `import { Button, TaillessLineArrowRight } from "@taskall/react";
 
 export function PublishTask({ onPublish, saving }: { onPublish: () => void; saving: boolean }) {
   return (
@@ -208,7 +208,7 @@ export function PublishTask({ onPublish, saving }: { onPublish: () => void; savi
       '`loading` desabilita o botão e adiciona `aria-busy="true"`; o texto continua acessível.',
       "Ícones são decorativos (`aria-hidden`). Para botão só com ícone use IconButton (exige `aria-label`).",
       "Altura medium = 44px (alvo de toque). Small (32px) é exceção documentada para barras densas em desktop.",
-      "Foco visível via `--hive-focus-ring-*`; não remova o outline.",
+      "Foco visível via `--taskall-focus-ring-*`; não remova o outline.",
     ],
     keyboard: [
       { keys: "Tab", action: "Move o foco para o botão." },

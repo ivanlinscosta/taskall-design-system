@@ -5,7 +5,7 @@ import {
   Heading,
   Paragraph,
   Rating,
-} from "@hive/react";
+} from "@taskall/react";
 
 export default function RatingActivityFeedback() {
   const [value, setValue] = React.useState(0);
@@ -15,13 +15,13 @@ export default function RatingActivityFeedback() {
     <section
       style={{
         display: "grid",
-        gap: "var(--hive-space-step-5)",
+        gap: "var(--taskall-space-step-5)",
         maxWidth: 420,
         margin: "0 auto",
-        padding: "var(--hive-space-step-7)",
-        border: "1px solid var(--hive-border-default)",
-        borderRadius: "var(--hive-radius-surface)",
-        backgroundColor: "var(--hive-background-primary)",
+        padding: "var(--taskall-space-step-7)",
+        border: "1px solid var(--taskall-border-default)",
+        borderRadius: "var(--taskall-radius-surface)",
+        backgroundColor: "var(--taskall-background-primary)",
       }}
     >
       <div>
@@ -30,7 +30,7 @@ export default function RatingActivityFeedback() {
         </Heading>
         <Paragraph
           size="s"
-          style={{ margin: 0, color: "var(--hive-content-secondary)" }}
+          style={{ margin: 0, color: "var(--taskall-content-secondary)" }}
         >
           Sua resposta é anônima e ajuda o professor a planejar as próximas
           aulas.

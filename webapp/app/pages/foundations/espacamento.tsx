@@ -11,7 +11,7 @@ const page = findPage("fundamentos", "espacamento");
 
 const primitives = [0, 2, 4, 6, 8, 12, 16, 20, 24, 32, 40, 44, 48, 56, 64];
 const steps = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-const stepTokens = steps.map((step) => `--hive-space-step-${step}`);
+const stepTokens = steps.map((step) => `--taskall-space-step-${step}`);
 
 function StepColumn({ label }: { label: string }) {
   const [ref, values] = useComputedTokens<HTMLDivElement>(stepTokens);
@@ -23,11 +23,11 @@ function StepColumn({ label }: { label: string }) {
           <code className={styles.barLabel}>step-{step}</code>
           <span
             className={styles.bar}
-            style={{ width: `var(--hive-space-step-${step})` }}
+            style={{ width: `var(--taskall-space-step-${step})` }}
             aria-hidden="true"
           />
           <span className={styles.barValue}>
-            {values[`--hive-space-step-${step}`] || "…"}
+            {values[`--taskall-space-step-${step}`] || "…"}
           </span>
         </div>
       ))}
@@ -43,15 +43,15 @@ export default function SpacingPage() {
       <PageHeader
         eyebrow="Fundamentos"
         title="Espaçamento"
-        lead="Duas escalas: primitivos em px exatos, que nunca mudam, e steps 1–9, que o HiveProvider remapeia conforme a densidade (compacta, padrão, expandida)."
+        lead="Duas escalas: primitivos em px exatos, que nunca mudam, e steps 1–9, que o TaskAllProvider remapeia conforme a densidade (compacta, padrão, expandida)."
       />
       <DocSection id="uso" title="Como usar">
         <Prose>
           <p>
-            Use <code>--hive-space-step-*</code> para paddings, gaps e margens
-            de componentes e layouts — eles acompanham a densidade escolhida.
-            Use os primitivos apenas quando a medida precisa ser fixa (ex.:
-            alinhar um ícone de 16px).
+            Use <code>--taskall-space-step-*</code> para paddings, gaps e
+            margens de componentes e layouts — eles acompanham a densidade
+            escolhida. Use os primitivos apenas quando a medida precisa ser fixa
+            (ex.: alinhar um ícone de 16px).
           </p>
         </Prose>
         <CodeBlock
@@ -59,12 +59,12 @@ export default function SpacingPage() {
           caption="TaskList.module.css"
           code={`.list {
   display: grid;
-  gap: var(--hive-space-step-4);   /* 8 · 12 · 16px conforme a densidade */
-  padding: var(--hive-space-step-6);
+  gap: var(--taskall-space-step-4);   /* 8 · 12 · 16px conforme a densidade */
+  padding: var(--taskall-space-step-6);
 }
 
 .icon {
-  width: var(--hive-space-16);     /* fixo */
+  width: var(--taskall-space-16);     /* fixo */
 }`}
         />
       </DocSection>
@@ -98,12 +98,12 @@ export default function SpacingPage() {
           rows={primitives.map((value) => ({
             key: String(value),
             cells: [
-              <code key="token">--hive-space-{value}</code>,
+              <code key="token">--taskall-space-{value}</code>,
               `${value}px`,
               <span
                 key="bar"
                 className={styles.bar}
-                style={{ width: `var(--hive-space-${value})` }}
+                style={{ width: `var(--taskall-space-${value})` }}
                 aria-hidden="true"
               />,
             ],
@@ -111,7 +111,7 @@ export default function SpacingPage() {
         />
       </DocSection>
       <DocSection id="alvo-toque" title="Alvo de toque">
-        <Callout title="--hive-touch-target: 44px">
+        <Callout title="--taskall-touch-target: 44px">
           <p>
             Controles interativos devem ter no mínimo 44×44px de área clicável
             (WCAG 2.5.5). Botões medium, campos e o fechar do Modal já seguem

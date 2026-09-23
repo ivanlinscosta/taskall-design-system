@@ -1,7 +1,7 @@
 .swatchGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
-  gap: var(--hive-space-16);
+  gap: var(--taskall-space-16);
 }
 
 .swatch {
@@ -9,71 +9,72 @@
   flex-direction: column;
   margin: 0;
   overflow: hidden;
-  border: 1px solid var(--hive-border-default);
-  border-radius: var(--hive-radius-4);
-  background-color: var(--hive-background-primary);
+  border: 1px solid var(--taskall-border-default);
+  border-radius: var(--taskall-radius-4);
+  background-color: var(--taskall-background-primary);
 }
 
 .swatchColor {
   height: 72px;
-  border-bottom: 1px solid var(--hive-border-subtle);
+  border-bottom: 1px solid var(--taskall-border-subtle);
 }
 
 .swatchCaption {
   display: flex;
   flex-direction: column;
-  gap: var(--hive-space-2);
-  padding: var(--hive-space-8) var(--hive-space-12) var(--hive-space-12);
+  gap: var(--taskall-space-2);
+  padding: var(--taskall-space-8) var(--taskall-space-12)
+    var(--taskall-space-12);
 }
 
 .swatchName {
-  font: var(--hive-font-label-s);
+  font: var(--taskall-font-label-s);
 }
 
 .swatchToken {
   font-size: 12px;
-  color: var(--hive-content-secondary);
+  color: var(--taskall-content-secondary);
   overflow-wrap: anywhere;
 }
 
 .swatchValue {
-  font: var(--hive-font-paragraph-xs);
+  font: var(--taskall-font-paragraph-xs);
   font-family: var(--docs-mono);
-  color: var(--hive-content-secondary);
+  color: var(--taskall-content-secondary);
   text-transform: lowercase;
 }
 
 .tableWrap {
   overflow-x: auto;
-  border: 1px solid var(--hive-border-default);
-  border-radius: var(--hive-radius-4);
+  border: 1px solid var(--taskall-border-default);
+  border-radius: var(--taskall-radius-4);
 }
 
 .table {
   width: 100%;
   min-width: 520px;
   border-collapse: collapse;
-  font: var(--hive-font-paragraph-s);
+  font: var(--taskall-font-paragraph-s);
 }
 
 .table th,
 .table td {
-  padding: var(--hive-space-12) var(--hive-space-16);
-  border-bottom: 1px solid var(--hive-border-subtle);
+  padding: var(--taskall-space-12) var(--taskall-space-16);
+  border-bottom: 1px solid var(--taskall-border-subtle);
   text-align: left;
   vertical-align: middle;
 }
 
 .table thead th {
-  background-color: var(--hive-background-secondary);
-  font: var(--hive-font-label-xs);
+  background-color: var(--taskall-background-secondary);
+  font: var(--taskall-font-label-xs);
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--hive-content-secondary);
+  color: var(--taskall-content-secondary);
 }
 
 .table tbody th {
-  font-weight: var(--hive-weight-regular);
+  font-weight: var(--taskall-weight-regular);
 }
 
 .table tbody tr:last-child th,

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Hive Design System — Design Tokens
+   TaskAll Design System — Design Tokens
    --------------------------------------------------------------------------
    Primitive and semantic tokens expressed as CSS Custom Properties.
 
@@ -12,8 +12,8 @@
    When no provider is mounted, :root default values apply:
      light / coral / default / default
 
-   Every HiveProvider ([data-color-mode]) re-declares the base scope, so derived
-   aliases (e.g. --hive-action-primary -> --hive-brand) and default density /
+   Every TaskAllProvider ([data-color-mode]) re-declares the base scope, so derived
+   aliases (e.g. --taskall-action-primary -> --taskall-brand) and default density /
    shape resolve inside nested providers instead of inheriting the parent's.
    ========================================================================== */
 
@@ -24,268 +24,288 @@
   /* ------------------------------------------------------------------ *
    * Typography
    * ------------------------------------------------------------------ */
-  --hive-font-family: "Archivo", system-ui, -apple-system, sans-serif;
+  --taskall-font-family: "Archivo", system-ui, -apple-system, sans-serif;
 
-  --hive-weight-regular: 400;
-  --hive-weight-semibold: 600;
-  --hive-weight-bold: 700;
+  --taskall-weight-regular: 400;
+  --taskall-weight-semibold: 600;
+  --taskall-weight-bold: 700;
 
   /* Display (weight 700) */
-  --hive-font-size-display-1: 96px;
-  --hive-font-size-display-2: 52px;
-  --hive-font-size-display-3: 44px;
-  --hive-font-size-display-4: 36px;
-  --hive-line-height-display-1: 115.2px;
-  --hive-line-height-display-2: 62.4px;
-  --hive-line-height-display-3: 61.6px;
-  --hive-line-height-display-4: 50.4px;
-  --hive-font-display-1: var(--hive-weight-bold) var(--hive-font-size-display-1) /
-    var(--hive-line-height-display-1) var(--hive-font-family);
-  --hive-font-display-2: var(--hive-weight-bold) var(--hive-font-size-display-2) /
-    var(--hive-line-height-display-2) var(--hive-font-family);
-  --hive-font-display-3: var(--hive-weight-bold) var(--hive-font-size-display-3) /
-    var(--hive-line-height-display-3) var(--hive-font-family);
-  --hive-font-display-4: var(--hive-weight-bold) var(--hive-font-size-display-4) /
-    var(--hive-line-height-display-4) var(--hive-font-family);
+  --taskall-font-size-display-1: 96px;
+  --taskall-font-size-display-2: 52px;
+  --taskall-font-size-display-3: 44px;
+  --taskall-font-size-display-4: 36px;
+  --taskall-line-height-display-1: 115.2px;
+  --taskall-line-height-display-2: 62.4px;
+  --taskall-line-height-display-3: 61.6px;
+  --taskall-line-height-display-4: 50.4px;
+  --taskall-font-display-1: var(--taskall-weight-bold)
+    var(--taskall-font-size-display-1) / var(--taskall-line-height-display-1)
+    var(--taskall-font-family);
+  --taskall-font-display-2: var(--taskall-weight-bold)
+    var(--taskall-font-size-display-2) / var(--taskall-line-height-display-2)
+    var(--taskall-font-family);
+  --taskall-font-display-3: var(--taskall-weight-bold)
+    var(--taskall-font-size-display-3) / var(--taskall-line-height-display-3)
+    var(--taskall-font-family);
+  --taskall-font-display-4: var(--taskall-weight-bold)
+    var(--taskall-font-size-display-4) / var(--taskall-line-height-display-4)
+    var(--taskall-font-family);
 
   /* Headings */
-  --hive-font-size-h1: 56px;
-  --hive-font-size-h2: 48px;
-  --hive-font-size-h3: 40px;
-  --hive-font-size-h4: 32px;
-  --hive-font-size-h5: 24px;
-  --hive-font-size-h6: 20px;
-  --hive-line-height-h1: 64px;
-  --hive-line-height-h2: 56px;
-  --hive-line-height-h3: 48px;
-  --hive-line-height-h4: 40px;
-  --hive-line-height-h5: 32px;
-  --hive-line-height-h6: 28px;
-  --hive-font-h1: var(--hive-weight-bold) var(--hive-font-size-h1) / var(--hive-line-height-h1)
-    var(--hive-font-family);
-  --hive-font-h2: var(--hive-weight-bold) var(--hive-font-size-h2) / var(--hive-line-height-h2)
-    var(--hive-font-family);
-  --hive-font-h3: var(--hive-weight-bold) var(--hive-font-size-h3) / var(--hive-line-height-h3)
-    var(--hive-font-family);
-  --hive-font-h4: var(--hive-weight-bold) var(--hive-font-size-h4) / var(--hive-line-height-h4)
-    var(--hive-font-family);
-  --hive-font-h5: var(--hive-weight-semibold) var(--hive-font-size-h5) /
-    var(--hive-line-height-h5) var(--hive-font-family);
-  --hive-font-h6: var(--hive-weight-semibold) var(--hive-font-size-h6) /
-    var(--hive-line-height-h6) var(--hive-font-family);
+  --taskall-font-size-h1: 56px;
+  --taskall-font-size-h2: 48px;
+  --taskall-font-size-h3: 40px;
+  --taskall-font-size-h4: 32px;
+  --taskall-font-size-h5: 24px;
+  --taskall-font-size-h6: 20px;
+  --taskall-line-height-h1: 64px;
+  --taskall-line-height-h2: 56px;
+  --taskall-line-height-h3: 48px;
+  --taskall-line-height-h4: 40px;
+  --taskall-line-height-h5: 32px;
+  --taskall-line-height-h6: 28px;
+  --taskall-font-h1: var(--taskall-weight-bold) var(--taskall-font-size-h1) /
+    var(--taskall-line-height-h1) var(--taskall-font-family);
+  --taskall-font-h2: var(--taskall-weight-bold) var(--taskall-font-size-h2) /
+    var(--taskall-line-height-h2) var(--taskall-font-family);
+  --taskall-font-h3: var(--taskall-weight-bold) var(--taskall-font-size-h3) /
+    var(--taskall-line-height-h3) var(--taskall-font-family);
+  --taskall-font-h4: var(--taskall-weight-bold) var(--taskall-font-size-h4) /
+    var(--taskall-line-height-h4) var(--taskall-font-family);
+  --taskall-font-h5: var(--taskall-weight-semibold)
+    var(--taskall-font-size-h5) / var(--taskall-line-height-h5)
+    var(--taskall-font-family);
+  --taskall-font-h6: var(--taskall-weight-semibold)
+    var(--taskall-font-size-h6) / var(--taskall-line-height-h6)
+    var(--taskall-font-family);
 
   /* Paragraphs (weight 400) */
-  --hive-font-size-paragraph-l: 18px;
-  --hive-font-size-paragraph-m: 16px;
-  --hive-font-size-paragraph-s: 14px;
-  --hive-font-size-paragraph-xs: 12px;
-  --hive-line-height-paragraph-l: 32px;
-  --hive-line-height-paragraph-m: 24px;
-  --hive-line-height-paragraph-s: 20px;
-  --hive-line-height-paragraph-xs: 16px;
-  --hive-font-paragraph-l: var(--hive-weight-regular) var(--hive-font-size-paragraph-l) /
-    var(--hive-line-height-paragraph-l) var(--hive-font-family);
-  --hive-font-paragraph-m: var(--hive-weight-regular) var(--hive-font-size-paragraph-m) /
-    var(--hive-line-height-paragraph-m) var(--hive-font-family);
-  --hive-font-paragraph-s: var(--hive-weight-regular) var(--hive-font-size-paragraph-s) /
-    var(--hive-line-height-paragraph-s) var(--hive-font-family);
-  --hive-font-paragraph-xs: var(--hive-weight-regular) var(--hive-font-size-paragraph-xs) /
-    var(--hive-line-height-paragraph-xs) var(--hive-font-family);
+  --taskall-font-size-paragraph-l: 18px;
+  --taskall-font-size-paragraph-m: 16px;
+  --taskall-font-size-paragraph-s: 14px;
+  --taskall-font-size-paragraph-xs: 12px;
+  --taskall-line-height-paragraph-l: 32px;
+  --taskall-line-height-paragraph-m: 24px;
+  --taskall-line-height-paragraph-s: 20px;
+  --taskall-line-height-paragraph-xs: 16px;
+  --taskall-font-paragraph-l: var(--taskall-weight-regular)
+    var(--taskall-font-size-paragraph-l) /
+    var(--taskall-line-height-paragraph-l) var(--taskall-font-family);
+  --taskall-font-paragraph-m: var(--taskall-weight-regular)
+    var(--taskall-font-size-paragraph-m) /
+    var(--taskall-line-height-paragraph-m) var(--taskall-font-family);
+  --taskall-font-paragraph-s: var(--taskall-weight-regular)
+    var(--taskall-font-size-paragraph-s) /
+    var(--taskall-line-height-paragraph-s) var(--taskall-font-family);
+  --taskall-font-paragraph-xs: var(--taskall-weight-regular)
+    var(--taskall-font-size-paragraph-xs) /
+    var(--taskall-line-height-paragraph-xs) var(--taskall-font-family);
 
   /* Labels (weight 600) */
-  --hive-font-label-l: var(--hive-weight-semibold) var(--hive-font-size-paragraph-l) /
-    var(--hive-line-height-paragraph-l) var(--hive-font-family);
-  --hive-font-label-m: var(--hive-weight-semibold) var(--hive-font-size-paragraph-m) /
-    var(--hive-line-height-paragraph-m) var(--hive-font-family);
-  --hive-font-label-s: var(--hive-weight-semibold) var(--hive-font-size-paragraph-s) /
-    var(--hive-line-height-paragraph-s) var(--hive-font-family);
-  --hive-font-label-xs: var(--hive-weight-semibold) var(--hive-font-size-paragraph-xs) /
-    var(--hive-line-height-paragraph-xs) var(--hive-font-family);
+  --taskall-font-label-l: var(--taskall-weight-semibold)
+    var(--taskall-font-size-paragraph-l) /
+    var(--taskall-line-height-paragraph-l) var(--taskall-font-family);
+  --taskall-font-label-m: var(--taskall-weight-semibold)
+    var(--taskall-font-size-paragraph-m) /
+    var(--taskall-line-height-paragraph-m) var(--taskall-font-family);
+  --taskall-font-label-s: var(--taskall-weight-semibold)
+    var(--taskall-font-size-paragraph-s) /
+    var(--taskall-line-height-paragraph-s) var(--taskall-font-family);
+  --taskall-font-label-xs: var(--taskall-weight-semibold)
+    var(--taskall-font-size-paragraph-xs) /
+    var(--taskall-line-height-paragraph-xs) var(--taskall-font-family);
 
   /* Links */
-  --hive-font-link-m: var(--hive-weight-semibold) var(--hive-font-size-paragraph-m) /
-    var(--hive-line-height-paragraph-m) var(--hive-font-family);
-  --hive-font-link-s: var(--hive-weight-semibold) var(--hive-font-size-paragraph-s) /
-    var(--hive-line-height-paragraph-s) var(--hive-font-family);
-  --hive-font-link-xs: var(--hive-weight-bold) var(--hive-font-size-paragraph-xs) /
-    var(--hive-line-height-paragraph-xs) var(--hive-font-family);
+  --taskall-font-link-m: var(--taskall-weight-semibold)
+    var(--taskall-font-size-paragraph-m) /
+    var(--taskall-line-height-paragraph-m) var(--taskall-font-family);
+  --taskall-font-link-s: var(--taskall-weight-semibold)
+    var(--taskall-font-size-paragraph-s) /
+    var(--taskall-line-height-paragraph-s) var(--taskall-font-family);
+  --taskall-font-link-xs: var(--taskall-weight-bold)
+    var(--taskall-font-size-paragraph-xs) /
+    var(--taskall-line-height-paragraph-xs) var(--taskall-font-family);
 
   /* ------------------------------------------------------------------ *
    * Space — primitive scale (exact px, never remapped)
    * ------------------------------------------------------------------ */
-  --hive-space-0: 0px;
-  --hive-space-2: 2px;
-  --hive-space-4: 4px;
-  --hive-space-6: 6px;
-  --hive-space-8: 8px;
-  --hive-space-12: 12px;
-  --hive-space-16: 16px;
-  --hive-space-20: 20px;
-  --hive-space-24: 24px;
-  --hive-space-32: 32px;
-  --hive-space-40: 40px;
-  --hive-space-44: 44px;
-  --hive-space-48: 48px;
-  --hive-space-56: 56px;
-  --hive-space-64: 64px;
+  --taskall-space-0: 0px;
+  --taskall-space-2: 2px;
+  --taskall-space-4: 4px;
+  --taskall-space-6: 6px;
+  --taskall-space-8: 8px;
+  --taskall-space-12: 12px;
+  --taskall-space-16: 16px;
+  --taskall-space-20: 20px;
+  --taskall-space-24: 24px;
+  --taskall-space-32: 32px;
+  --taskall-space-40: 40px;
+  --taskall-space-44: 44px;
+  --taskall-space-48: 48px;
+  --taskall-space-56: 56px;
+  --taskall-space-64: 64px;
 
   /* ------------------------------------------------------------------ *
    * Space — density steps (remapped by data-density)
    * Step 1..9 resolve through the density scale.
    * ------------------------------------------------------------------ */
-  --hive-space-step-1: var(--hive-space-2);
-  --hive-space-step-2: var(--hive-space-4);
-  --hive-space-step-3: var(--hive-space-8);
-  --hive-space-step-4: var(--hive-space-12);
-  --hive-space-step-5: var(--hive-space-16);
-  --hive-space-step-6: var(--hive-space-20);
-  --hive-space-step-7: var(--hive-space-24);
-  --hive-space-step-8: var(--hive-space-32);
-  --hive-space-step-9: var(--hive-space-40);
+  --taskall-space-step-1: var(--taskall-space-2);
+  --taskall-space-step-2: var(--taskall-space-4);
+  --taskall-space-step-3: var(--taskall-space-8);
+  --taskall-space-step-4: var(--taskall-space-12);
+  --taskall-space-step-5: var(--taskall-space-16);
+  --taskall-space-step-6: var(--taskall-space-20);
+  --taskall-space-step-7: var(--taskall-space-24);
+  --taskall-space-step-8: var(--taskall-space-32);
+  --taskall-space-step-9: var(--taskall-space-40);
 
   /* ------------------------------------------------------------------ *
    * Radius
    * Levels 1..9 remapped by data-shape.
    * ------------------------------------------------------------------ */
-  --hive-radius-1: 2px;
-  --hive-radius-2: 4px;
-  --hive-radius-3: 8px;
-  --hive-radius-4: 12px;
-  --hive-radius-5: 16px;
-  --hive-radius-6: 20px;
-  --hive-radius-7: 24px;
-  --hive-radius-8: 32px;
-  --hive-radius-9: 40px;
-  --hive-radius-surface: var(--hive-radius-4);
-  --hive-radius-pill: 999px;
+  --taskall-radius-1: 2px;
+  --taskall-radius-2: 4px;
+  --taskall-radius-3: 8px;
+  --taskall-radius-4: 12px;
+  --taskall-radius-5: 16px;
+  --taskall-radius-6: 20px;
+  --taskall-radius-7: 24px;
+  --taskall-radius-8: 32px;
+  --taskall-radius-9: 40px;
+  --taskall-radius-surface: var(--taskall-radius-4);
+  --taskall-radius-pill: 999px;
 
   /* ------------------------------------------------------------------ *
    * Colors — content (light)
    * ------------------------------------------------------------------ */
-  --hive-content-primary: #080b12;
-  --hive-content-secondary: #374151;
-  --hive-content-tertiary: #9ca3af;
-  --hive-content-inverse: #ffffff;
-  --hive-content-disabled: #b6bcc6;
-  --hive-content-on-brand: #ffffff;
-  --hive-content-on-soft: #080b12;
+  --taskall-content-primary: #080b12;
+  --taskall-content-secondary: #374151;
+  --taskall-content-tertiary: #9ca3af;
+  --taskall-content-inverse: #ffffff;
+  --taskall-content-disabled: #b6bcc6;
+  --taskall-content-on-brand: #ffffff;
+  --taskall-content-on-soft: #080b12;
 
   /* ------------------------------------------------------------------ *
    * Colors — background (light)
    * ------------------------------------------------------------------ */
-  --hive-background-primary: #ffffff;
-  --hive-background-secondary: #f5f6f8;
-  --hive-background-tertiary: #eceef1;
-  --hive-background-inverse: #080b12;
-  --hive-background-disabled: #f0f1f4;
-  --hive-background-hover: #f7f8fa;
+  --taskall-background-primary: #ffffff;
+  --taskall-background-secondary: #f5f6f8;
+  --taskall-background-tertiary: #eceef1;
+  --taskall-background-inverse: #080b12;
+  --taskall-background-disabled: #f0f1f4;
+  --taskall-background-hover: #f7f8fa;
 
   /* ------------------------------------------------------------------ *
    * Colors — border (light)
    * ------------------------------------------------------------------ */
-  --hive-border-default: #d6dae1;
-  --hive-border-subtle: #e8eaee;
-  --hive-border-strong: #9ca3af;
-  --hive-border-inverse: #ffffff;
+  --taskall-border-default: #d6dae1;
+  --taskall-border-subtle: #e8eaee;
+  --taskall-border-strong: #9ca3af;
+  --taskall-border-inverse: #ffffff;
 
   /* ------------------------------------------------------------------ *
    * Colors — brand (coral default)
    * ------------------------------------------------------------------ */
-  --hive-brand: #ec7474;
-  --hive-brand-soft: #fdeaea;
-  --hive-brand-hover: #e45a5a;
-  --hive-brand-active: #d94444;
-  --hive-brand-soft-hover: #fbdcdc;
+  --taskall-brand: #ec7474;
+  --taskall-brand-soft: #fdeaea;
+  --taskall-brand-hover: #e45a5a;
+  --taskall-brand-active: #d94444;
+  --taskall-brand-soft-hover: #fbdcdc;
 
   /* ------------------------------------------------------------------ *
    * Colors — action (light)
    * ------------------------------------------------------------------ */
-  --hive-action-primary: var(--hive-brand);
-  --hive-action-primary-hover: var(--hive-brand-hover);
-  --hive-action-primary-active: var(--hive-brand-active);
-  --hive-action-primary-contrast: var(--hive-content-on-brand);
+  --taskall-action-primary: var(--taskall-brand);
+  --taskall-action-primary-hover: var(--taskall-brand-hover);
+  --taskall-action-primary-active: var(--taskall-brand-active);
+  --taskall-action-primary-contrast: var(--taskall-content-on-brand);
 
-  --hive-action-neutral-fill: #1f2937;
-  --hive-action-neutral-fill-hover: #111827;
-  --hive-action-neutral-fill-active: #080b12;
-  --hive-action-neutral-contrast: #ffffff;
-  --hive-action-neutral-light: #f3f4f6;
-  --hive-action-neutral-light-hover: #eceef1;
-  --hive-action-neutral-outline-border: #cdd3db;
-  --hive-action-neutral-outline-text: #1f2937;
+  --taskall-action-neutral-fill: #1f2937;
+  --taskall-action-neutral-fill-hover: #111827;
+  --taskall-action-neutral-fill-active: #080b12;
+  --taskall-action-neutral-contrast: #ffffff;
+  --taskall-action-neutral-light: #f3f4f6;
+  --taskall-action-neutral-light-hover: #eceef1;
+  --taskall-action-neutral-outline-border: #cdd3db;
+  --taskall-action-neutral-outline-text: #1f2937;
 
-  --hive-action-error-fill: #dc2626;
-  --hive-action-error-fill-hover: #b91c1c;
-  --hive-action-error-fill-active: #991b1b;
-  --hive-action-error-contrast: #ffffff;
-  --hive-action-error-light: #fef2f2;
-  --hive-action-error-light-hover: #fee2e2;
-  --hive-action-error-outline-border: #fca5a5;
-  --hive-action-error-outline-text: #b91c1c;
+  --taskall-action-error-fill: #dc2626;
+  --taskall-action-error-fill-hover: #b91c1c;
+  --taskall-action-error-fill-active: #991b1b;
+  --taskall-action-error-contrast: #ffffff;
+  --taskall-action-error-light: #fef2f2;
+  --taskall-action-error-light-hover: #fee2e2;
+  --taskall-action-error-outline-border: #fca5a5;
+  --taskall-action-error-outline-text: #b91c1c;
 
-  --hive-action-disabled-fill: #eceef1;
-  --hive-action-disabled-contrast: #b6bcc6;
-  --hive-action-disabled-border: #e8eaee;
+  --taskall-action-disabled-fill: #eceef1;
+  --taskall-action-disabled-contrast: #b6bcc6;
+  --taskall-action-disabled-border: #e8eaee;
 
   /* ------------------------------------------------------------------ *
    * Colors — status / feedback (light)
    * ------------------------------------------------------------------ */
-  --hive-status-information: #2665e0;
-  --hive-status-information-soft: #eaf1fe;
-  --hive-status-information-contrast: #ffffff;
-  --hive-status-information-outline: #8fb0ef;
+  --taskall-status-information: #2665e0;
+  --taskall-status-information-soft: #eaf1fe;
+  --taskall-status-information-contrast: #ffffff;
+  --taskall-status-information-outline: #8fb0ef;
 
-  --hive-status-warning: #d97706;
-  --hive-status-warning-soft: #fef3e7;
-  --hive-status-warning-contrast: #ffffff;
-  --hive-status-warning-outline: #f0c887;
+  --taskall-status-warning: #d97706;
+  --taskall-status-warning-soft: #fef3e7;
+  --taskall-status-warning-contrast: #ffffff;
+  --taskall-status-warning-outline: #f0c887;
 
-  --hive-status-success: #16a34a;
-  --hive-status-success-soft: #e8f7ee;
-  --hive-status-success-contrast: #ffffff;
-  --hive-status-success-outline: #90d8aa;
+  --taskall-status-success: #16a34a;
+  --taskall-status-success-soft: #e8f7ee;
+  --taskall-status-success-contrast: #ffffff;
+  --taskall-status-success-outline: #90d8aa;
 
-  --hive-status-error: #dc2626;
-  --hive-status-error-soft: #fef2f2;
-  --hive-status-error-contrast: #ffffff;
-  --hive-status-error-outline: #f5a3a3;
+  --taskall-status-error: #dc2626;
+  --taskall-status-error-soft: #fef2f2;
+  --taskall-status-error-contrast: #ffffff;
+  --taskall-status-error-outline: #f5a3a3;
 
-  --hive-status-update: #4b5563;
-  --hive-status-update-soft: #f3f4f6;
-  --hive-status-update-contrast: #ffffff;
-  --hive-status-update-outline: #c4cbd4;
+  --taskall-status-update: #4b5563;
+  --taskall-status-update-soft: #f3f4f6;
+  --taskall-status-update-contrast: #ffffff;
+  --taskall-status-update-outline: #c4cbd4;
 
   /* ------------------------------------------------------------------ *
    * Progress bar tones (base hues shared across color modes)
    * ------------------------------------------------------------------ */
-  --hive-progress-brand: var(--hive-brand);
-  --hive-progress-purple: #8b5cf6;
-  --hive-progress-blue: #3b82f6;
-  --hive-progress-green: #10b981;
-  --hive-progress-yellow: #f59e0b;
-  --hive-progress-orange: #f97316;
-  --hive-progress-red: #ef4444;
-  --hive-progress-pink: #ec4899;
+  --taskall-progress-brand: var(--taskall-brand);
+  --taskall-progress-purple: #8b5cf6;
+  --taskall-progress-blue: #3b82f6;
+  --taskall-progress-green: #10b981;
+  --taskall-progress-yellow: #f59e0b;
+  --taskall-progress-orange: #f97316;
+  --taskall-progress-red: #ef4444;
+  --taskall-progress-pink: #ec4899;
 
   /* ------------------------------------------------------------------ *
    * Effects
    * ------------------------------------------------------------------ */
-  --hive-overlay: rgba(8, 11, 18, 0.48);
-  --hive-shadow-sm: 0 1px 2px rgba(8, 11, 18, 0.06), 0 1px 3px rgba(8, 11, 18, 0.1);
-  --hive-shadow-md: 0 4px 6px rgba(8, 11, 18, 0.06), 0 2px 4px rgba(8, 11, 18, 0.08);
-  --hive-shadow-lg: 0 16px 32px rgba(8, 11, 18, 0.14), 0 4px 12px rgba(8, 11, 18, 0.1);
+  --taskall-overlay: rgba(8, 11, 18, 0.48);
+  --taskall-shadow-sm:
+    0 1px 2px rgba(8, 11, 18, 0.06), 0 1px 3px rgba(8, 11, 18, 0.1);
+  --taskall-shadow-md:
+    0 4px 6px rgba(8, 11, 18, 0.06), 0 2px 4px rgba(8, 11, 18, 0.08);
+  --taskall-shadow-lg:
+    0 16px 32px rgba(8, 11, 18, 0.14), 0 4px 12px rgba(8, 11, 18, 0.1);
 
-  --hive-focus-ring-color: var(--hive-action-primary);
-  --hive-focus-ring-width: 2px;
-  --hive-focus-ring-offset: 2px;
+  --taskall-focus-ring-color: var(--taskall-action-primary);
+  --taskall-focus-ring-width: 2px;
+  --taskall-focus-ring-offset: 2px;
 
-  --hive-touch-target: 44px;
+  --taskall-touch-target: 44px;
 
   /* ------------------------------------------------------------------ *
    * Brand identity (logo) — fixed across themes
    * ------------------------------------------------------------------ */
-  --hive-logo-accent: #f87171;
-  --hive-logo-on-accent: #ffffff;
+  --taskall-logo-accent: #f87171;
+  --taskall-logo-on-accent: #ffffff;
 }
 
 /* ==========================================================================
@@ -301,159 +321,162 @@
 [data-color-mode="dark"] {
   color-scheme: dark;
 
-  --hive-content-primary: #f4f6f9;
-  --hive-content-secondary: #c8cfda;
-  --hive-content-tertiary: #7d8794;
-  --hive-content-inverse: #080b12;
-  --hive-content-disabled: #4b5563;
-  --hive-content-on-brand: #080b12;
-  --hive-content-on-soft: #f4f6f9;
+  --taskall-content-primary: #f4f6f9;
+  --taskall-content-secondary: #c8cfda;
+  --taskall-content-tertiary: #7d8794;
+  --taskall-content-inverse: #080b12;
+  --taskall-content-disabled: #4b5563;
+  --taskall-content-on-brand: #080b12;
+  --taskall-content-on-soft: #f4f6f9;
 
-  --hive-background-primary: #10141b;
-  --hive-background-secondary: #171c25;
-  --hive-background-tertiary: #1f2631;
-  --hive-background-inverse: #f4f6f9;
-  --hive-background-disabled: #232a35;
-  --hive-background-hover: #1a202a;
+  --taskall-background-primary: #10141b;
+  --taskall-background-secondary: #171c25;
+  --taskall-background-tertiary: #1f2631;
+  --taskall-background-inverse: #f4f6f9;
+  --taskall-background-disabled: #232a35;
+  --taskall-background-hover: #1a202a;
 
-  --hive-border-default: #2e3744;
-  --hive-border-subtle: #252d38;
-  --hive-border-strong: #4b5563;
-  --hive-border-inverse: #10141b;
+  --taskall-border-default: #2e3744;
+  --taskall-border-subtle: #252d38;
+  --taskall-border-strong: #4b5563;
+  --taskall-border-inverse: #10141b;
 
-  --hive-brand-hover: #f6a5a5;
-  --hive-brand-active: #fa9595;
-  --hive-brand-soft-hover: #7e3232;
+  --taskall-brand-hover: #f6a5a5;
+  --taskall-brand-active: #fa9595;
+  --taskall-brand-soft-hover: #7e3232;
 
-  --hive-action-neutral-fill: #e5e9ef;
-  --hive-action-neutral-fill-hover: #f4f6f9;
-  --hive-action-neutral-fill-active: #c8cfda;
-  --hive-action-neutral-contrast: #10141b;
-  --hive-action-neutral-light: #222a35;
-  --hive-action-neutral-light-hover: #2a333f;
-  --hive-action-neutral-outline-border: #3a4553;
-  --hive-action-neutral-outline-text: #e5e9ef;
+  --taskall-action-neutral-fill: #e5e9ef;
+  --taskall-action-neutral-fill-hover: #f4f6f9;
+  --taskall-action-neutral-fill-active: #c8cfda;
+  --taskall-action-neutral-contrast: #10141b;
+  --taskall-action-neutral-light: #222a35;
+  --taskall-action-neutral-light-hover: #2a333f;
+  --taskall-action-neutral-outline-border: #3a4553;
+  --taskall-action-neutral-outline-text: #e5e9ef;
 
-  --hive-action-error-fill: #f27c7c;
-  --hive-action-error-fill-hover: #f59a9a;
-  --hive-action-error-fill-active: #f27c7c;
-  --hive-action-error-contrast: #2a0a0a;
-  --hive-action-error-light: #43201f;
-  --hive-action-error-light-hover: #552625;
-  --hive-action-error-outline-border: #7a3a3a;
-  --hive-action-error-outline-text: #f5a3a3;
+  --taskall-action-error-fill: #f27c7c;
+  --taskall-action-error-fill-hover: #f59a9a;
+  --taskall-action-error-fill-active: #f27c7c;
+  --taskall-action-error-contrast: #2a0a0a;
+  --taskall-action-error-light: #43201f;
+  --taskall-action-error-light-hover: #552625;
+  --taskall-action-error-outline-border: #7a3a3a;
+  --taskall-action-error-outline-text: #f5a3a3;
 
-  --hive-action-disabled-fill: #232a35;
-  --hive-action-disabled-contrast: #525d6b;
-  --hive-action-disabled-border: #2e3744;
+  --taskall-action-disabled-fill: #232a35;
+  --taskall-action-disabled-contrast: #525d6b;
+  --taskall-action-disabled-border: #2e3744;
 
-  --hive-status-information: #7aa7f2;
-  --hive-status-information-soft: #1c2f4e;
-  --hive-status-information-contrast: #0a1424;
-  --hive-status-information-outline: #3a5c8f;
+  --taskall-status-information: #7aa7f2;
+  --taskall-status-information-soft: #1c2f4e;
+  --taskall-status-information-contrast: #0a1424;
+  --taskall-status-information-outline: #3a5c8f;
 
-  --hive-status-warning: #f0b35e;
-  --hive-status-warning-soft: #45331a;
-  --hive-status-warning-contrast: #221505;
-  --hive-status-warning-outline: #8a6630;
+  --taskall-status-warning: #f0b35e;
+  --taskall-status-warning-soft: #45331a;
+  --taskall-status-warning-contrast: #221505;
+  --taskall-status-warning-outline: #8a6630;
 
-  --hive-status-success: #5fd38a;
-  --hive-status-success-soft: #1a3d28;
-  --hive-status-success-contrast: #062012;
-  --hive-status-success-outline: #2f6b46;
+  --taskall-status-success: #5fd38a;
+  --taskall-status-success-soft: #1a3d28;
+  --taskall-status-success-contrast: #062012;
+  --taskall-status-success-outline: #2f6b46;
 
-  --hive-status-error: #f27c7c;
-  --hive-status-error-soft: #43201f;
-  --hive-status-error-contrast: #2a0a0a;
-  --hive-status-error-outline: #7a3a3a;
+  --taskall-status-error: #f27c7c;
+  --taskall-status-error-soft: #43201f;
+  --taskall-status-error-contrast: #2a0a0a;
+  --taskall-status-error-outline: #7a3a3a;
 
-  --hive-status-update: #c8cfda;
-  --hive-status-update-soft: #232a35;
-  --hive-status-update-contrast: #10141b;
-  --hive-status-update-outline: #4b5563;
+  --taskall-status-update: #c8cfda;
+  --taskall-status-update-soft: #232a35;
+  --taskall-status-update-contrast: #10141b;
+  --taskall-status-update-outline: #4b5563;
 
-  --hive-progress-purple: #a78bfa;
-  --hive-progress-blue: #60a5fa;
-  --hive-progress-green: #34d399;
-  --hive-progress-yellow: #fbbf24;
-  --hive-progress-orange: #fb923c;
-  --hive-progress-red: #f87171;
-  --hive-progress-pink: #f472b6;
+  --taskall-progress-purple: #a78bfa;
+  --taskall-progress-blue: #60a5fa;
+  --taskall-progress-green: #34d399;
+  --taskall-progress-yellow: #fbbf24;
+  --taskall-progress-orange: #fb923c;
+  --taskall-progress-red: #f87171;
+  --taskall-progress-pink: #f472b6;
 
-  --hive-overlay: rgba(0, 0, 0, 0.64);
-  --hive-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.5);
-  --hive-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.5);
-  --hive-shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.5), 0 4px 12px rgba(0, 0, 0, 0.55);
+  --taskall-overlay: rgba(0, 0, 0, 0.64);
+  --taskall-shadow-sm:
+    0 1px 2px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.5);
+  --taskall-shadow-md:
+    0 4px 6px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.5);
+  --taskall-shadow-lg:
+    0 16px 32px rgba(0, 0, 0, 0.5), 0 4px 12px rgba(0, 0, 0, 0.55);
 }
 
 /* ==========================================================================
    Brands — light mode
    ========================================================================== */
 [data-brand="coral"] {
-  --hive-brand: #ec7474;
-  --hive-brand-soft: #fdeaea;
-  --hive-brand-hover: #e45a5a;
-  --hive-brand-active: #d94444;
-  --hive-brand-soft-hover: #fbdcdc;
+  --taskall-brand: #ec7474;
+  --taskall-brand-soft: #fdeaea;
+  --taskall-brand-hover: #e45a5a;
+  --taskall-brand-active: #d94444;
+  --taskall-brand-soft-hover: #fbdcdc;
 }
 
 [data-brand="gestao"] {
-  --hive-brand: #7838ec;
-  --hive-brand-soft: #ede0ff;
-  --hive-brand-hover: #6a27e5;
-  --hive-brand-active: #5c1fd0;
-  --hive-brand-soft-hover: #e2cdfc;
+  --taskall-brand: #7838ec;
+  --taskall-brand-soft: #ede0ff;
+  --taskall-brand-hover: #6a27e5;
+  --taskall-brand-active: #5c1fd0;
+  --taskall-brand-soft-hover: #e2cdfc;
 }
 
 [data-brand="estudantes"] {
-  --hive-brand: #7f8000;
-  --hive-brand-soft: #f0f0cc;
-  --hive-brand-hover: #6f7000;
-  --hive-brand-active: #5f6000;
-  --hive-brand-soft-hover: #e6e6b3;
+  --taskall-brand: #7f8000;
+  --taskall-brand-soft: #f0f0cc;
+  --taskall-brand-hover: #6f7000;
+  --taskall-brand-active: #5f6000;
+  --taskall-brand-soft-hover: #e6e6b3;
 }
 
 [data-brand="responsaveis"] {
-  --hive-brand: #2babd0;
-  --hive-brand-soft: #d6f1fa;
-  --hive-brand-hover: #2494b5;
-  --hive-brand-active: #1e81a0;
-  --hive-brand-soft-hover: #bce9f6;
+  --taskall-brand: #2babd0;
+  --taskall-brand-soft: #d6f1fa;
+  --taskall-brand-hover: #2494b5;
+  --taskall-brand-active: #1e81a0;
+  --taskall-brand-soft-hover: #bce9f6;
 }
 
 /* ==========================================================================
    Brands — dark mode
    ========================================================================== */
 [data-color-mode="dark"][data-brand="coral"] {
-  --hive-brand: #f08c8c;
-  --hive-brand-soft: #732929;
-  --hive-brand-hover: #f6a5a5;
-  --hive-brand-active: #f08c8c;
-  --hive-brand-soft-hover: #7e3232;
+  --taskall-brand: #f08c8c;
+  --taskall-brand-soft: #732929;
+  --taskall-brand-hover: #f6a5a5;
+  --taskall-brand-active: #f08c8c;
+  --taskall-brand-soft-hover: #7e3232;
 }
 
 [data-color-mode="dark"][data-brand="gestao"] {
-  --hive-brand: #9b68f5;
-  --hive-brand-soft: #331a6b;
-  --hive-brand-hover: #ad82f7;
-  --hive-brand-active: #9b68f5;
-  --hive-brand-soft-hover: #3a1f7a;
+  --taskall-brand: #9b68f5;
+  --taskall-brand-soft: #331a6b;
+  --taskall-brand-hover: #ad82f7;
+  --taskall-brand-active: #9b68f5;
+  --taskall-brand-soft-hover: #3a1f7a;
 }
 
 [data-color-mode="dark"][data-brand="estudantes"] {
-  --hive-brand: #9f9f26;
-  --hive-brand-soft: #343500;
-  --hive-brand-hover: #b3b330;
-  --hive-brand-active: #9f9f26;
-  --hive-brand-soft-hover: #3e3f00;
+  --taskall-brand: #9f9f26;
+  --taskall-brand-soft: #343500;
+  --taskall-brand-hover: #b3b330;
+  --taskall-brand-active: #9f9f26;
+  --taskall-brand-soft-hover: #3e3f00;
 }
 
 [data-color-mode="dark"][data-brand="responsaveis"] {
-  --hive-brand: #3dbbd8;
-  --hive-brand-soft: #0f4858;
-  --hive-brand-hover: #52c6e0;
-  --hive-brand-active: #3dbbd8;
-  --hive-brand-soft-hover: #13586b;
+  --taskall-brand: #3dbbd8;
+  --taskall-brand-soft: #0f4858;
+  --taskall-brand-hover: #52c6e0;
+  --taskall-brand-active: #3dbbd8;
+  --taskall-brand-soft-hover: #13586b;
 }
 
 /* ==========================================================================
@@ -463,27 +486,27 @@
    Expanded: 4, 8, 12, 16, 20, 24, 32, 40, 44
    ========================================================================== */
 [data-density="compact"] {
-  --hive-space-step-1: 0px;
-  --hive-space-step-2: var(--hive-space-2);
-  --hive-space-step-3: var(--hive-space-4);
-  --hive-space-step-4: var(--hive-space-8);
-  --hive-space-step-5: var(--hive-space-12);
-  --hive-space-step-6: var(--hive-space-16);
-  --hive-space-step-7: var(--hive-space-20);
-  --hive-space-step-8: var(--hive-space-24);
-  --hive-space-step-9: var(--hive-space-32);
+  --taskall-space-step-1: 0px;
+  --taskall-space-step-2: var(--taskall-space-2);
+  --taskall-space-step-3: var(--taskall-space-4);
+  --taskall-space-step-4: var(--taskall-space-8);
+  --taskall-space-step-5: var(--taskall-space-12);
+  --taskall-space-step-6: var(--taskall-space-16);
+  --taskall-space-step-7: var(--taskall-space-20);
+  --taskall-space-step-8: var(--taskall-space-24);
+  --taskall-space-step-9: var(--taskall-space-32);
 }
 
 [data-density="expanded"] {
-  --hive-space-step-1: var(--hive-space-4);
-  --hive-space-step-2: var(--hive-space-8);
-  --hive-space-step-3: var(--hive-space-12);
-  --hive-space-step-4: var(--hive-space-16);
-  --hive-space-step-5: var(--hive-space-20);
-  --hive-space-step-6: var(--hive-space-24);
-  --hive-space-step-7: var(--hive-space-32);
-  --hive-space-step-8: var(--hive-space-40);
-  --hive-space-step-9: var(--hive-space-44);
+  --taskall-space-step-1: var(--taskall-space-4);
+  --taskall-space-step-2: var(--taskall-space-8);
+  --taskall-space-step-3: var(--taskall-space-12);
+  --taskall-space-step-4: var(--taskall-space-16);
+  --taskall-space-step-5: var(--taskall-space-20);
+  --taskall-space-step-6: var(--taskall-space-24);
+  --taskall-space-step-7: var(--taskall-space-32);
+  --taskall-space-step-8: var(--taskall-space-40);
+  --taskall-space-step-9: var(--taskall-space-44);
 }
 
 /* ==========================================================================
@@ -493,27 +516,27 @@
    Rounded: every level -> 32px
    ========================================================================== */
 [data-shape="sharp"] {
-  --hive-radius-1: 2px;
-  --hive-radius-2: 2px;
-  --hive-radius-3: 2px;
-  --hive-radius-4: 2px;
-  --hive-radius-5: 2px;
-  --hive-radius-6: 2px;
-  --hive-radius-7: 2px;
-  --hive-radius-8: 2px;
-  --hive-radius-9: 2px;
-  --hive-radius-surface: 2px;
+  --taskall-radius-1: 2px;
+  --taskall-radius-2: 2px;
+  --taskall-radius-3: 2px;
+  --taskall-radius-4: 2px;
+  --taskall-radius-5: 2px;
+  --taskall-radius-6: 2px;
+  --taskall-radius-7: 2px;
+  --taskall-radius-8: 2px;
+  --taskall-radius-9: 2px;
+  --taskall-radius-surface: 2px;
 }
 
 [data-shape="rounded"] {
-  --hive-radius-1: 32px;
-  --hive-radius-2: 32px;
-  --hive-radius-3: 32px;
-  --hive-radius-4: 32px;
-  --hive-radius-5: 32px;
-  --hive-radius-6: 32px;
-  --hive-radius-7: 32px;
-  --hive-radius-8: 32px;
-  --hive-radius-9: 32px;
-  --hive-radius-surface: 16px;
+  --taskall-radius-1: 32px;
+  --taskall-radius-2: 32px;
+  --taskall-radius-3: 32px;
+  --taskall-radius-4: 32px;
+  --taskall-radius-5: 32px;
+  --taskall-radius-6: 32px;
+  --taskall-radius-7: 32px;
+  --taskall-radius-8: 32px;
+  --taskall-radius-9: 32px;
+  --taskall-radius-surface: 16px;
 }

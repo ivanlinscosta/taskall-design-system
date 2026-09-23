@@ -1,9 +1,9 @@
-import { AlertNotification } from "@hive/react";
+import { AlertNotification } from "@taskall/react";
 
 export default function AlertNotificationSizes() {
   return (
     <div
-      style={{ display: "grid", gap: "var(--hive-space-12)", width: "100%" }}
+      style={{ display: "grid", gap: "var(--taskall-space-12)", width: "100%" }}
     >
       <AlertNotification
         size="large"

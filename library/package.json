@@ -1,11 +1,32 @@
 {
-  "name": "@hive/react",
+  "name": "@taskall/react",
   "version": "0.0.1",
-  "description": "Hive Design System — React components, tokens and icons",
+  "description": "TaskAll Design System — React components, tokens and icons",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivanlinscosta/taskall-design-system.git",
+    "directory": "library"
+  },
+  "homepage": "https://github.com/ivanlinscosta/taskall-design-system#readme",
+  "bugs": {
+    "url": "https://github.com/ivanlinscosta/taskall-design-system/issues"
+  },
+  "keywords": [
+    "taskall",
+    "design-system",
+    "react",
+    "components",
+    "tokens",
+    "icons"
+  ],
   "type": "module",
-  "files": ["dist"],
-  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "main": "./dist/cjs/index.cjs",
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.mts",

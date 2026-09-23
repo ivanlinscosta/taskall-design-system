@@ -7,12 +7,14 @@ import { describe, expect, it } from "vitest";
 
 import { MailSendEnvelope as Mail } from "../../icons/MailSendEnvelope";
 import { MagnifyingGlass as Search } from "../../icons/MagnifyingGlass";
-import { renderWithHive } from "../../test/renderWithHive";
+import { renderWithTaskAll } from "../../test/renderWithTaskAll";
 import { TextInput } from "./TextInput";
 
 describe("TextInput", () => {
   it("renders a labelled textbox", () => {
-    renderWithHive(<TextInput label="E-mail" placeholder="nome@empresa.com" />);
+    renderWithTaskAll(
+      <TextInput label="E-mail" placeholder="nome@empresa.com" />,
+    );
 
     expect(screen.getByRole("textbox", { name: "E-mail" })).toBeInTheDocument();
   });
@@ -20,7 +22,7 @@ describe("TextInput", () => {
   it("forwards the ref to the native input", () => {
     const ref = createRef<HTMLInputElement>();
 
-    renderWithHive(<TextInput label="Busca" ref={ref} />);
+    renderWithTaskAll(<TextInput label="Busca" ref={ref} />);
 
     expect(ref.current).toBeInstanceOf(HTMLInputElement);
   });
@@ -28,12 +30,12 @@ describe("TextInput", () => {
   it("supports uncontrolled typing", async () => {
     const user = userEvent.setup();
 
-    renderWithHive(<TextInput label="Nome" />);
+    renderWithTaskAll(<TextInput label="Nome" />);
 
     const input = screen.getByRole("textbox", { name: "Nome" });
-    await user.type(input, "Hive");
+    await user.type(input, "TaskAll");
 
-    expect(input).toHaveValue("Hive");
+    expect(input).toHaveValue("TaskAll");
   });
 
   it("supports controlled usage", async () => {
@@ -51,7 +53,7 @@ describe("TextInput", () => {
       );
     }
 
-    renderWithHive(<ControlledInput />);
+    renderWithTaskAll(<ControlledInput />);
 
     const input = screen.getByRole("textbox", { name: "Cidade" });
     await user.type(input, "Recife");
@@ -60,7 +62,7 @@ describe("TextInput", () => {
   });
 
   it("exposes aria-invalid and error description", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <TextInput label="E-mail" error="Informe um e-mail válido" />,
     );
 
@@ -72,7 +74,7 @@ describe("TextInput", () => {
   });
 
   it("keeps decorative icons out of the accessibility tree", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <TextInput label="Busca" leftIcon={Search} rightIcon={Mail} />,
     );
 
@@ -87,7 +89,7 @@ describe("TextInput", () => {
   it("supports keyboard focus", async () => {
     const user = userEvent.setup();
 
-    renderWithHive(<TextInput label="Senha" />);
+    renderWithTaskAll(<TextInput label="Senha" />);
 
     await user.tab();
 
@@ -95,7 +97,7 @@ describe("TextInput", () => {
   });
 
   it("has no axe violations", async () => {
-    const { container } = renderWithHive(
+    const { container } = renderWithTaskAll(
       <>
         <TextInput label="Nome" sublabel="Como deve aparecer no crachá" />
         <TextInput label="E-mail" error="Informe um e-mail válido" />

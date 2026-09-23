@@ -1,7 +1,7 @@
 .root {
   display: inline-flex;
   align-items: flex-start;
-  gap: var(--hive-space-step-2);
+  gap: var(--taskall-space-step-2);
 }
 
 .root[data-direction="vertical"] {
@@ -17,8 +17,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: var(--hive-space-20);
-  height: var(--hive-space-20);
+  width: var(--taskall-space-20);
+  height: var(--taskall-space-20);
   flex-shrink: 0;
 }
 
@@ -28,20 +28,20 @@
   background: transparent;
   color: inherit;
   cursor: pointer;
-  border-radius: var(--hive-radius-2);
+  border-radius: var(--taskall-radius-2);
   -webkit-tap-highlight-color: transparent;
 }
 
 .item:focus-visible {
-  outline: var(--hive-focus-ring-width) solid var(--hive-focus-ring-color);
-  outline-offset: var(--hive-focus-ring-offset);
+  outline: var(--taskall-focus-ring-width) solid var(--taskall-focus-ring-color);
+  outline-offset: var(--taskall-focus-ring-offset);
 }
 
 .icon,
 .iconStack {
   display: block;
-  width: var(--hive-space-20);
-  height: var(--hive-space-20);
+  width: var(--taskall-space-20);
+  height: var(--taskall-space-20);
 }
 
 .iconStack {
@@ -56,25 +56,25 @@
 }
 
 .empty {
-  color: var(--hive-content-tertiary);
+  color: var(--taskall-content-tertiary);
 }
 
 .root[data-type="star"] .filled {
-  color: var(--hive-progress-yellow);
+  color: var(--taskall-progress-yellow);
 }
 
 .root[data-type="heart"] .filled {
-  color: var(--hive-status-error);
+  color: var(--taskall-status-error);
 }
 
 .root[data-hovering="true"][data-type="star"]
   .item[data-active="true"]
   .filled {
-  color: var(--hive-progress-orange);
+  color: var(--taskall-progress-orange);
 }
 
 .root[data-hovering="true"][data-type="heart"]
   .item[data-active="true"]
   .filled {
-  color: var(--hive-action-error-fill-hover);
+  color: var(--taskall-action-error-fill-hover);
 }

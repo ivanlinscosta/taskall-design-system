@@ -32,9 +32,9 @@ function scale(
 ): Style[] {
   return names.map((name, index) => ({
     name: `${prefix} ${name.toUpperCase()}`,
-    font: `--hive-font-${prefix.toLowerCase()}-${name}`,
-    size: `--hive-font-size-${sizePrefix}-${name}`,
-    lineHeight: `--hive-line-height-${sizePrefix}-${name}`,
+    font: `--taskall-font-${prefix.toLowerCase()}-${name}`,
+    size: `--taskall-font-size-${sizePrefix}-${name}`,
+    lineHeight: `--taskall-line-height-${sizePrefix}-${name}`,
     weight,
     use: use[index] ?? "",
   }));
@@ -52,9 +52,9 @@ const groups: Array<{
     intro: "Números e títulos de destaque (hero, indicadores de painel). Bold.",
     styles: [1, 2, 3, 4].map((level) => ({
       name: `Display ${level}`,
-      font: `--hive-font-display-${level}`,
-      size: `--hive-font-size-display-${level}`,
-      lineHeight: `--hive-line-height-display-${level}`,
+      font: `--taskall-font-display-${level}`,
+      size: `--taskall-font-size-display-${level}`,
+      lineHeight: `--taskall-line-height-display-${level}`,
       weight: "700",
       use:
         level === 1
@@ -71,9 +71,9 @@ const groups: Array<{
       "Estrutura de páginas e seções, via componente Heading. h1–h4 bold, h5–h6 semibold.",
     styles: [1, 2, 3, 4, 5, 6].map((level) => ({
       name: `Heading ${level}`,
-      font: `--hive-font-h${level}`,
-      size: `--hive-font-size-h${level}`,
-      lineHeight: `--hive-line-height-h${level}`,
+      font: `--taskall-font-h${level}`,
+      size: `--taskall-font-size-h${level}`,
+      lineHeight: `--taskall-line-height-h${level}`,
       weight: level <= 4 ? "700" : "600",
       use:
         [
@@ -111,9 +111,9 @@ const groups: Array<{
       ]),
       ...["m", "s", "xs"].map((size) => ({
         name: `Link ${size.toUpperCase()}`,
-        font: `--hive-font-link-${size}`,
-        size: `--hive-font-size-paragraph-${size}`,
-        lineHeight: `--hive-line-height-paragraph-${size}`,
+        font: `--taskall-font-link-${size}`,
+        size: `--taskall-font-size-paragraph-${size}`,
+        lineHeight: `--taskall-line-height-paragraph-${size}`,
         weight: size === "xs" ? "700" : "600",
         use: "Links inline",
       })),
@@ -160,7 +160,7 @@ export default function TypographyPage() {
       <PageHeader
         eyebrow="Fundamentos"
         title="Tipografia"
-        lead="Uma família (Archivo), três pesos e tokens compostos (--hive-font-*) que já trazem peso, tamanho, altura de linha e família."
+        lead="Uma família (Archivo), três pesos e tokens compostos (--taskall-font-*) que já trazem peso, tamanho, altura de linha e família."
       />
       <DocSection id="uso" title="Como usar">
         <Prose>
@@ -176,18 +176,18 @@ export default function TypographyPage() {
           language="css"
           caption="Resumo.module.css"
           code={`.title {
-  font: var(--hive-font-h5);
+  font: var(--taskall-font-h5);
 }
 
 .meta {
-  font: var(--hive-font-paragraph-xs);
-  color: var(--hive-content-secondary);
+  font: var(--taskall-font-paragraph-xs);
+  color: var(--taskall-content-secondary);
 }`}
         />
         <BulletList
           items={[
             "Fonte: Archivo (400, 600, 700), com fallback `system-ui`. Carregue os pesos no app (ex.: `@fontsource/archivo`).",
-            "Pesos por token: `--hive-weight-regular`, `--hive-weight-semibold`, `--hive-weight-bold`.",
+            "Pesos por token: `--taskall-weight-regular`, `--taskall-weight-semibold`, `--taskall-weight-bold`.",
             "Tamanhos em px fixos: respeite o zoom do navegador e evite reduzir abaixo de 12px.",
           ]}
         />

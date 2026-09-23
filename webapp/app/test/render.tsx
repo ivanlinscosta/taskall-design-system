@@ -1,7 +1,7 @@
 import * as React from "react";
 import { render } from "@testing-library/react";
 import { createRoutesStub } from "react-router";
-import { HiveProvider } from "@hive/react";
+import { TaskAllProvider } from "@taskall/react";
 
 import { SettingsProvider } from "../lib/settings";
 import { SearchProvider } from "../ui/SearchDialog";
@@ -17,7 +17,7 @@ export function renderPage(
       path,
       Component: () => (
         <SettingsProvider>
-          <HiveProvider>
+          <TaskAllProvider>
             <SearchProvider>
               {withMain ? (
                 <main>
@@ -27,7 +27,7 @@ export function renderPage(
                 <Page />
               )}
             </SearchProvider>
-          </HiveProvider>
+          </TaskAllProvider>
         </SettingsProvider>
       ),
     },

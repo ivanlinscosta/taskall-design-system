@@ -22,7 +22,7 @@ const IconGrid: React.FC = () => {
   const [copied, setCopied] = React.useState<string | null>(null);
 
   const handleCopy = (name: string) => {
-    navigator.clipboard.writeText(`import { ${name} } from "@hive/react";`);
+    navigator.clipboard.writeText(`import { ${name} } from "@taskall/react";`);
     setCopied(name);
     setTimeout(() => setCopied(null), 2000);
   };
@@ -33,12 +33,18 @@ const IconGrid: React.FC = () => {
     return iconSearchIndex.filter(
       (item) =>
         item.name.toLowerCase().includes(term) ||
-        item.keywords.some((k) => k.toLowerCase().includes(term))
+        item.keywords.some((k) => k.toLowerCase().includes(term)),
     );
   }, [search]);
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "var(--hive-space-32)" }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "var(--taskall-space-32)",
+      }}
+    >
       <div style={{ position: "relative", maxWidth: 400 }}>
         <input
           type="text"
@@ -47,23 +53,23 @@ const IconGrid: React.FC = () => {
           onChange={(e) => setSearch(e.target.value)}
           style={{
             width: "100%",
-            padding: "var(--hive-space-12) var(--hive-space-16)",
-            paddingLeft: "var(--hive-space-40)",
-            borderRadius: "var(--hive-radius-surface)",
-            border: "1px solid var(--hive-border-default)",
-            backgroundColor: "var(--hive-background-primary)",
-            color: "var(--hive-content-primary)",
-            font: "var(--hive-font-paragraph-m)",
+            padding: "var(--taskall-space-12) var(--taskall-space-16)",
+            paddingLeft: "var(--taskall-space-40)",
+            borderRadius: "var(--taskall-radius-surface)",
+            border: "1px solid var(--taskall-border-default)",
+            backgroundColor: "var(--taskall-background-primary)",
+            color: "var(--taskall-content-primary)",
+            font: "var(--taskall-font-paragraph-m)",
             outline: "none",
           }}
         />
         <div
           style={{
             position: "absolute",
-            left: "var(--hive-space-12)",
+            left: "var(--taskall-space-12)",
             top: "50%",
             transform: "translateY(-50%)",
-            color: "var(--hive-content-tertiary)",
+            color: "var(--taskall-content-tertiary)",
             display: "flex",
             pointerEvents: "none",
           }}
@@ -75,12 +81,12 @@ const IconGrid: React.FC = () => {
       {filteredIcons.length === 0 ? (
         <div
           style={{
-            padding: "var(--hive-space-48)",
+            padding: "var(--taskall-space-48)",
             textAlign: "center",
-            color: "var(--hive-content-secondary)",
-            font: "var(--hive-font-paragraph-m)",
-            backgroundColor: "var(--hive-background-secondary)",
-            borderRadius: "var(--hive-radius-surface)",
+            color: "var(--taskall-content-secondary)",
+            font: "var(--taskall-font-paragraph-m)",
+            backgroundColor: "var(--taskall-background-secondary)",
+            borderRadius: "var(--taskall-radius-surface)",
           }}
         >
           Nenhum ícone encontrado para "{search}"
@@ -90,13 +96,15 @@ const IconGrid: React.FC = () => {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))",
-            gap: "var(--hive-space-16)",
+            gap: "var(--taskall-space-16)",
           }}
         >
           {filteredIcons.map((item) => {
-            const IconComponent = Icons[item.componentName as keyof typeof Icons] as React.FC<{ size?: number }>;
+            const IconComponent = Icons[
+              item.componentName as keyof typeof Icons
+            ] as React.FC<{ size?: number }>;
             if (!IconComponent) return null;
-            
+
             const isPlaceholder = item.componentName === "Placeholder";
 
             return (
@@ -109,34 +117,69 @@ const IconGrid: React.FC = () => {
                   flexDirection: "column",
                   alignItems: "center",
                   justifyContent: "center",
-                  gap: "var(--hive-space-12)",
-                  padding: "var(--hive-space-24) var(--hive-space-12)",
-                  backgroundColor: isPlaceholder ? "var(--hive-status-warning-soft)" : "var(--hive-background-primary)",
-                  border: `1px solid ${isPlaceholder ? "var(--hive-status-warning-outline)" : "var(--hive-border-subtle)"}`,
-                  borderRadius: "var(--hive-radius-surface)",
+                  gap: "var(--taskall-space-12)",
+                  padding: "var(--taskall-space-24) var(--taskall-space-12)",
+                  backgroundColor: isPlaceholder
+                    ? "var(--taskall-status-warning-soft)"
+                    : "var(--taskall-background-primary)",
+                  border: `1px solid ${isPlaceholder ? "var(--taskall-status-warning-outline)" : "var(--taskall-border-subtle)"}`,
+                  borderRadius: "var(--taskall-radius-surface)",
                   cursor: "pointer",
                   transition: "all 0.2s ease",
                   position: "relative",
-                  color: "var(--hive-content-primary)",
+                  color: "var(--taskall-content-primary)",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = isPlaceholder ? "var(--hive-status-warning-soft)" : "var(--hive-background-hover)";
-                  e.currentTarget.style.borderColor = isPlaceholder ? "var(--hive-status-warning)" : "var(--hive-border-default)";
+                  e.currentTarget.style.backgroundColor = isPlaceholder
+                    ? "var(--taskall-status-warning-soft)"
+                    : "var(--taskall-background-hover)";
+                  e.currentTarget.style.borderColor = isPlaceholder
+                    ? "var(--taskall-status-warning)"
+                    : "var(--taskall-border-default)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = isPlaceholder ? "var(--hive-status-warning-soft)" : "var(--hive-background-primary)";
-                  e.currentTarget.style.borderColor = isPlaceholder ? "var(--hive-status-warning-outline)" : "var(--hive-border-subtle)";
+                  e.currentTarget.style.backgroundColor = isPlaceholder
+                    ? "var(--taskall-status-warning-soft)"
+                    : "var(--taskall-background-primary)";
+                  e.currentTarget.style.borderColor = isPlaceholder
+                    ? "var(--taskall-status-warning-outline)"
+                    : "var(--taskall-border-subtle)";
                 }}
               >
-                <div style={{ color: isPlaceholder ? "var(--hive-status-warning)" : "inherit" }}>
+                <div
+                  style={{
+                    color: isPlaceholder
+                      ? "var(--taskall-status-warning)"
+                      : "inherit",
+                  }}
+                >
                   <IconComponent size={32} />
                 </div>
-                
-                <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "var(--hive-space-4)" }}>
-                  <span style={{ font: "var(--hive-font-label-s)", textAlign: "center", wordBreak: "break-word" }}>
+
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    gap: "var(--taskall-space-4)",
+                  }}
+                >
+                  <span
+                    style={{
+                      font: "var(--taskall-font-label-s)",
+                      textAlign: "center",
+                      wordBreak: "break-word",
+                    }}
+                  >
                     {item.componentName}
                   </span>
-                  <span style={{ font: "var(--hive-font-paragraph-xs)", color: "var(--hive-content-secondary)", textAlign: "center" }}>
+                  <span
+                    style={{
+                      font: "var(--taskall-font-paragraph-xs)",
+                      color: "var(--taskall-content-secondary)",
+                      textAlign: "center",
+                    }}
+                  >
                     {item.name}
                   </span>
                 </div>
@@ -145,13 +188,13 @@ const IconGrid: React.FC = () => {
                   <div
                     style={{
                       position: "absolute",
-                      top: "var(--hive-space-8)",
-                      right: "var(--hive-space-8)",
-                      backgroundColor: "var(--hive-status-warning)",
-                      color: "var(--hive-status-warning-contrast)",
+                      top: "var(--taskall-space-8)",
+                      right: "var(--taskall-space-8)",
+                      backgroundColor: "var(--taskall-status-warning)",
+                      color: "var(--taskall-status-warning-contrast)",
                       padding: "2px 6px",
-                      borderRadius: "var(--hive-radius-pill)",
-                      font: "var(--hive-font-label-xs)",
+                      borderRadius: "var(--taskall-radius-pill)",
+                      font: "var(--taskall-font-label-xs)",
                       fontSize: 10,
                     }}
                   >
@@ -164,13 +207,13 @@ const IconGrid: React.FC = () => {
                     style={{
                       position: "absolute",
                       inset: 0,
-                      backgroundColor: "var(--hive-status-success)",
-                      color: "var(--hive-status-success-contrast)",
+                      backgroundColor: "var(--taskall-status-success)",
+                      color: "var(--taskall-status-success-contrast)",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      borderRadius: "var(--hive-radius-surface)",
-                      font: "var(--hive-font-label-m)",
+                      borderRadius: "var(--taskall-radius-surface)",
+                      font: "var(--taskall-font-label-m)",
                       animation: "fadeIn 0.2s ease",
                     }}
                   >
@@ -190,7 +233,7 @@ export const Icones: Story = {
   render: () => (
     <PageContainer
       title="Ícones"
-      description="A biblioteca de ícones do Hive. Clique em qualquer ícone para copiar o código de importação."
+      description="A biblioteca de ícones do TaskAll. Clique em qualquer ícone para copiar o código de importação."
     >
       <Section
         title="Biblioteca"

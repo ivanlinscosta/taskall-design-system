@@ -1,29 +1,30 @@
 .nav {
   display: flex;
   flex-direction: column;
-  gap: var(--hive-space-24);
-  padding: var(--hive-space-24) var(--hive-space-16) var(--hive-space-48);
+  gap: var(--taskall-space-24);
+  padding: var(--taskall-space-24) var(--taskall-space-16)
+    var(--taskall-space-48);
 }
 
 .group {
   display: flex;
   flex-direction: column;
-  gap: var(--hive-space-4);
+  gap: var(--taskall-space-4);
 }
 
 .groupTitle {
   margin: 0;
-  padding: 0 var(--hive-space-12);
-  font: var(--hive-font-label-xs);
+  padding: 0 var(--taskall-space-12);
+  font: var(--taskall-font-label-xs);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--hive-content-secondary);
+  color: var(--taskall-content-secondary);
 }
 
 .list {
   display: flex;
   flex-direction: column;
-  gap: var(--hive-space-2);
+  gap: var(--taskall-space-2);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -34,37 +35,37 @@
   display: flex;
   align-items: center;
   min-height: 36px;
-  padding: var(--hive-space-6) var(--hive-space-12);
-  border-radius: var(--hive-radius-3);
-  font: var(--hive-font-paragraph-s);
-  color: var(--hive-content-secondary);
+  padding: var(--taskall-space-6) var(--taskall-space-12);
+  border-radius: var(--taskall-radius-3);
+  font: var(--taskall-font-paragraph-s);
+  color: var(--taskall-content-secondary);
   text-decoration: none;
 }
 
 .link:hover {
-  background-color: var(--hive-background-hover);
-  color: var(--hive-content-primary);
+  background-color: var(--taskall-background-hover);
+  color: var(--taskall-content-primary);
 }
 
 .link[aria-current="page"] {
-  background-color: var(--hive-brand-soft);
-  color: var(--hive-content-on-soft);
-  font: var(--hive-font-label-s);
+  background-color: var(--taskall-brand-soft);
+  color: var(--taskall-content-on-soft);
+  font: var(--taskall-font-label-s);
 }
 
 .link[aria-current="page"]::before {
   content: "";
   position: absolute;
-  top: var(--hive-space-8);
-  bottom: var(--hive-space-8);
+  top: var(--taskall-space-8);
+  bottom: var(--taskall-space-8);
   left: 0;
   width: 3px;
-  border-radius: var(--hive-radius-pill);
-  background-color: var(--hive-brand);
+  border-radius: var(--taskall-radius-pill);
+  background-color: var(--taskall-brand);
 }
 
 @media (pointer: coarse) {
   .link {
-    min-height: var(--hive-touch-target);
+    min-height: var(--taskall-touch-target);
   }
 }

@@ -1,4 +1,4 @@
-import { StatusIndicator } from "@hive/react";
+import { StatusIndicator } from "@taskall/react";
 
 export default function StatusIndicatorSizes() {
   return (
@@ -6,7 +6,7 @@ export default function StatusIndicatorSizes() {
       style={{
         display: "flex",
         alignItems: "center",
-        gap: "var(--hive-space-16)",
+        gap: "var(--taskall-space-16)",
       }}
     >
       {(["xs", "sm", "md", "lg", "xl"] as const).map((size) => (

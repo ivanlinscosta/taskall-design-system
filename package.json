@@ -3,19 +3,19 @@
   "version": "0.0.1",
   "private": true,
   "type": "module",
-  "description": "Task All Design System — Hive components library + documentation webapp",
+  "description": "TaskAll Design System — components library + documentation webapp",
   "license": "MIT",
   "scripts": {
-    "dev": "pnpm --filter hive-docs dev",
+    "dev": "pnpm --filter taskall-docs dev",
     "build": "pnpm -r build",
-    "preview": "pnpm --filter hive-docs preview",
+    "preview": "pnpm --filter taskall-docs preview",
     "lint": "eslint .",
     "typecheck": "pnpm -r typecheck",
     "test": "pnpm -r test",
     "test:watch": "pnpm -r test:watch",
-    "storybook": "pnpm --filter hive-docs storybook",
-    "storybook:build": "pnpm --filter hive-docs storybook:build",
-    "release": "changeset publish"
+    "storybook": "pnpm --filter taskall-docs storybook",
+    "storybook:build": "pnpm --filter taskall-docs storybook:build",
+    "release": "pnpm --filter @taskall/react build && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^3.0.3",

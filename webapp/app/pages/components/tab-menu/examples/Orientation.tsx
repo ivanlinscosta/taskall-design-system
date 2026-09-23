@@ -1,4 +1,9 @@
-import { BlankCalendar, CircleClock, LayoutGrid, TabMenu } from "@hive/react";
+import {
+  BlankCalendar,
+  CircleClock,
+  LayoutGrid,
+  TabMenu,
+} from "@taskall/react";
 
 const items = [
   {
@@ -27,7 +32,7 @@ export default function TabMenuOrientation() {
       style={{
         display: "grid",
         gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-        gap: "var(--hive-space-32)",
+        gap: "var(--taskall-space-32)",
         width: "100%",
       }}
     >

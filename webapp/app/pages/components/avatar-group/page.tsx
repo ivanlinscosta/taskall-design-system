@@ -1,4 +1,4 @@
-import { AvatarGroup, type AvatarProps } from "@hive/react";
+import { AvatarGroup, type AvatarProps } from "@taskall/react";
 
 import { jsx, raw } from "../../../lib/api";
 import { definePlayground, example, type ComponentDoc } from "../../../lib/doc";
@@ -27,7 +27,7 @@ const doc: ComponentDoc = {
     "Quando cada pessoa precisa ser identificada ou acionada individualmente — use uma lista.",
     "Para listas longas que exigem busca ou paginação.",
   ],
-  usage: `import { AvatarGroup } from "@hive/react";
+  usage: `import { AvatarGroup } from "@taskall/react";
 
 <AvatarGroup
   ariaLabel="Integrantes do grupo 3"

@@ -1,4 +1,4 @@
-import { Checkbox, type CheckboxProps } from "@hive/react";
+import { Checkbox, type CheckboxProps } from "@taskall/react";
 
 import { jsx } from "../../../lib/api";
 import { definePlayground, example, type ComponentDoc } from "../../../lib/doc";
@@ -26,7 +26,7 @@ const doc: ComponentDoc = {
     "Escolha única entre opções — use RadioGroup.",
     "Ações que acontecem imediatamente ao clicar — use Button.",
   ],
-  usage: `import { Checkbox } from "@hive/react";
+  usage: `import { Checkbox } from "@taskall/react";
 
 <Checkbox label="Notas publicadas" checked={prefs.grades} onChange={(e) => setGrades(e.currentTarget.checked)} />`,
   playground: definePlayground({

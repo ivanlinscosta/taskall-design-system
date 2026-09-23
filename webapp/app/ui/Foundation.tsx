@@ -5,7 +5,7 @@ import styles from "./Foundation.module.css";
 
 /**
  * Lê o valor computado de tokens a partir de um elemento — respeita o
- * HiveProvider mais próximo e recalcula quando o tema global muda.
+ * TaskAllProvider mais próximo e recalcula quando o tema global muda.
  */
 export function useComputedTokens<T extends HTMLElement>(
   tokens: readonly string[],

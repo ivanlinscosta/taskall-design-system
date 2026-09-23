@@ -6,12 +6,12 @@ import {
   Loop,
   ModalFooter,
   TaillessLineArrowRight,
-} from "@hive/react";
+} from "@taskall/react";
 
 const frame = {
-  border: "1px solid var(--hive-border-subtle)",
-  borderRadius: "var(--hive-radius-surface)",
-  backgroundColor: "var(--hive-background-primary)",
+  border: "1px solid var(--taskall-border-subtle)",
+  borderRadius: "var(--taskall-radius-surface)",
+  backgroundColor: "var(--taskall-background-primary)",
 };
 
 export default function ModalFooterVariants() {
@@ -19,7 +19,7 @@ export default function ModalFooterVariants() {
     <div
       style={{
         display: "grid",
-        gap: "var(--hive-space-16)",
+        gap: "var(--taskall-space-16)",
         width: "100%",
         maxWidth: 520,
       }}
@@ -38,8 +38,8 @@ export default function ModalFooterVariants() {
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "var(--hive-space-8)",
-              font: "var(--hive-font-paragraph-s)",
+              gap: "var(--taskall-space-8)",
+              font: "var(--taskall-font-paragraph-s)",
             }}
           >
             <InformationCircle size={16} aria-hidden="true" />
@@ -66,8 +66,8 @@ export default function ModalFooterVariants() {
           <a
             href="#politica"
             style={{
-              color: "var(--hive-content-primary)",
-              font: "var(--hive-font-link-s)",
+              color: "var(--taskall-content-primary)",
+              font: "var(--taskall-font-link-s)",
             }}
           >
             Ver política de convites

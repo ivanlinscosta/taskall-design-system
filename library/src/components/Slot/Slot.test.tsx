@@ -4,12 +4,12 @@ import { axe } from "jest-axe";
 import { describe, expect, it } from "vitest";
 
 import { BellNotification as Bell } from "../../icons/BellNotification";
-import { renderWithHive } from "../../test/renderWithHive";
+import { renderWithTaskAll } from "../../test/renderWithTaskAll";
 import { Slot } from "./Slot";
 
 describe("Slot", () => {
   it("renders a span container with default md size", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <Slot data-testid="slot">
         <Bell size={16} aria-hidden="true" />
       </Slot>,
@@ -20,17 +20,17 @@ describe("Slot", () => {
 
   it("forwards the ref to the native span", () => {
     const ref = createRef<HTMLSpanElement>();
-    renderWithHive(<Slot ref={ref}>A</Slot>);
+    renderWithTaskAll(<Slot ref={ref}>A</Slot>);
     expect(ref.current).toBeInstanceOf(HTMLSpanElement);
   });
 
   it("supports xs size for dense layouts", () => {
-    renderWithHive(<Slot size="xs">1</Slot>);
+    renderWithTaskAll(<Slot size="xs">1</Slot>);
     expect(screen.getByText("1")).toHaveAttribute("data-size", "xs");
   });
 
   it("has no axe violations", async () => {
-    const { container } = renderWithHive(<Slot aria-label="Atalho">+</Slot>);
+    const { container } = renderWithTaskAll(<Slot aria-label="Atalho">+</Slot>);
     const results = await axe(container, {
       rules: { "color-contrast": { enabled: false } },
     });

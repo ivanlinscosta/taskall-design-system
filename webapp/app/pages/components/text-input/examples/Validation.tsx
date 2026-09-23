@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Mail, TextInput } from "@hive/react";
+import { Mail, TextInput } from "@taskall/react";
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 

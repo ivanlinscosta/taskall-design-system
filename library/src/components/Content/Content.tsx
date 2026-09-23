@@ -13,6 +13,10 @@ export type ContentProps = React.HTMLAttributes<HTMLDivElement> & {
   avatar?: React.ReactNode;
   icon?: IconComponent;
   badge?: React.ReactNode;
+  /**
+   * Tamanho das iniciais. Sem valor, acompanha a altura do texto
+   * (rótulo + descrição), como o ícone.
+   */
   avatarSize?: "xs" | "sm" | "md" | "lg" | "xl";
 };
 
@@ -47,7 +51,7 @@ export const Content = React.forwardRef<HTMLDivElement, ContentProps>(
       avatar,
       icon: Icon,
       badge,
-      avatarSize = "md",
+      avatarSize,
       className,
       ...props
     },
@@ -61,6 +65,7 @@ export const Content = React.forwardRef<HTMLDivElement, ContentProps>(
         ref={ref}
         data-type={type}
         data-size={size}
+        data-description={description ? "" : undefined}
         className={cx(styles.root, styles[size], className)}
         {...props}
       >
@@ -82,7 +87,7 @@ export const Content = React.forwardRef<HTMLDivElement, ContentProps>(
             className={cx(
               styles.leading,
               styles.avatarFallback,
-              avatarSizeClassNames[avatarSize],
+              avatarSize ? avatarSizeClassNames[avatarSize] : styles.autoSize,
             )}
             title={label}
             aria-hidden="true"

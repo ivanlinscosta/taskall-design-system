@@ -8,12 +8,12 @@ import {
   ScrollRestoration,
   type MetaFunction,
 } from "react-router";
-import { HiveProvider } from "@hive/react";
+import { TaskAllProvider } from "@taskall/react";
 
 import "@fontsource/archivo/400.css";
 import "@fontsource/archivo/600.css";
 import "@fontsource/archivo/700.css";
-import "@hive/react/styles.css";
+import "@taskall/react/styles.css";
 import "./app.css";
 
 import { SiteHeader } from "./ui/SiteHeader";
@@ -27,11 +27,11 @@ import {
 import styles from "./root.module.css";
 
 export const meta: MetaFunction = () => [
-  { title: "Hive Design System · Task All" },
+  { title: "TaskAll Design System" },
   {
     name: "description",
     content:
-      "Documentação do Hive, o design system do Task All: fundamentos, componentes React acessíveis e padrões aplicados.",
+      "Documentação do TaskAll, o design system do Task All: fundamentos, componentes React acessíveis e padrões aplicados.",
   },
 ];
 
@@ -46,7 +46,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="hive-base">
+      <body className="taskall-base">
         {children}
         <ScrollRestoration />
         <Scripts />
@@ -56,14 +56,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 /**
- * HiveProvider global da aplicação. O "chrome" da documentação segue o modo de
+ * TaskAllProvider global da aplicação. O "chrome" da documentação segue o modo de
  * cor e a marca; densidade e forma são aplicadas nas áreas de demonstração.
  */
 function ThemedApp({ children }: { children: React.ReactNode }) {
   const { settings } = useSettings();
 
   return (
-    <HiveProvider
+    <TaskAllProvider
       colorMode={settings.colorMode}
       brand={settings.brand}
       className={styles.app}
@@ -77,7 +77,7 @@ function ThemedApp({ children }: { children: React.ReactNode }) {
         <SiteHeader />
         {children}
       </SearchProvider>
-    </HiveProvider>
+    </TaskAllProvider>
   );
 }
 

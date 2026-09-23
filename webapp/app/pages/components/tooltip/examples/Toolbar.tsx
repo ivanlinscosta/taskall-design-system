@@ -1,4 +1,4 @@
-import { Download, Filter, More, Tooltip, Upload } from "@hive/react";
+import { Download, Filter, More, Tooltip, Upload } from "@taskall/react";
 
 const actions = [
   { icon: Filter, label: "Filtrar entregas" },
@@ -14,11 +14,11 @@ export default function TooltipToolbar() {
       aria-label="Ações das entregas"
       style={{
         display: "inline-flex",
-        gap: "var(--hive-space-4)",
-        padding: "var(--hive-space-4)",
-        border: "1px solid var(--hive-border-default)",
-        borderRadius: "var(--hive-radius-surface)",
-        backgroundColor: "var(--hive-background-primary)",
+        gap: "var(--taskall-space-4)",
+        padding: "var(--taskall-space-4)",
+        border: "1px solid var(--taskall-border-default)",
+        borderRadius: "var(--taskall-radius-surface)",
+        backgroundColor: "var(--taskall-background-primary)",
       }}
     >
       {actions.map(({ icon: Icon, label }) => (
@@ -29,12 +29,12 @@ export default function TooltipToolbar() {
             style={{
               display: "inline-grid",
               placeItems: "center",
-              width: "var(--hive-touch-target)",
-              height: "var(--hive-touch-target)",
+              width: "var(--taskall-touch-target)",
+              height: "var(--taskall-touch-target)",
               border: 0,
-              borderRadius: "var(--hive-radius-3)",
+              borderRadius: "var(--taskall-radius-3)",
               background: "transparent",
-              color: "var(--hive-content-primary)",
+              color: "var(--taskall-content-primary)",
               cursor: "pointer",
             }}
           >

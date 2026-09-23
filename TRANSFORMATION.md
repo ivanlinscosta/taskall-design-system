@@ -1,17 +1,17 @@
 # Transformar a Live Demo em Aplicação Web de Documentação
 
-> **Para o Claude (ou qualquer agente):** este documento é o briefing completo para transformar a live demo atual (Storybook) em uma **aplicação web de documentação no estilo Material Design** (material.io/components), onde os componentes do Hive aparecem **aplicados em contextos reais**, com documentação rica, boas práticas e navegação profissional.
+> **Para o Claude (ou qualquer agente):** este documento é o briefing completo para transformar a live demo atual (Storybook) em uma **aplicação web de documentação no estilo Material Design** (material.io/components), onde os componentes do TaskAll aparecem **aplicados em contextos reais**, com documentação rica, boas práticas e navegação profissional.
 
 ---
 
 ## 1. Contexto do projeto
 
-O **Task All Design System** ("Hive") é o design system do Sistema Task All:
+O **Task All Design System** ("TaskAll") é o design system do Sistema Task All:
 
 | Parte | Pasta | Pacote | Papel |
 |-------|-------|--------|-------|
-| Biblioteca de componentes | `library/` | `@hive/react` | React + TypeScript strict, tokens CSS, temas, 21 grupos de componentes, 44 ícones. Publicável no NPM. |
-| Aplicação web (docs/demo) | `webapp/` | `hive-docs` | Hoje: Storybook live demo. **Alvo desta transformação.** |
+| Biblioteca de componentes | `library/` | `@taskall/react` | React + TypeScript strict, tokens CSS, temas, 21 grupos de componentes, 44 ícones. Publicável no NPM. |
+| Aplicação web (docs/demo) | `webapp/` | `taskall-docs` | Hoje: Storybook live demo. **Alvo desta transformação.** |
 
 Stack atual:
 
@@ -24,7 +24,7 @@ Stack atual:
 - Roda com `pnpm storybook` → http://localhost:6006/
 - 118 stories + 22 páginas de docs, incluindo páginas de **Foundations**: Colors, Typography, Spacing, Radius, Grid, Themes, Icons.
 - As stories vivem em `library/src/**/*.stories.tsx` e as páginas de Foundation em `library/src/foundations/`.
-- O `webapp/.storybook/preview.tsx` já aplica o `HiveProvider` globalmente (decorator) — a app real deve fazer o mesmo.
+- O `webapp/.storybook/preview.tsx` já aplica o `TaskAllProvider` globalmente (decorator) — a app real deve fazer o mesmo.
 - **Importante:** o Storybook é a *matéria-prima*. As stories demonstram props; a aplicação deve reutilizar esses exemplos, mas com UX de site de documentação.
 
 ## 3. Objetivo
@@ -50,15 +50,15 @@ Construir em `webapp/` uma aplicação web própria (o Claude deve escolher e ju
 - **Idioma:** todo conteúdo em **português (PT-BR)**.
 - **Navegação:** sidebar agrupando *Foundations* → *Componentes* (ordem alfabética) → *Guias* (boas práticas, contribution, changelog). Busca por componente (fuzzy é suficiente).
 - **Cada componente = uma rota** com âncoras por seção (Visão geral, Demos, API, Acessibilidade, Código).
-- **Dark mode persistido** (localStorage) + respeito a `prefers-color-scheme`; usar `HiveProvider colorMode`.
+- **Dark mode persistido** (localStorage) + respeito a `prefers-color-scheme`; usar `TaskAllProvider colorMode`.
 - **Troca de brand/density/shape** por página ou global (dev tools de demonstração), exatamente como o toolbar do Storybook.
 - **Tabs/examples:** alternar entre "Preview" e "Code" no mesmo bloco de exemplo.
 - Tom de voz: técnico, direto, sem marketing. Exemplos com o domínio do Task All (tarefas, equipes, prazos, estudantes/responsáveis — as 4 marcas já mapeiam esses públicos).
 
 ## 5. Diretrizes técnicas (obrigatórias)
 
-- Consumir os componentes **apenas** via `@hive/react` (workspace link já existe: `webapp/node_modules/@hive/react → library`). **Não duplicar componentes dentro da app.** Para desenvolvimento com hot-reload da lib, alias para `library/src` é aceitável (padrão já usado no `webapp/.storybook/main.ts`).
-- Nunca usar hex/cor fixa: **somente tokens** (`--hive-*`) ou os componentes. Classes utilitárias da app própria devem usar os tokens.
+- Consumir os componentes **apenas** via `@taskall/react` (workspace link já existe: `webapp/node_modules/@taskall/react → library`). **Não duplicar componentes dentro da app.** Para desenvolvimento com hot-reload da lib, alias para `library/src` é aceitável (padrão já usado no `webapp/.storybook/main.ts`).
+- Nunca usar hex/cor fixa: **somente tokens** (`--taskall-*`) ou os componentes. Classes utilitárias da app própria devem usar os tokens.
 - TypeScript strict, sem `any`/`@ts-ignore`; ESLint/Prettier do repo valem.
 - Acessibilidade AA como mínimo: HTML semântico, landmarks (`header/nav/main`), `skip link`, foco visível, contraste verificado, ícones decorativos `aria-hidden`.
 - Performance: código-splitting por rota; não importar a lib inteira quando um subconjunto basta (tree-shaking é suportado — `sideEffects: false`).
@@ -86,7 +86,7 @@ Critérios: (a) esforço mínimo para reutilizar stories/exemplos; (b) renderiza
 
 ## 8. Fora de escopo
 
-- Publicar `@hive/react` no NPM (já tratado por Changesets, não é parte desta transformação).
+- Publicar `@taskall/react` no NPM (já tratado por Changesets, não é parte desta transformação).
 - Alterar APIs públicas dos componentes sem necessidade demonstrada.
 - Reescrever tokens/themes.
 - Inserir novas dependências pesadas sem justificativa (analytics, CMS…).
@@ -115,7 +115,7 @@ Estrutura de referência:
 
 ```
 taskall-design-system/
-├── library/          # @hive/react — src/, docs/CONVENTIONS.md, tokens em src/styles/
+├── library/          # @taskall/react — src/, docs/CONVENTIONS.md, tokens em src/styles/
 ├── webapp/           # documentação/live demo — alvo da transformação
 ├── TRANSFORMATION.md # este arquivo
 └── README.md
@@ -131,13 +131,13 @@ taskall-design-system/
 
 - `pnpm lint` → 0 erros · `pnpm typecheck` (library + webapp) → 0 erros
 - Storybook dev → http://localhost:6006/ com 118 stories + 22 páginas de docs
-- Workspace `@hive/react → library` linkado; jsdom ajustado para 29.x (compatível com Node 20)
+- Workspace `@taskall/react → library` linkado; jsdom ajustado para 29.x (compatível com Node 20)
 
 ### 🔴 Assets gráficos ausentes (aguardam design — NÃO inventar)
 
 Regra do projeto: **não inventar SVG paths**. Os arquivos abaixo não existem no repo e precisam ser fornecidos:
 
-1. **44 ícones estão como placeholders geométricos** (`library/src/icons/*.tsx`, regeneráveis via `pnpm --filter @hive/react generate:icons` a partir de SVGs originais, viewBox 24×24):
+1. **44 ícones estão como placeholders geométricos** (`library/src/icons/*.tsx`, regeneráveis via `pnpm --filter @taskall/react generate:icons` a partir de SVGs originais, viewBox 24×24):
 
    - [ ] Add, ArrowDown, ArrowLeft, ArrowRight, ArrowUp
    - [ ] Bell, Calendar, Camera, Check, CheckCircleFilled
@@ -150,7 +150,7 @@ Regra do projeto: **não inventar SVG paths**. Os arquivos abaixo não existem n
    - [ ] Visible, WarningCircleFilled, WarningTriangle, WarningTriangleFilled
 
 2. **Marca/identidade** (necessários para landing, Themes e cabeçalho da app):
-   - [ ] Logo oficial Task All / Hive (SVG) e variantes (mono, horizontal, ícone)
+   - [ ] Logo oficial TaskAll (SVG) e variantes (mono, horizontal, ícone)
    - [ ] Favicon / ícone de app (multi-size 16–512) + `manifest.webmanifest`
    - [ ] Imagem social (og-image 1200×630)
    - [ ] Logos ou swatches oficiais das 4 marcas (coral, gestão, estudantes, responsáveis)
@@ -168,8 +168,8 @@ Regra do projeto: **não inventar SVG paths**. Os arquivos abaixo não existem n
 | 1 | `vi.fn()` esperava 1 chamada, 0 | Callback do consumidor não disparado (relacionado aos casos acima). |
 
 - [ ] Todos os 29 testes verdes (`./node_modules/.bin/vitest run` em `library/`)
-- [ ] Cobertura **nunca foi executada com sucesso** — exigido: 90 stmts / 85 branches / 90 funcs / 90 lines (`pnpm --filter @hive/react test:coverage`)
-- [ ] **Testes de import/tree-shaking não existem**: (a) importar somente `Button` de `@hive/react` não pode puxar os 44 ícones (usar esbuild `analyzeMetafile`); (b) entries ESM e CJS carregam sem erro
+- [ ] Cobertura **nunca foi executada com sucesso** — exigido: 90 stmts / 85 branches / 90 funcs / 90 lines (`pnpm --filter @taskall/react test:coverage`)
+- [ ] **Testes de import/tree-shaking não existem**: (a) importar somente `Button` de `@taskall/react` não pode puxar os 44 ícones (usar esbuild `analyzeMetafile`); (b) entries ESM e CJS carregam sem erro
 - [ ] A11y do Storybook desativada: `a11y: { test: "todo" }` em `webapp/.storybook/preview.tsx`
 
 ### 🟠 Build e entrega
@@ -177,7 +177,7 @@ Regra do projeto: **não inventar SVG paths**. Os arquivos abaixo não existem n
 - [ ] `pnpm build` nunca verificado de ponta a ponta — `library/dist/` existe (esm/cjs/styles.css, gerado em 23/09 16:31) mas está **potencialmente desatualizado** e **sem validação** de `index.d.mts` / `index.d.cts` / `styles.css` / sideEffects
 - [ ] `pnpm storybook:build` nunca executado
 - [ ] DoD completo da §9 (`install → lint → typecheck → test → build → storybook:build`) ainda não passou de verde integral
-- [ ] Publicação: changeset inicial pronto (`.changeset/hive-react-initial.md`); CI/pipeline de release (GitHub Actions) não configurado (opcional, se for publicar)
+- [ ] Publicação: changeset inicial pronto (`.changeset/taskall-react-initial.md`); CI/pipeline de release (GitHub Actions) não configurado (opcional, se for publicar)
 
 ### 🟡 Revisões contra a especificação
 

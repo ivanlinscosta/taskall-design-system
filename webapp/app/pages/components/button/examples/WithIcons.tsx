@@ -7,14 +7,14 @@ import {
   MagnifyingGlass,
   SendEmail,
   TaillessLineArrowRight,
-} from "@hive/react";
+} from "@taskall/react";
 
 export default function ButtonWithIcons() {
   return (
     <div
       style={{
         display: "grid",
-        gap: "var(--hive-space-16)",
+        gap: "var(--taskall-space-16)",
         justifyItems: "center",
       }}
     >
@@ -23,7 +23,7 @@ export default function ButtonWithIcons() {
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
-          gap: "var(--hive-space-12)",
+          gap: "var(--taskall-space-12)",
         }}
       >
         <Button leftIcon={AddCircle}>Nova tarefa</Button>
@@ -44,7 +44,7 @@ export default function ButtonWithIcons() {
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
-          gap: "var(--hive-space-12)",
+          gap: "var(--taskall-space-12)",
         }}
       >
         <Button size="small" leftIcon={CloudUpload}>

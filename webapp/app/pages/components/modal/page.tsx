@@ -7,7 +7,7 @@ import {
   SendEmail,
   WarningTriangle,
   type ModalIconTone,
-} from "@hive/react";
+} from "@taskall/react";
 
 import { jsx, raw } from "../../../lib/api";
 import { definePlayground, example, type ComponentDoc } from "../../../lib/doc";
@@ -47,7 +47,7 @@ const doc: ComponentDoc = {
     "Abrir um modal a partir de outro modal.",
   ],
   usage: `import * as React from "react";
-import { Button, Modal, ModalFooter } from "@hive/react";
+import { Button, Modal, ModalFooter } from "@taskall/react";
 
 export function EditDeadline() {
   const [open, setOpen] = React.useState(false);
@@ -205,7 +205,7 @@ export function EditDeadline() {
       "O foco entra no modal ao abrir, fica preso nele e volta ao gatilho ao fechar.",
       "O ícone do cabeçalho (`icon`) é decorativo (`aria-hidden`): o significado fica no `title`.",
       "O botão de fechar tem `aria-label` configurável por `closeLabel` (padrão “Fechar”) e 44×44px.",
-      "O portal é montado dentro do HiveProvider mais próximo, preservando tema e marca.",
+      "O portal é montado dentro do TaskAllProvider mais próximo, preservando tema e marca.",
     ],
     keyboard: [
       {

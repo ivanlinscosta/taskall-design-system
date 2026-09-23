@@ -108,7 +108,7 @@ importers:
       '@fontsource/archivo':
         specifier: ^5.3.0
         version: 5.3.0
-      '@hive/react':
+      '@taskall/react':
         specifier: workspace:*
         version: link:../library
       '@react-router/node':

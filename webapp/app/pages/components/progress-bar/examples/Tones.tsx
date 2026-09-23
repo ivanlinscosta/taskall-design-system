@@ -1,4 +1,4 @@
-import { ProgressBar } from "@hive/react";
+import { ProgressBar } from "@taskall/react";
 
 const tones = [
   "brand",
@@ -16,7 +16,7 @@ export default function ProgressBarTones() {
     <div
       style={{
         display: "grid",
-        gap: "var(--hive-space-12)",
+        gap: "var(--taskall-space-12)",
         width: "100%",
         maxWidth: 420,
       }}

@@ -1,4 +1,4 @@
-import { AvatarGroup } from "@hive/react";
+import { AvatarGroup } from "@taskall/react";
 
 const team = ["AL", "BR", "CM", "DF", "EG", "FH", "GI", "HJ"].map(
   (fallback) => ({ fallback }),
@@ -9,7 +9,7 @@ export default function AvatarGroupOverflow() {
     <div
       style={{
         display: "grid",
-        gap: "var(--hive-space-16)",
+        gap: "var(--taskall-space-16)",
         justifyItems: "start",
       }}
     >

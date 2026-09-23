@@ -1,4 +1,4 @@
-import { LabelText, type LabelTextProps } from "@hive/react";
+import { LabelText, type LabelTextProps } from "@taskall/react";
 
 import { jsx } from "../../../lib/api";
 import { definePlayground, example, type ComponentDoc } from "../../../lib/doc";
@@ -14,17 +14,17 @@ const page = findPage("componentes", "label-text");
 const doc: ComponentDoc = {
   page,
   description:
-    "LabelText exibe rótulos curtos em semibold usando a escala `--hive-font-label-*` (l, m, s, xs).",
+    "LabelText exibe rótulos curtos em semibold usando a escala `--taskall-font-label-*` (l, m, s, xs).",
   whenToUse: [
     "Rótulos de metadados (Turma, Matrícula), legendas e pequenos destaques.",
     "Nomes em linhas de lista acima de uma descrição.",
   ],
   whenNotToUse: [
     "Títulos de seção — use Heading para manter a semântica.",
-    "Rótulo de campo de formulário — os campos do Hive já trazem `label`.",
+    "Rótulo de campo de formulário — os campos do TaskAll já trazem `label`.",
     "Parágrafos — use Paragraph.",
   ],
-  usage: `import { LabelText } from "@hive/react";
+  usage: `import { LabelText } from "@taskall/react";
 
 <LabelText size="xs">Matrícula</LabelText>`,
   playground: definePlayground({
@@ -77,7 +77,7 @@ const doc: ComponentDoc = {
   accessibility: {
     notes: [
       "Renderiza `<span>` sem papel: o significado vem do contexto (ex.: `<dt>`, `<label>`).",
-      "Mantenha contraste AA: use `--hive-content-secondary` no mínimo para textos de apoio.",
+      "Mantenha contraste AA: use `--taskall-content-secondary` no mínimo para textos de apoio.",
     ],
     keyboard: [],
   },

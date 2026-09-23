@@ -10,7 +10,10 @@ declare module "jest-axe" {
     ...expected: unknown[]
   ) => { pass: boolean; message: () => string };
 
-  export function axe(html: Element | string, options?: RunOptions): Promise<AxeResults>;
+  export function axe(
+    html: Element | string,
+    options?: RunOptions,
+  ): Promise<AxeResults>;
   export function configureAxe(options?: RunOptions): typeof axe;
 
   const jestAxe: {

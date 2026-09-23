@@ -6,7 +6,7 @@ import { axe } from "jest-axe";
 import { describe, expect, it } from "vitest";
 
 import { MagnifyingGlass as Search } from "../../icons/MagnifyingGlass";
-import { renderWithHive } from "../../test/renderWithHive";
+import { renderWithTaskAll } from "../../test/renderWithTaskAll";
 import { Dropdown } from "./Dropdown";
 
 const options = [
@@ -17,7 +17,7 @@ const options = [
 
 describe("Dropdown", () => {
   it("renders a labelled combobox trigger", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <Dropdown label="Status" options={options} placeholder="Selecione" />,
     );
 
@@ -29,7 +29,7 @@ describe("Dropdown", () => {
   it("forwards the ref to the trigger button", () => {
     const ref = createRef<HTMLButtonElement>();
 
-    renderWithHive(<Dropdown label="Status" options={options} ref={ref} />);
+    renderWithTaskAll(<Dropdown label="Status" options={options} ref={ref} />);
 
     expect(ref.current).toBeInstanceOf(HTMLButtonElement);
   });
@@ -37,7 +37,7 @@ describe("Dropdown", () => {
   it("supports uncontrolled usage", async () => {
     const user = userEvent.setup();
 
-    renderWithHive(
+    renderWithTaskAll(
       <Dropdown label="Status" options={options} defaultValue="draft" />,
     );
 
@@ -65,7 +65,7 @@ describe("Dropdown", () => {
       );
     }
 
-    renderWithHive(<ControlledDropdown />);
+    renderWithTaskAll(<ControlledDropdown />);
 
     const trigger = screen.getByRole("combobox", { name: "Status" });
 
@@ -78,7 +78,7 @@ describe("Dropdown", () => {
   it("supports keyboard focus and selection", async () => {
     const user = userEvent.setup();
 
-    renderWithHive(
+    renderWithTaskAll(
       <Dropdown label="Status" options={options} placeholder="Selecione" />,
     );
 
@@ -94,7 +94,7 @@ describe("Dropdown", () => {
   });
 
   it("exposes aria-invalid and error description", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <Dropdown label="Status" options={options} error="Selecione um status" />,
     );
 
@@ -108,7 +108,7 @@ describe("Dropdown", () => {
   it("renders option adornments and meta content", async () => {
     const user = userEvent.setup();
 
-    renderWithHive(
+    renderWithTaskAll(
       <Dropdown
         label="Pessoa"
         leftIcon={Search}
@@ -133,7 +133,7 @@ describe("Dropdown", () => {
   });
 
   it("has no axe violations", async () => {
-    const { container } = renderWithHive(
+    const { container } = renderWithTaskAll(
       <Dropdown label="Status" options={options} placeholder="Selecione" />,
     );
 

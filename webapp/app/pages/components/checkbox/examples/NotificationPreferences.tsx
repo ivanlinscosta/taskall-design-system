@@ -1,4 +1,4 @@
-import { Button, Checkbox, Heading, Paragraph } from "@hive/react";
+import { Button, Checkbox, Heading, Paragraph } from "@taskall/react";
 
 export default function CheckboxNotificationPreferences() {
   return (
@@ -6,13 +6,13 @@ export default function CheckboxNotificationPreferences() {
       onSubmit={(event) => event.preventDefault()}
       style={{
         display: "grid",
-        gap: "var(--hive-space-step-6)",
+        gap: "var(--taskall-space-step-6)",
         maxWidth: 480,
         margin: "0 auto",
-        padding: "var(--hive-space-step-7)",
-        border: "1px solid var(--hive-border-default)",
-        borderRadius: "var(--hive-radius-surface)",
-        backgroundColor: "var(--hive-background-primary)",
+        padding: "var(--taskall-space-step-7)",
+        border: "1px solid var(--taskall-border-default)",
+        borderRadius: "var(--taskall-radius-surface)",
+        backgroundColor: "var(--taskall-background-primary)",
       }}
     >
       <div>
@@ -21,7 +21,7 @@ export default function CheckboxNotificationPreferences() {
         </Heading>
         <Paragraph
           size="s"
-          style={{ margin: 0, color: "var(--hive-content-secondary)" }}
+          style={{ margin: 0, color: "var(--taskall-content-secondary)" }}
         >
           Escolha o que você quer receber sobre Lucas Martins.
         </Paragraph>
@@ -32,7 +32,7 @@ export default function CheckboxNotificationPreferences() {
           padding: 0,
           border: 0,
           display: "grid",
-          gap: "var(--hive-space-step-4)",
+          gap: "var(--taskall-space-step-4)",
         }}
       >
         <legend className="visually-hidden">Tipos de notificação</legend>

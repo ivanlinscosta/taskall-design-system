@@ -1,4 +1,4 @@
-import { Bell, Slot, type SlotProps } from "@hive/react";
+import { Bell, Slot, type SlotProps } from "@taskall/react";
 
 import { jsx } from "../../../lib/api";
 import { definePlayground, example, type ComponentDoc } from "../../../lib/doc";
@@ -23,7 +23,7 @@ const doc: ComponentDoc = {
     "Como botão — Slot é apresentacional; envolva em `<button>`/`<a>` com rótulo.",
     "Para fotos de pessoas — use Avatar.",
   ],
-  usage: `import { Bell, Slot } from "@hive/react";
+  usage: `import { Bell, Slot } from "@taskall/react";
 
 <Slot size="xl">
   <Bell size={20} aria-hidden="true" />

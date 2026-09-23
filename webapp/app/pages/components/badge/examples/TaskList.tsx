@@ -1,4 +1,4 @@
-import { Badge, Calendar, Check, LabelText, Paragraph } from "@hive/react";
+import { Badge, Calendar, Check, LabelText, Paragraph } from "@taskall/react";
 
 const tasks = [
   {
@@ -30,9 +30,9 @@ export default function BadgeTaskList() {
         margin: "0 auto",
         padding: 0,
         listStyle: "none",
-        border: "1px solid var(--hive-border-default)",
-        borderRadius: "var(--hive-radius-surface)",
-        backgroundColor: "var(--hive-background-primary)",
+        border: "1px solid var(--taskall-border-default)",
+        borderRadius: "var(--taskall-radius-surface)",
+        backgroundColor: "var(--taskall-background-primary)",
       }}
     >
       {tasks.map((task, index) => (
@@ -41,10 +41,12 @@ export default function BadgeTaskList() {
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "var(--hive-space-12)",
-            padding: "var(--hive-space-step-5)",
+            gap: "var(--taskall-space-12)",
+            padding: "var(--taskall-space-step-5)",
             borderTop:
-              index === 0 ? undefined : "1px solid var(--hive-border-subtle)",
+              index === 0
+                ? undefined
+                : "1px solid var(--taskall-border-subtle)",
           }}
         >
           <div style={{ flex: 1, minWidth: 0 }}>
@@ -55,8 +57,8 @@ export default function BadgeTaskList() {
                 margin: 0,
                 display: "flex",
                 alignItems: "center",
-                gap: "var(--hive-space-4)",
-                color: "var(--hive-content-secondary)",
+                gap: "var(--taskall-space-4)",
+                color: "var(--taskall-content-secondary)",
               }}
             >
               <Calendar size={12} aria-hidden="true" /> {task.due}

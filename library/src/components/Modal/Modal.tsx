@@ -10,7 +10,7 @@ import styles from "./Modal.module.css";
 
 // Ignora <html>: apps podem espelhar o tema no documento (ex.: evitar "flash"
 // de tema em páginas pré-renderizadas), mas o portal deve ir para um provider.
-const HIVE_PROVIDER_SELECTOR =
+const TASKALL_PROVIDER_SELECTOR =
   ":not(html)[data-color-mode][data-brand][data-density][data-shape]";
 const useIsomorphicLayoutEffect =
   typeof window === "undefined" ? React.useEffect : React.useLayoutEffect;
@@ -75,7 +75,7 @@ function getPortalContainer() {
 
   if (document.activeElement instanceof HTMLElement) {
     const closestProvider = document.activeElement.closest<HTMLElement>(
-      HIVE_PROVIDER_SELECTOR,
+      TASKALL_PROVIDER_SELECTOR,
     );
 
     if (closestProvider) {
@@ -84,7 +84,7 @@ function getPortalContainer() {
   }
 
   return (
-    document.querySelector<HTMLElement>(HIVE_PROVIDER_SELECTOR) ?? undefined
+    document.querySelector<HTMLElement>(TASKALL_PROVIDER_SELECTOR) ?? undefined
   );
 }
 
