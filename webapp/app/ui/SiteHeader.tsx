@@ -77,7 +77,6 @@ export function SiteHeader() {
           aria-label="TaskAll Design System — início"
         >
           <Logo className={styles.logo} title="" />
-          <span className={styles.brandTag}>Design System</span>
         </Link>
 
         <nav aria-label="Seções" className={styles.sections}>

@@ -27,15 +27,7 @@
 }
 
 .logo {
-  height: 30px;
-}
-
-.brandTag {
-  padding: 0 var(--taskall-space-8);
-  border-radius: var(--taskall-radius-pill);
-  background-color: var(--taskall-background-tertiary);
-  font: var(--taskall-font-label-xs);
-  color: var(--taskall-content-secondary);
+  height: 40px;
 }
 
 .sections {
@@ -165,7 +157,6 @@
     padding: 0 var(--taskall-space-8);
   }
 
-  .brandTag,
   .searchKbd {
     display: none;
   }
