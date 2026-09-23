@@ -1,6 +1,6 @@
 {
   "name": "@taskall/react",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "TaskAll Design System — React components, tokens and icons",
   "license": "MIT",
   "repository": {
