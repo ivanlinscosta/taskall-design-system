@@ -1,0 +1,8 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["react", "react-dom", "vite/client", "vitest/globals", "@testing-library/jest-dom"],
+    "baseUrl": "."
+  },
+  "include": ["src", "scripts", "vite.config.ts", "vitest.config.ts"]
+}

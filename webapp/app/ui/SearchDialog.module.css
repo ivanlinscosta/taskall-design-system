@@ -1,0 +1,58 @@
+.modal {
+  min-height: min(520px, calc(100vh - var(--hive-space-32)));
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hive-space-12);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hive-space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hive-space-2);
+  min-height: var(--hive-touch-target);
+  padding: var(--hive-space-8) var(--hive-space-12);
+  border-radius: var(--hive-radius-3);
+  cursor: pointer;
+}
+
+.option[aria-selected="true"] {
+  background-color: var(--hive-brand-soft);
+  color: var(--hive-content-on-soft);
+}
+
+.optionTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--hive-space-8);
+  font: var(--hive-font-label-m);
+}
+
+.optionSection {
+  font: var(--hive-font-paragraph-xs);
+  color: var(--hive-content-secondary);
+}
+
+.optionSummary {
+  font: var(--hive-font-paragraph-s);
+  color: var(--hive-content-secondary);
+}
+
+.empty {
+  margin: 0;
+  padding: var(--hive-space-24) 0;
+  text-align: center;
+  font: var(--hive-font-paragraph-m);
+  color: var(--hive-content-secondary);
+}

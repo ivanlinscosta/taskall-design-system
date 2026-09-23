@@ -1,0 +1,91 @@
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--hive-space-8);
+}
+
+.import {
+  padding: var(--hive-space-6) var(--hive-space-12);
+  border: 1px solid var(--hive-border-default);
+  border-radius: var(--hive-radius-3);
+  background-color: var(--hive-background-secondary);
+  font-size: 13px;
+  color: var(--hive-content-primary);
+  overflow-wrap: anywhere;
+}
+
+.usage {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--hive-space-32);
+}
+
+.exampleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hive-space-24);
+}
+
+.exampleGroup + .exampleGroup {
+  margin-top: var(--hive-space-16);
+}
+
+.kind {
+  margin: 0;
+  font: var(--hive-font-label-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--hive-content-secondary);
+}
+
+.notes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hive-space-8);
+  max-width: 72ch;
+  margin: 0;
+  padding-left: var(--hive-space-20);
+  font: var(--hive-font-paragraph-m);
+}
+
+.keyboard {
+  overflow-x: auto;
+}
+
+.keyboard table {
+  width: 100%;
+  border-collapse: collapse;
+  font: var(--hive-font-paragraph-s);
+}
+
+.keyboard caption {
+  padding-bottom: var(--hive-space-8);
+  font: var(--hive-font-label-m);
+  text-align: left;
+}
+
+.keyboard th,
+.keyboard td {
+  padding: var(--hive-space-8) var(--hive-space-12);
+  border-bottom: 1px solid var(--hive-border-subtle);
+  text-align: left;
+  vertical-align: top;
+}
+
+.keyboard thead th {
+  font: var(--hive-font-label-xs);
+  text-transform: uppercase;
+  color: var(--hive-content-secondary);
+}
+
+.keyboard tbody th {
+  width: 220px;
+  font-weight: var(--hive-weight-regular);
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .usage {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

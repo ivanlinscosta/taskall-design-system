@@ -1,0 +1,24 @@
+.surface {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--hive-space-12);
+  min-height: 160px;
+  padding: var(--hive-space-32) var(--hive-space-24);
+  background-color: var(--hive-background-primary);
+  background-image: radial-gradient(
+    var(--hive-border-subtle) 1px,
+    transparent 1px
+  );
+  background-size: 16px 16px;
+  color: var(--hive-content-primary);
+}
+
+.surface[data-align="start"] {
+  justify-content: flex-start;
+}
+
+.surface[data-align="stretch"] {
+  display: block;
+}

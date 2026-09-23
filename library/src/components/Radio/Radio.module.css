@@ -1,0 +1,117 @@
+.group {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-inline-size: 0;
+}
+
+.legend {
+  margin-bottom: var(--hive-space-step-3);
+  padding: 0;
+  color: var(--hive-content-primary);
+  font: var(--hive-font-label-s);
+}
+
+.options {
+  display: grid;
+  gap: var(--hive-space-step-3);
+}
+
+.root {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--hive-space-step-3);
+  color: var(--hive-content-primary);
+  cursor: pointer;
+  font: var(--hive-font-paragraph-s);
+}
+
+.small {
+  min-height: var(--hive-space-20);
+}
+
+.x-small {
+  min-height: 16px;
+  font: var(--hive-font-paragraph-xs);
+}
+
+.disabled {
+  color: var(--hive-content-disabled);
+  cursor: not-allowed;
+}
+
+.input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: inherit;
+}
+
+.control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  border: 1px solid var(--hive-border-strong);
+  border-radius: var(--hive-radius-pill);
+  background-color: var(--hive-background-primary);
+  transition:
+    border-color 120ms ease,
+    box-shadow 120ms ease,
+    background-color 120ms ease;
+}
+
+.x-small .control {
+  width: 16px;
+  height: 16px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--hive-radius-pill);
+  background-color: var(--hive-action-primary);
+  transform: scale(0);
+  transition: transform 120ms ease;
+}
+
+.x-small .dot {
+  width: 6px;
+  height: 6px;
+}
+
+.input:focus-visible + .control {
+  outline: var(--hive-focus-ring-width) solid var(--hive-focus-ring-color);
+  outline-offset: var(--hive-focus-ring-offset);
+}
+
+.root:hover:not(.disabled) .control {
+  border-color: var(--hive-action-primary);
+}
+
+.root[data-state="checked"] .control {
+  border-color: var(--hive-action-primary);
+}
+
+.root[data-state="checked"] .dot {
+  transform: scale(1);
+}
+
+.root.disabled .control,
+.input:disabled + .control {
+  background-color: var(--hive-action-disabled-fill);
+  border-color: var(--hive-action-disabled-border);
+}
+
+.root.disabled .dot,
+.input:disabled + .control .dot {
+  background-color: var(--hive-action-disabled-contrast);
+}
+
+.label {
+  color: inherit;
+}

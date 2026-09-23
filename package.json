@@ -1,0 +1,33 @@
+{
+  "name": "taskall-design-system",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Task All Design System — Hive components library + documentation webapp",
+  "license": "MIT",
+  "scripts": {
+    "dev": "pnpm --filter hive-docs dev",
+    "build": "pnpm -r build",
+    "preview": "pnpm --filter hive-docs preview",
+    "lint": "eslint .",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "test:watch": "pnpm -r test:watch",
+    "storybook": "pnpm --filter hive-docs storybook",
+    "storybook:build": "pnpm --filter hive-docs storybook:build",
+    "release": "changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^3.0.3",
+    "@eslint/js": "^9.14.0",
+    "@types/node": "^24.0.0",
+    "eslint": "^9.14.0",
+    "prettier": "^3.3.3",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.70.1"
+  },
+  "packageManager": "pnpm@10.0.0",
+  "engines": {
+    "node": ">=20"
+  }
+}

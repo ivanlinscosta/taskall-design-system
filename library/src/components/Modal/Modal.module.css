@@ -1,0 +1,212 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--hive-overlay);
+  z-index: 1000;
+}
+
+.overlay[data-state="open"] {
+  animation: hive-overlay-in 160ms ease-out;
+}
+
+.content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  max-width: calc(100vw - var(--hive-space-32));
+  max-height: calc(100vh - var(--hive-space-32));
+  overflow: auto;
+  border-radius: var(--hive-radius-surface);
+  background: var(--hive-background-primary);
+  box-shadow: var(--hive-shadow-lg);
+  color: var(--hive-content-primary);
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+}
+
+.content[data-state="open"] {
+  animation: hive-content-in 180ms ease-out;
+}
+
+.header,
+.customHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--hive-space-12);
+  padding: var(--hive-space-16);
+}
+
+.headerContent,
+.customHeaderContent {
+  display: flex;
+  flex: 1;
+  gap: var(--hive-space-12);
+  min-width: 0;
+}
+
+.headerContent {
+  flex-direction: column;
+  gap: var(--hive-space-4);
+}
+
+.headerTextBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hive-space-4);
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  color: var(--hive-content-primary);
+  font: var(--hive-font-h6);
+}
+
+.description {
+  margin: 0;
+  color: var(--hive-content-secondary);
+  font: var(--hive-font-paragraph-s);
+}
+
+.closeButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: var(--hive-touch-target);
+  height: var(--hive-touch-target);
+  border: 0;
+  border-radius: var(--hive-radius-surface);
+  background: transparent;
+  color: var(--hive-content-primary);
+  cursor: pointer;
+  transition:
+    background-color 120ms ease,
+    color 120ms ease,
+    box-shadow 120ms ease;
+}
+
+.closeButton:hover {
+  background: var(--hive-background-hover);
+}
+
+.closeButton:focus-visible {
+  outline: var(--hive-focus-ring-width) solid var(--hive-focus-ring-color);
+  outline-offset: var(--hive-focus-ring-offset);
+}
+
+.body {
+  padding: var(--hive-space-16);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: var(--hive-space-64);
+  padding: var(--hive-space-16);
+  border-top: 1px solid var(--hive-border-subtle);
+  gap: var(--hive-space-12);
+}
+
+.footerCta {
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: var(--hive-space-step-3);
+}
+
+.footerInformation {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footerCheckbox {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footerLink {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footerCtaFull {
+  justify-content: flex-start;
+}
+
+.footerCtaFull > * {
+  width: 100%;
+}
+
+.headerSlot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: var(--hive-space-44);
+  height: var(--hive-space-44);
+  border-radius: var(--hive-radius-surface);
+  background: var(--hive-background-secondary);
+  color: var(--hive-content-primary);
+}
+
+.headerIconBox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: var(--hive-space-40);
+  height: var(--hive-space-40);
+  border-radius: var(--hive-radius-surface);
+  background: var(--hive-brand-soft);
+  color: var(--hive-brand);
+}
+
+.headerIconBox[data-tone="information"] {
+  background: var(--hive-status-information-soft);
+  color: var(--hive-status-information);
+}
+
+.headerIconBox[data-tone="success"] {
+  background: var(--hive-status-success-soft);
+  color: var(--hive-status-success);
+}
+
+.headerIconBox[data-tone="warning"] {
+  background: var(--hive-status-warning-soft);
+  color: var(--hive-status-warning);
+}
+
+.headerIconBox[data-tone="error"] {
+  background: var(--hive-status-error-soft);
+  color: var(--hive-status-error);
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@keyframes hive-overlay-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes hive-content-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.98);
+  }
+}

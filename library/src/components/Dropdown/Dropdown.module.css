@@ -1,0 +1,227 @@
+.root {
+  display: grid;
+  gap: var(--hive-space-step-2);
+  width: 100%;
+  color: var(--hive-content-primary);
+}
+
+.label {
+  color: var(--hive-content-primary);
+  font: var(--hive-font-label-s);
+}
+
+.sublabel {
+  color: var(--hive-content-secondary);
+  font: var(--hive-font-paragraph-xs);
+}
+
+.field {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--hive-space-step-3);
+  width: 100%;
+  border: 1px solid var(--hive-border-default);
+  border-radius: var(--hive-radius-3);
+  background-color: var(--hive-background-primary);
+  color: var(--hive-content-primary);
+  padding-inline: var(--hive-space-12);
+  cursor: pointer;
+  transition:
+    border-color 120ms ease,
+    box-shadow 120ms ease,
+    background-color 120ms ease,
+    color 120ms ease;
+}
+
+.field:hover:not(:disabled) {
+  border-color: var(--hive-border-strong);
+}
+
+.field:focus-visible {
+  outline: 0;
+  border-color: var(--hive-action-primary);
+  box-shadow: 0 0 0 3px var(--hive-brand-soft);
+}
+
+.fieldError {
+  border-color: var(--hive-status-error);
+}
+
+.fieldError:hover:not(:disabled),
+.fieldError:focus-visible {
+  border-color: var(--hive-status-error);
+}
+
+.fieldError:focus-visible {
+  box-shadow: 0 0 0 3px var(--hive-status-error-soft);
+}
+
+.fieldDisabled {
+  background-color: var(--hive-background-disabled);
+  border-color: var(--hive-action-disabled-border);
+  color: var(--hive-content-disabled);
+  cursor: not-allowed;
+}
+
+.fieldDisabled:hover {
+  border-color: var(--hive-action-disabled-border);
+}
+
+.medium .field {
+  min-height: var(--hive-space-44);
+}
+
+.small .field {
+  min-height: 32px;
+}
+
+.icon,
+.chevron,
+.itemIcon {
+  flex-shrink: 0;
+  color: var(--hive-content-tertiary);
+}
+
+.value {
+  display: inline-flex;
+  flex: 1;
+  min-width: 0;
+  color: inherit;
+  font: var(--hive-font-paragraph-m);
+  text-align: left;
+}
+
+.small .value {
+  font: var(--hive-font-paragraph-s);
+}
+
+.field[data-placeholder] .value {
+  color: var(--hive-content-tertiary);
+}
+
+.content {
+  z-index: 50;
+  min-width: var(--radix-select-trigger-width);
+  overflow: hidden;
+  border: 1px solid var(--hive-border-default);
+  border-radius: var(--hive-radius-3);
+  background-color: var(--hive-background-primary);
+  box-shadow: var(--hive-shadow-lg);
+}
+
+.viewport {
+  padding-block: var(--hive-space-4);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--hive-space-step-3);
+  min-height: var(--hive-space-44);
+  padding-inline: var(--hive-space-12);
+  color: var(--hive-content-primary);
+  font: var(--hive-font-paragraph-s);
+  cursor: pointer;
+  user-select: none;
+  outline: 0;
+}
+
+.item[data-highlighted] {
+  background-color: var(--hive-background-hover);
+}
+
+.item[data-state="checked"] {
+  background-color: var(--hive-brand-soft);
+  color: var(--hive-action-primary);
+}
+
+.item[data-disabled] {
+  color: var(--hive-content-disabled);
+  cursor: not-allowed;
+}
+
+.itemText {
+  flex: 1;
+  min-width: 0;
+}
+
+.trailing {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;
+  min-width: 20px;
+}
+
+.itemIndicator,
+.embeddedIndicator,
+.embeddedRadioIndicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selectionBox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--hive-border-strong);
+  border-radius: var(--hive-radius-2);
+}
+
+.item[data-state="checked"] .selectionBox {
+  border-color: var(--hive-action-primary);
+  background-color: var(--hive-action-primary);
+  color: var(--hive-action-primary-contrast);
+}
+
+.selectionRadio {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--hive-border-strong);
+  border-radius: var(--hive-radius-pill);
+}
+
+.item[data-state="checked"] .selectionRadio {
+  border-color: var(--hive-action-primary);
+}
+
+.selectionRadioDot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--hive-radius-pill);
+  background-color: var(--hive-action-primary);
+}
+
+.flagAdornment {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--hive-radius-pill);
+  background-color: var(--hive-brand);
+}
+
+.meta {
+  color: var(--hive-content-tertiary);
+  font: var(--hive-font-paragraph-xs);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 20px;
+  padding-inline: var(--hive-space-8);
+  border-radius: var(--hive-radius-pill);
+  background-color: var(--hive-brand-soft);
+  color: var(--hive-action-primary);
+  font: var(--hive-font-paragraph-xs);
+}
+
+.error {
+  color: var(--hive-status-error);
+  font: var(--hive-font-paragraph-xs);
+}

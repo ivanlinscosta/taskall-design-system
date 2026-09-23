@@ -1,0 +1,28 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--hive-space-16);
+  max-width: 640px;
+  margin: 0 auto;
+  padding: var(--hive-space-64) var(--hive-space-24);
+  outline: none;
+}
+
+.code {
+  margin: 0;
+  font: var(--hive-font-display-3);
+  color: var(--hive-brand);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--hive-touch-target);
+  padding: 0 var(--hive-space-20);
+  border-radius: var(--hive-radius-surface);
+  background-color: var(--hive-background-inverse);
+  color: var(--hive-content-inverse);
+  font: var(--hive-font-label-m);
+  text-decoration: none;
+}

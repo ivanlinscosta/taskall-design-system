@@ -1,0 +1,211 @@
+.root {
+  --alert-accent: var(--hive-status-information);
+  --alert-soft: var(--hive-status-information-soft);
+  --alert-contrast: var(--hive-status-information-contrast);
+  --alert-outline: var(--hive-status-information-outline);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid transparent;
+  font-family: var(--hive-font-family);
+  color: var(--hive-content-primary);
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease,
+    color 120ms ease;
+}
+
+.root[data-tone="information"] {
+  --alert-accent: var(--hive-status-information);
+  --alert-soft: var(--hive-status-information-soft);
+  --alert-contrast: var(--hive-status-information-contrast);
+  --alert-outline: var(--hive-status-information-outline);
+}
+
+.root[data-tone="warning"] {
+  --alert-accent: var(--hive-status-warning);
+  --alert-soft: var(--hive-status-warning-soft);
+  --alert-contrast: var(--hive-status-warning-contrast);
+  --alert-outline: var(--hive-status-warning-outline);
+}
+
+.root[data-tone="success"] {
+  --alert-accent: var(--hive-status-success);
+  --alert-soft: var(--hive-status-success-soft);
+  --alert-contrast: var(--hive-status-success-contrast);
+  --alert-outline: var(--hive-status-success-outline);
+}
+
+.root[data-tone="error"] {
+  --alert-accent: var(--hive-status-error);
+  --alert-soft: var(--hive-status-error-soft);
+  --alert-contrast: var(--hive-status-error-contrast);
+  --alert-outline: var(--hive-status-error-outline);
+}
+
+.root[data-tone="update"] {
+  --alert-accent: var(--hive-status-update);
+  --alert-soft: var(--hive-status-update-soft);
+  --alert-contrast: var(--hive-status-update-contrast);
+  --alert-outline: var(--hive-status-update-outline);
+}
+
+.leading {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--hive-space-step-1);
+  min-width: 0;
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+.title,
+.body,
+.link {
+  font-size: var(--hive-font-size-paragraph-s);
+  line-height: var(--hive-line-height-paragraph-s);
+}
+
+.title {
+  font-weight: var(--hive-weight-semibold);
+}
+
+.body {
+  color: var(--hive-content-secondary);
+}
+
+.link {
+  width: fit-content;
+  font-weight: var(--hive-weight-semibold);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.closeButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  border-radius: var(--hive-radius-pill);
+  background: transparent;
+  color: currentColor;
+  cursor: pointer;
+  transition:
+    background-color 120ms ease,
+    color 120ms ease,
+    box-shadow 120ms ease;
+}
+
+.closeButton:focus-visible {
+  outline: var(--hive-focus-ring-width) solid var(--hive-focus-ring-color);
+  outline-offset: var(--hive-focus-ring-offset);
+}
+
+.large {
+  gap: var(--hive-space-step-3);
+  padding: var(--hive-space-step-4);
+  border-radius: var(--hive-radius-4);
+}
+
+.large .leading {
+  gap: var(--hive-space-step-3);
+}
+
+.medium {
+  gap: var(--hive-space-step-2);
+  padding: var(--hive-space-step-3);
+  border-radius: var(--hive-radius-3);
+}
+
+.medium .leading {
+  gap: var(--hive-space-step-2);
+}
+
+.small {
+  gap: var(--hive-space-step-1);
+  align-items: center;
+  min-height: 16px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.small .leading {
+  gap: var(--hive-space-step-1);
+  align-items: center;
+}
+
+.small .content {
+  justify-content: center;
+}
+
+.small .title {
+  color: var(--alert-accent);
+}
+
+.small .icon {
+  color: var(--alert-accent);
+}
+
+.filled {
+  background: var(--alert-accent);
+  color: var(--alert-contrast);
+}
+
+.filled .body,
+.filled .link,
+.filled .icon {
+  color: var(--alert-contrast);
+}
+
+.filled .closeButton {
+  background: var(--alert-contrast);
+  color: var(--alert-accent);
+}
+
+.light {
+  background: var(--alert-soft);
+}
+
+.light .title,
+.light .link,
+.light .icon {
+  color: var(--alert-accent);
+}
+
+.outline {
+  border-color: var(--alert-accent);
+  background: transparent;
+}
+
+.outline .title,
+.outline .link,
+.outline .icon {
+  color: var(--alert-accent);
+}
+
+.small .body,
+.small .link {
+  display: none;
+}
+
+.small.filled,
+.small.light,
+.small.outline {
+  background: transparent;
+  border-color: transparent;
+}

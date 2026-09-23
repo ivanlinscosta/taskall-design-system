@@ -1,0 +1,40 @@
+.slot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: var(--hive-radius-surface);
+  background-color: var(--hive-background-secondary);
+  color: var(--hive-content-primary);
+  overflow: hidden;
+}
+
+.size2xl {
+  width: var(--hive-space-44);
+  height: var(--hive-space-44);
+}
+
+.sizeXl {
+  width: var(--hive-space-40);
+  height: var(--hive-space-40);
+}
+
+.sizeLg {
+  width: var(--hive-space-32);
+  height: var(--hive-space-32);
+}
+
+.sizeMd {
+  width: var(--hive-space-24);
+  height: var(--hive-space-24);
+}
+
+.sizeSm {
+  width: var(--hive-space-20);
+  height: var(--hive-space-20);
+}
+
+.sizeXs {
+  width: var(--hive-space-16);
+  height: var(--hive-space-16);
+}

@@ -1,0 +1,92 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hive-space-8);
+}
+
+.scroller {
+  overflow-x: auto;
+  border: 1px solid var(--hive-border-default);
+  border-radius: var(--hive-radius-4);
+}
+
+.table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  font: var(--hive-font-paragraph-s);
+}
+
+.caption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--hive-space-8);
+  padding: var(--hive-space-12) var(--hive-space-16);
+  border-bottom: 1px solid var(--hive-border-default);
+  background-color: var(--hive-background-secondary);
+  text-align: left;
+}
+
+.captionTitle {
+  margin: 0;
+  font: var(--hive-font-label-m);
+}
+
+.source {
+  font: var(--hive-font-paragraph-xs);
+  color: var(--hive-content-secondary);
+}
+
+.table th,
+.table td {
+  padding: var(--hive-space-12) var(--hive-space-16);
+  border-bottom: 1px solid var(--hive-border-subtle);
+  text-align: left;
+  vertical-align: top;
+}
+
+.table thead th {
+  font: var(--hive-font-label-xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--hive-content-secondary);
+}
+
+.table tbody tr:last-child th,
+.table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.table tbody th {
+  font-weight: var(--hive-weight-regular);
+  white-space: nowrap;
+}
+
+.name {
+  font-weight: var(--hive-weight-semibold);
+}
+
+.required {
+  display: block;
+  margin-top: var(--hive-space-2);
+  font: var(--hive-font-paragraph-xs);
+  color: var(--hive-status-error);
+}
+
+.type {
+  color: var(--hive-content-secondary);
+  word-break: break-word;
+}
+
+.description {
+  min-width: 220px;
+  color: var(--hive-content-secondary);
+}
+
+.native {
+  margin: 0;
+  font: var(--hive-font-paragraph-s);
+  color: var(--hive-content-secondary);
+}

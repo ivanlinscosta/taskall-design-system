@@ -1,0 +1,174 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  font-family: var(--hive-font-family);
+  font-weight: var(--hive-weight-semibold);
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease,
+    color 120ms ease,
+    box-shadow 120ms ease;
+}
+
+.button:focus-visible {
+  outline: var(--hive-focus-ring-width) solid var(--hive-focus-ring-color);
+  outline-offset: var(--hive-focus-ring-offset);
+}
+
+.medium {
+  height: var(--hive-space-44);
+  padding-inline: var(--hive-space-12);
+  gap: var(--hive-space-step-3);
+  border-radius: var(--hive-radius-3);
+  font-size: var(--hive-font-size-paragraph-s);
+  line-height: var(--hive-line-height-paragraph-s);
+}
+
+.small {
+  height: 32px;
+  padding-inline: var(--hive-space-step-3);
+  gap: var(--hive-space-step-3);
+  border-radius: var(--hive-radius-3);
+  font-size: var(--hive-font-size-paragraph-xs);
+  line-height: var(--hive-line-height-paragraph-xs);
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+}
+
+.primary.filled {
+  background-color: var(--hive-action-primary);
+  color: var(--hive-action-primary-contrast);
+}
+
+.primary.filled:hover:not(:disabled) {
+  background-color: var(--hive-action-primary-hover);
+}
+
+.primary.filled:active:not(:disabled) {
+  background-color: var(--hive-action-primary-active);
+}
+
+.primary.light {
+  background-color: var(--hive-brand-soft);
+  color: var(--hive-brand);
+}
+
+.primary.light:hover:not(:disabled) {
+  background-color: var(--hive-brand-soft-hover);
+}
+
+.primary.light:active:not(:disabled) {
+  color: var(--hive-brand-active);
+}
+
+.primary.outline {
+  background-color: transparent;
+  border-color: var(--hive-brand);
+  color: var(--hive-brand);
+}
+
+.primary.outline:hover:not(:disabled) {
+  background-color: var(--hive-brand-soft);
+}
+
+.primary.outline:active:not(:disabled) {
+  color: var(--hive-brand-active);
+  border-color: var(--hive-brand-active);
+}
+
+.neutral.filled {
+  background-color: var(--hive-action-neutral-fill);
+  color: var(--hive-action-neutral-contrast);
+}
+
+.neutral.filled:hover:not(:disabled) {
+  background-color: var(--hive-action-neutral-fill-hover);
+}
+
+.neutral.filled:active:not(:disabled) {
+  background-color: var(--hive-action-neutral-fill-active);
+}
+
+.neutral.light {
+  background-color: var(--hive-action-neutral-light);
+  color: var(--hive-content-primary);
+}
+
+.neutral.light:hover:not(:disabled) {
+  background-color: var(--hive-action-neutral-light-hover);
+}
+
+.neutral.outline {
+  background-color: transparent;
+  border-color: var(--hive-action-neutral-outline-border);
+  color: var(--hive-action-neutral-outline-text);
+}
+
+.neutral.outline:hover:not(:disabled) {
+  background-color: var(--hive-action-neutral-light);
+}
+
+.error.filled {
+  background-color: var(--hive-action-error-fill);
+  color: var(--hive-action-error-contrast);
+}
+
+.error.filled:hover:not(:disabled) {
+  background-color: var(--hive-action-error-fill-hover);
+}
+
+.error.filled:active:not(:disabled) {
+  background-color: var(--hive-action-error-fill-active);
+}
+
+.error.light {
+  background-color: var(--hive-action-error-light);
+  color: var(--hive-action-error-outline-text);
+}
+
+.error.light:hover:not(:disabled) {
+  background-color: var(--hive-action-error-light-hover);
+}
+
+.error.outline {
+  background-color: transparent;
+  border-color: var(--hive-action-error-outline-border);
+  color: var(--hive-action-error-outline-text);
+}
+
+.error.outline:hover:not(:disabled) {
+  background-color: var(--hive-action-error-light);
+}
+
+.button:disabled {
+  background-color: var(--hive-action-disabled-fill);
+  color: var(--hive-action-disabled-contrast);
+  border-color: transparent;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: hive-spin 600ms linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes hive-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

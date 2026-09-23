@@ -1,0 +1,13 @@
+.iconButton[data-icon-only] {
+  flex-shrink: 0;
+  padding: 0;
+  aspect-ratio: 1;
+}
+
+.iconButton[data-size="medium"] {
+  width: var(--hive-space-44);
+}
+
+.iconButton[data-size="small"] {
+  width: 32px;
+}
