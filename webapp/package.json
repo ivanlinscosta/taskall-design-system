@@ -13,7 +13,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "storybook": "storybook dev -p 6006",
-    "storybook:build": "storybook build"
+    "storybook:build": "storybook build",
+    "build:pages": "tsx scripts/prepare-pages.ts"
   },
   "dependencies": {
     "@fontsource/archivo": "^5.3.0",

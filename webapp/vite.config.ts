@@ -19,6 +19,8 @@ export const taskallAliases = [
 ];
 
 export default defineConfig({
+  // Mesmo valor do `basename` em react-router.config.ts (GitHub Pages usa subcaminho).
+  base: process.env.DOCS_BASE ?? "/",
   plugins: [reactRouter()],
   resolve: { alias: taskallAliases },
   css: { modules: { generateScopedName: taskallClassName } },

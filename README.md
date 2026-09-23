@@ -2,6 +2,8 @@
 
 Design system React do Task All, com tokens, temas, componentes acessíveis e build ESM/CJS pronta para publicação — e uma aplicação de documentação no estilo material.io, com os componentes aplicados a telas reais do Task All.
 
+**Documentação:** https://ivanlinscosta.github.io/taskall-design-system/ · **Storybook:** https://ivanlinscosta.github.io/taskall-design-system/storybook/ · **npm:** [`@taskall/react`](https://www.npmjs.com/package/@taskall/react)
+
 ## Estrutura do monorepo
 
 O projeto utiliza pnpm workspaces para gerenciar a biblioteca e a documentação.
@@ -36,6 +38,9 @@ pnpm build
 # Servir o build estático da documentação → http://localhost:4173/
 pnpm preview
 
+# Simular o GitHub Pages (subcaminho) → http://localhost:4173/taskall-design-system/
+DOCS_BASE=/taskall-design-system/ pnpm build && DOCS_BASE=/taskall-design-system/ pnpm --filter taskall-docs build:pages && DOCS_BASE=/taskall-design-system/ pnpm preview
+
 # Storybook (bancada isolada de componentes) → http://localhost:6006/
 pnpm storybook
 pnpm storybook:build
@@ -64,6 +69,10 @@ A documentação é uma aplicação React Router 7 (framework mode, `ssr: false`
 | Tema e persistência               | `webapp/app/lib/settings.tsx`         | `TaskAllProvider` global + script anti-"flash" no `<head>`.                                          |
 
 Os componentes são consumidos **somente via `@taskall/react`**; em dev e build o alias aponta para `library/src` (mesmo padrão do Storybook), com hot-reload e tree-shaking.
+
+### Publicação no GitHub Pages
+
+O workflow `.github/workflows/docs.yml` roda a cada push na `main`: verifica (lint, typecheck, testes), gera a documentação com `DOCS_BASE=/taskall-design-system/`, ajusta o build para o Pages (`build:pages`: HTML na raiz, `404.html` para rotas do cliente, `.nojekyll`) e publica o Storybook em `/storybook/`.
 
 ### Decisão: React Router 7 + Vite (e não Next.js)
 

@@ -41,7 +41,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
         <script dangerouslySetInnerHTML={{ __html: THEME_BOOTSTRAP_SCRIPT }} />
         <Meta />
         <Links />
@@ -105,7 +105,7 @@ export function ErrorBoundary({ error }: { error: unknown }) {
     <main className={styles.error}>
       <h1>{title}</h1>
       <p>{detail}</p>
-      <a href="/">Voltar para o início</a>
+      <a href={import.meta.env.BASE_URL}>Voltar para o início</a>
     </main>
   );
 }
