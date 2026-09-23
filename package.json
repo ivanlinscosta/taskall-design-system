@@ -18,7 +18,7 @@
     "release": "pnpm --filter @taskall/react build && changeset publish"
   },
   "devDependencies": {
-    "@changesets/cli": "^3.0.3",
+    "@changesets/cli": "^2.31.1",
     "@eslint/js": "^9.14.0",
     "@types/node": "^24.0.0",
     "eslint": "^9.14.0",
