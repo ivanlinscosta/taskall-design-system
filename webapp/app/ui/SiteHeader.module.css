@@ -26,7 +26,8 @@
   text-decoration: none;
 }
 
-.logo {
+/* Mais específico que a regra base do Logo da lib: a ordem do CSS muda no build. */
+.brand > .logo {
   height: 40px;
 }
 
