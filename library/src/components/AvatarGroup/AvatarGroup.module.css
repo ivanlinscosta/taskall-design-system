@@ -1,5 +1,5 @@
 .root {
-  --avatar-group-overlap: var(--hive-space-8);
+  --avatar-group-overlap: var(--taskall-space-8);
   display: inline-flex;
   align-items: center;
 }
@@ -9,8 +9,8 @@
   align-items: center;
   justify-content: center;
   padding: 1px;
-  border-radius: var(--hive-radius-pill);
-  background: var(--hive-background-primary);
+  border-radius: var(--taskall-radius-pill);
+  background: var(--taskall-background-primary);
 }
 
 .item + .item {
@@ -18,23 +18,23 @@
 }
 
 .xs {
-  --avatar-group-overlap: var(--hive-space-4);
+  --avatar-group-overlap: var(--taskall-space-4);
 }
 
 .sm {
-  --avatar-group-overlap: var(--hive-space-4);
+  --avatar-group-overlap: var(--taskall-space-4);
 }
 
 .md {
-  --avatar-group-overlap: var(--hive-space-8);
+  --avatar-group-overlap: var(--taskall-space-8);
 }
 
 .lg {
-  --avatar-group-overlap: var(--hive-space-8);
+  --avatar-group-overlap: var(--taskall-space-8);
 }
 
 .xl {
-  --avatar-group-overlap: var(--hive-space-12);
+  --avatar-group-overlap: var(--taskall-space-12);
 }
 
 .overflowWrap {
@@ -45,11 +45,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--hive-radius-pill);
-  background: var(--hive-brand-soft);
-  color: var(--hive-brand);
-  font-family: var(--hive-font-family);
-  font-weight: var(--hive-weight-bold);
+  border-radius: var(--taskall-radius-pill);
+  background: var(--taskall-brand-soft);
+  color: var(--taskall-brand);
+  font-family: var(--taskall-font-family);
+  font-weight: var(--taskall-weight-bold);
 }
 
 .xs .overflow {

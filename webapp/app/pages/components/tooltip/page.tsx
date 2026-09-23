@@ -1,4 +1,4 @@
-import { Button, Tooltip, type TooltipProps } from "@hive/react";
+import { Button, Tooltip, type TooltipProps } from "@taskall/react";
 
 import { jsx } from "../../../lib/api";
 import { definePlayground, example, type ComponentDoc } from "../../../lib/doc";
@@ -26,7 +26,7 @@ const doc: ComponentDoc = {
     "Conteúdo interativo (links, botões) — use um popover ou Modal.",
     "Em elementos não focáveis: quem usa teclado ou toque não verá a dica.",
   ],
-  usage: `import { Tooltip } from "@hive/react";
+  usage: `import { Tooltip } from "@taskall/react";
 
 <Tooltip title="Baixar todas as entregas">
   <button type="button" aria-label="Baixar todas as entregas">

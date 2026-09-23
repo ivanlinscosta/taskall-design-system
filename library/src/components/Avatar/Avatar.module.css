@@ -3,12 +3,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  border-radius: var(--hive-radius-pill);
-  background: var(--hive-brand-soft);
-  color: var(--hive-brand);
-  font-family: var(--hive-font-family);
-  font-weight: var(--hive-weight-bold);
+  border-radius: var(--taskall-radius-pill);
+  background: var(--taskall-brand-soft);
+  color: var(--taskall-brand);
+  font-family: var(--taskall-font-family);
+  font-weight: var(--taskall-weight-bold);
   line-height: 1;
   flex-shrink: 0;
 }
@@ -19,6 +18,8 @@
   justify-content: center;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
   text-transform: uppercase;
 }
 
@@ -69,16 +70,22 @@
   font-size: 18px;
 }
 
+/*
+ * Centro do indicador sobre a borda do círculo, a 45° (canto inferior direito):
+ * 1 - cos(45°) ≈ 14.6% do lado.
+ */
 .statusIndicator {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 14.6%;
+  bottom: 14.6%;
+  z-index: 1;
+  transform: translate(50%, 50%);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--hive-radius-pill);
-  color: var(--hive-content-inverse);
-  box-shadow: 0 0 0 1px var(--hive-background-primary);
+  border-radius: var(--taskall-radius-pill);
+  color: var(--taskall-content-inverse);
+  box-shadow: 0 0 0 2px var(--taskall-background-primary);
 }
 
 .xs .statusIndicator {
@@ -107,30 +114,30 @@
 }
 
 .online {
-  background: var(--hive-status-success);
+  background: var(--taskall-status-success);
 }
 
 .busy {
-  background: var(--hive-status-error);
+  background: var(--taskall-status-error);
 }
 
 .away {
-  background: var(--hive-status-warning);
+  background: var(--taskall-status-warning);
 }
 
 .offline {
-  background: var(--hive-content-tertiary);
+  background: var(--taskall-content-tertiary);
 }
 
 .verified,
 .add {
-  background: var(--hive-brand);
+  background: var(--taskall-brand);
 }
 
 .delete {
-  background: var(--hive-status-error);
+  background: var(--taskall-status-error);
 }
 
 .favorite {
-  background: var(--hive-progress-yellow);
+  background: var(--taskall-progress-yellow);
 }

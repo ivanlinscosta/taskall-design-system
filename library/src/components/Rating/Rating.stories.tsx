@@ -119,8 +119,8 @@ export const RealExample: Story = {
     <div style={{ display: "grid", gap: 12, maxWidth: 320 }}>
       <strong
         style={{
-          font: "var(--hive-font-label-s)",
-          color: "var(--hive-content-primary)",
+          font: "var(--taskall-font-label-s)",
+          color: "var(--taskall-content-primary)",
         }}
       >
         Como foi sua experiência?

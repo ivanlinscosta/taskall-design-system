@@ -8,7 +8,7 @@ import {
   Paragraph,
   RecycleBin,
   WarningTriangle,
-} from "@hive/react";
+} from "@taskall/react";
 
 export default function ModalConfirmDelete() {
   const [open, setOpen] = React.useState(false);
@@ -19,7 +19,7 @@ export default function ModalConfirmDelete() {
       <div
         style={{
           display: "grid",
-          gap: "var(--hive-space-12)",
+          gap: "var(--taskall-space-12)",
           width: "100%",
           maxWidth: 420,
         }}

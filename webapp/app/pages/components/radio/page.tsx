@@ -1,4 +1,4 @@
-import { Radio, RadioGroup, type RadioGroupProps } from "@hive/react";
+import { Radio, RadioGroup, type RadioGroupProps } from "@taskall/react";
 
 import { jsx } from "../../../lib/api";
 import { definePlayground, example, type ComponentDoc } from "../../../lib/doc";
@@ -32,7 +32,7 @@ const doc: ComponentDoc = {
     "Muitas opções ou pouco espaço — use Dropdown.",
     "Ligar/desligar uma única configuração — use Checkbox.",
   ],
-  usage: `import { Radio, RadioGroup } from "@hive/react";
+  usage: `import { Radio, RadioGroup } from "@taskall/react";
 
 <RadioGroup name="turno" label="Turno" value={shift} onValueChange={setShift}>
   <Radio value="manha" label="Manhã" />

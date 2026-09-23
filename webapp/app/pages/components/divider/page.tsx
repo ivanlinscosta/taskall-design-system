@@ -1,4 +1,4 @@
-import { Divider, Star, type DividerProps } from "@hive/react";
+import { Divider, Star, type DividerProps } from "@taskall/react";
 
 import { jsx, raw } from "../../../lib/api";
 import { definePlayground, example, type ComponentDoc } from "../../../lib/doc";
@@ -23,7 +23,7 @@ const doc: ComponentDoc = {
     "Quando espaçamento ou um título já separam bem as seções.",
     "Como decoração repetida entre todos os elementos da tela.",
   ],
-  usage: `import { Divider } from "@hive/react";
+  usage: `import { Divider } from "@taskall/react";
 
 <Divider />
 <Divider type="text" text="ou" />`,
@@ -80,7 +80,7 @@ const doc: ComponentDoc = {
       dont: "Colocar frases longas ou ações dentro do divisor.",
     },
     {
-      do: "Prefira espaçamento (tokens `--hive-space-step-*`) antes de adicionar linhas.",
+      do: "Prefira espaçamento (tokens `--taskall-space-step-*`) antes de adicionar linhas.",
       dont: "Linhas entre cada elemento, criando ruído visual.",
     },
   ],

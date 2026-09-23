@@ -1,4 +1,4 @@
-import { AlertNotification } from "@hive/react";
+import { AlertNotification } from "@taskall/react";
 
 const statuses = [
   "information",
@@ -18,12 +18,12 @@ const titles = {
 export default function AlertNotificationVariants() {
   return (
     <div
-      style={{ display: "grid", gap: "var(--hive-space-12)", width: "100%" }}
+      style={{ display: "grid", gap: "var(--taskall-space-12)", width: "100%" }}
     >
       {(["light", "filled", "outline"] as const).map((visualStyle) => (
         <div
           key={visualStyle}
-          style={{ display: "grid", gap: "var(--hive-space-8)" }}
+          style={{ display: "grid", gap: "var(--taskall-space-8)" }}
         >
           {statuses.map((status) => (
             <AlertNotification

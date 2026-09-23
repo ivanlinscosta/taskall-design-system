@@ -1,19 +1,19 @@
 .example {
   display: flex;
   flex-direction: column;
-  gap: var(--hive-space-12);
+  gap: var(--taskall-space-12);
 }
 
 .header {
   display: flex;
   flex-direction: column;
-  gap: var(--hive-space-4);
+  gap: var(--taskall-space-4);
 }
 
 .title {
   margin: 0;
-  font: var(--hive-font-label-l);
-  scroll-margin-top: calc(var(--docs-header-height) + var(--hive-space-24));
+  font: var(--taskall-font-label-l);
+  scroll-margin-top: calc(var(--docs-header-height) + var(--taskall-space-24));
 }
 
 .anchor {
@@ -23,19 +23,19 @@
 
 .anchor:hover {
   text-decoration: underline;
-  text-decoration-color: var(--hive-brand);
+  text-decoration-color: var(--taskall-brand);
 }
 
 .description {
   margin: 0;
-  font: var(--hive-font-paragraph-s);
-  color: var(--hive-content-secondary);
+  font: var(--taskall-font-paragraph-s);
+  color: var(--taskall-content-secondary);
 }
 
 .frame {
   overflow: hidden;
-  border: 1px solid var(--hive-border-default);
-  border-radius: var(--hive-radius-4);
+  border: 1px solid var(--taskall-border-default);
+  border-radius: var(--taskall-radius-4);
 }
 
 .code {

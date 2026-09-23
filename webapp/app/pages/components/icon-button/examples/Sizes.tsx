@@ -1,4 +1,4 @@
-import { Delete, IconButton, MagnifyingGlass } from "@hive/react";
+import { Delete, IconButton, MagnifyingGlass } from "@taskall/react";
 
 export default function IconButtonSizes() {
   return (
@@ -6,7 +6,7 @@ export default function IconButtonSizes() {
       style={{
         display: "flex",
         alignItems: "center",
-        gap: "var(--hive-space-12)",
+        gap: "var(--taskall-space-12)",
       }}
     >
       <IconButton

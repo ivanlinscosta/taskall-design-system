@@ -52,7 +52,7 @@ export function ComponentPage({ doc }: { doc: ComponentDoc }) {
         <div className={styles.meta}>
           <code
             className={styles.import}
-          >{`import { ${importNames.join(", ")} } from "@hive/react";`}</code>
+          >{`import { ${importNames.join(", ")} } from "@taskall/react";`}</code>
         </div>
       </PageHeader>
 
@@ -112,7 +112,7 @@ export function ComponentPage({ doc }: { doc: ComponentDoc }) {
         intro={
           <p>
             O estado atual do playground renderizado em cada variação do
-            HiveProvider.
+            TaskAllProvider.
           </p>
         }
       >

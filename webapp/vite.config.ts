@@ -2,22 +2,25 @@ import { fileURLToPath } from "node:url";
 import { reactRouter } from "@react-router/dev/vite";
 import { defineConfig } from "vite";
 
+import { taskallClassName } from "../library/scripts/css-class-name";
+
 const librarySrc = fileURLToPath(new URL("../library/src", import.meta.url));
 
 /**
- * `@hive/react` resolve para o código-fonte da biblioteca (mesmo padrão do
+ * `@taskall/react` resolve para o código-fonte da biblioteca (mesmo padrão do
  * Storybook): hot-reload da lib durante o desenvolvimento e tree-shaking no build.
  */
-export const hiveAliases = [
+export const taskallAliases = [
   {
-    find: /^@hive\/react\/styles\.css$/,
+    find: /^@taskall\/react\/styles\.css$/,
     replacement: `${librarySrc}/styles/index.css`,
   },
-  { find: /^@hive\/react$/, replacement: `${librarySrc}/index.ts` },
+  { find: /^@taskall\/react$/, replacement: `${librarySrc}/index.ts` },
 ];
 
 export default defineConfig({
   plugins: [reactRouter()],
-  resolve: { alias: hiveAliases },
+  resolve: { alias: taskallAliases },
+  css: { modules: { generateScopedName: taskallClassName } },
   server: { port: 5173 },
 });

@@ -4,7 +4,7 @@
 
 .list {
   display: inline-flex;
-  gap: var(--hive-space-step-3);
+  gap: var(--taskall-space-step-3);
 }
 
 .horizontal {
@@ -21,15 +21,15 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--hive-space-6);
+  gap: var(--taskall-space-6);
   height: 36px;
-  padding-inline: var(--hive-space-step-3);
+  padding-inline: var(--taskall-space-step-3);
   border: 0;
   background: transparent;
-  color: var(--hive-content-secondary);
-  font: var(--hive-font-label-s);
+  color: var(--taskall-content-secondary);
+  font: var(--taskall-font-label-s);
   cursor: pointer;
-  border-radius: var(--hive-radius-2);
+  border-radius: var(--taskall-radius-2);
   transition:
     background-color 120ms ease,
     color 120ms ease,
@@ -37,17 +37,17 @@
 }
 
 .tab:hover {
-  background-color: var(--hive-background-hover);
+  background-color: var(--taskall-background-hover);
 }
 
 .tab:focus-visible {
-  outline: var(--hive-focus-ring-width) solid var(--hive-focus-ring-color);
-  outline-offset: var(--hive-focus-ring-offset);
+  outline: var(--taskall-focus-ring-width) solid var(--taskall-focus-ring-color);
+  outline-offset: var(--taskall-focus-ring-offset);
 }
 
 .horizontal .tab[data-selected="true"] {
-  color: var(--hive-content-primary);
-  box-shadow: inset 0 -2px 0 var(--hive-action-primary);
+  color: var(--taskall-content-primary);
+  box-shadow: inset 0 -2px 0 var(--taskall-action-primary);
 }
 
 .vertical .tab {
@@ -56,14 +56,14 @@
 }
 
 .vertical .tab[data-selected="true"] {
-  background-color: var(--hive-brand-soft);
-  color: var(--hive-brand);
+  background-color: var(--taskall-brand-soft);
+  color: var(--taskall-brand);
 }
 
 .panel {
-  margin-top: var(--hive-space-step-4);
-  color: var(--hive-content-primary);
-  font: var(--hive-font-paragraph-s);
+  margin-top: var(--taskall-space-step-4);
+  color: var(--taskall-content-primary);
+  font: var(--taskall-font-paragraph-s);
 }
 
 .panel[hidden] {

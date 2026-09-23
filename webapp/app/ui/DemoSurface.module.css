@@ -3,16 +3,16 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: var(--hive-space-12);
+  gap: var(--taskall-space-12);
   min-height: 160px;
-  padding: var(--hive-space-32) var(--hive-space-24);
-  background-color: var(--hive-background-primary);
+  padding: var(--taskall-space-32) var(--taskall-space-24);
+  background-color: var(--taskall-background-primary);
   background-image: radial-gradient(
-    var(--hive-border-subtle) 1px,
+    var(--taskall-border-subtle) 1px,
     transparent 1px
   );
   background-size: 16px 16px;
-  color: var(--hive-content-primary);
+  color: var(--taskall-content-primary);
 }
 
 .surface[data-align="start"] {

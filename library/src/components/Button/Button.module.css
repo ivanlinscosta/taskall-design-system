@@ -3,8 +3,8 @@
   align-items: center;
   justify-content: center;
   border: 1px solid transparent;
-  font-family: var(--hive-font-family);
-  font-weight: var(--hive-weight-semibold);
+  font-family: var(--taskall-font-family);
+  font-weight: var(--taskall-weight-semibold);
   letter-spacing: 0.2px;
   cursor: pointer;
   text-decoration: none;
@@ -18,26 +18,26 @@
 }
 
 .button:focus-visible {
-  outline: var(--hive-focus-ring-width) solid var(--hive-focus-ring-color);
-  outline-offset: var(--hive-focus-ring-offset);
+  outline: var(--taskall-focus-ring-width) solid var(--taskall-focus-ring-color);
+  outline-offset: var(--taskall-focus-ring-offset);
 }
 
 .medium {
-  height: var(--hive-space-44);
-  padding-inline: var(--hive-space-12);
-  gap: var(--hive-space-step-3);
-  border-radius: var(--hive-radius-3);
-  font-size: var(--hive-font-size-paragraph-s);
-  line-height: var(--hive-line-height-paragraph-s);
+  height: var(--taskall-space-44);
+  padding-inline: var(--taskall-space-12);
+  gap: var(--taskall-space-step-3);
+  border-radius: var(--taskall-radius-3);
+  font-size: var(--taskall-font-size-paragraph-s);
+  line-height: var(--taskall-line-height-paragraph-s);
 }
 
 .small {
   height: 32px;
-  padding-inline: var(--hive-space-step-3);
-  gap: var(--hive-space-step-3);
-  border-radius: var(--hive-radius-3);
-  font-size: var(--hive-font-size-paragraph-xs);
-  line-height: var(--hive-line-height-paragraph-xs);
+  padding-inline: var(--taskall-space-step-3);
+  gap: var(--taskall-space-step-3);
+  border-radius: var(--taskall-radius-3);
+  font-size: var(--taskall-font-size-paragraph-xs);
+  line-height: var(--taskall-line-height-paragraph-xs);
 }
 
 .label {
@@ -46,113 +46,113 @@
 }
 
 .primary.filled {
-  background-color: var(--hive-action-primary);
-  color: var(--hive-action-primary-contrast);
+  background-color: var(--taskall-action-primary);
+  color: var(--taskall-action-primary-contrast);
 }
 
 .primary.filled:hover:not(:disabled) {
-  background-color: var(--hive-action-primary-hover);
+  background-color: var(--taskall-action-primary-hover);
 }
 
 .primary.filled:active:not(:disabled) {
-  background-color: var(--hive-action-primary-active);
+  background-color: var(--taskall-action-primary-active);
 }
 
 .primary.light {
-  background-color: var(--hive-brand-soft);
-  color: var(--hive-brand);
+  background-color: var(--taskall-brand-soft);
+  color: var(--taskall-brand);
 }
 
 .primary.light:hover:not(:disabled) {
-  background-color: var(--hive-brand-soft-hover);
+  background-color: var(--taskall-brand-soft-hover);
 }
 
 .primary.light:active:not(:disabled) {
-  color: var(--hive-brand-active);
+  color: var(--taskall-brand-active);
 }
 
 .primary.outline {
   background-color: transparent;
-  border-color: var(--hive-brand);
-  color: var(--hive-brand);
+  border-color: var(--taskall-brand);
+  color: var(--taskall-brand);
 }
 
 .primary.outline:hover:not(:disabled) {
-  background-color: var(--hive-brand-soft);
+  background-color: var(--taskall-brand-soft);
 }
 
 .primary.outline:active:not(:disabled) {
-  color: var(--hive-brand-active);
-  border-color: var(--hive-brand-active);
+  color: var(--taskall-brand-active);
+  border-color: var(--taskall-brand-active);
 }
 
 .neutral.filled {
-  background-color: var(--hive-action-neutral-fill);
-  color: var(--hive-action-neutral-contrast);
+  background-color: var(--taskall-action-neutral-fill);
+  color: var(--taskall-action-neutral-contrast);
 }
 
 .neutral.filled:hover:not(:disabled) {
-  background-color: var(--hive-action-neutral-fill-hover);
+  background-color: var(--taskall-action-neutral-fill-hover);
 }
 
 .neutral.filled:active:not(:disabled) {
-  background-color: var(--hive-action-neutral-fill-active);
+  background-color: var(--taskall-action-neutral-fill-active);
 }
 
 .neutral.light {
-  background-color: var(--hive-action-neutral-light);
-  color: var(--hive-content-primary);
+  background-color: var(--taskall-action-neutral-light);
+  color: var(--taskall-content-primary);
 }
 
 .neutral.light:hover:not(:disabled) {
-  background-color: var(--hive-action-neutral-light-hover);
+  background-color: var(--taskall-action-neutral-light-hover);
 }
 
 .neutral.outline {
   background-color: transparent;
-  border-color: var(--hive-action-neutral-outline-border);
-  color: var(--hive-action-neutral-outline-text);
+  border-color: var(--taskall-action-neutral-outline-border);
+  color: var(--taskall-action-neutral-outline-text);
 }
 
 .neutral.outline:hover:not(:disabled) {
-  background-color: var(--hive-action-neutral-light);
+  background-color: var(--taskall-action-neutral-light);
 }
 
 .error.filled {
-  background-color: var(--hive-action-error-fill);
-  color: var(--hive-action-error-contrast);
+  background-color: var(--taskall-action-error-fill);
+  color: var(--taskall-action-error-contrast);
 }
 
 .error.filled:hover:not(:disabled) {
-  background-color: var(--hive-action-error-fill-hover);
+  background-color: var(--taskall-action-error-fill-hover);
 }
 
 .error.filled:active:not(:disabled) {
-  background-color: var(--hive-action-error-fill-active);
+  background-color: var(--taskall-action-error-fill-active);
 }
 
 .error.light {
-  background-color: var(--hive-action-error-light);
-  color: var(--hive-action-error-outline-text);
+  background-color: var(--taskall-action-error-light);
+  color: var(--taskall-action-error-outline-text);
 }
 
 .error.light:hover:not(:disabled) {
-  background-color: var(--hive-action-error-light-hover);
+  background-color: var(--taskall-action-error-light-hover);
 }
 
 .error.outline {
   background-color: transparent;
-  border-color: var(--hive-action-error-outline-border);
-  color: var(--hive-action-error-outline-text);
+  border-color: var(--taskall-action-error-outline-border);
+  color: var(--taskall-action-error-outline-text);
 }
 
 .error.outline:hover:not(:disabled) {
-  background-color: var(--hive-action-error-light);
+  background-color: var(--taskall-action-error-light);
 }
 
 .button:disabled {
-  background-color: var(--hive-action-disabled-fill);
-  color: var(--hive-action-disabled-contrast);
+  background-color: var(--taskall-action-disabled-fill);
+  color: var(--taskall-action-disabled-contrast);
   border-color: transparent;
   cursor: not-allowed;
 }
@@ -163,11 +163,11 @@
   border: 2px solid currentColor;
   border-right-color: transparent;
   border-radius: 50%;
-  animation: hive-spin 600ms linear infinite;
+  animation: taskall-spin 600ms linear infinite;
   flex-shrink: 0;
 }
 
-@keyframes hive-spin {
+@keyframes taskall-spin {
   to {
     transform: rotate(360deg);
   }

@@ -1,30 +1,30 @@
 .columns {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: var(--hive-space-16);
+  gap: var(--taskall-space-16);
 }
 
 .columnSurface {
-  border: 1px solid var(--hive-border-default);
-  border-radius: var(--hive-radius-4);
+  border: 1px solid var(--taskall-border-default);
+  border-radius: var(--taskall-radius-4);
 }
 
 .stepColumn {
   display: flex;
   flex-direction: column;
-  gap: var(--hive-space-8);
+  gap: var(--taskall-space-8);
 }
 
 .columnTitle {
-  margin: 0 0 var(--hive-space-4);
-  font: var(--hive-font-label-m);
+  margin: 0 0 var(--taskall-space-4);
+  font: var(--taskall-font-label-m);
 }
 
 .barRow {
   display: grid;
   grid-template-columns: 56px 1fr 40px;
   align-items: center;
-  gap: var(--hive-space-8);
+  gap: var(--taskall-space-8);
 }
 
 .barLabel {
@@ -35,26 +35,26 @@
   display: inline-block;
   height: 12px;
   min-width: 1px;
-  border-radius: var(--hive-radius-1);
-  background-color: var(--hive-brand);
+  border-radius: var(--taskall-radius-1);
+  background-color: var(--taskall-brand);
 }
 
 .barValue {
-  font: var(--hive-font-paragraph-xs);
+  font: var(--taskall-font-paragraph-xs);
   font-family: var(--docs-mono);
-  color: var(--hive-content-secondary);
+  color: var(--taskall-content-secondary);
 }
 
 .radiusGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: var(--hive-space-16);
+  gap: var(--taskall-space-16);
 }
 
 .radiusItem {
   display: flex;
   flex-direction: column;
-  gap: var(--hive-space-8);
+  gap: var(--taskall-space-8);
   margin: 0;
 }
 
@@ -67,14 +67,14 @@
 .radiusBox {
   width: 100%;
   aspect-ratio: 4 / 3;
-  border: 2px solid var(--hive-brand);
-  background-color: var(--hive-brand-soft);
+  border: 2px solid var(--taskall-brand);
+  background-color: var(--taskall-brand-soft);
 }
 
 .gridDemo {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: var(--hive-space-step-4);
+  gap: var(--taskall-space-step-4);
 }
 
 .gridCell {
@@ -82,10 +82,10 @@
   align-items: center;
   justify-content: center;
   min-height: 56px;
-  border-radius: var(--hive-radius-2);
-  background-color: var(--hive-brand-soft);
-  color: var(--hive-content-on-soft);
-  font: var(--hive-font-label-s);
+  border-radius: var(--taskall-radius-2);
+  background-color: var(--taskall-brand-soft);
+  color: var(--taskall-content-on-soft);
+  font: var(--taskall-font-label-s);
 }
 
 .gridBlock {
@@ -93,11 +93,11 @@
   align-items: center;
   justify-content: center;
   min-height: 48px;
-  padding: var(--hive-space-8);
-  border-radius: var(--hive-radius-2);
-  background-color: var(--hive-background-tertiary);
-  color: var(--hive-content-primary);
-  font: var(--hive-font-label-s);
+  padding: var(--taskall-space-8);
+  border-radius: var(--taskall-radius-2);
+  background-color: var(--taskall-background-tertiary);
+  color: var(--taskall-content-primary);
+  font: var(--taskall-font-label-s);
   text-align: center;
 }
 
@@ -105,13 +105,13 @@
   display: flex;
   flex-wrap: wrap;
   align-items: end;
-  gap: var(--hive-space-16);
+  gap: var(--taskall-space-16);
 }
 
 .iconGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
-  gap: var(--hive-space-8);
+  gap: var(--taskall-space-8);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -122,52 +122,52 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--hive-space-8);
+  gap: var(--taskall-space-8);
   width: 100%;
   min-height: 104px;
-  padding: var(--hive-space-12) var(--hive-space-8);
-  border: 1px solid var(--hive-border-subtle);
-  border-radius: var(--hive-radius-4);
-  background-color: var(--hive-background-primary);
-  color: var(--hive-content-primary);
-  font: var(--hive-font-paragraph-xs);
+  padding: var(--taskall-space-12) var(--taskall-space-8);
+  border: 1px solid var(--taskall-border-subtle);
+  border-radius: var(--taskall-radius-4);
+  background-color: var(--taskall-background-primary);
+  color: var(--taskall-content-primary);
+  font: var(--taskall-font-paragraph-xs);
   cursor: pointer;
 }
 
 .iconButton:hover {
-  border-color: var(--hive-border-strong);
-  background-color: var(--hive-background-hover);
+  border-color: var(--taskall-border-strong);
+  background-color: var(--taskall-background-hover);
 }
 
 .iconButton[data-copied="true"] {
-  border-color: var(--hive-status-success-outline);
-  background-color: var(--hive-status-success-soft);
+  border-color: var(--taskall-status-success-outline);
+  background-color: var(--taskall-status-success-soft);
 }
 
 .brandGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: var(--hive-space-16);
+  gap: var(--taskall-space-16);
 }
 
 .brandCard {
   display: flex;
   flex-direction: column;
-  gap: var(--hive-space-12);
-  border: 1px solid var(--hive-border-default);
-  border-radius: var(--hive-radius-4);
+  gap: var(--taskall-space-12);
+  border: 1px solid var(--taskall-border-default);
+  border-radius: var(--taskall-radius-4);
 }
 
 .brandSwatches {
   display: flex;
-  gap: var(--hive-space-6);
+  gap: var(--taskall-space-6);
 }
 
 .brandSwatches span {
   flex: 1;
   height: 32px;
-  border-radius: var(--hive-radius-2);
-  border: 1px solid var(--hive-border-subtle);
+  border-radius: var(--taskall-radius-2);
+  border: 1px solid var(--taskall-border-subtle);
 }
 
 .iconName {

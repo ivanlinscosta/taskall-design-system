@@ -1,9 +1,9 @@
-import { Heading, Paragraph } from "@hive/react";
+import { Heading, Paragraph } from "@taskall/react";
 
 export default function HeadingSemanticVsVisual() {
   return (
     <div
-      style={{ display: "grid", gap: "var(--hive-space-16)", width: "100%" }}
+      style={{ display: "grid", gap: "var(--taskall-space-16)", width: "100%" }}
     >
       <div>
         <Heading level={2} as={5}>

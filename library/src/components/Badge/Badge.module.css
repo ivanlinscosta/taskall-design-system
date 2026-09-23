@@ -2,12 +2,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--hive-space-step-2);
+  gap: var(--taskall-space-step-2);
   max-width: 100%;
-  padding-inline: var(--hive-space-step-3);
+  padding-inline: var(--taskall-space-step-3);
   border: 1px solid transparent;
-  border-radius: var(--hive-radius-pill);
-  font-family: var(--hive-font-family);
+  border-radius: var(--taskall-radius-pill);
+  font-family: var(--taskall-font-family);
   white-space: nowrap;
   transition:
     background-color 120ms ease,
@@ -22,53 +22,53 @@
 
 .medium {
   height: 24px;
-  font: var(--hive-font-label-xs);
+  font: var(--taskall-font-label-xs);
 }
 
 .small {
   height: 20px;
-  padding-inline: var(--hive-space-step-2);
-  font: var(--hive-font-label-xs);
+  padding-inline: var(--taskall-space-step-2);
+  font: var(--taskall-font-label-xs);
 }
 
 .x-small {
   height: 16px;
-  padding-inline: var(--hive-space-step-2);
-  font-size: var(--hive-font-size-paragraph-xs);
-  line-height: var(--hive-line-height-paragraph-xs);
-  font-weight: var(--hive-weight-bold);
+  padding-inline: var(--taskall-space-step-2);
+  font-size: var(--taskall-font-size-paragraph-xs);
+  line-height: var(--taskall-line-height-paragraph-xs);
+  font-weight: var(--taskall-weight-bold);
 }
 
 .status.filled {
-  background: var(--hive-status-information);
-  color: var(--hive-status-information-contrast);
+  background: var(--taskall-status-information);
+  color: var(--taskall-status-information-contrast);
 }
 
 .status.light {
-  background: var(--hive-status-information-soft);
-  color: var(--hive-status-information);
+  background: var(--taskall-status-information-soft);
+  color: var(--taskall-status-information);
 }
 
 .status.outline {
   background: transparent;
-  border-color: var(--hive-status-information);
-  color: var(--hive-status-information);
+  border-color: var(--taskall-status-information);
+  color: var(--taskall-status-information);
 }
 
 .icon.filled {
-  background: var(--hive-brand);
-  color: var(--hive-content-on-brand);
+  background: var(--taskall-brand);
+  color: var(--taskall-content-on-brand);
 }
 
 .icon.light {
-  background: var(--hive-brand-soft);
-  color: var(--hive-brand);
+  background: var(--taskall-brand-soft);
+  color: var(--taskall-brand);
 }
 
 .icon.outline {
   background: transparent;
-  border-color: var(--hive-brand);
-  color: var(--hive-brand);
+  border-color: var(--taskall-brand);
+  color: var(--taskall-brand);
 }
 
 .number {
@@ -76,20 +76,20 @@
 }
 
 .number.filled {
-  background: var(--hive-action-neutral-fill);
-  color: var(--hive-action-neutral-contrast);
+  background: var(--taskall-action-neutral-fill);
+  color: var(--taskall-action-neutral-contrast);
 }
 
 .number.light,
 .number.outline {
-  background: var(--hive-background-tertiary);
-  color: var(--hive-content-secondary);
+  background: var(--taskall-background-tertiary);
+  color: var(--taskall-content-secondary);
 }
 
 .number.outline {
-  border-color: var(--hive-border-default);
+  border-color: var(--taskall-border-default);
 }
 
 .iconOnly {
-  padding-inline: var(--hive-space-step-2);
+  padding-inline: var(--taskall-space-step-2);
 }

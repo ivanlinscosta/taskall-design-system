@@ -216,7 +216,7 @@ const foundationEntries: ComponentEntry[] = [
   {
     slug: "temas",
     title: "Temas",
-    summary: "HiveProvider: modo, marca, densidade e forma.",
+    summary: "TaskAllProvider: modo, marca, densidade e forma.",
     keywords: ["tema", "dark mode", "marca", "brand", "provider", "densidade"],
   },
   {
@@ -232,7 +232,7 @@ const guideEntries: ComponentEntry[] = [
   {
     slug: "primeiros-passos",
     title: "Primeiros passos",
-    summary: "Instalação, estilos, HiveProvider e o primeiro componente.",
+    summary: "Instalação, estilos, TaskAllProvider e o primeiro componente.",
     keywords: [
       "instalar",
       "setup",
@@ -246,7 +246,7 @@ const guideEntries: ComponentEntry[] = [
     slug: "boas-praticas",
     title: "Boas práticas",
     summary:
-      "Convenções do Hive: tokens, estados data-*, foco, alvos de toque.",
+      "Convenções do TaskAll: tokens, estados data-*, foco, alvos de toque.",
     keywords: [
       "convenções",
       "regras",
@@ -258,7 +258,7 @@ const guideEntries: ComponentEntry[] = [
   {
     slug: "padroes",
     title: "Padrões aplicados",
-    summary: "Telas do Task All montadas só com componentes do Hive.",
+    summary: "Telas do Task All montadas só com componentes do TaskAll.",
     keywords: [
       "exemplos",
       "telas",
@@ -277,7 +277,7 @@ const guideEntries: ComponentEntry[] = [
   {
     slug: "changelog",
     title: "Changelog",
-    summary: "Histórico de versões de @hive/react.",
+    summary: "Histórico de versões de @taskall/react.",
     keywords: ["versões", "release", "mudanças", "histórico"],
   },
 ];
@@ -344,5 +344,5 @@ export function findPage(section: NavSection, slug: string): NavItem {
 }
 
 export function pageTitle(title: string) {
-  return `${title} · Hive Design System`;
+  return `${title} · TaskAll Design System`;
 }

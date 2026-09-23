@@ -1,5 +1,5 @@
 import type { Decorator, Preview } from "@storybook/react";
-import { HiveProvider } from "@hive/react";
+import { TaskAllProvider } from "@taskall/react";
 
 import "../../library/src/styles/index.css";
 
@@ -58,18 +58,18 @@ export const globalTypes = {
   },
 };
 
-const withHiveProvider: Decorator = (Story, context) => {
+const withTaskAllProvider: Decorator = (Story, context) => {
   const { colorMode = "light", brand = "coral", density = "default", shape = "default" } =
     context.globals;
   return (
-    <HiveProvider colorMode={colorMode} brand={brand} density={density} shape={shape}>
+    <TaskAllProvider colorMode={colorMode} brand={brand} density={density} shape={shape}>
       <div style={{ padding: 24 }}>{Story()}</div>
-    </HiveProvider>
+    </TaskAllProvider>
   );
 };
 
 const preview: Preview = {
-  decorators: [withHiveProvider],
+  decorators: [withTaskAllProvider],
   parameters: {
     layout: "fullscreen",
     controls: {

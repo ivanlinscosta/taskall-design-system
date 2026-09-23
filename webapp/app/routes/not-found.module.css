@@ -2,27 +2,27 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--hive-space-16);
+  gap: var(--taskall-space-16);
   max-width: 640px;
   margin: 0 auto;
-  padding: var(--hive-space-64) var(--hive-space-24);
+  padding: var(--taskall-space-64) var(--taskall-space-24);
   outline: none;
 }
 
 .code {
   margin: 0;
-  font: var(--hive-font-display-3);
-  color: var(--hive-brand);
+  font: var(--taskall-font-display-3);
+  color: var(--taskall-brand);
 }
 
 .link {
   display: inline-flex;
   align-items: center;
-  min-height: var(--hive-touch-target);
-  padding: 0 var(--hive-space-20);
-  border-radius: var(--hive-radius-surface);
-  background-color: var(--hive-background-inverse);
-  color: var(--hive-content-inverse);
-  font: var(--hive-font-label-m);
+  min-height: var(--taskall-touch-target);
+  padding: 0 var(--taskall-space-20);
+  border-radius: var(--taskall-radius-surface);
+  background-color: var(--taskall-background-inverse);
+  color: var(--taskall-content-inverse);
+  font: var(--taskall-font-label-m);
   text-decoration: none;
 }

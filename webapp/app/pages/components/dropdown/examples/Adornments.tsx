@@ -5,7 +5,7 @@ import {
   AngledMoon,
   CircleClock,
   type DropdownOption,
-} from "@hive/react";
+} from "@taskall/react";
 
 const periods: DropdownOption[] = [
   { value: "b1", label: "1º bimestre", adornment: "check" },
@@ -37,7 +37,7 @@ export default function DropdownAdornments() {
       style={{
         display: "grid",
         gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-        gap: "var(--hive-space-16)",
+        gap: "var(--taskall-space-16)",
         width: "100%",
       }}
     >

@@ -3,12 +3,12 @@ import { screen } from "@testing-library/react";
 import { axe } from "jest-axe";
 import { describe, expect, it } from "vitest";
 
-import { renderWithHive } from "../../test/renderWithHive";
+import { renderWithTaskAll } from "../../test/renderWithTaskAll";
 import { ProgressBar } from "./ProgressBar";
 
 describe("ProgressBar", () => {
   it("renders a progressbar with the expected aria values", () => {
-    renderWithHive(<ProgressBar value={48} label="Upload" />);
+    renderWithTaskAll(<ProgressBar value={48} label="Upload" />);
 
     const progressbar = screen.getByRole("progressbar", { name: "Upload" });
     expect(progressbar).toHaveAttribute("aria-valuemin", "0");
@@ -19,13 +19,13 @@ describe("ProgressBar", () => {
   it("forwards the ref to the root div", () => {
     const ref = createRef<HTMLDivElement>();
 
-    renderWithHive(<ProgressBar ref={ref} value={20} />);
+    renderWithTaskAll(<ProgressBar ref={ref} value={20} />);
 
     expect(ref.current).toBeInstanceOf(HTMLDivElement);
   });
 
   it("clamps values outside the 0 to 100 range", () => {
-    renderWithHive(<ProgressBar value={160} label="Clamped" />);
+    renderWithTaskAll(<ProgressBar value={160} label="Clamped" />);
 
     expect(
       screen.getByRole("progressbar", { name: "Clamped" }),
@@ -33,13 +33,15 @@ describe("ProgressBar", () => {
   });
 
   it("shows the formatted percentage when requested", () => {
-    renderWithHive(<ProgressBar value={33.3} showPercentage label="Entrega" />);
+    renderWithTaskAll(
+      <ProgressBar value={33.3} showPercentage label="Entrega" />,
+    );
 
     expect(screen.getByText("33.3%")).toBeInTheDocument();
   });
 
   it("exposes tone and size data attributes", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <ProgressBar
         value={12}
         tone="green"
@@ -59,7 +61,7 @@ describe("ProgressBar", () => {
   });
 
   it("has no axe violations", async () => {
-    const { container } = renderWithHive(
+    const { container } = renderWithTaskAll(
       <>
         <ProgressBar value={20} label="Início" />
         <ProgressBar

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link, NavLink, useLocation } from "react-router";
-import { Close, Logo, Menu, Search } from "@hive/react";
+import { Close, Logo, Menu, Search } from "@taskall/react";
 
 import { NAV_GROUPS } from "../lib/registry";
 import { useSearch } from "./SearchDialog";
@@ -33,7 +33,7 @@ function NavDrawer({ open, onClose }: { open: boolean; onClose: () => void }) {
           to="/"
           className={styles.brand}
           onClick={onClose}
-          aria-label="Hive Design System — início"
+          aria-label="TaskAll Design System — início"
         >
           <Logo className={styles.logo} title="" />
         </Link>
@@ -74,10 +74,10 @@ export function SiteHeader() {
         <Link
           to="/"
           className={styles.brand}
-          aria-label="Hive Design System — início"
+          aria-label="TaskAll Design System — início"
         >
           <Logo className={styles.logo} title="" />
-          <span className={styles.brandTag}>Hive DS</span>
+          <span className={styles.brandTag}>Design System</span>
         </Link>
 
         <nav aria-label="Seções" className={styles.sections}>

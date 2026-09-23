@@ -5,12 +5,12 @@ import userEvent from "@testing-library/user-event";
 import { axe } from "jest-axe";
 import { describe, expect, it, vi } from "vitest";
 
-import { renderWithHive } from "../../test/renderWithHive";
+import { renderWithTaskAll } from "../../test/renderWithTaskAll";
 import { Checkbox } from "./Checkbox";
 
 describe("Checkbox", () => {
   it("renders a native checkbox with an accessible label", () => {
-    renderWithHive(<Checkbox label="Aceito os termos" />);
+    renderWithTaskAll(<Checkbox label="Aceito os termos" />);
 
     expect(
       screen.getByRole("checkbox", { name: "Aceito os termos" }),
@@ -20,7 +20,7 @@ describe("Checkbox", () => {
   it("forwards the ref to the native input", () => {
     const ref = createRef<HTMLInputElement>();
 
-    renderWithHive(<Checkbox ref={ref} label="Newsletter" />);
+    renderWithTaskAll(<Checkbox ref={ref} label="Newsletter" />);
 
     expect(ref.current).toBeInstanceOf(HTMLInputElement);
   });
@@ -28,7 +28,7 @@ describe("Checkbox", () => {
   it("supports uncontrolled usage", async () => {
     const user = userEvent.setup();
 
-    renderWithHive(
+    renderWithTaskAll(
       <Checkbox label="Receber novidades" defaultChecked={false} />,
     );
 
@@ -60,7 +60,7 @@ describe("Checkbox", () => {
       );
     }
 
-    renderWithHive(<ControlledCheckbox />);
+    renderWithTaskAll(<ControlledCheckbox />);
 
     const checkbox = screen.getByRole("checkbox", { name: "Selecionar" });
 
@@ -71,7 +71,7 @@ describe("Checkbox", () => {
   });
 
   it("syncs the indeterminate DOM property and aria-checked", () => {
-    renderWithHive(<Checkbox label="Parcial" indeterminate />);
+    renderWithTaskAll(<Checkbox label="Parcial" indeterminate />);
 
     const checkbox = screen.getByRole("checkbox", { name: "Parcial" });
 
@@ -86,7 +86,7 @@ describe("Checkbox", () => {
   it("supports keyboard focus and toggling with space", async () => {
     const user = userEvent.setup();
 
-    renderWithHive(<Checkbox label="Teclado" />);
+    renderWithTaskAll(<Checkbox label="Teclado" />);
 
     await user.tab();
 
@@ -99,7 +99,7 @@ describe("Checkbox", () => {
   });
 
   it("passes through data and aria attributes", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <Checkbox
         label="Extra"
         data-testid="extra-checkbox"
@@ -117,7 +117,7 @@ describe("Checkbox", () => {
     const user = userEvent.setup();
     const onChange = vi.fn();
 
-    renderWithHive(<Checkbox label="Callback" onChange={onChange} />);
+    renderWithTaskAll(<Checkbox label="Callback" onChange={onChange} />);
 
     await user.click(screen.getByRole("checkbox", { name: "Callback" }));
 
@@ -125,7 +125,7 @@ describe("Checkbox", () => {
   });
 
   it("has no axe violations", async () => {
-    const { container } = renderWithHive(
+    const { container } = renderWithTaskAll(
       <>
         <Checkbox label="Aceito os termos" defaultChecked />
         <Checkbox label="Parcial" indeterminate />

@@ -1,5 +1,5 @@
 /**
- * Gera app/generated/api.json a partir dos tipos TypeScript reais de @hive/react.
+ * Gera app/generated/api.json a partir dos tipos TypeScript reais de @taskall/react.
  *
  * Para cada `export type XProps` em library/src/components, extrai as props
  * declaradas na própria biblioteca (ignora atributos HTML herdados do React),

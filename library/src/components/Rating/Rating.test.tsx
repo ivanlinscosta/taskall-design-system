@@ -4,13 +4,13 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import { axe } from "jest-axe";
 import { describe, expect, it, vi } from "vitest";
 
-import { HiveProvider } from "../Provider/HiveProvider";
-import { renderWithHive } from "../../test/renderWithHive";
+import { TaskAllProvider } from "../Provider/TaskAllProvider";
+import { renderWithTaskAll } from "../../test/renderWithTaskAll";
 import { Rating } from "./Rating";
 
 describe("Rating", () => {
   it("renders an editable radiogroup with an accessible name", () => {
-    renderWithHive(<Rating label="Avaliação do curso" value={3} />);
+    renderWithTaskAll(<Rating label="Avaliação do curso" value={3} />);
 
     const group = screen.getByRole("radiogroup", {
       name: "Avaliação do curso",
@@ -25,7 +25,7 @@ describe("Rating", () => {
   it("forwards the ref to the root element", () => {
     const ref = createRef<HTMLDivElement>();
 
-    renderWithHive(<Rating ref={ref} label="Nota" />);
+    renderWithTaskAll(<Rating ref={ref} label="Nota" />);
 
     expect(ref.current).toBeInstanceOf(HTMLDivElement);
     expect(ref.current).toHaveAttribute("role", "radiogroup");
@@ -34,7 +34,7 @@ describe("Rating", () => {
   it("supports uncontrolled selection", () => {
     const onChange = vi.fn();
 
-    renderWithHive(<Rating label="Nota" onChange={onChange} />);
+    renderWithTaskAll(<Rating label="Nota" onChange={onChange} />);
 
     const fourthItem = screen.getByRole("radio", { name: "4 estrelas" });
     fireEvent.click(fourthItem);
@@ -61,7 +61,7 @@ describe("Rating", () => {
       );
     };
 
-    renderWithHive(<ControlledExample />);
+    renderWithTaskAll(<ControlledExample />);
 
     const fifthItem = screen.getByRole("radio", { name: "5 estrelas" });
     fireEvent.click(fifthItem);
@@ -71,7 +71,7 @@ describe("Rating", () => {
   });
 
   it("supports keyboard navigation and keeps roving focus on radios", () => {
-    renderWithHive(<Rating label="Nota" value={2} />);
+    renderWithTaskAll(<Rating label="Nota" value={2} />);
 
     const secondItem = screen.getByRole("radio", { name: "2 estrelas" });
     const thirdItem = screen.getByRole("radio", { name: "3 estrelas" });
@@ -93,7 +93,7 @@ describe("Rating", () => {
   it("renders read-only mode as an image and does not call onChange", () => {
     const onChange = vi.fn();
 
-    renderWithHive(
+    renderWithTaskAll(
       <Rating label="Avaliação" value={2.5} readOnly onChange={onChange} />,
     );
 
@@ -105,9 +105,9 @@ describe("Rating", () => {
 
   it("renders inside light and dark providers", () => {
     const { rerender } = render(
-      <HiveProvider colorMode="light">
+      <TaskAllProvider colorMode="light">
         <Rating label="Tema" value={4} />
-      </HiveProvider>,
+      </TaskAllProvider>,
     );
 
     expect(
@@ -115,9 +115,9 @@ describe("Rating", () => {
     ).toBeInTheDocument();
 
     rerender(
-      <HiveProvider colorMode="dark">
+      <TaskAllProvider colorMode="dark">
         <Rating label="Tema" value={4} />
-      </HiveProvider>,
+      </TaskAllProvider>,
     );
 
     expect(
@@ -126,7 +126,7 @@ describe("Rating", () => {
   });
 
   it("has no axe violations", async () => {
-    const { container } = renderWithHive(<Rating label="Nota" value={3} />);
+    const { container } = renderWithTaskAll(<Rating label="Nota" value={3} />);
 
     const results = await axe(container, {
       rules: { "color-contrast": { enabled: false } },

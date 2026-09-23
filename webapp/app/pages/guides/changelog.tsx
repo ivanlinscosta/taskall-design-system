@@ -1,4 +1,4 @@
-import { Badge } from "@hive/react";
+import { Badge } from "@taskall/react";
 
 import { findPage } from "../../lib/registry";
 import { pageMeta } from "../../ui/ComponentPage";
@@ -51,7 +51,7 @@ export default function ChangelogPage() {
       <PageHeader
         eyebrow="Guias"
         title="Changelog"
-        lead="Versões de @hive/react. As mudanças ainda não publicadas vêm direto dos changesets do repositório."
+        lead="Versões de @taskall/react. As mudanças ainda não publicadas vêm direto dos changesets do repositório."
       />
       <DocSection id="nao-publicado" title="Não publicado">
         {sorted.length === 0 ? (
@@ -84,8 +84,8 @@ export default function ChangelogPage() {
         <Prose>
           <p>
             Base inicial: tokens (claro/escuro, 4 marcas, 3 densidades, 3
-            formas), HiveProvider, componentes, sistema de ícones, Storybook e
-            suíte Vitest.
+            formas), TaskAllProvider, componentes, sistema de ícones, Storybook
+            e suíte Vitest.
           </p>
         </Prose>
       </DocSection>

@@ -151,16 +151,16 @@ export const RealExample: Story = {
       <div style={{ display: "grid", gap: 4 }}>
         <strong
           style={{
-            font: "var(--hive-font-label-s)",
-            color: "var(--hive-content-primary)",
+            font: "var(--taskall-font-label-s)",
+            color: "var(--taskall-content-primary)",
           }}
         >
           Ivana Costa
         </strong>
         <span
           style={{
-            font: "var(--hive-font-paragraph-xs)",
-            color: "var(--hive-content-secondary)",
+            font: "var(--taskall-font-paragraph-xs)",
+            color: "var(--taskall-content-secondary)",
           }}
         >
           Responsável pela revisão final do cadastro.

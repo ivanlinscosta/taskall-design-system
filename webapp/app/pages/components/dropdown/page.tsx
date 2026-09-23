@@ -1,4 +1,4 @@
-import { Calendar, Dropdown, type DropdownProps } from "@hive/react";
+import { Calendar, Dropdown, type DropdownProps } from "@taskall/react";
 
 import { jsx, raw } from "../../../lib/api";
 import { definePlayground, example, type ComponentDoc } from "../../../lib/doc";
@@ -33,7 +33,7 @@ const doc: ComponentDoc = {
     "Seleção múltipla — use Checkbox.",
     "Texto livre ou busca — use TextInput.",
   ],
-  usage: `import { Dropdown } from "@hive/react";
+  usage: `import { Dropdown } from "@taskall/react";
 
 const periods = [
   { value: "b1", label: "1º bimestre" },

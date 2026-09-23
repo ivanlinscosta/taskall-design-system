@@ -3,12 +3,12 @@ import { fireEvent, screen } from "@testing-library/react";
 import { axe } from "jest-axe";
 import { describe, expect, it, vi } from "vitest";
 
-import { renderWithHive } from "../../test/renderWithHive";
+import { renderWithTaskAll } from "../../test/renderWithTaskAll";
 import { AlertNotification } from "./AlertNotification";
 
 describe("AlertNotification", () => {
   it("renders status content with a polite live region by default", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <AlertNotification title="Atualização enviada" body="Tudo certo." />,
     );
 
@@ -19,7 +19,9 @@ describe("AlertNotification", () => {
   });
 
   it("uses role alert for error notifications", () => {
-    renderWithHive(<AlertNotification title="Erro ao salvar" status="error" />);
+    renderWithTaskAll(
+      <AlertNotification title="Erro ao salvar" status="error" />,
+    );
 
     expect(screen.getByRole("alert")).toBeInTheDocument();
   });
@@ -27,13 +29,13 @@ describe("AlertNotification", () => {
   it("forwards the ref to the root div", () => {
     const ref = createRef<HTMLDivElement>();
 
-    renderWithHive(<AlertNotification ref={ref} title="Ref" />);
+    renderWithTaskAll(<AlertNotification ref={ref} title="Ref" />);
 
     expect(ref.current).toBeInstanceOf(HTMLDivElement);
   });
 
   it("exposes size, variant and tone data attributes", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <AlertNotification
         title="Aviso"
         status="warning"
@@ -49,7 +51,7 @@ describe("AlertNotification", () => {
   });
 
   it("does not render the body in medium size", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <AlertNotification
         title="Aviso"
         body="Esse texto não deve aparecer"
@@ -63,7 +65,7 @@ describe("AlertNotification", () => {
   });
 
   it("renders only title content in small size", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <AlertNotification
         title="Sincronizado"
         body="Oculto"
@@ -83,7 +85,7 @@ describe("AlertNotification", () => {
   it("dismisses itself and calls onClose when closable", () => {
     const onClose = vi.fn();
 
-    renderWithHive(
+    renderWithTaskAll(
       <AlertNotification title="Fechável" closable onClose={onClose} />,
     );
 
@@ -94,7 +96,7 @@ describe("AlertNotification", () => {
   });
 
   it("renders an accessible link when href and label are provided", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <AlertNotification
         title="Leia mais"
         linkLabel="Abrir ajuda"
@@ -109,7 +111,7 @@ describe("AlertNotification", () => {
   });
 
   it("has no axe violations", async () => {
-    const { container } = renderWithHive(
+    const { container } = renderWithTaskAll(
       <>
         <AlertNotification title="Informação" body="Resumo importante" />
         <AlertNotification

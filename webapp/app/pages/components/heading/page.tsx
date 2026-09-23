@@ -1,4 +1,4 @@
-import { Heading, type HeadingLevel } from "@hive/react";
+import { Heading, type HeadingLevel } from "@taskall/react";
 
 import { jsx } from "../../../lib/api";
 import { definePlayground, example, type ComponentDoc } from "../../../lib/doc";
@@ -18,7 +18,7 @@ type LevelOption = (typeof levels)[number];
 const doc: ComponentDoc = {
   page,
   description:
-    "Heading renderiza títulos h1–h6 com a escala tipográfica do Hive. `level` define a semântica; `as` define só a aparência.",
+    "Heading renderiza títulos h1–h6 com a escala tipográfica do TaskAll. `level` define a semântica; `as` define só a aparência.",
   whenToUse: [
     "Títulos de páginas, seções, cards e modais.",
     "Sempre que a hierarquia precisa aparecer no outline para leitores de tela.",
@@ -28,7 +28,7 @@ const doc: ComponentDoc = {
     "Rótulos curtos de interface — use LabelText.",
     "Só para deixar um texto em negrito/maior sem ser título.",
   ],
-  usage: `import { Heading } from "@hive/react";
+  usage: `import { Heading } from "@taskall/react";
 
 <Heading level={1} as={4}>Painel da coordenação</Heading>
 <Heading level={2} as={6}>Tarefas atrasadas</Heading>`,
@@ -65,7 +65,7 @@ const doc: ComponentDoc = {
         id: "niveis",
         kind: "variantes",
         title: "Escala h1–h6",
-        description: "Tamanhos vindos de `--hive-font-h1…h6`.",
+        description: "Tamanhos vindos de `--taskall-font-h1…h6`.",
       },
       Levels,
       levelsCode,

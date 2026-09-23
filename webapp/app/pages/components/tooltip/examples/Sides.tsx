@@ -1,4 +1,4 @@
-import { Button, Tooltip } from "@hive/react";
+import { Button, Tooltip } from "@taskall/react";
 
 export default function TooltipSides() {
   return (
@@ -6,8 +6,8 @@ export default function TooltipSides() {
       style={{
         display: "grid",
         gridTemplateColumns: "repeat(2, auto)",
-        gap: "var(--hive-space-24) var(--hive-space-48)",
-        padding: "var(--hive-space-32)",
+        gap: "var(--taskall-space-24) var(--taskall-space-48)",
+        padding: "var(--taskall-space-32)",
       }}
     >
       {(["top", "right", "bottom", "left"] as const).map((side) => (

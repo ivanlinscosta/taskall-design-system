@@ -1,11 +1,11 @@
-import { Divider, Star } from "@hive/react";
+import { Divider, Star } from "@taskall/react";
 
 export default function DividerVariants() {
   return (
     <div
       style={{
         display: "grid",
-        gap: "var(--hive-space-24)",
+        gap: "var(--taskall-space-24)",
         width: "100%",
         maxWidth: 480,
       }}

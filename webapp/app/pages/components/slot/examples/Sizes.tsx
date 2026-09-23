@@ -1,4 +1,4 @@
-import { Bell, Slot } from "@hive/react";
+import { Bell, Slot } from "@taskall/react";
 
 const sizes = [
   { size: "2xl", icon: 24 },
@@ -15,7 +15,7 @@ export default function SlotSizes() {
       style={{
         display: "flex",
         alignItems: "end",
-        gap: "var(--hive-space-16)",
+        gap: "var(--taskall-space-16)",
       }}
     >
       {sizes.map(({ size, icon }) => (
@@ -24,7 +24,7 @@ export default function SlotSizes() {
           style={{
             display: "grid",
             justifyItems: "center",
-            gap: "var(--hive-space-6)",
+            gap: "var(--taskall-space-6)",
           }}
         >
           <Slot size={size}>
@@ -32,8 +32,8 @@ export default function SlotSizes() {
           </Slot>
           <span
             style={{
-              font: "var(--hive-font-paragraph-xs)",
-              color: "var(--hive-content-secondary)",
+              font: "var(--taskall-font-paragraph-xs)",
+              color: "var(--taskall-content-secondary)",
             }}
           >
             {size}

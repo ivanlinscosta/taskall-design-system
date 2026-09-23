@@ -1,4 +1,4 @@
-import { AlertNotification, type AlertNotificationProps } from "@hive/react";
+import { AlertNotification, type AlertNotificationProps } from "@taskall/react";
 
 import { jsx } from "../../../lib/api";
 import { definePlayground, example, type ComponentDoc } from "../../../lib/doc";
@@ -29,7 +29,7 @@ const doc: ComponentDoc = {
     "Decisões que exigem resposta — use Modal.",
     "Conteúdo promocional sem urgência.",
   ],
-  usage: `import { AlertNotification } from "@hive/react";
+  usage: `import { AlertNotification } from "@taskall/react";
 
 export function ImportResult({ count }: { count: number }) {
   return (

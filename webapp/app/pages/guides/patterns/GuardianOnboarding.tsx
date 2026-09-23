@@ -13,7 +13,7 @@ import {
   RadioGroup,
   TextInput,
   User,
-} from "@hive/react";
+} from "@taskall/react";
 
 const relationships = [
   { value: "mae", label: "Mãe" },
@@ -47,7 +47,7 @@ export default function GuardianOnboarding() {
           maxWidth: 520,
           margin: "0 auto",
           display: "grid",
-          gap: "var(--hive-space-12)",
+          gap: "var(--taskall-space-12)",
         }}
       >
         <AlertNotification
@@ -79,20 +79,20 @@ export default function GuardianOnboarding() {
       }}
       style={{
         display: "grid",
-        gap: "var(--hive-space-step-6)",
+        gap: "var(--taskall-space-step-6)",
         maxWidth: 520,
         margin: "0 auto",
-        padding: "var(--hive-space-step-8)",
-        border: "1px solid var(--hive-border-default)",
-        borderRadius: "var(--hive-radius-surface)",
-        backgroundColor: "var(--hive-background-primary)",
+        padding: "var(--taskall-space-step-8)",
+        border: "1px solid var(--taskall-border-default)",
+        borderRadius: "var(--taskall-radius-surface)",
+        backgroundColor: "var(--taskall-background-primary)",
       }}
     >
       <div
         style={{
           display: "flex",
           alignItems: "center",
-          gap: "var(--hive-space-12)",
+          gap: "var(--taskall-space-12)",
         }}
       >
         <Avatar size="lg" fallback="LM" alt="Lucas Martins" />
@@ -102,7 +102,7 @@ export default function GuardianOnboarding() {
           </Heading>
           <Paragraph
             size="s"
-            style={{ margin: 0, color: "var(--hive-content-secondary)" }}
+            style={{ margin: 0, color: "var(--taskall-content-secondary)" }}
           >
             Estudante: Lucas Martins · 8º B
           </Paragraph>
@@ -160,7 +160,7 @@ export default function GuardianOnboarding() {
         style={{
           display: "flex",
           justifyContent: "flex-end",
-          gap: "var(--hive-space-8)",
+          gap: "var(--taskall-space-8)",
         }}
       >
         <Button type="button" tone="neutral" visualStyle="light">

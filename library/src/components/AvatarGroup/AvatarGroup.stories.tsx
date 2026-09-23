@@ -132,8 +132,8 @@ export const RealExample: Story = {
       />
       <span
         style={{
-          font: "var(--hive-font-paragraph-s)",
-          color: "var(--hive-content-secondary)",
+          font: "var(--taskall-font-paragraph-s)",
+          color: "var(--taskall-content-secondary)",
         }}
       >
         4 responsáveis acompanhando a entrega.

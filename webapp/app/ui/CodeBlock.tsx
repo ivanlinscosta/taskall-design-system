@@ -1,6 +1,6 @@
 import * as React from "react";
 import { highlight, type LanguageName } from "sugar-high";
-import { HiveProvider } from "@hive/react";
+import { TaskAllProvider } from "@taskall/react";
 
 import { useSettings } from "../lib/settings";
 import styles from "./CodeBlock.module.css";
@@ -51,7 +51,7 @@ export function CopyButton({
 
 /**
  * Bloco de código com realce de sintaxe. Sempre renderizado em modo escuro
- * (tokens dark do Hive) para contraste consistente em ambos os temas.
+ * (tokens dark do TaskAll) para contraste consistente em ambos os temas.
  */
 export function CodeBlock({
   code,
@@ -66,7 +66,7 @@ export function CodeBlock({
   );
 
   return (
-    <HiveProvider
+    <TaskAllProvider
       colorMode="dark"
       brand={settings.brand}
       className={[styles.block, className].filter(Boolean).join(" ")}
@@ -82,6 +82,6 @@ export function CodeBlock({
       >
         <code dangerouslySetInnerHTML={{ __html: html }} />
       </pre>
-    </HiveProvider>
+    </TaskAllProvider>
   );
 }

@@ -1,4 +1,4 @@
-import { Avatar, type AvatarProps } from "@hive/react";
+import { Avatar, type AvatarProps } from "@taskall/react";
 
 import { jsx } from "../../../lib/api";
 import { definePlayground, example, type ComponentDoc } from "../../../lib/doc";
@@ -29,7 +29,7 @@ const doc: ComponentDoc = {
     "Quando o nome precisa ser lido sem ambiguidade — mostre o nome ao lado.",
     "Para representar entidades sem pessoa (turmas, escolas) — use Slot com ícone.",
   ],
-  usage: `import { Avatar } from "@hive/react";
+  usage: `import { Avatar } from "@taskall/react";
 
 <Avatar src={user.photoUrl} alt={user.name} fallback="MS" status="online" />`,
   playground: definePlayground({

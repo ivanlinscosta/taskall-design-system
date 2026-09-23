@@ -1,7 +1,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: var(--hive-space-12);
+  gap: var(--taskall-space-12);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -10,13 +10,13 @@
 .card {
   display: flex;
   flex-direction: column;
-  gap: var(--hive-space-4);
+  gap: var(--taskall-space-4);
   height: 100%;
-  padding: var(--hive-space-16) var(--hive-space-20);
-  border: 1px solid var(--hive-border-default);
-  border-radius: var(--hive-radius-4);
-  background-color: var(--hive-background-primary);
-  color: var(--hive-content-primary);
+  padding: var(--taskall-space-16) var(--taskall-space-20);
+  border: 1px solid var(--taskall-border-default);
+  border-radius: var(--taskall-radius-4);
+  background-color: var(--taskall-background-primary);
+  color: var(--taskall-content-primary);
   text-decoration: none;
   transition:
     border-color 120ms ease,
@@ -24,15 +24,15 @@
 }
 
 .card:hover {
-  border-color: var(--hive-brand);
-  box-shadow: var(--hive-shadow-md);
+  border-color: var(--taskall-brand);
+  box-shadow: var(--taskall-shadow-md);
 }
 
 .name {
-  font: var(--hive-font-label-m);
+  font: var(--taskall-font-label-m);
 }
 
 .summary {
-  font: var(--hive-font-paragraph-s);
-  color: var(--hive-content-secondary);
+  font: var(--taskall-font-paragraph-s);
+  color: var(--taskall-content-secondary);
 }

@@ -1,9 +1,13 @@
-import { Button, Tooltip } from "@hive/react";
+import { Button, Tooltip } from "@taskall/react";
 
 export default function TooltipVariants() {
   return (
     <div
-      style={{ display: "flex", flexWrap: "wrap", gap: "var(--hive-space-12)" }}
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        gap: "var(--taskall-space-12)",
+      }}
     >
       {(["light", "filled", "outline"] as const).map((visualStyle) => (
         <Tooltip

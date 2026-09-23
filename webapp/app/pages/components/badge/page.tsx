@@ -1,4 +1,4 @@
-import { Badge, Bell, Check, type BadgeProps } from "@hive/react";
+import { Badge, Bell, Check, type BadgeProps } from "@taskall/react";
 
 import { jsx, raw } from "../../../lib/api";
 import { definePlayground, example, type ComponentDoc } from "../../../lib/doc";
@@ -27,7 +27,7 @@ const doc: ComponentDoc = {
     "Mensagens com frase completa ou que exigem ação — use AlertNotification.",
     "Como botão ou filtro clicável — Badge não é interativo.",
   ],
-  usage: `import { Badge, Check } from "@hive/react";
+  usage: `import { Badge, Check } from "@taskall/react";
 
 <Badge size="small" type="icon" icon={Check} visualStyle="outline">Corrigida</Badge>
 <Badge type="number" role="img" aria-label="7 entregas pendentes">7</Badge>`,

@@ -1,4 +1,4 @@
-import { Avatar } from "@hive/react";
+import { Avatar } from "@taskall/react";
 
 export default function AvatarImageFallback() {
   return (
@@ -6,7 +6,7 @@ export default function AvatarImageFallback() {
       style={{
         display: "flex",
         alignItems: "center",
-        gap: "var(--hive-space-16)",
+        gap: "var(--taskall-space-16)",
       }}
     >
       <Avatar
@@ -17,8 +17,8 @@ export default function AvatarImageFallback() {
       />
       <span
         style={{
-          font: "var(--hive-font-paragraph-s)",
-          color: "var(--hive-content-secondary)",
+          font: "var(--taskall-font-paragraph-s)",
+          color: "var(--taskall-content-secondary)",
         }}
       >
         Se a foto falhar ao carregar, as iniciais aparecem automaticamente.

@@ -1,20 +1,20 @@
 .paragraph {
   margin: 0;
-  color: var(--hive-content-primary);
+  color: var(--taskall-content-primary);
 }
 
 .l {
-  font: var(--hive-font-paragraph-l);
+  font: var(--taskall-font-paragraph-l);
 }
 
 .m {
-  font: var(--hive-font-paragraph-m);
+  font: var(--taskall-font-paragraph-m);
 }
 
 .s {
-  font: var(--hive-font-paragraph-s);
+  font: var(--taskall-font-paragraph-s);
 }
 
 .xs {
-  font: var(--hive-font-paragraph-xs);
+  font: var(--taskall-font-paragraph-xs);
 }

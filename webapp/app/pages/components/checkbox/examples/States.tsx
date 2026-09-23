@@ -1,4 +1,4 @@
-import { Checkbox } from "@hive/react";
+import { Checkbox } from "@taskall/react";
 
 export default function CheckboxStates() {
   return (
@@ -6,7 +6,7 @@ export default function CheckboxStates() {
       style={{
         display: "grid",
         gridTemplateColumns: "repeat(2, auto)",
-        gap: "var(--hive-space-12) var(--hive-space-32)",
+        gap: "var(--taskall-space-12) var(--taskall-space-32)",
       }}
     >
       <Checkbox label="Não marcado" />

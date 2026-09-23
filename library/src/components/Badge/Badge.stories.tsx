@@ -131,8 +131,8 @@ export const RealExample: Story = {
     <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
       <span
         style={{
-          font: "var(--hive-font-paragraph-s)",
-          color: "var(--hive-content-secondary)",
+          font: "var(--taskall-font-paragraph-s)",
+          color: "var(--taskall-content-secondary)",
         }}
       >
         Solicitações pendentes

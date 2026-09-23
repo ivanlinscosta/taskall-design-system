@@ -6,7 +6,7 @@ import {
   Divider,
   Heading,
   Mail,
-} from "@hive/react";
+} from "@taskall/react";
 
 const items = [
   {
@@ -35,24 +35,24 @@ export default function ContentAgenda() {
       style={{
         maxWidth: 440,
         margin: "0 auto",
-        padding: "var(--hive-space-step-6)",
-        border: "1px solid var(--hive-border-default)",
-        borderRadius: "var(--hive-radius-surface)",
-        backgroundColor: "var(--hive-background-primary)",
+        padding: "var(--taskall-space-step-6)",
+        border: "1px solid var(--taskall-border-default)",
+        borderRadius: "var(--taskall-radius-surface)",
+        backgroundColor: "var(--taskall-background-primary)",
       }}
     >
       <Heading
         level={3}
         as={6}
         id="agenda-title"
-        style={{ marginBottom: "var(--hive-space-step-4)" }}
+        style={{ marginBottom: "var(--taskall-space-step-4)" }}
       >
         Agenda da semana
       </Heading>
       <ul
         style={{
           display: "grid",
-          gap: "var(--hive-space-step-4)",
+          gap: "var(--taskall-space-step-4)",
           margin: 0,
           padding: 0,
           listStyle: "none",
@@ -61,7 +61,7 @@ export default function ContentAgenda() {
         {items.map((item, index) => (
           <li
             key={item.label}
-            style={{ display: "grid", gap: "var(--hive-space-step-4)" }}
+            style={{ display: "grid", gap: "var(--taskall-space-step-4)" }}
           >
             {index > 0 ? <Divider /> : null}
             <Content

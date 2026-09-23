@@ -1,61 +1,61 @@
 .root {
-  --progress-fill: var(--hive-progress-brand);
+  --progress-fill: var(--taskall-progress-brand);
   display: inline-flex;
   flex-direction: column;
-  gap: var(--hive-space-step-2);
+  gap: var(--taskall-space-step-2);
   width: 100%;
   max-width: 300px;
 }
 
 .root[data-tone="brand"] {
-  --progress-fill: var(--hive-progress-brand);
+  --progress-fill: var(--taskall-progress-brand);
 }
 
 .root[data-tone="purple"] {
-  --progress-fill: var(--hive-progress-purple);
+  --progress-fill: var(--taskall-progress-purple);
 }
 
 .root[data-tone="blue"] {
-  --progress-fill: var(--hive-progress-blue);
+  --progress-fill: var(--taskall-progress-blue);
 }
 
 .root[data-tone="green"] {
-  --progress-fill: var(--hive-progress-green);
+  --progress-fill: var(--taskall-progress-green);
 }
 
 .root[data-tone="yellow"] {
-  --progress-fill: var(--hive-progress-yellow);
+  --progress-fill: var(--taskall-progress-yellow);
 }
 
 .root[data-tone="orange"] {
-  --progress-fill: var(--hive-progress-orange);
+  --progress-fill: var(--taskall-progress-orange);
 }
 
 .root[data-tone="red"] {
-  --progress-fill: var(--hive-progress-red);
+  --progress-fill: var(--taskall-progress-red);
 }
 
 .root[data-tone="pink"] {
-  --progress-fill: var(--hive-progress-pink);
+  --progress-fill: var(--taskall-progress-pink);
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--hive-space-step-3);
+  gap: var(--taskall-space-step-3);
 }
 
 .label {
-  font: var(--hive-font-label-xs);
-  color: var(--hive-content-secondary);
+  font: var(--taskall-font-label-xs);
+  color: var(--taskall-content-secondary);
 }
 
 .track {
   width: 100%;
   overflow: hidden;
-  border-radius: var(--hive-radius-pill);
-  background: var(--hive-background-tertiary);
+  border-radius: var(--taskall-radius-pill);
+  background: var(--taskall-background-tertiary);
 }
 
 .fill {

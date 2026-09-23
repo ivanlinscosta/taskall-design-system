@@ -1,4 +1,4 @@
-import { ProgressBar, type ProgressBarProps } from "@hive/react";
+import { ProgressBar, type ProgressBarProps } from "@taskall/react";
 
 import { jsx } from "../../../lib/api";
 import { definePlayground, example, type ComponentDoc } from "../../../lib/doc";
@@ -25,7 +25,7 @@ const doc: ComponentDoc = {
     "Esperas sem estimativa — use o `loading` do Button ou um spinner.",
     "Comparar muitas séries — use um gráfico.",
   ],
-  usage: `import { ProgressBar } from "@hive/react";
+  usage: `import { ProgressBar } from "@taskall/react";
 
 <ProgressBar label="Tarefas entregues" value={72} showPercentage />`,
   playground: definePlayground({

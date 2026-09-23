@@ -1,4 +1,4 @@
-import { StatusIndicator } from "@hive/react";
+import { StatusIndicator } from "@taskall/react";
 
 const statuses = [
   { status: "online", label: "Online" },
@@ -17,7 +17,7 @@ export default function StatusIndicatorStatuses() {
       style={{
         display: "grid",
         gridTemplateColumns: "repeat(4, auto)",
-        gap: "var(--hive-space-16) var(--hive-space-32)",
+        gap: "var(--taskall-space-16) var(--taskall-space-32)",
         margin: 0,
         padding: 0,
         listStyle: "none",
@@ -29,8 +29,8 @@ export default function StatusIndicatorStatuses() {
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "var(--hive-space-8)",
-            font: "var(--hive-font-paragraph-s)",
+            gap: "var(--taskall-space-8)",
+            font: "var(--taskall-font-paragraph-s)",
           }}
         >
           <StatusIndicator status={status} size="lg" />

@@ -1,4 +1,4 @@
-import { Rating, type RatingProps } from "@hive/react";
+import { Rating, type RatingProps } from "@taskall/react";
 
 import { jsx } from "../../../lib/api";
 import { definePlayground, example, type ComponentDoc } from "../../../lib/doc";
@@ -25,7 +25,7 @@ const doc: ComponentDoc = {
     "Notas escolares oficiais ou escalas detalhadas — use um campo numérico.",
     "Quando a decisão precisa de justificativa — combine com um campo de texto.",
   ],
-  usage: `import { Rating } from "@hive/react";
+  usage: `import { Rating } from "@taskall/react";
 
 <Rating label="Nota da atividade" value={value} onChange={setValue} />
 <Rating readOnly value={4.5} label="Média da turma" />`,

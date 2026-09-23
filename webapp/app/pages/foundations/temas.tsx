@@ -1,4 +1,4 @@
-import { AlertNotification, Badge, Button, ProgressBar } from "@hive/react";
+import { AlertNotification, Badge, Button, ProgressBar } from "@taskall/react";
 
 import { SETTING_OPTIONS } from "../../lib/settings";
 import { findPage } from "../../lib/registry";
@@ -31,7 +31,7 @@ function Sample() {
     <div
       style={{
         display: "grid",
-        gap: "var(--hive-space-step-4)",
+        gap: "var(--taskall-space-step-4)",
         width: "100%",
       }}
     >
@@ -39,7 +39,7 @@ function Sample() {
         style={{
           display: "flex",
           flexWrap: "wrap",
-          gap: "var(--hive-space-8)",
+          gap: "var(--taskall-space-8)",
           alignItems: "center",
         }}
       >
@@ -62,9 +62,9 @@ export default function ThemesPage() {
       <PageHeader
         eyebrow="Fundamentos"
         title="Temas"
-        lead="O HiveProvider define quatro dimensões independentes — modo de cor, marca, densidade e forma — como atributos data-* que remapeiam os tokens. Componentes nunca codificam tema."
+        lead="O TaskAllProvider define quatro dimensões independentes — modo de cor, marca, densidade e forma — como atributos data-* que remapeiam os tokens. Componentes nunca codificam tema."
       />
-      <DocSection id="provider" title="HiveProvider">
+      <DocSection id="provider" title="TaskAllProvider">
         <Prose>
           <p>
             Envolva a aplicação uma vez e importe os estilos. Providers podem
@@ -74,19 +74,19 @@ export default function ThemesPage() {
         </Prose>
         <CodeBlock
           caption="main.tsx"
-          code={`import { HiveProvider } from "@hive/react";
-import "@hive/react/styles.css";
+          code={`import { TaskAllProvider } from "@taskall/react";
+import "@taskall/react/styles.css";
 
 export function App() {
   return (
-    <HiveProvider colorMode="light" brand="responsaveis" density="default" shape="default">
+    <TaskAllProvider colorMode="light" brand="responsaveis" density="default" shape="default">
       <Routes />
-    </HiveProvider>
+    </TaskAllProvider>
   );
 }`}
         />
         <PropsTable
-          name="HiveProvider"
+          name="TaskAllProvider"
           native="<div>"
           descriptions={{
             colorMode: "Modo de cor: light ou dark.",
@@ -105,26 +105,26 @@ export function App() {
               align="stretch"
               className={styles.brandCard}
             >
-              <div style={{ display: "grid", gap: "var(--hive-space-12)" }}>
+              <div style={{ display: "grid", gap: "var(--taskall-space-12)" }}>
                 <div>
-                  <p style={{ margin: 0, font: "var(--hive-font-h6)" }}>
+                  <p style={{ margin: 0, font: "var(--taskall-font-h6)" }}>
                     {brand.label}
                   </p>
                   <p
                     style={{
                       margin: 0,
-                      font: "var(--hive-font-paragraph-s)",
-                      color: "var(--hive-content-secondary)",
+                      font: "var(--taskall-font-paragraph-s)",
+                      color: "var(--taskall-content-secondary)",
                     }}
                   >
                     {audiences[brand.value]}
                   </p>
                 </div>
                 <div className={styles.brandSwatches} aria-hidden="true">
-                  <span style={{ background: "var(--hive-brand)" }} />
-                  <span style={{ background: "var(--hive-brand-hover)" }} />
-                  <span style={{ background: "var(--hive-brand-active)" }} />
-                  <span style={{ background: "var(--hive-brand-soft)" }} />
+                  <span style={{ background: "var(--taskall-brand)" }} />
+                  <span style={{ background: "var(--taskall-brand-hover)" }} />
+                  <span style={{ background: "var(--taskall-brand-active)" }} />
+                  <span style={{ background: "var(--taskall-brand-soft)" }} />
                 </div>
                 <Sample />
               </div>
@@ -142,7 +142,7 @@ export function App() {
             <div
               style={{
                 display: "grid",
-                gap: "var(--hive-space-step-4)",
+                gap: "var(--taskall-space-step-4)",
                 width: "100%",
               }}
             >

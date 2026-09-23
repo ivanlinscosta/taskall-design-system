@@ -1,4 +1,4 @@
-import { Avatar } from "@hive/react";
+import { Avatar } from "@taskall/react";
 
 export default function AvatarSizes() {
   return (
@@ -6,7 +6,7 @@ export default function AvatarSizes() {
       style={{
         display: "flex",
         alignItems: "center",
-        gap: "var(--hive-space-16)",
+        gap: "var(--taskall-space-16)",
       }}
     >
       {(["xs", "sm", "md", "lg", "xl"] as const).map((size) => (

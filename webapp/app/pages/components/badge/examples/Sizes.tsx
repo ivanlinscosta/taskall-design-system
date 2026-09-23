@@ -1,4 +1,4 @@
-import { Badge } from "@hive/react";
+import { Badge } from "@taskall/react";
 
 export default function BadgeSizes() {
   return (
@@ -6,7 +6,7 @@ export default function BadgeSizes() {
       style={{
         display: "flex",
         alignItems: "center",
-        gap: "var(--hive-space-12)",
+        gap: "var(--taskall-space-12)",
       }}
     >
       <Badge size="medium">Medium</Badge>

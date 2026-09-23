@@ -8,7 +8,7 @@ export const meta = () => [
   { title: pageTitle("Componentes") },
   {
     name: "description",
-    content: "Todos os componentes React do Hive, em ordem alfabética.",
+    content: "Todos os componentes React do TaskAll, em ordem alfabética.",
   },
 ];
 

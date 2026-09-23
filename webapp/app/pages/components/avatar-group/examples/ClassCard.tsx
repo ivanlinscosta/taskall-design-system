@@ -4,7 +4,7 @@ import {
   Heading,
   Paragraph,
   ProgressBar,
-} from "@hive/react";
+} from "@taskall/react";
 
 const students = [
   { fallback: "LM", alt: "Lucas Martins" },
@@ -20,13 +20,13 @@ export default function AvatarGroupClassCard() {
     <article
       style={{
         display: "grid",
-        gap: "var(--hive-space-step-5)",
+        gap: "var(--taskall-space-step-5)",
         maxWidth: 380,
         margin: "0 auto",
-        padding: "var(--hive-space-step-7)",
-        border: "1px solid var(--hive-border-default)",
-        borderRadius: "var(--hive-radius-surface)",
-        backgroundColor: "var(--hive-background-primary)",
+        padding: "var(--taskall-space-step-7)",
+        border: "1px solid var(--taskall-border-default)",
+        borderRadius: "var(--taskall-radius-surface)",
+        backgroundColor: "var(--taskall-background-primary)",
       }}
     >
       <div
@@ -34,7 +34,7 @@ export default function AvatarGroupClassCard() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "start",
-          gap: "var(--hive-space-8)",
+          gap: "var(--taskall-space-8)",
         }}
       >
         <div>
@@ -43,7 +43,7 @@ export default function AvatarGroupClassCard() {
           </Heading>
           <Paragraph
             size="xs"
-            style={{ margin: 0, color: "var(--hive-content-secondary)" }}
+            style={{ margin: 0, color: "var(--taskall-content-secondary)" }}
           >
             Grupo 3 · entrega em 02/10
           </Paragraph>

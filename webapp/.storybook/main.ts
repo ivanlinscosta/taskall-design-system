@@ -21,7 +21,7 @@ const config: StorybookConfig = {
     viteConfig.resolve = viteConfig.resolve ?? {};
     viteConfig.resolve.alias = {
       ...viteConfig.resolve.alias,
-      "@hive/react": resolve(dirname, "../../library/src/index.ts"),
+      "@taskall/react": resolve(dirname, "../../library/src/index.ts"),
     };
     return viteConfig;
   },

@@ -1,4 +1,4 @@
-import { LabelText, Paragraph } from "@hive/react";
+import { LabelText, Paragraph } from "@taskall/react";
 
 const fields = [
   { term: "Matrícula", value: "2025-08B-031" },
@@ -13,13 +13,13 @@ export default function LabelTextStudentMeta() {
       style={{
         display: "grid",
         gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
-        gap: "var(--hive-space-step-5)",
+        gap: "var(--taskall-space-step-5)",
         maxWidth: 560,
         margin: "0 auto",
-        padding: "var(--hive-space-step-6)",
-        border: "1px solid var(--hive-border-default)",
-        borderRadius: "var(--hive-radius-surface)",
-        backgroundColor: "var(--hive-background-primary)",
+        padding: "var(--taskall-space-step-6)",
+        border: "1px solid var(--taskall-border-default)",
+        borderRadius: "var(--taskall-radius-surface)",
+        backgroundColor: "var(--taskall-background-primary)",
       }}
     >
       {fields.map((field) => (
@@ -27,7 +27,7 @@ export default function LabelTextStudentMeta() {
           <dt>
             <LabelText
               size="xs"
-              style={{ color: "var(--hive-content-secondary)" }}
+              style={{ color: "var(--taskall-content-secondary)" }}
             >
               {field.term}
             </LabelText>

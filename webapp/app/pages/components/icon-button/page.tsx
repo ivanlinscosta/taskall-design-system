@@ -7,7 +7,7 @@ import {
   RecycleBin,
   Tooltip,
   type IconButtonProps,
-} from "@hive/react";
+} from "@taskall/react";
 
 import { jsx, raw } from "../../../lib/api";
 import { definePlayground, example, type ComponentDoc } from "../../../lib/doc";
@@ -37,7 +37,7 @@ const doc: ComponentDoc = {
     "Ação principal da tela — use Button com texto.",
     "Quando o ícone não é universalmente reconhecido — acrescente texto.",
   ],
-  usage: `import { Cog, IconButton, Tooltip } from "@hive/react";
+  usage: `import { Cog, IconButton, Tooltip } from "@taskall/react";
 
 <Tooltip title="Configurações da turma">
   <IconButton icon={Cog} aria-label="Configurações da turma" tone="neutral" visualStyle="light" />
@@ -154,7 +154,7 @@ const doc: ComponentDoc = {
       name: "IconButton",
       native: "<button>",
       descriptions: {
-        icon: "Ícone exibido (qualquer ícone de `@hive/react`).",
+        icon: "Ícone exibido (qualquer ícone de `@taskall/react`).",
         "aria-label": "Nome acessível obrigatório.",
         tone: "Intenção: primary, neutral ou error.",
         visualStyle: "Ênfase: filled, light ou outline.",

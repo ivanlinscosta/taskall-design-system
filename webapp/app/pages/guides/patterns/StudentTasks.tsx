@@ -11,7 +11,7 @@ import {
   ProgressBar,
   Rating,
   Upload,
-} from "@hive/react";
+} from "@taskall/react";
 
 type Task = {
   id: string;
@@ -67,13 +67,13 @@ export default function StudentTasks() {
       aria-labelledby="minhas-tarefas"
       style={{
         display: "grid",
-        gap: "var(--hive-space-step-6)",
+        gap: "var(--taskall-space-step-6)",
         maxWidth: 560,
         margin: "0 auto",
-        padding: "var(--hive-space-step-7)",
-        border: "1px solid var(--hive-border-default)",
-        borderRadius: "var(--hive-radius-surface)",
-        backgroundColor: "var(--hive-background-primary)",
+        padding: "var(--taskall-space-step-7)",
+        border: "1px solid var(--taskall-border-default)",
+        borderRadius: "var(--taskall-radius-surface)",
+        backgroundColor: "var(--taskall-background-primary)",
       }}
     >
       <div>
@@ -82,7 +82,7 @@ export default function StudentTasks() {
         </Heading>
         <Paragraph
           size="s"
-          style={{ margin: 0, color: "var(--hive-content-secondary)" }}
+          style={{ margin: 0, color: "var(--taskall-content-secondary)" }}
         >
           Semana de 22 a 26/09
         </Paragraph>
@@ -95,7 +95,7 @@ export default function StudentTasks() {
       <ul
         style={{
           display: "grid",
-          gap: "var(--hive-space-step-4)",
+          gap: "var(--taskall-space-step-4)",
           margin: 0,
           padding: 0,
           listStyle: "none",
@@ -107,7 +107,7 @@ export default function StudentTasks() {
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "var(--hive-space-12)",
+              gap: "var(--taskall-space-12)",
             }}
           >
             <Content
@@ -155,7 +155,7 @@ export default function StudentTasks() {
           </ModalFooter>
         }
       >
-        <div style={{ display: "grid", gap: "var(--hive-space-8)" }}>
+        <div style={{ display: "grid", gap: "var(--taskall-space-8)" }}>
           <Paragraph size="s" style={{ margin: 0 }}>
             Opcional: como foi fazer esta tarefa?
           </Paragraph>

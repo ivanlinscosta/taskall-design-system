@@ -1,4 +1,4 @@
-import { AvatarGroup } from "@hive/react";
+import { AvatarGroup } from "@taskall/react";
 
 const people = [
   { fallback: "AL" },
@@ -13,7 +13,7 @@ export default function AvatarGroupSizes() {
     <div
       style={{
         display: "grid",
-        gap: "var(--hive-space-16)",
+        gap: "var(--taskall-space-16)",
         justifyItems: "start",
       }}
     >

@@ -148,7 +148,7 @@ export const Dropdown = React.forwardRef<HTMLButtonElement, DropdownProps>(
     ref,
   ) {
     const reactId = React.useId();
-    const triggerId = id ?? `hive-dropdown-${reactId}`;
+    const triggerId = id ?? `taskall-dropdown-${reactId}`;
     const descriptionId = sublabel ? `${triggerId}-description` : undefined;
     const errorId = error ? `${triggerId}-error` : undefined;
     const describedBy = joinIds(ariaDescribedBy, descriptionId, errorId);
@@ -225,7 +225,9 @@ export const Dropdown = React.forwardRef<HTMLButtonElement, DropdownProps>(
             {LeftIcon ? (
               <LeftIcon size={16} aria-hidden="true" className={styles.icon} />
             ) : null}
-            <Select.Value className={styles.value} placeholder={placeholder} />
+            <span className={styles.value}>
+              <Select.Value placeholder={placeholder} />
+            </span>
             <Select.Icon asChild>
               <ChevronDown
                 size={16}

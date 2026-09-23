@@ -3,12 +3,12 @@ import { screen } from "@testing-library/react";
 import { axe } from "jest-axe";
 import { describe, expect, it } from "vitest";
 
-import { renderWithHive } from "../../test/renderWithHive";
+import { renderWithTaskAll } from "../../test/renderWithTaskAll";
 import { Heading } from "./Heading";
 
 describe("Heading", () => {
   it("renders a native heading with semantic and visual levels", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <Heading level={3} as={1}>
         Título da seção
       </Heading>,
@@ -24,7 +24,7 @@ describe("Heading", () => {
   });
 
   it("defaults the visual appearance to the semantic level", () => {
-    renderWithHive(<Heading level={4}>Subtítulo</Heading>);
+    renderWithTaskAll(<Heading level={4}>Subtítulo</Heading>);
     expect(
       screen.getByRole("heading", { name: "Subtítulo", level: 4 }),
     ).toHaveAttribute("data-as", "4");
@@ -32,12 +32,12 @@ describe("Heading", () => {
 
   it("forwards the ref to the native heading element", () => {
     const ref = createRef<HTMLHeadingElement>();
-    renderWithHive(<Heading ref={ref}>Título</Heading>);
+    renderWithTaskAll(<Heading ref={ref}>Título</Heading>);
     expect(ref.current).toBeInstanceOf(HTMLHeadingElement);
   });
 
   it("has no axe violations", async () => {
-    const { container } = renderWithHive(
+    const { container } = renderWithTaskAll(
       <Heading level={2} as={5}>
         Heading acessível
       </Heading>,

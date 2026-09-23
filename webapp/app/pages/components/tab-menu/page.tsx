@@ -4,7 +4,7 @@ import {
   CheckCircle,
   NotepadText,
   UploadTray,
-} from "@hive/react";
+} from "@taskall/react";
 
 import { jsx, raw } from "../../../lib/api";
 import { definePlayground, example, type ComponentDoc } from "../../../lib/doc";
@@ -51,7 +51,7 @@ const doc: ComponentDoc = {
     "Etapas sequenciais de um fluxo — use um stepper/formulário em etapas.",
     "Mais de ~7 abas ou rótulos longos.",
   ],
-  usage: `import { CircleClock, TabMenu, TrendingContent } from "@hive/react";
+  usage: `import { CircleClock, TabMenu, TrendingContent } from "@taskall/react";
 
 <TabMenu
   ariaLabel="Ficha do estudante"

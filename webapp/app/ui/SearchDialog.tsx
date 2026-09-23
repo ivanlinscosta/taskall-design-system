@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useNavigate } from "react-router";
-import { Modal, Search, TextInput } from "@hive/react";
+import { Modal, Search, TextInput } from "@taskall/react";
 
 import { rankBy } from "../lib/fuzzy";
 import { ALL_PAGES, type NavItem } from "../lib/registry";

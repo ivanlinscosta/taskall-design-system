@@ -1,41 +1,41 @@
-# @hive/react
+# @taskall/react
 
-Biblioteca oficial de componentes React do Hive Design System. Desenvolvida para oferecer uma experiência consistente, acessível e performática nas aplicações do ecossistema Task All.
+Biblioteca oficial de componentes React do TaskAll Design System. Desenvolvida para oferecer uma experiência consistente, acessível e performática nas aplicações do ecossistema Task All.
 
 ## Instalação
 
 Adicione o pacote ao seu projeto usando seu gerenciador de dependências preferido:
 
 ```bash
-pnpm add @hive/react
+pnpm add @taskall/react
 # ou
-npm install @hive/react
+npm install @taskall/react
 # ou
-yarn add @hive/react
+yarn add @taskall/react
 ```
 
 ## Uso rápido
 
-Para começar a usar os componentes, envolva sua aplicação com o `HiveProvider` e importe os estilos globais.
+Para começar a usar os componentes, envolva sua aplicação com o `TaskAllProvider` e importe os estilos globais.
 
 ```tsx
-import { HiveProvider, Button } from "@hive/react";
-import "@hive/react/styles.css";
+import { TaskAllProvider, Button } from "@taskall/react";
+import "@taskall/react/styles.css";
 
 function App() {
   return (
-    <HiveProvider colorMode="light" brand="coral">
+    <TaskAllProvider colorMode="light" brand="coral">
       <Button tone="primary" visualStyle="filled" size="medium">
         Enviar
       </Button>
-    </HiveProvider>
+    </TaskAllProvider>
   );
 }
 ```
 
 ## Temas
 
-O `HiveProvider` permite configurar a aparência global da aplicação através das seguintes propriedades:
+O `TaskAllProvider` permite configurar a aparência global da aplicação através das seguintes propriedades:
 
 - **colorMode**: Define o esquema de cores (`light` ou `dark`).
 - **brand**: Define a identidade visual da marca (`coral`, `gestao`, `estudantes` ou `responsaveis`).
@@ -43,14 +43,14 @@ O `HiveProvider` permite configurar a aparência global da aplicação através 
 - **shape**: Define o arredondamento das bordas (`sharp`, `default` ou `rounded`).
 
 ```tsx
-<HiveProvider 
+<TaskAllProvider 
   colorMode="dark" 
   brand="gestao" 
   density="compact" 
   shape="rounded"
 >
   {/* Conteúdo da aplicação */}
-</HiveProvider>
+</TaskAllProvider>
 ```
 
 ## Componentes
@@ -82,7 +82,7 @@ O `HiveProvider` permite configurar a aparência global da aplicação através 
 A biblioteca inclui um conjunto de 44 ícones otimizados. Eles podem ser importados individualmente para garantir o tree-shaking:
 
 ```tsx
-import { Search, ChevronRight } from "@hive/react";
+import { Search, ChevronRight } from "@taskall/react";
 
 function MyComponent() {
   return <Search size={20} />;
@@ -91,7 +91,7 @@ function MyComponent() {
 
 ## Acessibilidade
 
-O Hive React é construído com foco total em acessibilidade, seguindo as diretrizes WCAG:
+O TaskAll React é construído com foco total em acessibilidade, seguindo as diretrizes WCAG:
 
 - Uso correto de roles e atributos ARIA.
 - Suporte completo a estados nativos e navegação por teclado.

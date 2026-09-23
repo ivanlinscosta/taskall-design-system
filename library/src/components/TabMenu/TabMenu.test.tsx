@@ -4,8 +4,8 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import { axe } from "jest-axe";
 import { describe, expect, it, vi } from "vitest";
 
-import { HiveProvider } from "../Provider/HiveProvider";
-import { renderWithHive } from "../../test/renderWithHive";
+import { TaskAllProvider } from "../Provider/TaskAllProvider";
+import { renderWithTaskAll } from "../../test/renderWithTaskAll";
 import { Star } from "../../icons/Star";
 import { TabMenu } from "./TabMenu";
 
@@ -17,7 +17,7 @@ const items = [
 
 describe("TabMenu", () => {
   it("renders a tablist with accessible tabs and panels", () => {
-    renderWithHive(<TabMenu items={items} ariaLabel="Seções" />);
+    renderWithTaskAll(<TabMenu items={items} ariaLabel="Seções" />);
 
     expect(screen.getByRole("tablist", { name: "Seções" })).toBeInTheDocument();
     expect(screen.getByRole("tab", { name: "Visão geral" })).toHaveAttribute(
@@ -30,7 +30,7 @@ describe("TabMenu", () => {
   });
 
   it("renders item content in the panel when provided", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <TabMenu
         ariaLabel="Ficha"
         items={[
@@ -46,7 +46,7 @@ describe("TabMenu", () => {
   });
 
   it("renders a decorative icon before the tab label", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <TabMenu
         ariaLabel="Ficha"
         items={[{ key: "notas", label: "Notas", icon: Star }]}
@@ -60,7 +60,7 @@ describe("TabMenu", () => {
   it("forwards the ref to the root element", () => {
     const ref = createRef<HTMLDivElement>();
 
-    renderWithHive(<TabMenu ref={ref} items={items} />);
+    renderWithTaskAll(<TabMenu ref={ref} items={items} />);
 
     expect(ref.current).toBeInstanceOf(HTMLDivElement);
   });
@@ -68,7 +68,7 @@ describe("TabMenu", () => {
   it("supports uncontrolled selection", () => {
     const onValueChange = vi.fn();
 
-    renderWithHive(<TabMenu items={items} onValueChange={onValueChange} />);
+    renderWithTaskAll(<TabMenu items={items} onValueChange={onValueChange} />);
 
     fireEvent.click(screen.getByRole("tab", { name: "Detalhes" }));
 
@@ -97,7 +97,7 @@ describe("TabMenu", () => {
       );
     };
 
-    renderWithHive(<ControlledExample />);
+    renderWithTaskAll(<ControlledExample />);
 
     fireEvent.click(screen.getByRole("tab", { name: "Histórico" }));
 
@@ -109,7 +109,7 @@ describe("TabMenu", () => {
   });
 
   it("supports horizontal keyboard navigation with automatic activation", () => {
-    renderWithHive(<TabMenu items={items} ariaLabel="Seções" />);
+    renderWithTaskAll(<TabMenu items={items} ariaLabel="Seções" />);
 
     const firstTab = screen.getByRole("tab", { name: "Visão geral" });
     const secondTab = screen.getByRole("tab", { name: "Detalhes" });
@@ -130,7 +130,7 @@ describe("TabMenu", () => {
   });
 
   it("supports vertical keyboard navigation", () => {
-    renderWithHive(
+    renderWithTaskAll(
       <TabMenu items={items} type="vertical" ariaLabel="Seções verticais" />,
     );
 
@@ -146,9 +146,9 @@ describe("TabMenu", () => {
 
   it("renders correctly in light and dark modes", () => {
     const { rerender } = render(
-      <HiveProvider colorMode="light">
+      <TaskAllProvider colorMode="light">
         <TabMenu items={items} />
-      </HiveProvider>,
+      </TaskAllProvider>,
     );
 
     expect(
@@ -156,9 +156,9 @@ describe("TabMenu", () => {
     ).toBeInTheDocument();
 
     rerender(
-      <HiveProvider colorMode="dark">
+      <TaskAllProvider colorMode="dark">
         <TabMenu items={items} />
-      </HiveProvider>,
+      </TaskAllProvider>,
     );
 
     expect(
@@ -167,7 +167,7 @@ describe("TabMenu", () => {
   });
 
   it("has no axe violations", async () => {
-    const { container } = renderWithHive(
+    const { container } = renderWithTaskAll(
       <TabMenu items={items} ariaLabel="Seções" />,
     );
 

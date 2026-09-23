@@ -15,42 +15,106 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-const ThemeCard: React.FC<{ brand: string; title: string; description: string }> = ({ brand, title, description }) => {
+const ThemeCard: React.FC<{
+  brand: string;
+  title: string;
+  description: string;
+}> = ({ brand, title, description }) => {
   return (
     <div
       data-brand={brand}
       style={{
         display: "flex",
         flexDirection: "column",
-        gap: "var(--hive-space-16)",
-        padding: "var(--hive-space-24)",
-        backgroundColor: "var(--hive-background-primary)",
-        borderRadius: "var(--hive-radius-surface)",
-        border: "1px solid var(--hive-border-subtle)",
-        boxShadow: "var(--hive-shadow-sm)",
+        gap: "var(--taskall-space-16)",
+        padding: "var(--taskall-space-24)",
+        backgroundColor: "var(--taskall-background-primary)",
+        borderRadius: "var(--taskall-radius-surface)",
+        border: "1px solid var(--taskall-border-subtle)",
+        boxShadow: "var(--taskall-shadow-sm)",
       }}
     >
-      <div style={{ display: "flex", flexDirection: "column", gap: "var(--hive-space-4)" }}>
-        <h4 style={{ font: "var(--hive-font-h4)", color: "var(--hive-content-primary)", margin: 0 }}>{title}</h4>
-        <p style={{ font: "var(--hive-font-paragraph-s)", color: "var(--hive-content-secondary)", margin: 0 }}>{description}</p>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "var(--taskall-space-4)",
+        }}
+      >
+        <h4
+          style={{
+            font: "var(--taskall-font-h4)",
+            color: "var(--taskall-content-primary)",
+            margin: 0,
+          }}
+        >
+          {title}
+        </h4>
+        <p
+          style={{
+            font: "var(--taskall-font-paragraph-s)",
+            color: "var(--taskall-content-secondary)",
+            margin: 0,
+          }}
+        >
+          {description}
+        </p>
       </div>
 
-      <div style={{ display: "flex", gap: "var(--hive-space-8)" }}>
-        <div style={{ flex: 1, height: 48, backgroundColor: "var(--hive-brand)", borderRadius: "var(--hive-radius-2)" }} title="--hive-brand" />
-        <div style={{ flex: 1, height: 48, backgroundColor: "var(--hive-brand-soft)", borderRadius: "var(--hive-radius-2)" }} title="--hive-brand-soft" />
-        <div style={{ flex: 1, height: 48, backgroundColor: "var(--hive-brand-hover)", borderRadius: "var(--hive-radius-2)" }} title="--hive-brand-hover" />
-        <div style={{ flex: 1, height: 48, backgroundColor: "var(--hive-brand-active)", borderRadius: "var(--hive-radius-2)" }} title="--hive-brand-active" />
+      <div style={{ display: "flex", gap: "var(--taskall-space-8)" }}>
+        <div
+          style={{
+            flex: 1,
+            height: 48,
+            backgroundColor: "var(--taskall-brand)",
+            borderRadius: "var(--taskall-radius-2)",
+          }}
+          title="--taskall-brand"
+        />
+        <div
+          style={{
+            flex: 1,
+            height: 48,
+            backgroundColor: "var(--taskall-brand-soft)",
+            borderRadius: "var(--taskall-radius-2)",
+          }}
+          title="--taskall-brand-soft"
+        />
+        <div
+          style={{
+            flex: 1,
+            height: 48,
+            backgroundColor: "var(--taskall-brand-hover)",
+            borderRadius: "var(--taskall-radius-2)",
+          }}
+          title="--taskall-brand-hover"
+        />
+        <div
+          style={{
+            flex: 1,
+            height: 48,
+            backgroundColor: "var(--taskall-brand-active)",
+            borderRadius: "var(--taskall-radius-2)",
+          }}
+          title="--taskall-brand-active"
+        />
       </div>
 
-      <div style={{ display: "flex", gap: "var(--hive-space-12)", marginTop: "var(--hive-space-8)" }}>
+      <div
+        style={{
+          display: "flex",
+          gap: "var(--taskall-space-12)",
+          marginTop: "var(--taskall-space-8)",
+        }}
+      >
         <button
           style={{
-            padding: "var(--hive-space-12) var(--hive-space-24)",
-            backgroundColor: "var(--hive-action-primary)",
-            color: "var(--hive-action-primary-contrast)",
+            padding: "var(--taskall-space-12) var(--taskall-space-24)",
+            backgroundColor: "var(--taskall-action-primary)",
+            color: "var(--taskall-action-primary-contrast)",
             border: "none",
-            borderRadius: "var(--hive-radius-surface)",
-            font: "var(--hive-font-label-m)",
+            borderRadius: "var(--taskall-radius-surface)",
+            font: "var(--taskall-font-label-m)",
             cursor: "pointer",
           }}
         >
@@ -58,12 +122,12 @@ const ThemeCard: React.FC<{ brand: string; title: string; description: string }>
         </button>
         <button
           style={{
-            padding: "var(--hive-space-12) var(--hive-space-24)",
+            padding: "var(--taskall-space-12) var(--taskall-space-24)",
             backgroundColor: "transparent",
-            color: "var(--hive-action-primary)",
-            border: "1px solid var(--hive-action-primary)",
-            borderRadius: "var(--hive-radius-surface)",
-            font: "var(--hive-font-label-m)",
+            color: "var(--taskall-action-primary)",
+            border: "1px solid var(--taskall-action-primary)",
+            borderRadius: "var(--taskall-radius-surface)",
+            font: "var(--taskall-font-label-m)",
             cursor: "pointer",
           }}
         >
@@ -78,11 +142,11 @@ export const Themes: Story = {
   render: () => (
     <PageContainer
       title="Temas e Marcas"
-      description="O Hive suporta múltiplos temas através do componente HiveProvider. As propriedades colorMode, brand, density e shape alteram os tokens CSS globalmente, permitindo que a interface se adapte a diferentes contextos."
+      description="O TaskAll suporta múltiplos temas através do componente TaskAllProvider. As propriedades colorMode, brand, density e shape alteram os tokens CSS globalmente, permitindo que a interface se adapte a diferentes contextos."
     >
       <Section
         title="Marcas Disponíveis"
-        description="O sistema possui 4 marcas principais. Cada marca redefine os tokens --hive-brand-* e afeta componentes interativos como botões, links e indicadores de progresso."
+        description="O sistema possui 4 marcas principais. Cada marca redefine os tokens --taskall-brand-* e afeta componentes interativos como botões, links e indicadores de progresso."
       >
         <Grid minWidth={320}>
           <ThemeCard
@@ -109,32 +173,38 @@ export const Themes: Story = {
       </Section>
 
       <Section
-        title="Propriedades do HiveProvider"
+        title="Propriedades do TaskAllProvider"
         description="Como configurar o provedor na raiz da sua aplicação."
       >
         <div
           style={{
-            padding: "var(--hive-space-24)",
-            backgroundColor: "var(--hive-background-secondary)",
-            borderRadius: "var(--hive-radius-surface)",
-            border: "1px solid var(--hive-border-subtle)",
-            font: "var(--hive-font-paragraph-m)",
-            color: "var(--hive-content-primary)",
+            padding: "var(--taskall-space-24)",
+            backgroundColor: "var(--taskall-background-secondary)",
+            borderRadius: "var(--taskall-radius-surface)",
+            border: "1px solid var(--taskall-border-subtle)",
+            font: "var(--taskall-font-paragraph-m)",
+            color: "var(--taskall-content-primary)",
           }}
         >
-          <pre style={{ margin: 0, fontFamily: "monospace", whiteSpace: "pre-wrap" }}>
-{`import { HiveProvider } from "@hive/react";
+          <pre
+            style={{
+              margin: 0,
+              fontFamily: "monospace",
+              whiteSpace: "pre-wrap",
+            }}
+          >
+            {`import { TaskAllProvider } from "@taskall/react";
 
 function App() {
   return (
-    <HiveProvider
+    <TaskAllProvider
       colorMode="light" // "light" | "dark"
       brand="coral"     // "coral" | "gestao" | "estudantes" | "responsaveis"
       density="default" // "compact" | "default" | "expanded"
       shape="default"   // "sharp" | "default" | "rounded"
     >
       <YourApp />
-    </HiveProvider>
+    </TaskAllProvider>
   );
 }`}
           </pre>

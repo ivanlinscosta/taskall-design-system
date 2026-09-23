@@ -20,17 +20,17 @@ export default function ContributingPage() {
       <PageHeader
         eyebrow="Guias"
         title="Contribuição"
-        lead="Como propor, construir, testar e documentar um componente do Hive — do primeiro commit à página nesta documentação."
+        lead="Como propor, construir, testar e documentar um componente do TaskAll — do primeiro commit à página nesta documentação."
       />
       <DocSection id="estrutura" title="Estrutura do monorepo">
         <CodeBlock
           language="plaintext"
           caption="taskall-design-system/"
-          code={`library/                 @hive/react — componentes, tokens, ícones
+          code={`library/                 @taskall/react — componentes, tokens, ícones
   src/components/Nome/   Nome.tsx · Nome.module.css · Nome.test.tsx · Nome.stories.tsx
   src/styles/tokens.css  tokens e temas
   docs/CONVENTIONS.md    convenções obrigatórias
-webapp/                  hive-docs — esta documentação (React Router 7 + Vite)
+webapp/                  taskall-docs — esta documentação (React Router 7 + Vite)
   app/pages/components/  uma pasta por componente: page.tsx + examples/
   app/generated/api.json tabela de props gerada dos tipos TS
   .storybook/            Storybook (bancada de desenvolvimento)`}
@@ -72,12 +72,12 @@ pnpm changeset      # descreva a mudança para o changelog`}
             </li>
             <li>
               Escreva exemplos em <code>examples/*.tsx</code> importando só de{" "}
-              <code>@hive/react</code>; o código exibido vem do próprio arquivo
-              (<code>?raw</code>).
+              <code>@taskall/react</code>; o código exibido vem do próprio
+              arquivo (<code>?raw</code>).
             </li>
             <li>
-              Rode <code>pnpm --filter hive-docs gen:api</code> e descreva todas
-              as props — o teste de documentação falha se faltar alguma.
+              Rode <code>pnpm --filter taskall-docs gen:api</code> e descreva
+              todas as props — o teste de documentação falha se faltar alguma.
             </li>
           </ol>
         </Prose>

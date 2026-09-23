@@ -6,3 +6,8 @@ coverage
 *.mdbuild
 .react-router
 webapp/app/generated
+# Gerados por library/scripts/generate-icons.ts
+library/src/icons/*.tsx
+!library/src/icons/Icon.tsx
+library/src/icons/index.ts
+library/src/icons/iconSearch.ts

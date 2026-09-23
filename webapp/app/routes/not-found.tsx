@@ -1,10 +1,10 @@
 import { Link } from "react-router";
-import { Heading, Paragraph } from "@hive/react";
+import { Heading, Paragraph } from "@taskall/react";
 
 import styles from "./not-found.module.css";
 
 export const meta = () => [
-  { title: "Página não encontrada · Hive Design System" },
+  { title: "Página não encontrada · TaskAll Design System" },
 ];
 
 export default function NotFound() {

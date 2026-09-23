@@ -1,8 +1,8 @@
-import { Badge, Bell, Check } from "@hive/react";
+import { Badge, Bell, Check } from "@taskall/react";
 
 export default function BadgeTypes() {
   return (
-    <div style={{ display: "grid", gap: "var(--hive-space-16)" }}>
+    <div style={{ display: "grid", gap: "var(--taskall-space-16)" }}>
       {(["filled", "light", "outline"] as const).map((visualStyle) => (
         <div
           key={visualStyle}
@@ -10,7 +10,7 @@ export default function BadgeTypes() {
             display: "flex",
             flexWrap: "wrap",
             alignItems: "center",
-            gap: "var(--hive-space-12)",
+            gap: "var(--taskall-space-12)",
           }}
         >
           <Badge visualStyle={visualStyle}>Publicada</Badge>

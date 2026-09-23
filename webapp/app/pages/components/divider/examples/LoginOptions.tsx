@@ -1,4 +1,4 @@
-import { Button, Divider, Mail, TextInput } from "@hive/react";
+import { Button, Divider, Mail, TextInput } from "@taskall/react";
 
 export default function DividerLoginOptions() {
   return (
@@ -6,13 +6,13 @@ export default function DividerLoginOptions() {
       onSubmit={(event) => event.preventDefault()}
       style={{
         display: "grid",
-        gap: "var(--hive-space-step-6)",
+        gap: "var(--taskall-space-step-6)",
         maxWidth: 380,
         margin: "0 auto",
-        padding: "var(--hive-space-step-7)",
-        border: "1px solid var(--hive-border-default)",
-        borderRadius: "var(--hive-radius-surface)",
-        backgroundColor: "var(--hive-background-primary)",
+        padding: "var(--taskall-space-step-7)",
+        border: "1px solid var(--taskall-border-default)",
+        borderRadius: "var(--taskall-radius-surface)",
+        backgroundColor: "var(--taskall-background-primary)",
       }}
     >
       <TextInput

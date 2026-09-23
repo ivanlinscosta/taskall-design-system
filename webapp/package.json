@@ -1,8 +1,8 @@
 {
-  "name": "hive-docs",
+  "name": "taskall-docs",
   "version": "0.0.1",
   "private": true,
-  "description": "Hive Design System — aplicação de documentação (React Router 7 + Vite, pré-renderizada)",
+  "description": "TaskAll Design System — aplicação de documentação (React Router 7 + Vite, pré-renderizada)",
   "type": "module",
   "scripts": {
     "dev": "pnpm gen:api && react-router dev",
@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@fontsource/archivo": "^5.3.0",
-    "@hive/react": "workspace:*",
+    "@taskall/react": "workspace:*",
     "@react-router/node": "^7.18.4",
     "isbot": "^5",
     "react": "^18.3.1",

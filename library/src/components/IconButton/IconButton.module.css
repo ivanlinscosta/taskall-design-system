@@ -5,7 +5,7 @@
 }
 
 .iconButton[data-size="medium"] {
-  width: var(--hive-space-44);
+  width: var(--taskall-space-44);
 }
 
 .iconButton[data-size="small"] {

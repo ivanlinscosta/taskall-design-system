@@ -1,4 +1,4 @@
-import { AddCircle, Button } from "@hive/react";
+import { AddCircle, Button } from "@taskall/react";
 
 export default function ButtonSizes() {
   return (
@@ -6,7 +6,7 @@ export default function ButtonSizes() {
       style={{
         display: "flex",
         alignItems: "center",
-        gap: "var(--hive-space-12)",
+        gap: "var(--taskall-space-12)",
       }}
     >
       <Button size="medium" leftIcon={AddCircle}>

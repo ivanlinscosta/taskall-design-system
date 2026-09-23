@@ -1,4 +1,4 @@
-import { Mail, TextInput } from "@hive/react";
+import { Mail, TextInput } from "@taskall/react";
 
 export default function TextInputStates() {
   return (
@@ -6,7 +6,7 @@ export default function TextInputStates() {
       style={{
         display: "grid",
         gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-        gap: "var(--hive-space-16)",
+        gap: "var(--taskall-space-16)",
         width: "100%",
       }}
     >

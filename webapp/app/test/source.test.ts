@@ -16,7 +16,7 @@ function walk(dir: string): string[] {
 const files = walk(appDir);
 
 describe("código da aplicação", () => {
-  it("não usa cores fixas (hex, rgb, hsl): só tokens --hive-*", () => {
+  it("não usa cores fixas (hex, rgb, hsl): só tokens --taskall-*", () => {
     const offenders = files.flatMap((file) =>
       readFileSync(file, "utf8")
         .split("\n")
@@ -46,7 +46,7 @@ describe("código da aplicação", () => {
     expect(offenders).toEqual([]);
   });
 
-  it("importa componentes somente de @hive/react", () => {
+  it("importa componentes somente de @taskall/react", () => {
     const offenders = files
       .filter((file) => /\.tsx?$/.test(file))
       .filter((file) =>

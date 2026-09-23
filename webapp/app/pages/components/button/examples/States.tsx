@@ -4,7 +4,7 @@ import {
   IconButton,
   RecycleBin,
   TaillessLineArrowRight,
-} from "@hive/react";
+} from "@taskall/react";
 
 export default function ButtonStates() {
   return (
@@ -13,7 +13,7 @@ export default function ButtonStates() {
         display: "flex",
         flexWrap: "wrap",
         alignItems: "center",
-        gap: "var(--hive-space-12)",
+        gap: "var(--taskall-space-12)",
       }}
     >
       <Button>Padrão</Button>

@@ -4,7 +4,7 @@ import {
   TextInput,
   User,
   type TextInputProps,
-} from "@hive/react";
+} from "@taskall/react";
 
 import { jsx, raw } from "../../../lib/api";
 import { definePlayground, example, type ComponentDoc } from "../../../lib/doc";
@@ -37,7 +37,7 @@ const doc: ComponentDoc = {
     "Textos longos de várias linhas — use um `<textarea>` estilizado com tokens.",
     "Como rótulo visível substituto: não use só `placeholder`.",
   ],
-  usage: `import { Mail, TextInput } from "@hive/react";
+  usage: `import { Mail, TextInput } from "@taskall/react";
 
 export function GuardianEmail({ error }: { error?: string }) {
   return (

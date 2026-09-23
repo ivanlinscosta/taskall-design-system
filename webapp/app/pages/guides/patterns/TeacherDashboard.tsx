@@ -14,7 +14,7 @@ import {
   Tooltip,
   Add,
   Download,
-} from "@hive/react";
+} from "@taskall/react";
 
 const kpis = [
   { label: "Entregas no prazo", value: 86, tone: "green" as const },
@@ -44,28 +44,28 @@ const tasks = [
 ];
 
 const card = {
-  padding: "var(--hive-space-step-6)",
-  border: "1px solid var(--hive-border-default)",
-  borderRadius: "var(--hive-radius-surface)",
-  backgroundColor: "var(--hive-background-primary)",
+  padding: "var(--taskall-space-step-6)",
+  border: "1px solid var(--taskall-border-default)",
+  borderRadius: "var(--taskall-radius-surface)",
+  backgroundColor: "var(--taskall-background-primary)",
 };
 
 export default function TeacherDashboard() {
   return (
-    <div style={{ display: "grid", gap: "var(--hive-space-step-6)" }}>
+    <div style={{ display: "grid", gap: "var(--taskall-space-step-6)" }}>
       <header
         style={{
           display: "flex",
           flexWrap: "wrap",
           alignItems: "end",
           justifyContent: "space-between",
-          gap: "var(--hive-space-12)",
+          gap: "var(--taskall-space-12)",
         }}
       >
         <div>
           <LabelText
             size="xs"
-            style={{ color: "var(--hive-content-secondary)" }}
+            style={{ color: "var(--taskall-content-secondary)" }}
           >
             Segunda-feira, 22 de setembro
           </LabelText>
@@ -73,7 +73,7 @@ export default function TeacherDashboard() {
             Bom dia, Helena
           </Heading>
         </div>
-        <div style={{ display: "flex", gap: "var(--hive-space-8)" }}>
+        <div style={{ display: "flex", gap: "var(--taskall-space-8)" }}>
           <Tooltip title="Exportar notas do bimestre">
             <Button
               tone="neutral"
@@ -98,12 +98,12 @@ export default function TeacherDashboard() {
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-          gap: "var(--hive-space-step-5)",
+          gap: "var(--taskall-space-step-5)",
         }}
       >
         {kpis.map((kpi) => (
           <section key={kpi.label} style={card} aria-label={kpi.label}>
-            <p style={{ margin: 0, font: "var(--hive-font-display-4)" }}>
+            <p style={{ margin: 0, font: "var(--taskall-font-display-4)" }}>
               {kpi.value}%
             </p>
             <ProgressBar
@@ -120,11 +120,15 @@ export default function TeacherDashboard() {
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-          gap: "var(--hive-space-step-5)",
+          gap: "var(--taskall-space-step-5)",
         }}
       >
         <section
-          style={{ ...card, display: "grid", gap: "var(--hive-space-step-4)" }}
+          style={{
+            ...card,
+            display: "grid",
+            gap: "var(--taskall-space-step-4)",
+          }}
           aria-labelledby="dash-tarefas"
         >
           <Heading level={3} as={6} id="dash-tarefas">
@@ -140,7 +144,7 @@ export default function TeacherDashboard() {
                   <ul
                     style={{
                       display: "grid",
-                      gap: "var(--hive-space-step-4)",
+                      gap: "var(--taskall-space-step-4)",
                       margin: 0,
                       padding: 0,
                       listStyle: "none",
@@ -151,7 +155,7 @@ export default function TeacherDashboard() {
                         key={task.title}
                         style={{
                           display: "grid",
-                          gap: "var(--hive-space-step-4)",
+                          gap: "var(--taskall-space-step-4)",
                         }}
                       >
                         {index > 0 ? <Divider /> : null}
@@ -193,7 +197,7 @@ export default function TeacherDashboard() {
           style={{
             ...card,
             display: "grid",
-            gap: "var(--hive-space-step-4)",
+            gap: "var(--taskall-space-step-4)",
             alignContent: "start",
           }}
           aria-labelledby="dash-turma"
@@ -208,7 +212,7 @@ export default function TeacherDashboard() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
-                gap: "var(--hive-space-8)",
+                gap: "var(--taskall-space-8)",
               }}
             >
               <LabelText size="s">{group}</LabelText>

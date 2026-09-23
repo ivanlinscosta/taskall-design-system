@@ -40,7 +40,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
     ref,
   ) {
     const reactId = React.useId();
-    const inputId = id ?? `hive-text-input-${reactId}`;
+    const inputId = id ?? `taskall-text-input-${reactId}`;
     const descriptionId = sublabel ? `${inputId}-description` : undefined;
     const errorId = error ? `${inputId}-error` : undefined;
     const describedBy = joinIds(ariaDescribedBy, descriptionId, errorId);

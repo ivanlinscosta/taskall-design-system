@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Button, Dropdown, Settings } from "@hive/react";
+import { Button, Dropdown, Settings } from "@taskall/react";
 
 import {
   SETTING_LABELS,

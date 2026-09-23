@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Checkbox } from "@hive/react";
+import { Checkbox } from "@taskall/react";
 
 const classes = ["6º A", "6º B", "7º A", "8º B"];
 
@@ -15,13 +15,13 @@ export default function CheckboxSelectAll() {
         padding: 0,
         border: 0,
         display: "grid",
-        gap: "var(--hive-space-8)",
+        gap: "var(--taskall-space-8)",
       }}
     >
       <legend
         style={{
-          font: "var(--hive-font-label-m)",
-          marginBottom: "var(--hive-space-8)",
+          font: "var(--taskall-font-label-m)",
+          marginBottom: "var(--taskall-space-8)",
         }}
       >
         Publicar para as turmas
@@ -35,8 +35,8 @@ export default function CheckboxSelectAll() {
       <div
         style={{
           display: "grid",
-          gap: "var(--hive-space-8)",
-          paddingLeft: "var(--hive-space-24)",
+          gap: "var(--taskall-space-8)",
+          paddingLeft: "var(--taskall-space-24)",
         }}
       >
         {classes.map((name) => (

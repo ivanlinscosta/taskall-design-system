@@ -8,15 +8,16 @@
   top: var(--docs-header-height);
   height: calc(100vh - var(--docs-header-height));
   overflow-y: auto;
-  border-right: 1px solid var(--hive-border-subtle);
-  background-color: var(--hive-background-primary);
+  border-right: 1px solid var(--taskall-border-subtle);
+  background-color: var(--taskall-background-primary);
 }
 
 .main {
   display: grid;
   grid-template-columns: minmax(0, 1fr) var(--docs-toc-width);
-  gap: var(--hive-space-48);
-  padding: var(--hive-space-48) var(--hive-space-48) var(--hive-space-64);
+  gap: var(--taskall-space-48);
+  padding: var(--taskall-space-48) var(--taskall-space-48)
+    var(--taskall-space-64);
   outline: none;
 }
 
@@ -43,6 +44,7 @@
   }
 
   .main {
-    padding: var(--hive-space-32) var(--hive-space-16) var(--hive-space-48);
+    padding: var(--taskall-space-32) var(--taskall-space-16)
+      var(--taskall-space-48);
   }
 }

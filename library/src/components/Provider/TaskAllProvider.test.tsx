@@ -3,14 +3,14 @@ import { render, screen } from "@testing-library/react";
 import { axe } from "jest-axe";
 import { describe, expect, it } from "vitest";
 
-import { HiveProvider } from "./HiveProvider";
+import { TaskAllProvider } from "./TaskAllProvider";
 
-describe("HiveProvider", () => {
+describe("TaskAllProvider", () => {
   it("renders children with default personality attributes", () => {
     render(
-      <HiveProvider>
+      <TaskAllProvider>
         <h1>Olá</h1>
-      </HiveProvider>,
+      </TaskAllProvider>,
     );
     const provider = screen.getByText("Olá").parentElement;
     expect(provider).toHaveAttribute("data-color-mode", "light");
@@ -21,7 +21,7 @@ describe("HiveProvider", () => {
 
   it("applies every personality attribute", () => {
     render(
-      <HiveProvider
+      <TaskAllProvider
         data-testid="provider"
         colorMode="dark"
         brand="gestao"
@@ -29,7 +29,7 @@ describe("HiveProvider", () => {
         shape="rounded"
       >
         <div />
-      </HiveProvider>,
+      </TaskAllProvider>,
     );
     const provider = screen.getByTestId("provider");
     expect(provider).toHaveAttribute("data-color-mode", "dark");
@@ -41,14 +41,14 @@ describe("HiveProvider", () => {
   it("forwards ref, className and extra attributes", () => {
     const ref = React.createRef<HTMLDivElement>();
     render(
-      <HiveProvider
+      <TaskAllProvider
         ref={ref}
         className="app"
         data-testid="provider"
         aria-label="App"
       >
         <span />
-      </HiveProvider>,
+      </TaskAllProvider>,
     );
     const provider = screen.getByTestId("provider");
     expect(ref.current).toBe(provider);
@@ -58,9 +58,9 @@ describe("HiveProvider", () => {
 
   it("has no axe violations", async () => {
     const { container } = render(
-      <HiveProvider>
+      <TaskAllProvider>
         <main aria-label="Conteúdo">Demo</main>
-      </HiveProvider>,
+      </TaskAllProvider>,
     );
     const results = await axe(container, {
       rules: { "color-contrast": { enabled: false } },

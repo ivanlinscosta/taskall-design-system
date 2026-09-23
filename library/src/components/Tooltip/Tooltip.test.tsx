@@ -4,8 +4,8 @@ import { axe } from "jest-axe";
 import { afterEach, describe, expect, it, vi } from "vitest";
 
 import { Button } from "../Button/Button";
-import { HiveProvider } from "../Provider/HiveProvider";
-import { renderWithHive } from "../../test/renderWithHive";
+import { TaskAllProvider } from "../Provider/TaskAllProvider";
+import { renderWithTaskAll } from "../../test/renderWithTaskAll";
 import { Tooltip } from "./Tooltip";
 
 describe("Tooltip", () => {
@@ -16,7 +16,7 @@ describe("Tooltip", () => {
   it("renders the trigger and opens the tooltip with an accessible role", async () => {
     vi.useFakeTimers();
 
-    renderWithHive(
+    renderWithTaskAll(
       <Tooltip title="Mais detalhes">
         <Button>Ajuda</Button>
       </Tooltip>,
@@ -37,7 +37,7 @@ describe("Tooltip", () => {
 
     const ref = createRef<HTMLDivElement>();
 
-    renderWithHive(
+    renderWithTaskAll(
       <Tooltip ref={ref} title="Detalhes">
         <Button>Ajuda</Button>
       </Tooltip>,
@@ -56,7 +56,7 @@ describe("Tooltip", () => {
   it("supports large size, description and variant data attributes", async () => {
     vi.useFakeTimers();
 
-    renderWithHive(
+    renderWithTaskAll(
       <Tooltip
         title="Atalho"
         description="Use este botão para continuar a jornada."
@@ -84,7 +84,7 @@ describe("Tooltip", () => {
   it("opens on keyboard focus", async () => {
     vi.useFakeTimers();
 
-    renderWithHive(
+    renderWithTaskAll(
       <Tooltip title="Dica rápida" side="right">
         <Button>Focar</Button>
       </Tooltip>,
@@ -103,11 +103,11 @@ describe("Tooltip", () => {
     vi.useFakeTimers();
 
     const { rerender } = render(
-      <HiveProvider colorMode="light">
+      <TaskAllProvider colorMode="light">
         <Tooltip title="Tema claro">
           <Button>Modo</Button>
         </Tooltip>
-      </HiveProvider>,
+      </TaskAllProvider>,
     );
 
     await act(async () => {
@@ -117,11 +117,11 @@ describe("Tooltip", () => {
     expect(screen.getByText("Tema claro")).toBeInTheDocument();
 
     rerender(
-      <HiveProvider colorMode="dark">
+      <TaskAllProvider colorMode="dark">
         <Tooltip title="Tema escuro">
           <Button>Modo</Button>
         </Tooltip>
-      </HiveProvider>,
+      </TaskAllProvider>,
     );
 
     await act(async () => {
@@ -134,7 +134,7 @@ describe("Tooltip", () => {
   it("has no axe violations", async () => {
     vi.useFakeTimers();
 
-    const { baseElement } = renderWithHive(
+    const { baseElement } = renderWithTaskAll(
       <Tooltip title="Informação" description="Texto complementar.">
         <Button>Ajuda</Button>
       </Tooltip>,

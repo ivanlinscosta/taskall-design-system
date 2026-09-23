@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Button, Check, UploadTray } from "@hive/react";
+import { Button, Check, UploadTray } from "@taskall/react";
 
 type Status = "idle" | "sending" | "sent";
 
@@ -18,7 +18,7 @@ export default function ButtonAsyncSubmit() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        gap: "var(--hive-space-8)",
+        gap: "var(--taskall-space-8)",
       }}
     >
       <Button
@@ -36,8 +36,8 @@ export default function ButtonAsyncSubmit() {
       <span
         role="status"
         style={{
-          font: "var(--hive-font-paragraph-xs)",
-          color: "var(--hive-content-secondary)",
+          font: "var(--taskall-font-paragraph-xs)",
+          color: "var(--taskall-content-secondary)",
         }}
       >
         {status === "sent" ? "Enviado para a coordenação às 14:32." : ""}

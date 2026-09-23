@@ -7,7 +7,7 @@ import {
   CircleClock,
   TrendingContent,
   WarningSquare,
-} from "@hive/react";
+} from "@taskall/react";
 
 export default function TabMenuStudentRecord() {
   return (
@@ -15,13 +15,13 @@ export default function TabMenuStudentRecord() {
       aria-labelledby="ficha-title"
       style={{
         display: "grid",
-        gap: "var(--hive-space-step-5)",
+        gap: "var(--taskall-space-step-5)",
         maxWidth: 560,
         margin: "0 auto",
-        padding: "var(--hive-space-step-7)",
-        border: "1px solid var(--hive-border-default)",
-        borderRadius: "var(--hive-radius-surface)",
-        backgroundColor: "var(--hive-background-primary)",
+        padding: "var(--taskall-space-step-7)",
+        border: "1px solid var(--taskall-border-default)",
+        borderRadius: "var(--taskall-radius-surface)",
+        backgroundColor: "var(--taskall-background-primary)",
       }}
     >
       <Content
@@ -42,7 +42,7 @@ export default function TabMenuStudentRecord() {
             label: "Desempenho",
             icon: TrendingContent,
             content: (
-              <div style={{ display: "grid", gap: "var(--hive-space-12)" }}>
+              <div style={{ display: "grid", gap: "var(--taskall-space-12)" }}>
                 <ProgressBar
                   label="Matemática"
                   value={82}

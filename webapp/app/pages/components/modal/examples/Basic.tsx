@@ -6,7 +6,7 @@ import {
   Modal,
   ModalFooter,
   Paragraph,
-} from "@hive/react";
+} from "@taskall/react";
 
 export default function ModalBasic() {
   const [open, setOpen] = React.useState(false);

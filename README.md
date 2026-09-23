@@ -1,4 +1,4 @@
-# Hive React
+# TaskAll React
 
 Design system React do Task All, com tokens, temas, componentes acessíveis e build ESM/CJS pronta para publicação — e uma aplicação de documentação no estilo material.io, com os componentes aplicados a telas reais do Task All.
 
@@ -8,8 +8,8 @@ O projeto utiliza pnpm workspaces para gerenciar a biblioteca e a documentação
 
 | Caminho    | Pacote        | Descrição                                                                                      |
 | ---------- | ------------- | ---------------------------------------------------------------------------------------------- |
-| `library/` | `@hive/react` | Biblioteca de componentes React (pacote publicável).                                           |
-| `webapp/`  | `hive-docs`   | Documentação oficial (React Router 7 + Vite, pré-renderizada) e Storybook como bancada de dev. |
+| `library/` | `@taskall/react` | Biblioteca de componentes React (pacote publicável).                                           |
+| `webapp/`  | `taskall-docs`   | Documentação oficial (React Router 7 + Vite, pré-renderizada) e Storybook como bancada de dev. |
 
 ## Requisitos
 
@@ -59,15 +59,15 @@ A documentação é uma aplicação React Router 7 (framework mode, `ssr: false`
 | Catálogo de páginas               | `webapp/app/lib/registry.ts`          | Alimenta rotas, sidebar e busca.                                                                  |
 | Rotas                             | `webapp/app/routes.ts`                | Uma rota estática por página, geradas do catálogo.                                                |
 | Página de componente              | `webapp/app/pages/components/<slug>/` | `page.tsx` (conteúdo em TS) + `examples/*.tsx`. O código exibido é o próprio arquivo (`?raw`).    |
-| Tabela de API                     | `webapp/app/generated/api.json`       | Gerada dos tipos TS reais por `pnpm --filter hive-docs gen:api` (roda em `dev` e `build`).        |
+| Tabela de API                     | `webapp/app/generated/api.json`       | Gerada dos tipos TS reais por `pnpm --filter taskall-docs gen:api` (roda em `dev` e `build`).        |
 | Template e blocos                 | `webapp/app/ui/`                      | `ComponentPage`, `Playground`, `ExampleBlock`, `ThemeMatrix`, `PropsTable`, `CodeBlock`…          |
-| Tema e persistência               | `webapp/app/lib/settings.tsx`         | `HiveProvider` global + script anti-"flash" no `<head>`.                                          |
+| Tema e persistência               | `webapp/app/lib/settings.tsx`         | `TaskAllProvider` global + script anti-"flash" no `<head>`.                                          |
 
-Os componentes são consumidos **somente via `@hive/react`**; em dev e build o alias aponta para `library/src` (mesmo padrão do Storybook), com hot-reload e tree-shaking.
+Os componentes são consumidos **somente via `@taskall/react`**; em dev e build o alias aponta para `library/src` (mesmo padrão do Storybook), com hot-reload e tree-shaking.
 
 ### Decisão: React Router 7 + Vite (e não Next.js)
 
-- **Reuso**: mesmo stack do repositório (Vite 8, React 18, CSS Modules); os exemplos são componentes comuns importando `@hive/react`.
+- **Reuso**: mesmo stack do repositório (Vite 8, React 18, CSS Modules); os exemplos são componentes comuns importando `@taskall/react`.
 - **Renderização estática**: `prerender: true` gera HTML para todas as páginas, com hidratação e code-splitting por rota, sem servidor.
 - **Custo**: nenhum framework novo; React Router 8 exigiria React 19, então a versão é a 7.x.
 - **Storybook mantido** como bancada de desenvolvimento isolada (`pnpm storybook`), com config Vite próprio em `webapp/.storybook/vite.config.ts`. A documentação oficial passa a ser a aplicação.

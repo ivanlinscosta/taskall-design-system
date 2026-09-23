@@ -10,7 +10,7 @@ import {
   Heading,
   Logo,
   ProgressBar,
-} from "@hive/react";
+} from "@taskall/react";
 
 import { COMPONENTS, FOUNDATIONS, GUIDES } from "../lib/registry";
 import { SETTING_OPTIONS, useSettings } from "../lib/settings";
@@ -19,7 +19,7 @@ import { DemoSurface } from "../ui/DemoSurface";
 import styles from "./home.module.css";
 
 export const meta = () => [
-  { title: "Hive Design System · Task All" },
+  { title: "TaskAll Design System" },
   {
     name: "description",
     content:
@@ -41,7 +41,7 @@ const principles = [
   },
   {
     title: "Um código, quatro públicos",
-    text: "Modo, marca, densidade e forma trocam por atributos no HiveProvider — sem forks nem CSS por produto.",
+    text: "Modo, marca, densidade e forma trocam por atributos no TaskAllProvider — sem forks nem CSS por produto.",
   },
   {
     title: "Tipado e enxuto",
@@ -109,10 +109,9 @@ export default function Home() {
     <main id="conteudo" tabIndex={-1} className={styles.main}>
       <section className={styles.hero} aria-labelledby="hero-title">
         <div className={styles.heroText}>
-          <Logo className={styles.heroLogo} />
-          <p className={styles.eyebrow}>Design system do Task All</p>
+          <Logo className={styles.heroLogo} title="TaskAll" />
           <h1 id="hero-title" className={styles.title}>
-            Hive
+            Design System
           </h1>
           <p className={styles.lead}>
             Fundamentos, componentes React e padrões para construir as telas de
@@ -130,7 +129,7 @@ export default function Home() {
           <CodeBlock
             language="shell"
             caption="instalação"
-            code="pnpm add @hive/react"
+            code="pnpm add @taskall/react"
             className={styles.install}
           />
         </div>
@@ -223,7 +222,7 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <p>
-          Hive Design System · <code>@hive/react</code> · Documentação
+          TaskAll Design System · <code>@taskall/react</code> · Documentação
           pré-renderizada com React Router 7 e Vite.
         </p>
       </footer>

@@ -6,7 +6,7 @@ import {
   Slot,
   SlotGroup,
   type SlotGroupProps,
-} from "@hive/react";
+} from "@taskall/react";
 
 import { jsx } from "../../../lib/api";
 import { definePlayground, example, type ComponentDoc } from "../../../lib/doc";
@@ -32,7 +32,7 @@ const doc: ComponentDoc = {
     "Listas com semântica de lista e muitos itens — use `<ul>` com Content.",
     "Grupos de botões com seleção — use RadioGroup ou TabMenu.",
   ],
-  usage: `import { Slot, SlotGroup } from "@hive/react";
+  usage: `import { Slot, SlotGroup } from "@taskall/react";
 
 <SlotGroup ariaLabel="Disciplinas lecionadas">
   <Slot size="xl" role="img" aria-label="Matemática">MA</Slot>

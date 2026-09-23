@@ -6,7 +6,7 @@ import {
   Paragraph,
   Settings,
   Slot,
-} from "@hive/react";
+} from "@taskall/react";
 
 const shortcuts = [
   { icon: Calendar, title: "Calendário escolar", hint: "Provas e feriados" },
@@ -20,7 +20,7 @@ export default function SlotShortcuts() {
       <ul
         style={{
           display: "grid",
-          gap: "var(--hive-space-step-2)",
+          gap: "var(--taskall-space-step-2)",
           margin: 0,
           padding: 0,
           listStyle: "none",
@@ -33,14 +33,15 @@ export default function SlotShortcuts() {
               style={{
                 display: "flex",
                 alignItems: "center",
-                gap: "var(--hive-space-12)",
-                minHeight: "var(--hive-touch-target)",
-                padding: "var(--hive-space-step-3) var(--hive-space-step-4)",
-                borderRadius: "var(--hive-radius-surface)",
+                gap: "var(--taskall-space-12)",
+                minHeight: "var(--taskall-touch-target)",
+                padding:
+                  "var(--taskall-space-step-3) var(--taskall-space-step-4)",
+                borderRadius: "var(--taskall-radius-surface)",
                 color: "inherit",
                 textDecoration: "none",
-                backgroundColor: "var(--hive-background-primary)",
-                border: "1px solid var(--hive-border-subtle)",
+                backgroundColor: "var(--taskall-background-primary)",
+                border: "1px solid var(--taskall-border-subtle)",
               }}
             >
               <Slot size="xl">
@@ -52,7 +53,10 @@ export default function SlotShortcuts() {
                 </LabelText>
                 <Paragraph
                   size="xs"
-                  style={{ margin: 0, color: "var(--hive-content-secondary)" }}
+                  style={{
+                    margin: 0,
+                    color: "var(--taskall-content-secondary)",
+                  }}
                 >
                   {hint}
                 </Paragraph>

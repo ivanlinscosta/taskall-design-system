@@ -1,9 +1,13 @@
-import { Radio, RadioGroup } from "@hive/react";
+import { Radio, RadioGroup } from "@taskall/react";
 
 export default function RadioStates() {
   return (
     <div
-      style={{ display: "flex", flexWrap: "wrap", gap: "var(--hive-space-48)" }}
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        gap: "var(--taskall-space-48)",
+      }}
     >
       <RadioGroup
         name="estado-padrao"

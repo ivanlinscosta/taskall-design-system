@@ -1,4 +1,4 @@
-import { StatusIndicator, type StatusIndicatorProps } from "@hive/react";
+import { StatusIndicator, type StatusIndicatorProps } from "@taskall/react";
 
 import { jsx } from "../../../lib/api";
 import { definePlayground, example, type ComponentDoc } from "../../../lib/doc";
@@ -25,7 +25,7 @@ const doc: ComponentDoc = {
     "Como único portador de significado — sempre há texto equivalente.",
     "Para feedback de sistema — use AlertNotification ou Badge.",
   ],
-  usage: `import { StatusIndicator } from "@hive/react";
+  usage: `import { StatusIndicator } from "@taskall/react";
 
 <StatusIndicator status="online" /> Disponível`,
   playground: definePlayground({
