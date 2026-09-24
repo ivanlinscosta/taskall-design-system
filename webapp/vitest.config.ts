@@ -9,7 +9,7 @@ export default defineConfig({
   test: {
     environment: "jsdom",
     globals: true,
-    setupFiles: ["./app/test/setup.ts"],
+    setupFiles: ["../library/src/test/setup.ts"],
     include: ["app/**/*.test.{ts,tsx}"],
     // Páginas inteiras + axe (ex.: 322 ícones) passam de 5s em máquinas mais lentas.
     testTimeout: 30_000,

@@ -9,3 +9,7 @@ coverage/
 build/
 .react-router/
 *.log
+
+# Cópias duplicadas do macOS Finder ("arquivo 2.ext", "arquivo 2")
+* 2
+* 2.*
